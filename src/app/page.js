@@ -3,12 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import styles from "./page.module.css";
 import CustomBtn from "./components/CustomBtn/CustomBtn";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 import Link from "next/link";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
 import Stats from "./components/Stats/Stats";
 import { FaRegCompass } from "react-icons/fa6";
-import { FaNetworkWired } from "react-icons/fa";
+import { FaNetworkWired, FaHandshake } from "react-icons/fa";
+import { SiAircanada } from "react-icons/si";
 
 export default function Home() {
   const services = [
@@ -143,6 +144,16 @@ export default function Home() {
       title: "Extensive Network",
       text: "Access our network of investors and incubators to bring your vision to life and fast-track your growth in Canada.",
     },
+    {
+      icon: <FaHandshake />,
+      title: "Partnership Opportunities",
+      text: "Partner with Canadian businesses and stakeholders to expand your operations and integrate into the Canadian market.",
+    },
+    {
+      icon: <SiAircanada />,
+      title: "Exclusive Canadian Benefits",
+      text: "Benefit from Canada's supportive business environment, tax incentives, and access to a thriving global market.",
+    },
   ];
 
   const groupedProjects = featuredProjects.reduce((acc, project) => {
@@ -161,14 +172,13 @@ export default function Home() {
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
         alt="Beautiful landscape"
         title="Build the future"
-        text="Accelerate your startup’s growth with support from Canada’s Startup
-      Visa Program"
+        text="Build the future and accelerate your startup’s growth with dedicated support, mentorship, and valuable resources from Canada’s Startup Visa Program, designed to help you succeed and thrive in a dynamic business ecosystem."
         primaryBtnText="Book consult"
         lightBtnText="Learn more"
         secondBtn={true}
       />
 
-      <div className={`${styles.landingPageContent} section w-75`}>
+      <Container className={`${styles.landingPageContent} section`}>
         <h2 className={`xtraBold`}>
           Our mission is to empower creators and innovators to push boundaries
           through our partnership with Canada's Startup Visa Program
@@ -181,9 +191,9 @@ export default function Home() {
           you through the Canada Startup Visa Program to secure permanent
           residence and build a future in Canada.
         </p>
-      </div>
-      <div>
-        <h4 className="xtraBold">Our services</h4>
+      </Container>
+      <Container>
+        <h4 className="xtraBold header">Our services</h4>
         <Row className="g-4 mt-2">
           {services.map((service, index) => (
             <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
@@ -204,9 +214,9 @@ export default function Home() {
             </Col>
           ))}
         </Row>
-      </div>
-      <div className="section">
-        <h4 className="xtraBold mt-4">Featured projects</h4>
+      </Container>
+      <Container className="section">
+        <h4 className="xtraBold mt-4 header">Featured projects</h4>
         <div>
           {sortedYears.map((year) => (
             <div key={year}>
@@ -244,7 +254,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </Container>
       <div className="section">
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
@@ -256,24 +266,26 @@ export default function Home() {
           getSomethingForm={true}
         />
       </div>
-      <div>
+      <Container>
         <Stats />
-      </div>
-      <div className="section">
-        <h2 className={`xtraBold`}>Why Tech X Startup?</h2>
+      </Container>
+      <Container className="section">
+        <h2 className={`xtraBold header`}>Why Tech X Startup?</h2>
         <p className="mt-4 w-75 pb-2">
           Tech X Startup guides you from idea to success, securing essential
           support for Canada’s Startup Visa Program and unlocking opportunities
           for your business to thrive.
         </p>
-        <Row className="mt-5">
+        <Row className="mt-3 gx-4 gy-3">
           {sellingPoints.map((point, index) => (
             <Col
               lg={6}
               key={index}
               className="d-flex flex-column align-items-center"
             >
-              <div className={`${styles.sellingPointCard} d-flex flex-column p-4`}>
+              <div
+                className={`${styles.sellingPointCard} d-flex flex-column p-4`}
+              >
                 <div className="fs-4">{point.icon}</div>
                 <h5 className="xtraBold mt-3">{point.title}</h5>
                 <p className="text-secondary mt-1">{point.text}</p>
@@ -284,9 +296,9 @@ export default function Home() {
         <div className="mt-4">
           <CustomBtn variant="primary" text="Learn more" />
         </div>
-      </div>
-      <div className="section">
-        <h4 className="xtraBold mt-4">Our trusted partners</h4>
+      </Container>
+      <Container className="section">
+        <h4 className="xtraBold mt-4 header">Our trusted partners</h4>
         <Row className="mt-4">
           {partners.map((partner, index) => (
             <Col key={index} lg={3} md={6} sm={12} className="mb-4">
@@ -300,7 +312,7 @@ export default function Home() {
             </Col>
           ))}
         </Row>
-      </div>
+      </Container>
     </div>
   );
 }

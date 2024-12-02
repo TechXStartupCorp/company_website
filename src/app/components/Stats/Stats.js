@@ -1,6 +1,6 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
-import styles from './Stats.module.css'
+import { Row, Col, Container } from "react-bootstrap";
+import styles from "./Stats.module.css";
 
 const Stats = () => {
   const stats = [

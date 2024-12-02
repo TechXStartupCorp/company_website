@@ -19,13 +19,12 @@ body {
   --lightGreyContainerBG: #f0f2f4;
 }
 
-.section {
-  padding: 100px 0;
-  width: 100%;
+.header {
+  font-size: clamp(1.2rem, 4vw, 1.65rem) !important;
 }
 
 .section {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .xtraBold {

@@ -3,7 +3,7 @@ import React from "react";
 import CustomBtn from "../CustomBtn/CustomBtn";
 import Image from "next/image";
 import styles from "./CalloutSection.module.css";
-import { Form } from "react-bootstrap";
+import { Form, Container } from "react-bootstrap";
 import { IoMdSearch } from "react-icons/io";
 import GetSomethingForm from "./components/GetSomethingForm/GetSomethingForm";
 
@@ -20,42 +20,44 @@ const CalloutSection = ({
   getSomethingForm,
 }) => {
   return (
-    <div
-      className={`${styles.heroContainer} w-100 mt-4 position-relative d-flex`}
-    >
-      <div className={styles.optionalDarkOverlay}></div>
-      <Image
-        className={`${styles.heroImage}`}
-        src={imageURL}
-        alt={alt}
-        layout="fill"
-        objectFit="cover"
-        quality={100}
-        priority={true}
-      />
-      <div className={`${styles.textOverlay}`}>
-        <h1 className="fw-bold">{title}</h1>
-        <p className="mt-3">{text}</p>
-        {getSomethingForm ? (
-          <GetSomethingForm />
-        ) : (
-          <div className="d-flex gap-3 mt-5">
-            <CustomBtn
-              link={primaryBtnLink}
-              text={primaryBtnText}
-              variant="primary"
-            />
-            {secondBtn && (
+    <Container>
+      <div
+        className={`${styles.heroContainer} w-100 mt-4 position-relative d-flex`}
+      >
+        <div className={styles.optionalDarkOverlay}></div>
+        <Image
+          className={`${styles.heroImage}`}
+          src={imageURL}
+          alt={alt}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
+          priority={true}
+        />
+        <div className={`${styles.textOverlay}`}>
+          <h1 className="fw-bold">{title}</h1>
+          <p className="mt-3">{text}</p>
+          {getSomethingForm ? (
+            <GetSomethingForm />
+          ) : (
+            <div className="d-flex gap-3 mt-5">
               <CustomBtn
-                link={lightBtnLink}
-                text={lightBtnText}
-                variant="light"
+                link={primaryBtnLink}
+                text={primaryBtnText}
+                variant="primary"
               />
-            )}
-          </div>
-        )}
+              {secondBtn && (
+                <CustomBtn
+                  link={lightBtnLink}
+                  text={lightBtnText}
+                  variant="light"
+                />
+              )}
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </Container>
   );
 };
 
