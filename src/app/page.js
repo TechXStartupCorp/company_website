@@ -113,21 +113,49 @@ export default function Home() {
   const partners = [
     {
       name: "Partner X",
+      text: "Can assist in all your technology needs",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
     },
     {
       name: "Partner Y",
+      text: "Can assist in all your technology needs",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
     },
     {
       name: "Partner X",
+      text: "Can assist in all your technology needs",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
     },
     {
       name: "Partner Y",
+      text: "Can assist in all your technology needs",
+      image:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+    },
+    {
+      name: "Partner X",
+      text: "Can assist in all your technology needs",
+      image:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+    },
+    {
+      name: "Partner Y",
+      text: "Can assist in all your technology needs",
+      image:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+    },
+    {
+      name: "Partner X",
+      text: "Can assist in all your technology needs",
+      image:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+    },
+    {
+      name: "Partner Y",
+      text: "Can assist in all your technology needs",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
     },
@@ -184,39 +212,43 @@ export default function Home() {
           through our partnership with Canada's Startup Visa Program
         </h2>
         <p className="mt-4">
-          Tech X Startup works closely with angel investors, business
-          incubators, and venture capital funds to help you turn your tech idea
-          into a reality. We provide the funding, resources, and mentorship
-          needed to prove the potential of your business, all while supporting
-          you through the Canada Startup Visa Program to secure permanent
-          residence and build a future in Canada.
+          Tech X Startup collaborates closely with a network of angel investors,
+          business incubators, and venture capital funds to help transform your
+          tech idea into a thriving business. We offer not only the essential
+          funding, resources, and mentorship needed to validate and scale your
+          startup but also provide expert guidance throughout the process. With
+          our support, you'll navigate the Canada Startup Visa Program, securing
+          the opportunity for permanent residence while laying the foundation
+          for long-term success and building a prosperous future in Canada.
         </p>
       </Container>
+      <div className="mt-4 pb-4">
+        <Container>
+          <h4 className="xtraBold header">Our services</h4>
+          <Row className="g-4 mt-2">
+            {services.map((service, index) => (
+              <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
+                <div className={`customCard`}>
+                  <div className="imgContainer">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      layout="fill"
+                    />
+                  </div>
+                  <div>
+                    <h5 className="xtraBold mt-3">{service.title}</h5>
+                    <p className="text-secondary">{service.text}</p>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
+
       <Container>
-        <h4 className="xtraBold header">Our services</h4>
-        <Row className="g-4 mt-2">
-          {services.map((service, index) => (
-            <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
-              <div className={`d-flex flex-column h-100 ${styles.serviceCard}`}>
-                <div className={styles.imgContainer}>
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    layout="fill"
-                    // objectFit="cover"
-                  />
-                </div>
-                <div>
-                  <h5 className="xtraBold mt-3">{service.title}</h5>
-                  <p className="text-secondary">{service.text}</p>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
-      <Container className="section">
-        <h4 className="xtraBold mt-4 header">Featured projects</h4>
+        <h4 className="xtraBold mt-5 header pb-3">Featured projects</h4>
         <div>
           {sortedYears.map((year) => (
             <div key={year}>
@@ -255,6 +287,7 @@ export default function Home() {
           ))}
         </div>
       </Container>
+
       <div className="section">
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
@@ -293,26 +326,49 @@ export default function Home() {
             </Col>
           ))}
         </Row>
-        <div className="mt-4">
-          <CustomBtn variant="primary" text="Learn more" />
-        </div>
       </Container>
       <Container className="section">
-        <h4 className="xtraBold mt-4 header">Our trusted partners</h4>
-        <Row className="mt-4">
+        <h2 className={`xtraBold header`}>
+          Unlock Your Startup Potential with Our Partners
+        </h2>
+
+        <p className="mt-4 pb-2">
+          Tech X Startup partners with a trusted network of professionals, from
+          web design firms and immigration consultants to business incubators,
+          angel investors, and venture capital funds. Together, we help turn
+          your tech idea into a successful business by providing the expertise
+          and resources needed for growth and expansion in Canada.
+        </p>
+        <div className="mt-4 pb-2">
+          <CustomBtn variant="primary" text="Apply today" />
+        </div>
+        <Row className="mt-5">
           {partners.map((partner, index) => (
             <Col key={index} lg={3} md={6} sm={12} className="mb-4">
-              <div className="partner-card text-center">
-                <img
-                  src={partner.image}
-                  alt={partner.name}
-                  className="img-fluid rounded"
-                />
+              <div className="customCard">
+                <div className="imgContainer">
+                  <Image src={partner.image} alt={partner.name} layout="fill" />
+                </div>
+                <div>
+                  <h5 className="xtraBold mt-3">{partner.name}</h5>
+                  <p className="text-secondary">{partner.text}</p>
+                </div>
               </div>
             </Col>
           ))}
         </Row>
       </Container>
+      <div className="section">
+        <CalloutSection
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
+          alt="Beautiful landscape"
+          title="Build the future"
+          text="Build the future and accelerate your startup’s growth with dedicated support, mentorship, and valuable resources from Canada’s Startup Visa Program, designed to help you succeed and thrive in a dynamic business ecosystem."
+          primaryBtnText="Book consult"
+          lightBtnText="Learn more"
+          secondBtn={true}
+        />
+      </div>
     </div>
   );
 }
