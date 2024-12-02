@@ -1,0 +1,50 @@
+.navBar {
+  background-color: white !important;
+  border-bottom: 1px solid #f2f2f2;
+  color: #212121 !important;
+}
+.loginBTN {
+  background-color: #eeeeee;
+  border-radius: var(--border-radius-small); 
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-left: -0.9rem;
+}
+
+.navMenu a {
+  color: #212121 !important;
+  font-weight: 600 !important;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+.logoSpan {
+  display: inline-block;
+  width: 3px;
+  background-color: #ffc700;
+  margin-right: 3px;
+}
+
+.logoSpan:nth-child(1) {
+  height: 8px;
+}
+
+.logoSpan:nth-child(2) {
+  height: 12px;
+}
+
+.logoSpan:nth-child(3) {
+  height: 16px;
+}
+
+.logoSpan:nth-child(4) {
+  height: 10px;
+}
+
+.customBtnContainer {
+  margin-left: -5px;
+}

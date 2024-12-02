@@ -1,0 +1,68 @@
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  min-height: 300px;
+  max-height: 800px;
+  overflow: hidden;
+  border-radius: var(--border-radius-small);
+}
+
+.optionalDarkOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.textOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2.5rem;
+  color: white;
+  z-index: 10;
+}
+
+.textOverlay p {
+  font-size: 1.1rem;
+}
+
+.landingPageContent h2 {
+  line-height: 2.75rem;
+}
+
+.serviceCard img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius-small);
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  padding-bottom: 60.25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.caseStudyLinkContainer {
+  margin-top: 2.5rem;
+}
+
+.caseStudyLink {
+  background-color: var(--lightGreyContainerBG);
+}
+
+.featuredProjImgContainer {
+  padding-bottom: 56.25%;
+}
+
+.sellingPointCard {
+  border: 1px solid #d0dbe7;
+  border-radius: 12px;
+}

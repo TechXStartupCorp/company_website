@@ -1,0 +1,47 @@
+body {
+  height: 100%;
+  color: #212121 !important;
+  position: relative;
+  font-family: Mulish, sans-serif !important;
+  scroll-behavior: smooth;
+  padding-top: 80px;
+  margin: 0 !important;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --border-radius-small: 10px;
+  --lightGreyContainerBG: #f0f2f4;
+}
+
+.section {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.section {
+  padding: 2rem 0;
+}
+
+.xtraBold {
+  font-weight: 800 !important;
+}
+
+.roundedImage {
+  border-radius: var(--border-radius-small);
+}
+
+.rounded {
+  border-radius: var(--border-radius-small) !important;
+}
+/* 
+@media (max-width: 575px) {
+  .section {
+    padding: 60px 0;
+  }
+} */
