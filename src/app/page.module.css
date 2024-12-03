@@ -35,7 +35,6 @@
   line-height: 2.75rem;
 }
 
-
 .imgContainer {
   position: relative;
   width: 100%;
@@ -59,4 +58,12 @@
 .sellingPointCard {
   border: 1px solid #d0dbe7;
   border-radius: 12px;
+}
+
+.finalCTA h2 {
+  line-height: 2.85rem;
+}
+
+.finalCTA p {
+  font-size: 1.1rem !important;
 }

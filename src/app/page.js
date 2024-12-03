@@ -358,16 +358,41 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-      <div className="section">
-        <CalloutSection
-          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
-          alt="Beautiful landscape"
-          title="Build the future"
-          text="Build the future and accelerate your startup’s growth with dedicated support, mentorship, and valuable resources from Canada’s Startup Visa Program, designed to help you succeed and thrive in a dynamic business ecosystem."
-          primaryBtnText="Book consult"
-          lightBtnText="Learn more"
-          secondBtn={true}
-        />
+      {/* https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733164084/guy_on_comp_uyltlh.jpg */}
+      <div className="sectionWithBGcolor">
+        <Container>
+          <Row>
+            <Col>
+              <div className="imgContainer">
+                <Image
+                  src="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733164292/sketch-man-office-working-on-260nw-207966388_tixfjk.webp"
+                  alt="guy on computer"
+                  layout="fill"
+                />
+              </div>
+            </Col>
+            <Col>
+              <div className={`${styles.finalCTA} d-flex flex-column ps-4`}>
+                <h2 className={`${styles.finalCTAh1} xtraBold`}>
+                  Build, Launch, and Scale with Tech X Startup
+                </h2>
+                <p className="mt-3">
+                  Partner with Tech X Startup to navigate the Canada Startup
+                  Visa process. Book a call today and start your journey to
+                  building a successful business in Canada.
+                </p>
+                <div className="mt-4 pb-2">
+                  <CustomBtn
+                  thickerPadding={true}
+                    fullWidth={true}
+                    variant="primary"
+                    text="Book via Calendly"
+                  />
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </div>
   );
