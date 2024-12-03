@@ -1,0 +1,38 @@
+
+
+.formContainer {
+    margin-top: -12px;
+}
+
+.footerRow {
+    --bs-gutter-x: 3.5rem !important; 
+    border-bottom: 1px solid #e0e0e0; 
+}
+
+.innerFooterContainer {
+    padding-top: 20px;
+  }
+  
+  .borderContainer {
+    position: relative;
+    text-align: center;
+  }
+  
+  .borderContainer h4 {
+    display: inline-block;
+    background-color: #fff; /* Match the background color of your container */
+    padding: 0 100px; /* Add some padding to create space between text and line */
+    position: relative;
+    z-index: 1;
+  }
+  
+  .borderContainer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    border-top: 1px solid #e0e0e0; 
+    z-index: 0;
+    transform: translateY(-50%);
+  }

@@ -296,13 +296,14 @@ export default function Home() {
           text="Elevate your business with Canada's Startup Visa Program. Unlock new opportunities, gain invaluable support, and accelerate your growth as you scale your startup to new heights."
           primaryBtnText="Get started"
           secondBtn={false}
-          getSomethingForm={true}
+          doSomethingForm={true}
+          doSomethingFormBtnText="Get the guide"
         />
       </div>
       <Container>
         <Stats />
       </Container>
-      <Container className="section">
+      <Container className="section mt-1">
         <h2 className={`xtraBold header`}>Why Tech X Startup?</h2>
         <p className="mt-4 w-75 pb-2">
           Tech X Startup guides you from idea to success, securing essential
@@ -327,7 +328,7 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-      <Container className="section">
+      <Container className="section mt-1">
         <h2 className={`xtraBold header`}>
           Unlock Your Startup Potential with Our Partners
         </h2>
@@ -340,7 +341,7 @@ export default function Home() {
           and resources needed for growth and expansion in Canada.
         </p>
         <div className="mt-4 pb-2">
-          <CustomBtn variant="primary" text="Apply today" />
+          <CustomBtn variant="primary" text="Apply for Startup Visa" />
         </div>
         <Row className="mt-5">
           {partners.map((partner, index) => (

@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "./CalloutSection.module.css";
 import { Form, Container } from "react-bootstrap";
 import { IoMdSearch } from "react-icons/io";
-import GetSomethingForm from "./components/GetSomethingForm/GetSomethingForm";
+import DoSomethingForm from "./components/GetSomethingForm/DoSomethingForm";
 
 const CalloutSection = ({
   imageURL,
@@ -17,7 +17,8 @@ const CalloutSection = ({
   lightBtnLink,
   lightBtnText,
   secondBtn,
-  getSomethingForm,
+  doSomethingForm,
+  doSomethingFormBtnText
 }) => {
   return (
     <Container>
@@ -37,8 +38,8 @@ const CalloutSection = ({
         <div className={`${styles.textOverlay}`}>
           <h1 className="fw-bold">{title}</h1>
           <p className="mt-3">{text}</p>
-          {getSomethingForm ? (
-            <GetSomethingForm />
+          {doSomethingForm ? (
+            <DoSomethingForm text={doSomethingFormBtnText}/>
           ) : (
             <div className="d-flex gap-3 mt-5">
               <CustomBtn
@@ -62,21 +63,3 @@ const CalloutSection = ({
 };
 
 export default CalloutSection;
-
-{
-  /* <div
-  className={`${styles.searchBar} ${
-    isDesktopOrLaptop ? "w-75" : "w-100"
-  } position-relative`}
->
-  <FaSearch
-    className={`${styles.searchIcon} text-light position-absolute fs-6`}
-  />
-  <input
-    value={searchInput}
-    onChange={handleChange}
-    className="ps-5 pt-2 pb-2 pe-2"
-    placeholder="Search for movies"
-  ></input>
-</div>; */
-}
