@@ -207,7 +207,7 @@ export default function Home() {
       />
 
       <Container className={`${styles.landingPageContent} section`}>
-        <h2 className={`xtraBold`}>
+        <h2 className={`xtraBold w-75`}>
           Our mission is to empower creators and innovators to push boundaries
           through our partnership with Canada's Startup Visa Program
         </h2>
@@ -359,7 +359,7 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-      {/* https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733164084/guy_on_comp_uyltlh.jpg */}
+
       <div className="sectionWithBGcolor">
         <Container>
           <Row>
@@ -384,7 +384,7 @@ export default function Home() {
                 </p>
                 <div className="mt-4 pb-2">
                   <CustomBtn
-                  thickerPadding={true}
+                    thickerPadding={true}
                     fullWidth={true}
                     variant="primary"
                     text="Book via Calendly"

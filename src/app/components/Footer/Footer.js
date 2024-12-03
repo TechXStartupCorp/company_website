@@ -1,107 +1,55 @@
 import React from "react";
 import styles from "./Footer.module.css";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import Link from "next/link";
 import { CiLinkedin } from "react-icons/ci";
 import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
-import { FaRegBuilding } from "react-icons/fa";
 import DoSomethingForm from "../CalloutSection/components/GetSomethingForm/DoSomethingForm";
-import { MdOutlinePhoneEnabled } from "react-icons/md";
-import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className={styles.footer}>
-      <Container className={styles.innerFooterContainer}>
-        <div className={styles.borderContainer}>
-          <h4 className="xtraBold mb-0">Tech X Startup</h4>
+    <div>
+      <div className={`${styles.footerContainer} pb-5 section`}>
+        <Container className="d-flex flex-column justify-content-center align-items-center">
+          <h1 className="xtraBold mt-3">Let's stay in touch!</h1>
+          <p className="mt-3 text-center">
+            Subscribe to our weekly newsletter and receive the latest news and
+            changes directly in your inbox.
+          </p>
+          <div className="mt-4">
+            <DoSomethingForm text="Subscribe" />
+          </div>
+        </Container>
+      </div>
+      <Container className="text-secondary pb-4">
+        <ul className="mt-4 list-unstyled d-flex justify-content-between w-100">
+          {[
+            { title: "About", link: "#" },
+            { title: "Startup Visa", link: "#" },
+            { title: "Contact", link: "#" },
+            { title: "Blog", link: "#" },
+          ].map((item, index) => (
+            <li className={styles.footerLinks} key={index}>
+              <Link
+                className="text-decoration-none text-secondary"
+                href={item.link}
+              >
+                {item.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <div className="d-flex justify-content-center text-dark gap-3 fs-4 mt-4">
+          <CiLinkedin />
+          <CiFacebook />
+          <FaXTwitter />
+          <FaInstagram />
+        </div>{" "}
+        <div className="text-center mt-4">
+          &copy;2024 Tech X Startup Inc. All rights reserved. Privacy and terms
         </div>
-
-        <Row className={`${styles.footerRow} pb-5 mt-5`}>
-          <Col xl={4}>
-            <div className="d-flex flex-column">
-              <h5 className="xtraBold">Contact info</h5>
-              <ul className="mt-4 list-unstyled">
-                {[
-                  {
-                    icon: <FaRegBuilding />,
-                    value: "2975 Drew Rd, Suite 204, Mississauga ON, L4T 0A4",
-                  },
-                  { icon: <MdOutlinePhoneEnabled />, value: "(123) 456-7890" },
-                  {
-                    icon: <MdOutlineEmail />,
-                    value: "contact@techxstartup.com",
-                  },
-                ].map((item, index) => (
-                  <li className="mb-3" key={index}>
-                    <span className="fw-bold me-2">{item.icon} </span>
-                    <span className="">{item.value}</span>
-                  </li>
-                ))}
-              </ul>
-              {/* <p className="text-secondary mt-3">
-                Tech X Startup is your #1 source for everything related to
-                startup visa and all your tech immigration needs
-              </p>
-              <h4 className="mt-3">Tech X Startup Logo</h4> */}
-            </div>
-          </Col>
-          <Col xl={3}>
-            <div>
-              <h5 className="xtraBold">Links</h5>
-              <ul className="mt-4 list-unstyled">
-                {[
-                  { title: "About", link: "#" },
-                  { title: "Startup Visa", link: "#" },
-                  { title: "Contact", link: "#" },
-                  { title: "Blog", link: "#" },
-                ].map((item, index) => (
-                  <li className="mb-3" key={index}>
-                    <Link
-                      className="text-decoration-none text-dark"
-                      href={item.link}
-                    >
-                      {item.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </Col>
-          <Col xl={5}>
-            <div>
-              <h5 className="xtraBold">Newsletter</h5>
-              <p className="mt-4 mb-0">
-                Sign up for the latest Tech X Startup newsletter where you will
-                be kept informed about the latest news and program changes
-              </p>
-              <div className={styles.formContainer}></div>
-              <DoSomethingForm text="Subscribe" />
-            </div>
-          </Col>
-        </Row>
-        <Row className="mt-4">
-          <Col>
-            <p className="">
-              Copyright &copy;2024. All rights reserved |
-              <span className="text-dark fw-bold">
-                {" "}
-                Designed and developed by Tech X Startup
-              </span>
-            </p>
-          </Col>
-          <Col xl={3}>
-            {" "}
-            <div className="d-flex justify-content-end gap-5 fs-4">
-              <CiLinkedin />
-              <CiFacebook />
-              <FaXTwitter />
-              <FaInstagram />
-            </div>{" "}
-          </Col>
-        </Row>
       </Container>
     </div>
   );
