@@ -23,24 +23,9 @@ const Footer = () => {
           </div>
         </Container>
       </div>
-      <Container className="text-secondary pb-4">
-        <ul className="mt-4 list-unstyled d-flex justify-content-between w-100">
-          {[
-            { title: "About", link: "#" },
-            { title: "Startup Visa", link: "#" },
-            { title: "Contact", link: "#" },
-            { title: "Blog", link: "#" },
-          ].map((item, index) => (
-            <li className={styles.footerLinks} key={index}>
-              <Link
-                className="text-decoration-none text-secondary"
-                href={item.link}
-              >
-                {item.title}
-              </Link>
-            </li>
-          ))}
-        </ul>
+      <Container className="text-secondary d-flex flex-column align-items-center justify-content-center pb-4">
+       
+       
         <div className="d-flex justify-content-center text-dark gap-3 fs-4 mt-4">
           <CiLinkedin />
           <CiFacebook />
