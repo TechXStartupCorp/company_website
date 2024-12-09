@@ -37,8 +37,12 @@
   border-left: 1px solid #e4e4e4;
 }
 
-.textContainer {
-    
+.stepTitle {
+    font-size: 1.35rem !important;
+}
+
+.timelineNum {
+    font-size: 1.9rem !important;
 }
 
 /* .timelineContainer {

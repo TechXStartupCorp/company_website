@@ -24,8 +24,6 @@ const Footer = () => {
         </Container>
       </div>
       <Container className="text-secondary d-flex flex-column align-items-center justify-content-center pb-4">
-       
-       
         <div className="d-flex justify-content-center text-dark gap-3 fs-4 mt-4">
           <CiLinkedin />
           <CiFacebook />

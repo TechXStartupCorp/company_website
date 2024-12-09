@@ -9,18 +9,16 @@ export default function Home() {
   return (
     <div>
       <div className="section">
-        <Container>
-          <CalloutSection
-            imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
-            alt="Beautiful landscape"
-            title="The ultimate guide to Canada Startup Visa"
-            text="Elevate your entrepreneurial journey with Canada’s Startup Visa Program. Our guide covers everything you need to navigate the process, secure resources, and succeed in Canada’s thriving startup ecosystem. Unlock your business's potential today!"
-            primaryBtnText="Get started"
-            secondBtn={false}
-            doSomethingForm={true}
-            doSomethingFormBtnText="Get the guide"
-          />
-        </Container>
+        <CalloutSection
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
+          alt="Beautiful landscape"
+          title="The ultimate guide to Canada Startup Visa"
+          text="Elevate your entrepreneurial journey with Canada’s Startup Visa Program. Our guide covers everything you need to navigate the process, secure resources, and succeed in Canada’s thriving startup ecosystem. Unlock your business's potential today!"
+          primaryBtnText="Get started"
+          secondBtn={false}
+          doSomethingForm={true}
+          doSomethingFormBtnText="Get the guide"
+        />
       </div>
       <div className="">
         <Container>
@@ -161,19 +159,99 @@ export default function Home() {
       </div>
       <div className="section lightGreyContainerBG">
         <Container>
-          <h4 className="xtraBold mb-1">Timeline</h4>
-          <div className="d-flex text-primary gap-3 align-items-center text-uppercase fw-bold">
-            <small>Concept</small>
+          <h5 className="xtraBold mb-1 mt-3">Timeline</h5>
+          <div className="d-flex text-primary gap-3 align-items-center mt-2 fw-bold mt-1">
+            <p>Concept</p>
             <FaArrowRightLong />
-            <small>Achievement</small>
+            <p>Achievement</p>
           </div>
           <div className="d-flex mt-4 flex-column align-items-center">
-            {/* <h3 className="xtraBold">Startup Journey Timeline</h3>
-            <p className="mt-1">Here’s a clear breakdown of the steps and timelines ahead</p> */}
-            <Timeline />
+            <h3 className="xtraBold">Startup Journey Timeline</h3>
+            <p className="mt-1">
+              Here’s a clear breakdown of the steps and timelines ahead
+            </p>
+            <div className="mt-5 pb-5">
+              <Timeline />
+            </div>
           </div>
         </Container>
-
+      </div>
+      <div className="section">
+        <Container>
+          <h4 className="mt-3 xtraBold">What industries are accepted?</h4>
+          <p className="mt-4">
+            The Canada Startup Visa Program is open to a variety of industries,
+            including but not limited to information technology, healthcare,
+            manufacturing processes, agriculture, and consumer goods. This
+            diverse acceptance allows for a wide range of innovative ideas and
+            business models to be considered. If your startup is in one of these
+            sectors or another promising industry, we encourage you to apply and
+            explore the opportunities available through the Canada Startup Visa
+            Program
+          </p>
+          <Row className="g-4 mt-4">
+            {[
+              {
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                alt: "Information technology industry",
+                title: "Information technology",
+              },
+              {
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                alt: "Healthcare industry",
+                title: "Healthcare",
+              },
+              {
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                alt: "Manufacturing",
+                title: "Manufacturing",
+              },
+              {
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                alt: "Agriculture industry",
+                title: "Agriculture",
+              },
+              {
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                alt: "Consumer goods industry",
+                title: "Consumer goods",
+              },
+            ].map((industry, index) => (
+              <Col key={index} xs={12} sm={6} lg={3} xl={3} className="rounded">
+                <div className="customCard">
+                  <div className="imgContainer position-relative">
+                    <Image
+                      src={industry.image}
+                      alt={industry.alt}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded"
+                    />
+                  </div>
+                  <div>
+                    <h5 className="xtraBold mt-3">{industry.title}</h5>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
+      <div className="section pb-5">
+        <CalloutSection
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
+          alt="Beautiful landscape"
+          title="Apply for the Startup Visa today"
+          text="Apply for the Startup Visa today! You don’t have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
+          primaryBtnText="Book consult"
+          secondBtn={true}
+          lightBtnText="Apply now"
+        />
       </div>
     </div>
   );

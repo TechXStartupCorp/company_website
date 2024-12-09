@@ -200,8 +200,8 @@ export default function Home() {
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
         alt="Beautiful landscape"
-        title="Build the future"
-        text="Build the future and accelerate your startup’s growth with dedicated support, mentorship, and valuable resources from Canada’s Startup Visa Program, designed to help you succeed and thrive in a dynamic business ecosystem."
+        title="Build the Future, Together"
+        text="Accelerate your startup’s growth with dedicated support, mentorship, and resources through Canada’s Startup Visa Program. Join us to turn your innovative ideas into reality and succeed in a dynamic business environment."
         primaryBtnText="Book consult"
         lightBtnText="Learn more"
         secondBtn={true}

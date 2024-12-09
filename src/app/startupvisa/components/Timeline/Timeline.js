@@ -115,8 +115,10 @@ const Timeline = () => {
                     className={`${styles.timeLineCardLeft} d-flex gap-3 align-items-center`}
                   >
                     <div className="d-flex bg-light p-4 rounded">
-                      <div>
-                        <h5 className="xtraBold mt-1">{step.title}</h5>
+                      <div className="pe-4">
+                        <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
+                          {step.title}
+                        </h5>
                         <p className="mt-3 text-secondary">{step.text}</p>
                         <div className="d-flex gap-3 mt-4">
                           {step.images.map((image, imgIndex) => (
@@ -135,7 +137,7 @@ const Timeline = () => {
                         className={`${styles.week} d-flex flex-column align-items-center justify-content-center ps-4 pe-2 gap-2`}
                       >
                         <p className="mb-0 text-secondary mb-0">Week</p>
-                        <h1 className="fw-bold">{step.timeline}</h1>
+                        <h2 className={`${styles.timelineNum} fw-bold`}>{step.timeline}</h2>
                       </div>
                     </div>
                     <div className={`${styles.blueDot}`}></div>
@@ -157,8 +159,10 @@ const Timeline = () => {
                   >
                     <div className={`${styles.blueDot}`}></div>
                     <div className="d-flex bg-light p-4 rounded">
-                      <div className={styles.textContainer}>
-                        <h5 className="xtraBold mt-1">{step.title}</h5>
+                      <div className="pe-4">
+                        <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
+                          {step.title}
+                        </h5>
                         <p className="mt-3 text-secondary">{step.text}</p>
                         <div className="d-flex gap-3 mt-4">
                           {step.images.map((image, imgIndex) => (
@@ -177,7 +181,7 @@ const Timeline = () => {
                         className={`${styles.week} d-flex flex-column align-items-center justify-content-center ps-4 pe-2 gap-2`}
                       >
                         <p className="text-secondary mb-0">Week</p>
-                        <h1 className="fw-bold">{step.timeline}</h1>
+                        <h2 className={`${styles.timelineNum} fw-bold`}>{step.timeline}</h2>
                       </div>
                     </div>
                   </div>
