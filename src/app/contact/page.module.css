@@ -1,0 +1,10 @@
+.input, .textArea {
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
+}
+
+.input::placeholder,
+.textArea::placeholder {
+  color: rgb(149, 148, 148);
+  font-size: 0.9rem;
+}
