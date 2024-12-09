@@ -39,7 +39,9 @@ const CalloutSection = ({
           <h1 className="fw-bold">{title}</h1>
           <p className="mt-3">{text}</p>
           {doSomethingForm ? (
+            <div className="mt-4 pt-2">
             <DoSomethingForm text={doSomethingFormBtnText}/>
+            </div>
           ) : (
             <div className="d-flex gap-3 mt-5">
               <CustomBtn

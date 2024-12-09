@@ -228,10 +228,8 @@ export default function Home() {
           </Row>
         </Container>
         <CTAWithImage
-          header="Build, Launch, and Scale with Tech X Startup"
-          text="Partner with Tech X Startup to navigate the Canada Startup Visa
-                process. Book a call today and start your journey to building a
-                successful business in Canada."
+          header="Empowering Entrepreneurs to Succeed, Together"
+          text="Whether you’re just starting out or ready to scale, we’re here to help you navigate the complexities of entrepreneurship with confidence and clarity. Together, we’ll build a future where your business not only survives but thrives."
           img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733164292/sketch-man-office-working-on-260nw-207966388_tixfjk.webp"
           alt="guy on computer"
           btnText="Book via Calendy"
