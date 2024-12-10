@@ -3,13 +3,13 @@
   border-bottom: 1px solid #f2f2f2;
   color: #212121 !important;
 }
-.loginBTN {
+/* .loginBTN {
   background-color: #eeeeee;
   border-radius: var(--border-radius-small); 
   height: 2.5rem;
   width: 2.5rem;
   margin-left: -0.9rem;
-}
+} */
 
 .navMenu a {
   color: #212121 !important;

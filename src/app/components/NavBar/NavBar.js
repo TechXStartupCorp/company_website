@@ -48,12 +48,7 @@ const NavBar = () => {
             <CustomBtn text="Book consult" />
           </Nav.Item>
           <Nav.Item className="">
-            <div
-              className={`${styles.loginBTN} d-flex justify-content-center align-items-center`}
-            >
-              {" "}
-              <FaUser />
-            </div>
+          <CustomBtn text="Apply now" variant="light"/>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
