@@ -32,7 +32,7 @@ export default function Home() {
             in accessing resources, funding, and mentorship. This initiative is
             a gateway to permanent residency, fostering innovation and economic
             growth while empowering entrepreneurs to build a strong foundation
-            in Canada's dynamic business ecosystem.
+            in Canada&apos;s dynamic business ecosystem.
           </p>
           <h4 className="xtraBold mt-5">
             What are the Benefits of the Startup Visa Program?
@@ -59,7 +59,7 @@ export default function Home() {
             Applicants must meet eligibility requirements, including securing
             support from a designated organization, demonstrating language
             proficiency, and proving sufficient settlement funds. With Canada's
-            commitment to innovation and economic growth, it&apos;’s an ideal
+            commitment to innovation and economic growth, it&apos;s an ideal
             destination for startups. Leveraging expert support and a strong
             business network, entrepreneurs can navigate the program and build
             successful ventures.
@@ -74,7 +74,7 @@ export default function Home() {
           <p className="mt-4">
             The Startup Visa application process is designed to guide you
             through each stage of launching your business in Canada. By
-            following these steps, you'll receive personalized support to ensure
+            following these steps, you&apos;ll receive personalized support to ensure
             that you meet all the requirements for success.
           </p>
 

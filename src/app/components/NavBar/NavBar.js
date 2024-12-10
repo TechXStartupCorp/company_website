@@ -1,10 +1,10 @@
 "use client";
 import React from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
 import CustomBtn from "../CustomBtn/CustomBtn";
-import { FaUser } from "react-icons/fa6";
+import { IoDocumentTextSharp } from "react-icons/io5";
 
 const NavBar = () => {
   return (
@@ -48,7 +48,7 @@ const NavBar = () => {
             <CustomBtn text="Book consult" />
           </Nav.Item>
           <Nav.Item className="">
-          <CustomBtn text="Apply now" variant="light"/>
+          <Button variant="light" className={`fw-bold ${styles.applyNowBtn} px-3 py-2`}><span className="d-flex align-items-center gap-2"><IoDocumentTextSharp />Apply</span></Button>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

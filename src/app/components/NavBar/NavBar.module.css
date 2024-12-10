@@ -11,6 +11,14 @@
   margin-left: -0.9rem;
 } */
 
+.applyNowBtn {
+  background-color: #eeeeee !important;
+  border-radius: 11px !important;
+  white-space: nowrap !important;
+  border-color: transparent !important;
+  margin-left: -0.8rem;
+}
+
 .navMenu a {
   color: #212121 !important;
   font-weight: 600 !important;

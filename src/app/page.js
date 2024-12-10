@@ -210,7 +210,7 @@ export default function Home() {
       <Container className={`${styles.landingPageContent} section`}>
         <h2 className={`xtraBold w-75`}>
           Our mission is to empower creators and innovators to push boundaries
-          through our partnership with Canada&apos;'s Startup Visa Program
+          through our partnership with Canada&apos;s Startup Visa Program
         </h2>
         <p className="mt-4">
           Tech X Startup collaborates closely with a network of angel investors,
@@ -218,7 +218,7 @@ export default function Home() {
           tech idea into a thriving business. We offer not only the essential
           funding, resources, and mentorship needed to validate and scale your
           startup but also provide expert guidance throughout the process. With
-          our support, you&apos;'ll navigate the Canada Startup Visa Program,
+          our support, you&apos;ll navigate the Canada Startup Visa Program,
           securing the opportunity for permanent residence while laying the
           foundation for long-term success and building a prosperous future in
           Canada.

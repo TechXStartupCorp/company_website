@@ -30,7 +30,7 @@ export default function Home() {
             <div className="pe-3">
               <h4 className="xtraBold">Contact our team</h4>
               <p className="mt-3">
-                Let's talk about your project and discuss whether Canada Startup
+                Let&apos;s talk about your project and discuss whether Canada Startup
                 Visa is the best solution.
               </p>
 
@@ -121,7 +121,7 @@ export default function Home() {
                 <div className="d-flex flex-column">
                   <h5 className="xtraBold">Chat with us</h5>
                   <p className="mt-1">
-                    Ready to chat? Call, email or message us on What&apos;'s
+                    Ready to chat? Call, email or message us on What&apos;s
                     App.
                   </p>
                   <div className="d-flex flex-column gap-2 mt-2">
