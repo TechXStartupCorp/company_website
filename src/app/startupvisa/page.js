@@ -59,7 +59,7 @@ export default function Home() {
             Applicants must meet eligibility requirements, including securing
             support from a designated organization, demonstrating language
             proficiency, and proving sufficient settlement funds. With Canada's
-            commitment to innovation and economic growth, it’s an ideal
+            commitment to innovation and economic growth, it&apos;’s an ideal
             destination for startups. Leveraging expert support and a strong
             business network, entrepreneurs can navigate the program and build
             successful ventures.
@@ -161,14 +161,14 @@ export default function Home() {
         <Container>
           <h5 className="xtraBold mb-1 mt-3">Timeline</h5>
           <div className="d-flex text-primary gap-3 align-items-center mt-2 fw-bold mt-1">
-            <p>Concept</p>
+            <p className="mb-0">Concept</p>
             <FaArrowRightLong />
-            <p>Achievement</p>
+            <p className="mb-0">Achievement</p>
           </div>
           <div className="d-flex mt-4 flex-column align-items-center">
             <h3 className="xtraBold">Startup Journey Timeline</h3>
             <p className="mt-1">
-              Here’s a clear breakdown of the steps and timelines ahead
+              Here&apos;’s a clear breakdown of the steps and timelines ahead
             </p>
             <div className="mt-5 pb-5">
               <Timeline />
@@ -242,6 +242,63 @@ export default function Home() {
           </Row>
         </Container>
       </div>
+      {/* //// testimonial section, will finish later */}
+      {/* <div className="section lightGreyContainerBG">
+        <Container className="d-flex flex-column align-items-center justify-content-center">
+          <h3 className="xtraBold mt-3">What People Are Saying About Us</h3>
+          <p className="mt-1">
+            Discover what makes us special through the words of those who know
+            us best.
+          </p>
+          <Row className="g-4 mt-3">
+            {[
+              {
+                text: "Absolutely amazing experience! Everything exceeded my expectations, and I couldn't be happier with the results.",
+                name: "John Smith, Founder of XYZ Startup",
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+              },
+              {
+                text: "The team was incredibly professional and delivered beyond my expectations. I’m thrilled with the outcome!",
+                name: "Jane Doe, CEO of ABC Corporation",
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+              },
+              {
+                text: "A wonderful experience from start to finish. The quality and attention to detail were outstanding.",
+                name: "Robert Brown, Creative Director at LMN Agency",
+                image:
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+              },
+            ].map((testimonial, index) => (
+              <Col
+                key={index}
+                xs={12}
+                sm={6}
+                lg={4}
+                className="d-flex align-items-center"
+              >
+                <div
+                  className={`${styles.testimonialBox} d-flex flex-column align-items-center`}
+                >
+                  <div className="d-flex align-items-center justify-content-center">
+                    <p className="fw-semibold">{testimonial.text}</p>
+                  </div>
+                  <span></span>
+                  <Image
+                    className="mt-3 rounded-circle"
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    width="50"
+                    height="50"
+                  />
+                  <p className="mt-2 text-secondary">{testimonial.name}</p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div> */}
       <div className="section pb-5">
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"

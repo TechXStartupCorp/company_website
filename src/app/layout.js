@@ -1,9 +1,7 @@
-import "bootstrap/dist/css/bootstrap.min.css"; // Global Bootstrap styles
-import localFont from "next/font/local";
-import "./globals.css"; // Your custom global styles
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { Container } from "react-bootstrap";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",

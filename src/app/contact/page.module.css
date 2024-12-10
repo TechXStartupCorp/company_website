@@ -8,3 +8,8 @@
   color: rgb(149, 148, 148);
   font-size: 0.9rem;
 }
+
+.iframe {
+    border-radius: 22px;
+    margin-top: 1rem;
+}

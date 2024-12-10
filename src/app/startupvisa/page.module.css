@@ -18,3 +18,27 @@
     border-width: 0 2px 2px 0;
     transform: translate(-50%, -50%) rotate(45deg); /* Position and angle */
   }
+
+  .testimonialBox {
+    flex-grow: 1;
+  }
+
+  .testimonialBox > div:first-child {
+    background-color: white;
+    padding: 20px; /* Optional for spacing */
+    border-radius: 8px; /* Optional for rounded corners */
+  }
+  
+  .testimonialBox > span {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+    margin: 0 auto; /* Centers the triangle */
+    display: block;
+  }
+
+  .testimonialBox img {
+    border-radius: 50%;
+  }

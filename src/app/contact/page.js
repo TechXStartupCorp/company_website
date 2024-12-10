@@ -33,6 +33,7 @@ export default function Home() {
                 Let's talk about your project and discuss whether Canada Startup
                 Visa is the best solution.
               </p>
+              <hr></hr>
               <Form className="mt-5">
                 <Row className="mb-4">
                   <Col md={6}>
@@ -120,7 +121,7 @@ export default function Home() {
                 <div className="d-flex flex-column">
                   <h5 className="xtraBold">Chat with us</h5>
                   <p className="mt-1">
-                    Ready to chat? Call, email or message us on What's App.
+                    Ready to chat? Call, email or message us on What&apos;'s App.
                   </p>
                   <div className="d-flex flex-column gap-2 mt-2">
                     {contactInfo.map((item, index) => (
