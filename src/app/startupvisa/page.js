@@ -168,7 +168,7 @@ export default function Home() {
           <div className="d-flex mt-4 flex-column align-items-center">
             <h3 className="xtraBold">Startup Journey Timeline</h3>
             <p className="mt-1">
-              Here&apos;’s a clear breakdown of the steps and timelines ahead
+              Here&apos;s a clear breakdown of the steps and timelines ahead
             </p>
             <div className="mt-5 pb-5">
               <Timeline />
