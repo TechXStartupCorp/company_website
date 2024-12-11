@@ -23,7 +23,7 @@ export default function Home() {
     {
       title: "Ideation & Validation",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866359/absolutvision-82TpEld0_e4-unsplash_htx1yj.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935456/mika-baumeister-Y_LgXwQEx2c-unsplash_yfzgmi.jpg",
       text: "Refining and validating business ideas through market feedback and incubator resources.",
     },
     {
@@ -41,37 +41,37 @@ export default function Home() {
     {
       title: "Financial Models",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733932268/pexels-shkrabaanthony-5816298_mkv0te.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934819/pexels-mikael-blomkvist-6476254_kcq5au.jpg",
       text: "Building financial models to meet the requirements of investors and incubators.",
     },
     {
       title: "Incorporation & Legal",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733933962/scott-graham-OQMZwNd3ThU-unsplash_ciwcak.jpg",
       text: "Assisting with business setup and shareholder agreements for the Startup Visa program.",
     },
     {
       title: "Marketing Strategy",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935935/austin-chan-ukzHlkoz1IE-unsplash_jjstzt.jpg",
       text: "Developing strategic marketing plans for growth and investor attraction.",
     },
     {
       title: "Social Media & Customer Discovery",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935851/firmbee-com-DfMMzzi3rmg-unsplash_qq6brp.jpg",
       text: "Creating a strong social presence and engaging with target customers.",
     },
     {
       title: "Compliance & IP Protection",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
-      text: "Creating a strong social presence and engaging with target customers.",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733936349/pexels-pixabay-39584_lozgzk.jpg",
+      text: "Ensuring compliance with regulations and safeguarding intellectual property to protect your business interests.",
     },
     {
       title: "Prototyping & UI/UX Design",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733936413/pexels-tranmautritam-326514_l2dw1c.jpg",
       text: "Developing prototypes and designs to showcase your innovation to incubators and investors.",
     },
   ];
@@ -198,7 +198,7 @@ export default function Home() {
   return (
     <div>
       <CalloutSection
-        imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733864482/testalize-me-SVmaaACzcJ8-unsplash_jazcqq.jpg"
+        imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
         alt="Abstract landscape"
         title="Build the Future, Together"
         text="Accelerate your startup’s growth with dedicated support, mentorship, and resources through Canada’s Startup Visa Program. Join us to turn your innovative ideas into reality and succeed in a dynamic business environment."
