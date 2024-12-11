@@ -41,7 +41,7 @@ export default function Home() {
     {
       title: "Financial Models",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866700/stephen-dawson-qwtCeJ5cLYs-unsplash_mbvbji.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733932268/pexels-shkrabaanthony-5816298_mkv0te.jpg",
       text: "Building financial models to meet the requirements of investors and incubators.",
     },
     {

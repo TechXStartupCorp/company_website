@@ -84,7 +84,7 @@ export default function Home() {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
                 title: "Step 1: Free Eligibility Assessment",
-                text: "We’re excited to offer a free assessment to help you determine your eligibility and readiness for the Startup Visa Program.",
+                text: "We are excited to offer a free assessment to help you determine your eligibility and readiness for the Startup Visa Program.",
               },
               {
                 image:
