@@ -58,7 +58,7 @@ export default function Home() {
             entrepreneurs with innovative business ideas to scale globally.
             Applicants must meet eligibility requirements, including securing
             support from a designated organization, demonstrating language
-            proficiency, and proving sufficient settlement funds. With Canada's
+            proficiency, and proving sufficient settlement funds. With Canada&apos;s
             commitment to innovation and economic growth, it&apos;s an ideal
             destination for startups. Leveraging expert support and a strong
             business network, entrepreneurs can navigate the program and build
