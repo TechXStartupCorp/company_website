@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const CTAWithImage = ({ header, text, img, alt, btnText, imageAlign }) => {
   return (
-    <div className="sectionWithBGcolor">
+    <div className="sectionWithBGcolor pb-5">
       <Container>
         <Row>
           <Col className={imageAlign === "right" ? "order-last" : ""}>

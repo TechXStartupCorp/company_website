@@ -41,7 +41,7 @@ export default function Home() {
     {
       title: "Financial Models",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934819/pexels-mikael-blomkvist-6476254_kcq5au.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733948630/pexels-ivan-samkov-7213434_f0ovyw.jpg",
       text: "Building financial models to meet the requirements of investors and incubators.",
     },
     {
@@ -113,75 +113,43 @@ export default function Home() {
 
   const partners = [
     {
-      // name: "Partner X",
-      // text: "Can assist in all your technology needs",
-      // width: 150,
-      // height: 75,
-      smallerImage: true,
-      alt: "CICC Group logo",
+      alt: "Techspot logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945838/cicc_logo_1_kxdxr3.png",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942395/Screenshot_2024-12-11_122336-removebg-preview_ersorc.png",
     },
     {
-      // name: "Partner Y",
-      // text: "Can assist in all your technology needs",
-      // width: 150,
-      // height: 75,
       smallerImage: true,
       alt: "P & R Immigration logo",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945473/P_n_R_Logo_2_xhvqty.png",
     },
     {
-      // name: "Partner X",
-      // text: "Can assist in all your technology needs",
-      // width: 200,
-      // height: 100,
-      alt: "Techspot logo",
-      image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942395/Screenshot_2024-12-11_122336-removebg-preview_ersorc.png",
-    },
-    {
-      // name: "Partner Y",
-      // text: "Can assist in all your technology needs",
-      // width: 200,
-      // height: 100,
       alt: "Resettler logo",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937773/Resettler_Logo_jxgiov.png",
     },
     {
-      // name: "Partner X",
-      // text: "Can assist in all your technology needs",
-      // width: 200,
-      // height: 100,
       alt: "True global immigration logo",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937898/True_Global_xxmzrt.png",
     },
     {
-      // name: "Partner Y",
-      // text: "Can assist in all your technology needs",
-      // width: 200,
-      // height: 100,
       alt: "IELTS Batch",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937759/IELTS_Batch_logo_lfngb0.png",
     },
     {
-      // name: "Partner Y",
-      // text: "Can assist in all your technology needs",
-      // width: 200,
-      // height: 100,
+      smallerImage: true,
+      alt: "CICC Group logo",
+      image:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945838/cicc_logo_1_kxdxr3.png",
+    },
+    {
       alt: "Genius jobs logo",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942209/genius-jobs-logo-1-removebg-preview_jnzk5z.png",
     },
     {
-      // name: "Partner X",
-      // text: "Can assist in all your technology needs",
-      // width: 200,
-      // height: 100,
       alt: "Easy business plans logo",
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937736/easybusiness_cq643p.png",
@@ -335,7 +303,7 @@ export default function Home() {
         <h2 className={`xtraBold header`}>Why Tech X Startup?</h2>
         <p className="mt-4 w-75 pb-2">
           Tech X Startup guides you from idea to success, securing essential
-          support for Canada&apos;’s Startup Visa Program and unlocking
+          support for Canada&apos;s Startup Visa Program and unlocking
           opportunities for your business to thrive.
         </p>
         <Row className="mt-3 gx-4 gy-3">
@@ -372,10 +340,11 @@ export default function Home() {
       <div className="section">
         <Container>
           <h2 className={`xtraBold header`}>Our partners</h2>
+
           <Row className="mt-5">
             {partners.map((partner, index) => (
               <Col key={index} lg={4} md={6} sm={12} className="mb-4">
-                <div className={`${styles.logoCard} p-4`}>
+                <div className={`logoCard p-4`}>
                   <Image
                     src={partner.image}
                     alt={partner.alt}
@@ -400,7 +369,7 @@ export default function Home() {
         text="Partner with Tech X Startup to navigate the Canada Startup Visa
                 process. Book a call today and start your journey to building a
                 successful business in Canada."
-        img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946919/jose-gil-fMtQmLREruY-unsplash_mswnfj.jpg"
+        img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946918/dai-ke-GkraTrCYA_0-unsplash_zm7zb8.jpg"
         alt="guy on computer"
         btnText="Book via Calendy"
         imageAlign="left"
