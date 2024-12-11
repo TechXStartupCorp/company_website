@@ -1,5 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Mulish } from "@next/font/google";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         /> */}
       </head>
-      <body>
+      <body className={mulish.className}>
         <NavBar />
         <main>
           <div>{children}</div>

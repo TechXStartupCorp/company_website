@@ -17,31 +17,31 @@ export default function Home() {
     {
       title: "Pre-LOS training",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866229/headway-5QgIuuBxKwM-unsplash_knadoy.jpg",
       text: "Prepare your startup for the Canada Startup Visa and secure a spot in top incubators with our Pre-Letter of Support training.",
     },
     {
       title: "Ideation & Validation",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866359/absolutvision-82TpEld0_e4-unsplash_htx1yj.jpg",
       text: "Refining and validating business ideas through market feedback and incubator resources.",
     },
     {
       title: "Business Plan Development",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866435/austin-distel-wD1LRb9OeEo-unsplash_vbd1pz.jpg",
       text: "Crafting a compelling business plan tailored for the Startup Visa and incubator applications.",
     },
     {
       title: "Pitch Decks",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866530/slidebean-ymTcgQg-2BE-unsplash_y8rt85.jpg",
       text: "Designing persuasive pitch decks to attract incubators and investors.",
     },
     {
       title: "Financial Models",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866700/stephen-dawson-qwtCeJ5cLYs-unsplash_mbvbji.jpg",
       text: "Building financial models to meet the requirements of investors and incubators.",
     },
     {
@@ -198,8 +198,8 @@ export default function Home() {
   return (
     <div>
       <CalloutSection
-        imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
-        alt="Beautiful landscape"
+        imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733864482/testalize-me-SVmaaACzcJ8-unsplash_jazcqq.jpg"
+        alt="Abstract landscape"
         title="Build the Future, Together"
         text="Accelerate your startup’s growth with dedicated support, mentorship, and resources through Canada’s Startup Visa Program. Join us to turn your innovative ideas into reality and succeed in a dynamic business environment."
         primaryBtnText="Book consult"

@@ -13,7 +13,7 @@ export default function Home() {
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
           alt="Beautiful landscape"
           title="The ultimate guide to Canada Startup Visa"
-          text="Elevate your entrepreneurial journey with Canada’s Startup Visa Program. Our guide covers everything you need to navigate the process, secure resources, and succeed in Canada’s thriving startup ecosystem. Unlock your business's potential today!"
+          text="Elevate your entrepreneurial journey with Canada&apos;s Startup Visa Program. Our guide covers everything you need to navigate the process, secure resources, and succeed in Canada&apos;s thriving startup ecosystem. Unlock your business's potential today!"
           primaryBtnText="Get started"
           secondBtn={false}
           doSomethingForm={true}
@@ -45,7 +45,7 @@ export default function Home() {
             {[
               "Pathway to permanent residency for you and your family.",
               "Access to mentorship, funding, and resources through designated organizations.",
-              "Opportunity to scale your business in Canada’s innovation-driven economy with access to global markets.",
+              "Opportunity to scale your business in Canada's innovation-driven economy with access to global markets.",
             ].map((benefit, index) => (
               <div key={index} className="d-flex align-items-center gap-3 mt-3">
                 <span className={styles.bulletPoint}></span>
@@ -304,7 +304,7 @@ export default function Home() {
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
           alt="Beautiful landscape"
           title="Apply for the Startup Visa today"
-          text="Apply for the Startup Visa today! You don’t have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
+          text="Apply for the Startup Visa today! You don&apos;t have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
           primaryBtnText="Book consult"
           secondBtn={true}
           lightBtnText="Apply now"

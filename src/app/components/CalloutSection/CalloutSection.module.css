@@ -8,10 +8,6 @@
   border-radius: var(--border-radius-small);
 }
 
-.heroContainer h1 {
-  font-size: 2.75rem !important;
-}
-
 .optionalDarkOverlay {
   position: absolute;
   top: 0;
