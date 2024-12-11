@@ -11,7 +11,7 @@ const CTAWithImage = ({ header, text, img, alt, btnText, imageAlign }) => {
         <Row>
           <Col className={imageAlign === "right" ? "order-last" : ""}>
             <div className="imgContainer">
-              <Image src={img} alt={alt} layout="fill" />
+              <Image src={img} alt={alt} layout="fill" className="roundedImage"/>
             </div>
           </Col>
           <Col className={`${imageAlign === "right" ? "order-first" : ""} d-flex align-items-center`}>

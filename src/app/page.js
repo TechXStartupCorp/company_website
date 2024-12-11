@@ -71,7 +71,7 @@ export default function Home() {
     {
       title: "Prototyping & UI/UX Design",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733936413/pexels-tranmautritam-326514_l2dw1c.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937263/pexels-tranmautritam-326502_hcsllt.jpg",
       text: "Developing prototypes and designs to showcase your innovation to incubators and investors.",
     },
   ];
@@ -113,52 +113,78 @@ export default function Home() {
 
   const partners = [
     {
-      name: "Partner X",
-      text: "Can assist in all your technology needs",
+      // name: "Partner X",
+      // text: "Can assist in all your technology needs",
+      // width: 150,
+      // height: 75,
+      smallerImage: true,
+      alt: "CICC Group logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945838/cicc_logo_1_kxdxr3.png",
     },
     {
-      name: "Partner Y",
-      text: "Can assist in all your technology needs",
+      // name: "Partner Y",
+      // text: "Can assist in all your technology needs",
+      // width: 150,
+      // height: 75,
+      smallerImage: true,
+      alt: "P & R Immigration logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945473/P_n_R_Logo_2_xhvqty.png",
     },
     {
-      name: "Partner X",
-      text: "Can assist in all your technology needs",
+      // name: "Partner X",
+      // text: "Can assist in all your technology needs",
+      // width: 200,
+      // height: 100,
+      alt: "Techspot logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942395/Screenshot_2024-12-11_122336-removebg-preview_ersorc.png",
     },
     {
-      name: "Partner Y",
-      text: "Can assist in all your technology needs",
+      // name: "Partner Y",
+      // text: "Can assist in all your technology needs",
+      // width: 200,
+      // height: 100,
+      alt: "Resettler logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937773/Resettler_Logo_jxgiov.png",
     },
     {
-      name: "Partner X",
-      text: "Can assist in all your technology needs",
+      // name: "Partner X",
+      // text: "Can assist in all your technology needs",
+      // width: 200,
+      // height: 100,
+      alt: "True global immigration logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937898/True_Global_xxmzrt.png",
     },
     {
-      name: "Partner Y",
-      text: "Can assist in all your technology needs",
+      // name: "Partner Y",
+      // text: "Can assist in all your technology needs",
+      // width: 200,
+      // height: 100,
+      alt: "IELTS Batch",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937759/IELTS_Batch_logo_lfngb0.png",
     },
     {
-      name: "Partner X",
-      text: "Can assist in all your technology needs",
+      // name: "Partner Y",
+      // text: "Can assist in all your technology needs",
+      // width: 200,
+      // height: 100,
+      alt: "Genius jobs logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942209/genius-jobs-logo-1-removebg-preview_jnzk5z.png",
     },
     {
-      name: "Partner Y",
-      text: "Can assist in all your technology needs",
+      // name: "Partner X",
+      // text: "Can assist in all your technology needs",
+      // width: 200,
+      // height: 100,
+      alt: "Easy business plans logo",
       image:
-        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937736/easybusiness_cq643p.png",
     },
   ];
 
@@ -292,7 +318,7 @@ export default function Home() {
 
       <div className="section">
         <CalloutSection
-          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"
           alt="Beautiful landscape"
           title="Transform Your Startup’s Future"
           text="Elevate your business with Canada's Startup Visa Program. Unlock new opportunities, gain invaluable support, and accelerate your growth as you scale your startup to new heights."
@@ -330,44 +356,51 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-      <Container className="section mt-1">
-        <h2 className={`xtraBold header`}>
-          Unlock Your Startup Potential with Our Partners
-        </h2>
+      {/* <Container className="section mt-1">
+        <h2 className={`xtraBold header`}>Apply for Your Startup Visa Today</h2>
 
         <p className="mt-4 pb-2">
-          Tech X Startup partners with a trusted network of professionals, from
-          web design firms and immigration consultants to business incubators,
-          angel investors, and venture capital funds. Together, we help turn
-          your tech idea into a successful business by providing the expertise
-          and resources needed for growth and expansion in Canada.
+          Join the Tech X Startup community and access our tailored services
+          designed to guide you through the Startup Visa application process.
+          Start building your successful business in Canada now—apply for your
+          Startup Visa today and unlock the potential for growth and success.
         </p>
         <div className="mt-4 pb-2">
           <CustomBtn variant="primary" text="Apply for Startup Visa" />
         </div>
-        <Row className="mt-5">
-          {partners.map((partner, index) => (
-            <Col key={index} lg={3} md={6} sm={12} className="mb-4">
-              <div className="customCard">
-                <div className="imgContainer">
-                  <Image src={partner.image} alt={partner.name} layout="fill" />
+      </Container> */}
+      <div className="section">
+        <Container>
+          <h2 className={`xtraBold header`}>Our partners</h2>
+          <Row className="mt-5">
+            {partners.map((partner, index) => (
+              <Col key={index} lg={4} md={6} sm={12} className="mb-4">
+                <div className={`${styles.logoCard} p-4`}>
+                  <Image
+                    src={partner.image}
+                    alt={partner.alt}
+                    width={225}
+                    height={105}
+                    layout="intrinsic"
+                    // style={{
+                    //   width: '100%',
+                    //   height: '100%',
+                    //   objectFit: 'cover'
+                    // }}
+                  />
                 </div>
-                <div>
-                  <h5 className="xtraBold mt-3">{partner.name}</h5>
-                  <p className="text-secondary">{partner.text}</p>
-                </div>
-              </div>
-            </Col>
-          ))}
-        </Row>
-      </Container>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
 
       <CTAWithImage
         header="Build, Launch, and Scale with Tech X Startup"
         text="Partner with Tech X Startup to navigate the Canada Startup Visa
                 process. Book a call today and start your journey to building a
                 successful business in Canada."
-        img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733164292/sketch-man-office-working-on-260nw-207966388_tixfjk.webp"
+        img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946919/jose-gil-fMtQmLREruY-unsplash_mswnfj.jpg"
         alt="guy on computer"
         btnText="Book via Calendy"
         imageAlign="left"

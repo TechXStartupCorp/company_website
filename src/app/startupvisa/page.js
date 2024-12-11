@@ -8,7 +8,7 @@ import Timeline from "./components/Timeline/Timeline";
 export default function Home() {
   return (
     <div>
-      <div className="section">
+      <div>
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
           alt="Beautiful landscape"
@@ -20,7 +20,7 @@ export default function Home() {
           doSomethingFormBtnText="Get the guide"
         />
       </div>
-      <div className="">
+      <div className="section">
         <Container>
           <h4 className="xtraBold mt-2">What is the Startup Visa Program?</h4>
           <p className="mt-4">
