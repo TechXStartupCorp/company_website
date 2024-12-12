@@ -88,7 +88,7 @@ export default function Home() {
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734024919/per-loov-oXqn2CXC_9Q-unsplash_o3l4fg.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734027613/startae-team-7tXA8xwe4W4-unsplash_mzlkjh.jpg",
                 title: "Step 2: Tailored Innovation Strategy",
                 text: "Our approach focuses on personalization, ensuring that the innovative solutions we offer align with your background, interests, and goals.",
               },
@@ -131,7 +131,7 @@ export default function Home() {
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734027382/pexels-jamalyahyayev-3671394_isukyn.jpg",
                 title: "Step 9: Taking Your Business Public",
                 text: "If you wish, our partners can assist in taking your successful business public, helping you secure capital through the public markets.",
               },

@@ -1,9 +1,9 @@
 .leftCol {
-  border-right: 6px solid #d9d9d9;
+  border-right: 3px solid white;
 }
 
 .rightCol {
-  border-left: 6px solid #d9d9d9;
+  border-left: 3px solid white;
 }
 
 .leftCol,
@@ -13,16 +13,16 @@
 }
 
 .blueDot {
-  width: 22px;
-  height: 22px;
-  background-color: var(--bsPrimary);
+  width: 50px;
+  height: 50px;
+  /* background-color: var(--bsPrimary); */
   border-radius: 50%;
   border: 3px solid white;
   flex-shrink: 0;
 }
 
 .timeLineCardLeft {
-  margin-right: -17px;
+  margin-right: -26px;
   z-index: 1000;
   width: fit-content;
 }
@@ -30,7 +30,7 @@
 .timeLineCardRight {
   z-index: 1000;
   width: fit-content;
-  margin-left: -17px;
+  margin-left: -26px;
 }
 
 .week {

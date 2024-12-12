@@ -17,7 +17,7 @@ body {
 :root {
   --border-radius-small: 10px;
   --lightGreyContainerBG: #f0f2f4;
-  --bsPrimary: #0d6efd; 
+  --bsPrimary: #0d6efd;
 }
 
 .cardBoxShadow {
@@ -92,6 +92,45 @@ body {
   background-color: #f0f2f4;
 }
 
+.primaryTimelineIconBG {
+  background-color: var(--bsPrimary);
+}
+
+.primaryTimelineCardBorderTop {
+  border-top: 4px solid var(--bsPrimary);
+}
+
+.dustyGreenTimelineIconBG {
+  background-color: #7e9a92;
+}
+
+.dustyGreenTimelineCardBorderTop {
+  border-top: 4px solid #7e9a92;
+}
+
+.lightSteelBlueTimelineIconBG {
+  background-color: #a5b9d2;
+}
+
+.lightSteelBlueTimelineCardBorderTop {
+  border-top: 4px solid #a5b9d2;
+}
+
+.slateBlueTimelineIconBG {
+  background-color: #6a7f9b;
+}
+
+.slateBlueTimelineCardBorderTop {
+  border-top: 4px solid #6a7f9b;
+}
+
+.roseTimelineIconBG {
+  background-color: #e57373;
+}
+
+.roseBlueTimelineCardBorderTop {
+  border-top: 4px solid #e57373;
+}
 
 /* 
 @media (max-width: 575px) {

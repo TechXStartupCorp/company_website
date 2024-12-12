@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import CTAWithImage from "../components/CTAWithImage/CTAWithImage";
-import SectionWithHeaderAndText from "../components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import styles from "./page.module.css";
 
 export default function Home() {
