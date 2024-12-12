@@ -193,31 +193,31 @@ export default function Home() {
             {[
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734034154/pexels-cottonbro-5483064_kvts1q.jpg",
                 alt: "Information technology industry",
                 title: "Information technology",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734034320/hush-naidoo-jade-photography-ZCO_5Y29s8k-unsplash_vnc9rq.jpg",
                 alt: "Healthcare industry",
                 title: "Healthcare",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734034440/cemrecan-yurtman-ox5Dv5QD3-8-unsplash_px2bpf.jpg",
                 alt: "Manufacturing",
                 title: "Manufacturing",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734034470/pexels-timmossholder-974314_qzc2gb.jpg",
                 alt: "Agriculture industry",
                 title: "Agriculture",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734034541/pexels-phaseexit-3028500_s8owo8.jpg",
                 alt: "Consumer goods industry",
                 title: "Consumer goods",
               },
@@ -301,7 +301,7 @@ export default function Home() {
       </div> */}
       <div className="section pb-5">
         <CalloutSection
-          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734035019/headway-jfR5wu2hMI0-unsplash_y5u9fa.jpg"
           alt="Beautiful landscape"
           title="Apply for the Startup Visa today"
           text="Apply for the Startup Visa today! You don't have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
