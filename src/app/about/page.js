@@ -72,18 +72,16 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-      <div className="mt-4">
-        <SectionWithHeaderAndText
-          header="Our Approach: How We Work Closely With Our Clients to Drive Success"
-          textAlign="right"
-          btnText="Get started"
-          text="At Tech X Startup, we partner with you at every step of your startup’s journey. From Pre-LOS training for the Canada Startup Visa to refining business ideas, crafting solid plans, and designing pitch decks, we equip you with the tools and expertise for success. Our team ensures compliance, builds financial models, and supports your growth with strategic marketing, prototyping, and IP protection. We’re here to help you turn your vision into reality."
-        />
-      </div>
+
       <div className="section">
         <Container>
-          <h3 className="xtraBold mt-5">Meet our team</h3>
-          <Row className="g-4 mt-5">
+          <h2 className={`xtraBold w-75`}>
+            Our team values community and the power of information, using years
+            of immigration expertise to guide individuals and families every
+            step of the way.
+          </h2>
+          <h4 className="xtraBold mt-5">Our team</h4>
+          <div>
             {[
               {
                 image:
@@ -129,33 +127,37 @@ export default function Home() {
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
-                name: "Name X",
-                text: "Position at company",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg",
+                name: "Tatyana Karlen",
+                text: "Business development, IT",
               },
             ].map((item, index) => (
-              <Col key={index} xs={12} sm={6} lg={3} xl={3} className="rounded">
-                <div className="customCard">
-                  <div className={`${styles.imgContainer} position-relative`}>
-                    <Image
-                      priority
-                      src={item.image}
-                      alt={item.name}
-                      layout="fill"
-                      objectFit="cover"
-                      className="rounded"
-                    />
+              <Row className="mt-4">
+                <Col key={index} className="mb-2">
+                  <div className="d-flex align-items-center gap-3">
+                    <div className={`${styles.imgContainer} position-relative`}>
+                      <Image
+                        priority
+                        src={item.image}
+                        alt={item.name}
+                        objectFit="cover"
+                        className="rounded"
+                        width={100}
+                        height={100}
+                      />
+                    </div>
+                    <div className="d-flex flex-column">
+                      <span className="xtraBold">{item.name}</span>
+                      <span className="text-secondary">{item.text}</span>
+                    </div>
                   </div>
-                  <div>
-                    <h5 className="xtraBold mt-3">{item.name}</h5>
-                    <p className="text-secondary">{item.text}</p>
-                  </div>
-                </div>
-              </Col>
+                </Col>
+              </Row>
             ))}
-          </Row>
+          </div>
         </Container>
       </div>
+
       <div className="section pb-5">
         <Container>
           <h3 className="xtraBold mt-3">Our immigration partners</h3>
@@ -180,7 +182,7 @@ export default function Home() {
               },
               {
                 title: "Resttler",
-                text: "Resettler specializes in helping individuals and families transition smoothly to their new homes. With years of experience in relocation and settlement services, they provide tailored support to ensure a stress-free resettlement process.",
+                text: "Resettler helps individuals and families transition smoothly to new homes, offering expert relocation and settlement services for a stress-free experience.",
                 alt: "Resettler logo",
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937773/Resettler_Logo_jxgiov.png",
@@ -194,7 +196,7 @@ export default function Home() {
               },
               {
                 title: "IELTS Batch",
-                text: "IELTS Batch specializes in preparing individuals for success in the International English Language Testing System (IELTS). Our tailored language training services help students and professionals achieve their desired scores.",
+                text: "IELTS Batch prepares students and professionals for success in the IELTS with tailored language training to achieve their desired scores.",
                 alt: "IELTS Batch",
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937759/IELTS_Batch_logo_lfngb0.png",
@@ -202,39 +204,48 @@ export default function Home() {
 
               {
                 title: "Genius jobs",
-                text: "Genius Jobs offers a comprehensive platform for job seekers and employers, providing a wide range of career opportunities across various industries.",
+                text: "IELTS Batch prepares students and professionals for success in the IELTS with tailored language training to achieve their desired scores.",
                 alt: "Genius jobs logo",
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942209/genius-jobs-logo-1-removebg-preview_jnzk5z.png",
               },
             ].map((item, index) => (
               <Col key={index} lg={4} md={6} sm={12} className="mb-4">
-              <div className={`logoCard p-4`}>
-                <Image
-                  src={item.image}
-                  alt={item.alt}
-                  width={225}
-                  height={105}
-                  layout="intrinsic"
-                  // style={{
-                  //   width: '100%',
-                  //   height: '100%',
-                  //   objectFit: 'cover'
-                  // }}
-                />
-              </div>
-            </Col>
+                <div className="d-flex flex-column">
+                  <div className={`logoCard p-4`}>
+                    <Image
+                      src={item.image}
+                      alt={item.alt}
+                      width={225}
+                      height={105}
+                      layout="intrinsic"
+                    />
+                  </div>
+                  <h5 className="xtraBold mt-3">{item.title}</h5>
+                  <p className="text-secondary mt-1">{item.text}</p>
+                </div>
+              </Col>
             ))}
           </Row>
         </Container>
+        {/* <div className="mt-4">
+          <SectionWithHeaderAndText
+            header="Our Approach: How We Work Closely With Our Clients to Drive Success"
+            textAlign="right"
+            btnText="Get started"
+            text="At Tech X Startup, we support your journey from Pre-LOS training for the Canada Startup Visa to refining ideas, building plans, and creating pitch decks. We ensure compliance, craft financial models, and provide strategic marketing, prototyping, and IP protection to turn your vision into reality."
+          />
+        </div> */}
+        <div className="mt-3">
         <CTAWithImage
           header="Empowering Entrepreneurs to Succeed, Together"
           text="Whether you’re just starting out or ready to scale, we’re here to help you navigate the complexities of entrepreneurship with confidence and clarity. Together, we’ll build a future where your business not only survives but thrives."
-          img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733164292/sketch-man-office-working-on-260nw-207966388_tixfjk.webp"
+          img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
           alt="guy on computer"
           btnText="Book via Calendy"
           imageAlign="left"
         />
+        </div>
       </div>
     </div>
   );

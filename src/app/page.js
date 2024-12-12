@@ -351,11 +351,6 @@ export default function Home() {
                     width={225}
                     height={105}
                     layout="intrinsic"
-                    // style={{
-                    //   width: '100%',
-                    //   height: '100%',
-                    //   objectFit: 'cover'
-                    // }}
                   />
                 </div>
               </Col>
