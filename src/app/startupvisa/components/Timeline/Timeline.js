@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Timeline.module.css";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Badge } from "react-bootstrap";
 import { IoDocumentText } from "react-icons/io5";
 import { PiGearSixFill } from "react-icons/pi";
 import { IoBriefcase } from "react-icons/io5";
@@ -33,7 +33,7 @@ const Timeline = () => {
     {
       timeline: "01",
       title: "Preliminary Assessment",
-      tags: ["Discovery, Evaluation, Fit"],
+      tags: ["Discovery", "Evaluation", "Incubator Fit"],
       icon: <IoDocumentText />,
       bgIconClassName: "primaryTimelineIconBG",
       borderTopClassName: "primaryTimelineCardBorderTop",
@@ -42,7 +42,7 @@ const Timeline = () => {
     {
       timeline: "04",
       title: "Startup Development Phase",
-      tags: ["Building, Prototyping, Plannig"],
+      tags: ["Building", "Prototyping", "Planning"],
       icon: <PiGearSixFill />,
       bgIconClassName: "dustyGreenTimelineIconBG",
       borderTopClassName: "dustyGreenTimelineCardBorderTop",
@@ -51,7 +51,7 @@ const Timeline = () => {
     {
       timeline: "08",
       title: "Application and Interview Preparation Phase",
-      tags: ["Finalization, Submission"],
+      tags: ["Startup Readiness", "Finalization", "Submission"],
       icon: <IoBriefcase />,
       bgIconClassName: "lightSteelBlueTimelineIconBG",
       borderTopClassName: "lightSteelBlueTimelineCardBorderTop",
@@ -60,7 +60,7 @@ const Timeline = () => {
     {
       timeline: "10",
       title: "Interview with designated incubator",
-      tags: ["Interview, Due diligence"],
+      tags: ["Interview", "Incubator Process", "Due Diligence"],
       icon: <MdPerson3 />,
       bgIconClassName: "slateBlueTimelineIconBG ",
       borderTopClassName: "slateBlueTimelineCardBorderTop",
@@ -69,7 +69,7 @@ const Timeline = () => {
     {
       timeline: "12",
       title: "Receive Letter of Support",
-      tags: ["Approval, Support"],
+      tags: ["Approval", "Letter Of Support", "Funding"],
       icon: <IoDocumentAttachSharp />,
       bgIconClassName: "roseTimelineIconBG",
       borderTopClassName: "roseBlueTimelineCardBorderTop",
@@ -92,7 +92,9 @@ const Timeline = () => {
                   <div
                     className={`${styles.timeLineCardLeft} d-flex gap-4 align-items-center`}
                   >
-                    <div className={` ${step.borderTopClassName} d-flex bg-light p-4 rounded-bottom`}>
+                    <div
+                      className={` ${step.borderTopClassName} d-flex bg-light p-4 rounded-bottom`}
+                    >
                       <div className="pe-4">
                         <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
                           {step.title}
@@ -100,7 +102,12 @@ const Timeline = () => {
                         <p className="mt-3 text-secondary">{step.text}</p>
                         <div className="d-flex gap-3 mt-4">
                           {step.tags.map((tag, index) => (
-                            <span key={index}>{tag}</span>
+                            <Badge
+                              key={index}
+                              className={`${styles.tag} text-dark`}
+                            >
+                              {tag}
+                            </Badge>
                           ))}
                         </div>
                       </div>
@@ -139,7 +146,9 @@ const Timeline = () => {
                     >
                       {step.icon}
                     </div>
-                    <div className={` ${step.borderTopClassName} rounded-bottom d-flex bg-light p-4`}>
+                    <div
+                      className={` ${step.borderTopClassName} rounded-bottom d-flex bg-light p-4`}
+                    >
                       <div className="pe-4">
                         <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
                           {step.title}
@@ -147,7 +156,12 @@ const Timeline = () => {
                         <p className="mt-3 text-secondary">{step.text}</p>
                         <div className="d-flex gap-3 mt-4">
                           {step.tags.map((tag, index) => (
-                            <span key={index}>{tag}</span>
+                            <Badge
+                              key={index}
+                              className={`${styles.tag} text-dark`}
+                            >
+                              {tag}
+                            </Badge>
                           ))}
                         </div>
                       </div>

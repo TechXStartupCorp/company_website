@@ -38,11 +38,15 @@
 }
 
 .stepTitle {
-    font-size: 1.35rem !important;
+  font-size: 1.35rem !important;
 }
 
 .timelineNum {
-    font-size: 1.9rem !important;
+  font-size: 1.9rem !important;
+}
+
+.tag {
+  background-color: #e2e1e1 !important;
 }
 
 /* .timelineContainer {
