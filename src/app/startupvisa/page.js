@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import styles from "./page.module.css";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -10,10 +10,10 @@ export default function Home() {
     <div>
       <div>
         <CalloutSection
-          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
-          alt="Beautiful landscape"
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946921/sigmund-Fa9b57hffnM-unsplash_vexrzz.jpg"
+          alt="Tech office team"
           title="The ultimate guide to Canada Startup Visa"
-          text="Elevate your entrepreneurial journey with Canada&apos;s Startup Visa Program. Our guide covers everything you need to navigate the process, secure resources, and succeed in Canada&apos;s thriving startup ecosystem. Unlock your business's potential today!"
+          text="Elevate your entrepreneurial journey with Canada's Startup Visa Program. Our guide covers everything you need to navigate the process, secure resources, and succeed in Canada's thriving startup ecosystem. Unlock your business's potential today!"
           primaryBtnText="Get started"
           secondBtn={false}
           doSomethingForm={true}
@@ -58,11 +58,11 @@ export default function Home() {
             entrepreneurs with innovative business ideas to scale globally.
             Applicants must meet eligibility requirements, including securing
             support from a designated organization, demonstrating language
-            proficiency, and proving sufficient settlement funds. With Canada&apos;s
-            commitment to innovation and economic growth, it&apos;s an ideal
-            destination for startups. Leveraging expert support and a strong
-            business network, entrepreneurs can navigate the program and build
-            successful ventures.
+            proficiency, and proving sufficient settlement funds. With
+            Canada&apos;s commitment to innovation and economic growth,
+            it&apos;s an ideal destination for startups. Leveraging expert
+            support and a strong business network, entrepreneurs can navigate
+            the program and build successful ventures.
           </p>
         </Container>
       </div>
@@ -74,58 +74,58 @@ export default function Home() {
           <p className="mt-4">
             The Startup Visa application process is designed to guide you
             through each stage of launching your business in Canada. By
-            following these steps, you&apos;ll receive personalized support to ensure
-            that you meet all the requirements for success.
+            following these steps, you&apos;ll receive personalized support to
+            ensure that you meet all the requirements for success.
           </p>
 
           <Row className="g-4 mt-2">
             {[
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946288/usman-yousaf-qlkOZY-5dZ8-unsplash_hra5oa.jpg",
                 title: "Step 1: Free Eligibility Assessment",
                 text: "We are excited to offer a free assessment to help you determine your eligibility and readiness for the Startup Visa Program.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734024919/per-loov-oXqn2CXC_9Q-unsplash_o3l4fg.jpg",
                 title: "Step 2: Tailored Innovation Strategy",
                 text: "Our approach focuses on personalization, ensuring that the innovative solutions we offer align with your background, interests, and goals.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734025762/pexels-olly-3756678_wf0x82.jpg",
                 title:
                   "Step 3: Letter of Support from Designated Organizations",
                 text: "A Letter of Support is a document issued by a designated organization, endorsing your innovative business idea and confirming its potential.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026121/pexels-valentinantonucci-1275393_nss2do.jpg",
                 title: "Step 4: Customized Immigration Assistance",
                 text: "We provide immigration support tailored to your specific needs and circumstances, ensuring a smooth process throughout.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026552/pexels-mikael-blomkvist-6476799_h5uo2k.jpg",
                 title: "Step 5: Comprehensive Business Plan",
                 text: "Our team will help craft a thorough business plan, outlining your strategic objectives, operations, and financial projections for your startup.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026660/pexels-pixabay-416405_yetmwo.jpg",
                 title: "Step 6: Complete Technology Support Program",
                 text: "This includes project design, road mapping, customer validation, cybersecurity, deployment, and ongoing mentoring to ensure your tech infrastructure is robust.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026969/pexels-pixabay-39284_jvvaor.jpg",
                 title: "Step 7: Business Setup and Branding",
                 text: "We assist with incorporating your company, building your online presence (website and social media), designing marketing materials, and more to establish your brand.",
               },
               {
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734027078/pexels-cottonbro-4569340_ip3cht.jpg",
                 title: "Step 8: Settlement Services",
                 text: "Our team will help you find housing, schools, and connect with local professionals like lawyers, accountants, and banks, providing concierge services as needed when you arrive in Canada.",
               },
@@ -143,7 +143,7 @@ export default function Home() {
                       src={step.image}
                       alt={step.title}
                       layout="fill"
-                      objectFit="cover"
+                      // objectFit="cover"
                       className="rounded"
                     />
                   </div>
@@ -242,7 +242,7 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-      {/* //// testimonial section, will finish later */}
+      {/* //// testimonial section, to be finished later */}
       {/* <div className="section lightGreyContainerBG">
         <Container className="d-flex flex-column align-items-center justify-content-center">
           <h3 className="xtraBold mt-3">What People Are Saying About Us</h3>
@@ -304,7 +304,7 @@ export default function Home() {
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1732137929/sydney-rae-i0kQM6OdeVc-unsplash_cmtw8i.jpg"
           alt="Beautiful landscape"
           title="Apply for the Startup Visa today"
-          text="Apply for the Startup Visa today! You don&apos;t have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
+          text="Apply for the Startup Visa today! You don't have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
           primaryBtnText="Book consult"
           secondBtn={true}
           lightBtnText="Apply now"

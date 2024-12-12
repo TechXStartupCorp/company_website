@@ -80,7 +80,7 @@ export default function Home() {
             of immigration expertise to guide individuals and families every
             step of the way.
           </h2>
-          <h4 className="xtraBold mt-5">Our team</h4>
+          <h4 className="xtraBold mt-5 pb-2">Our team</h4>
           <div>
             {[
               {
@@ -132,8 +132,8 @@ export default function Home() {
                 text: "Business development, IT",
               },
             ].map((item, index) => (
-              <Row className="mt-4">
-                <Col key={index} className="mb-2">
+              <Row key={index} className="mt-4">
+                <Col className="mb-2">
                   <div className="d-flex align-items-center gap-3">
                     <div className={`${styles.imgContainer} position-relative`}>
                       <Image
@@ -228,23 +228,16 @@ export default function Home() {
             ))}
           </Row>
         </Container>
-        {/* <div className="mt-4">
-          <SectionWithHeaderAndText
-            header="Our Approach: How We Work Closely With Our Clients to Drive Success"
-            textAlign="right"
-            btnText="Get started"
-            text="At Tech X Startup, we support your journey from Pre-LOS training for the Canada Startup Visa to refining ideas, building plans, and creating pitch decks. We ensure compliance, craft financial models, and provide strategic marketing, prototyping, and IP protection to turn your vision into reality."
-          />
-        </div> */}
+
         <div className="mt-3">
-        <CTAWithImage
-          header="Empowering Entrepreneurs to Succeed, Together"
-          text="Whether you’re just starting out or ready to scale, we’re here to help you navigate the complexities of entrepreneurship with confidence and clarity. Together, we’ll build a future where your business not only survives but thrives."
-          img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
-          alt="guy on computer"
-          btnText="Book via Calendy"
-          imageAlign="left"
-        />
+          <CTAWithImage
+            header="Empowering Entrepreneurs to Succeed, Together"
+            text="Whether you’re just starting out or ready to scale, we’re here to help you navigate the complexities of entrepreneurship with confidence and clarity. Together, we’ll build a future where your business not only survives but thrives."
+            img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
+            alt="guy on computer"
+            btnText="Book via Calendy"
+            imageAlign="left"
+          />
         </div>
       </div>
     </div>
