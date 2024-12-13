@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
+import { MdOutlineLocationOn } from "react-icons/md";
+import CustomBtn from "../components/CustomBtn/CustomBtn";
 
 export default function Home() {
   const contactInfo = [
@@ -26,19 +28,18 @@ export default function Home() {
     <div className="section pb-5">
       <Container className="mt-3">
         <Row className="gx-5">
-          <Col>
+          <Col lg={6}>
             <div className="pe-3">
-              <h4 className="xtraBold">Contact our team</h4>
-              <p className="mt-3">
-                Let&apos;s talk about your project and discuss whether Canada Startup
-                Visa is the best solution.
+              <h4 className="xtraBold">Get in touch</h4>
+              <p className="mt-3 text-secondary">
+                Let us know how we can help you.
               </p>
 
               <Form className="mt-5">
                 <Row className="mb-4">
                   <Col md={6}>
                     <Form.Group controlId="firstName">
-                      <Form.Label className="xtraBold mb-3">
+                      <Form.Label className="xtraBold mb-2">
                         First Name
                       </Form.Label>
                       <Form.Control
@@ -50,7 +51,7 @@ export default function Home() {
                   </Col>
                   <Col md={6}>
                     <Form.Group controlId="lastName">
-                      <Form.Label className="xtraBold mb-3">
+                      <Form.Label className="xtraBold mb-2">
                         Last Name
                       </Form.Label>
                       <Form.Control
@@ -64,7 +65,7 @@ export default function Home() {
                 <Row className="mb-4">
                   <Col>
                     <Form.Group controlId="email">
-                      <Form.Label className="xtraBold mb-3">Email</Form.Label>
+                      <Form.Label className="xtraBold mb-2">Email</Form.Label>
                       <Form.Control
                         type="email"
                         placeholder="Enter your email"
@@ -73,7 +74,7 @@ export default function Home() {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Row className="mb-4">
+                {/* <Row className="mb-4">
                   <Col>
                     <Form.Group controlId="company">
                       <Form.Label className="xtraBold mb-3">Company</Form.Label>
@@ -84,11 +85,11 @@ export default function Home() {
                       />
                     </Form.Group>
                   </Col>
-                </Row>
+                </Row> */}
                 <Row className="mb-4">
                   <Col>
                     <Form.Group controlId="discussion">
-                      <Form.Label className="xtraBold mb-3">
+                      <Form.Label className="xtraBold mb-2">
                         What would you like to discuss?
                       </Form.Label>
                       <Form.Control
@@ -100,13 +101,65 @@ export default function Home() {
                     </Form.Group>
                   </Col>
                 </Row>
-                <Button variant="primary fw-bold" type="submit">
+
+                {/* <Button className="w-100 py-2" variant="primary fw-bold" type="submit">
                   Submit
-                </Button>
+                </Button> */}
+                <CustomBtn
+                  thickerPadding={true}
+                  fullWidth={true}
+                  variant="primary"
+                  text="Submit"
+                  type="submit"
+                />
               </Form>
+              <div className="d-flex flex-column gap-4">
+                <h5 className="xtraBold mt-5">Or reach out directly</h5>
+                {[
+                  {
+                    icon: <FaPhoneAlt />,
+                    title: "Phone",
+                    content: "647-792-7999 ext 103",
+                  },
+                  {
+                    icon: <MdOutlineEmail />,
+                    title: "Email",
+                    content: "team@techxstartup.com",
+                  },
+                  {
+                    icon: <MdOutlineLocationOn />,
+                    title: "Address",
+                    content: "2985 Drew Rd, Suite 204, Mississauga ON, L4T 0A4",
+                  },
+                ].map((item, index) => (
+                  <div key={index} className="d-flex gap-3 align-items-center">
+                    <div
+                      className={`${styles.iconContainer} d-flex justify-content-center align-items-center p-3 rounded fs-4`}
+                    >
+                      {item.icon}
+                    </div>
+                    <div className="d-flex flex-column">
+                      <span className="xtraBold fs-6">{item.title}</span>
+                      <small className="text-secondary mt-1">
+                        {item.content}
+                      </small>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </Col>
-          <Col>
+          <div className="mt-3">
+            <iframe
+              // width="100%"
+              height="450"
+              className={styles.iframe}
+              loading="lazy"
+              allowFullScreen
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.978211319052!2d-79.6587454712254!3d43.71100187395228!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3de715fd5b51%3A0xf4055636d4158c0!2s2985%20Drew%20Rd%2C%20Mississauga%2C%20ON%20L4T%204E5!5e0!3m2!1sen!2sca!4v1733778011906!5m2!1sen!2sca"
+            ></iframe>
+          </div>
+          {/* <Col>
             <div className="d-flex flex-column ps-3">
               <div
                 className={`${styles.contactCard} cardBoxShadow d-flex gap-4 p-4 rounded`}
@@ -152,7 +205,7 @@ export default function Home() {
                 ></iframe>
               </div>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>

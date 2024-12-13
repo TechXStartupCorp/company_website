@@ -12,4 +12,9 @@
 .iframe {
     border-radius: 22px;
     margin-top: 1rem;
+    width: 100% !important;
+}
+
+.iconContainer {
+  background-color: var(--lightGreyContainerBG);
 }
