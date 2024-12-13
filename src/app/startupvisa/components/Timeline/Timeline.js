@@ -8,26 +8,6 @@ import { MdPerson3 } from "react-icons/md";
 import { IoDocumentAttachSharp } from "react-icons/io5";
 import Image from "next/image";
 
-// .primaryTimelineIconBG {
-//   background-color: var(--bsPrimary);
-// }
-
-// .dustyGreenTimelineIconBG {
-//   background-color: #7e9a92;
-// }
-
-// .dustyGreenTimelineIconBG {
-//   background-color: #7e9a92;
-// }
-
-// .lightSteelBlueTimelineIconBG {
-//   background-color: #a5b9d2;
-// }
-
-// .slateBlueTimelineIconBG {
-//   background-color: #6A7F9b;
-// }
-
 const Timeline = () => {
   const steps = [
     {
@@ -35,8 +15,7 @@ const Timeline = () => {
       title: "Preliminary Assessment",
       tags: ["Discovery", "Evaluation", "Incubator Fit"],
       icon: <IoDocumentText />,
-      bgIconClassName: "primaryTimelineIconBG",
-      borderTopClassName: "primaryTimelineCardBorderTop",
+      color: "#0d6efd",
       text: "Conduct discovery calls, assess incubator-fit, perform due diligence, and decide on the startup type.",
     },
     {
@@ -44,8 +23,7 @@ const Timeline = () => {
       title: "Startup Development Phase",
       tags: ["Building", "Prototyping", "Planning"],
       icon: <PiGearSixFill />,
-      bgIconClassName: "dustyGreenTimelineIconBG",
-      borderTopClassName: "dustyGreenTimelineCardBorderTop",
+      color: "#7e9a92",
       text: "Establish the startup, develop the prototype, and prepare key documents.",
     },
     {
@@ -53,8 +31,7 @@ const Timeline = () => {
       title: "Application and Interview Preparation Phase",
       tags: ["Startup Readiness", "Finalization", "Submission"],
       icon: <IoBriefcase />,
-      bgIconClassName: "lightSteelBlueTimelineIconBG",
-      borderTopClassName: "lightSteelBlueTimelineCardBorderTop",
+      color: "#a5b9d2",
       text: "Finalize the prototype, prep for the interview, and submit the application.",
     },
     {
@@ -62,8 +39,7 @@ const Timeline = () => {
       title: "Interview with designated incubator",
       tags: ["Interview", "Incubator Process", "Due Diligence"],
       icon: <MdPerson3 />,
-      bgIconClassName: "slateBlueTimelineIconBG ",
-      borderTopClassName: "slateBlueTimelineCardBorderTop",
+      color: "#6a7f9b",
       text: "The incubator will interview the applicant(s), conduct due diligence, and send a contract for signature and payment.",
     },
     {
@@ -71,8 +47,7 @@ const Timeline = () => {
       title: "Receive Letter of Support",
       tags: ["Approval", "Letter Of Support", "Funding"],
       icon: <IoDocumentAttachSharp />,
-      bgIconClassName: "roseTimelineIconBG",
-      borderTopClassName: "roseBlueTimelineCardBorderTop",
+      color: "#354b6a",
       text: "Once payment is received, the incubator will issue a Letter of Support to the applicant.",
     },
   ];
@@ -93,7 +68,8 @@ const Timeline = () => {
                     className={`${styles.timeLineCardLeft} d-flex gap-4 align-items-center`}
                   >
                     <div
-                      className={` ${step.borderTopClassName} d-flex bg-light p-4 rounded-bottom`}
+                        style={{ borderTop: `4px solid ${step.color}` }}
+                      className={`d-flex bg-light p-4 rounded-bottom`}
                     >
                       <div className="pe-4">
                         <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
@@ -121,7 +97,8 @@ const Timeline = () => {
                       </div>
                     </div>
                     <div
-                      className={`${styles.blueDot} ${step.bgIconClassName} fs-3 text-light d-flex justify-content-center align-items-center`}
+                      style={{ backgroundColor: step.color }}
+                      className={`${styles.blueDot} fs-3 text-light d-flex justify-content-center align-items-center`}
                     >
                       {step.icon}
                     </div>
@@ -142,23 +119,25 @@ const Timeline = () => {
                     className={`${styles.timeLineCardRight} d-flex gap-4 align-items-center`}
                   >
                     <div
-                      className={`${styles.blueDot} ${step.bgIconClassName} fs-3 text-light d-flex justify-content-center align-items-center`}
+                      style={{ backgroundColor: step.color }}
+                      className={`${styles.blueDot} fs-3 text-light d-flex justify-content-center align-items-center`}
                     >
                       {step.icon}
                     </div>
                     <div
-                      className={` ${step.borderTopClassName} rounded-bottom d-flex bg-light p-4`}
+                    style={{ borderTop: `4px solid ${step.color}` }}
+                      className={`rounded-bottom d-flex bg-light p-4`}
                     >
                       <div className="pe-4">
                         <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
                           {step.title}
                         </h5>
                         <p className="mt-3 text-secondary">{step.text}</p>
-                        <div className="d-flex gap-3 mt-4">
+                        <div className="d-flex gap-3 mt-2 flex-wrap">
                           {step.tags.map((tag, index) => (
                             <Badge
                               key={index}
-                              className={`${styles.tag} text-dark`}
+                              className={`tag text-dark`}
                             >
                               {tag}
                             </Badge>
@@ -182,76 +161,7 @@ const Timeline = () => {
         </Row>
       ))}
     </Row>
-
-    // <Row className={`${styles.timelineRow} w-100`}>
-    //   <Row className="">
-    //     <Col className={`${styles.leftCol} d-flex justify-content-end`}>
-    //       <div className="d-flex flex-column">
-    //         <div
-    //           className={`${styles.timeLineCardLeft} d-flex gap-3 align-items-center`}
-    //         >
-    //           <div className="d-flex bg-light">
-    //             <div className="">
-    //               <h5>Title goes here</h5>
-    //               <p>Some stuf here</p>
-    //             </div>
-    //             <div className="d-flex flex-column">
-    //               <small>week</small>
-    //               <h2>Num</h2>
-    //             </div>
-    //           </div>
-    //           <div className={`${styles.blueDot}`}></div>
-    //         </div>
-    //       </div>
-    //     </Col>
-    //     <Col className={`${styles.rightCol}`}></Col>
-    //   </Row>
-    //   <Row className="">
-    //     <Col className={`${styles.leftCol}`}></Col>
-    //     <Col className={`${styles.rightCol}`}>
-    //       {" "}
-    //       <div className="d-flex flex-column mt-5">
-    //         <div
-    //           className={`${styles.timeLineCardRight} d-flex gap-3 align-items-center`}
-    //         >
-    //           <div className={`${styles.blueDot}`}></div>
-    //           <div className="d-flex bg-light">
-    //             <div className="">
-    //               <h5>Title goes here</h5>
-    //               <p>Some stuf here</p>
-    //             </div>
-    //             <div className="d-flex flex-column">
-    //               <small>week</small>
-    //               <h2>Num</h2>
-    //             </div>
-    //           </div>
-    //         </div>
-    //       </div>
-    //     </Col>
-    //   </Row>
-    // </Row>
   );
 };
 
 export default Timeline;
-
-// <div className={styles.timelineWrapper}>
-// {/* Grey line acting as the main timeline */}
-// <div className={styles.timelineLine}></div>
-
-// <div className={`d-flex align-items-center`}>
-//   {/* Blue Dot */}
-//   <div className="bg-warning h-auto">
-//   <div className={styles.timelineDot}></div>
-//   </div>
-
-//   <div className={`d-flex bg-light ${styles.timelineCard}`}>
-//     <h5>Preliminary Assessment</h5>
-//     <p>
-//       Conduct discovery calls, assess incubator-fit, perform due
-//       diligence, and decide on the startup type.
-//     </p>
-//   </div>
-// </div>
-
-// </div>

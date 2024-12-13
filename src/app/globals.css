@@ -18,9 +18,12 @@ body {
   --border-radius-small: 10px;
   --lightGreyContainerBG: #f0f2f4;
   --bsPrimary: #0d6efd;
+  --lightGreyBadgeBG: #e2e1e1;
 }
 
-
+.tag {
+  background-color: var(--lightGreyBadgeBG) !important;
+}
 
 .cardBoxShadow {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -126,12 +129,12 @@ body {
   border-top: 4px solid #6a7f9b;
 }
 
-.roseTimelineIconBG {
-  background-color: #e57373;
+.navyTimelineIconBG {
+  background-color: #354b6a;
 }
 
-.roseBlueTimelineCardBorderTop {
-  border-top: 4px solid #e57373;
+.navyBlueTimelineCardBorderTop {
+  border-top: 4px solid #354b6a;
 }
 
 /* 

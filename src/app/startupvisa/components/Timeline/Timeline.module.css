@@ -46,7 +46,7 @@
 }
 
 .tag {
-  background-color: #e2e1e1 !important;
+  background-color: var(--lightGreyBadgeBG) !important;
 }
 
 /* .timelineContainer {
