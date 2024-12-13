@@ -154,6 +154,11 @@ export default function Home() {
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937736/easybusiness_cq643p.png",
     },
+    {
+      alt: "Traveller's Club",
+      image:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734111639/travelers-club-logo_gfiecy.png",
+    },
   ];
 
   const sellingPoints = [
@@ -339,7 +344,7 @@ export default function Home() {
       </Container> */}
       <div className="section">
         <Container>
-          <h2 className={`xtraBold header`}>Our partners</h2>
+          <h2 className={`xtraBold header`}>Our venture partners</h2>
 
           <Row className="mt-5">
             {partners.map((partner, index) => (

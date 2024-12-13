@@ -35,19 +35,19 @@ export default function Home() {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949382/dennis-cortes-eBPx9x7Hxyg-unsplash_hsevuk.jpg",
                 title: "2021",
-                text: "Tech X Startup is born.",
+                text: "Tech X Startup was incorporated and began developing business ventures for clients.",
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949783/mimi-thian-IPBGKYnuz8Y-unsplash_uuj5j5.jpg",
                 title: "2022",
-                text: "First successful startup mentorship.",
+                text: "Tech X Startup supported numerous companies in establishing and growing their businesses across various Canadian provinces.",
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949704/pexels-fauxels-3184292_ertp2e.jpg",
-                title: "2023",
-                text: "Rebranding and Strategic Growth.",
+                title: "2024",
+                text: "Rebranded, appointed a new team and supported startups with idea validation in collaboration with immigration and startup experts.",
               },
             ].map((item, index) => (
               <Col key={index} xs={12} sm={6} lg={4} xl={4} className="rounded">
@@ -86,19 +86,19 @@ export default function Home() {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733950056/rs_w_365_h_365_cg_true_snwzq3.webp",
                 name: "Ram Babbar",
-                text: "RCIC - Corporate Immigration Consultant",
+                text: "Founder and COO",
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733950058/rs_w_365_h_365_cg_true_1_q4j6sk.webp",
                 name: "Simran Babbar",
-                text: "RCIC - Head of Operations, Immigration Consultants",
+                text: "CEO and Head of Operations",
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733950054/rs_w_365_h_365_cg_true_2_bb7mju.webp",
                 name: "Prof. Chandan Singh",
-                text: "RCIC - Business Immigration Consultant, Ph.D",
+                text: "Senior advisor and head of venture development",
               },
               {
                 image:
@@ -179,13 +179,7 @@ export default function Home() {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945473/P_n_R_Logo_2_xhvqty.png",
               },
-              {
-                title: "Resttler",
-                text: "Resettler helps individuals and families transition smoothly to new homes, offering expert relocation and settlement services for a stress-free experience.",
-                alt: "Resettler logo",
-                image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937773/Resettler_Logo_jxgiov.png",
-              },
+
               {
                 title: "True global immigration",
                 text: "True Global Immigration is a trusted immigration firm dedicated to helping clients achieve their dreams of living and working abroad.",
@@ -194,19 +188,11 @@ export default function Home() {
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937898/True_Global_xxmzrt.png",
               },
               {
-                title: "IELTS Batch",
-                text: "IELTS Batch prepares students and professionals for success in the IELTS with tailored language training to achieve their desired scores.",
-                alt: "IELTS Batch",
+                title: "CCN Immigration Services",
+                text: "Your partner in making your global aspirations a reality. We provide expert guidance and personalized support for living and working abroad.",
+                alt: "CCN Immigration logo",
                 image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937759/IELTS_Batch_logo_lfngb0.png",
-              },
-
-              {
-                title: "Genius jobs",
-                text: "IELTS Batch prepares students and professionals for success in the IELTS with tailored language training to achieve their desired scores.",
-                alt: "Genius jobs logo",
-                image:
-                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733942209/genius-jobs-logo-1-removebg-preview_jnzk5z.png",
+                  "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734111531/ccn-immigration-logo_jywvzq.png",
               },
             ].map((item, index) => (
               <Col key={index} lg={4} md={6} sm={12} className="mb-4">
