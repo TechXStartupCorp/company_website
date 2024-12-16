@@ -136,32 +136,31 @@ export const featuredProjects = [
   {
     year: "2023",
     title: "ABC Cleaning",
-    industry: "Cleaning", 
+    industry: "Cleaning",
     text: "Provides daily and specialty cleaning for local businesses in Canada. The startup aims to deliver reliable, high-quality cleaning solutions, making it easy for clients to maintain a clean and professional environment.",
     link: "urlhere.com",
     sections: {
-        intro:
+      intro:
         "ABC Cleaning and Janitorial services is a Canadian-based company that specializes in providing daily cleaning services to local businesses. Our team of professional cleaning experts offers specialty cleaning services such as carpet, hard tile, VCT waxing, furniture, and general disinfecting. With a focus on convenience and quality, we aim to take the hassle out of recruiting, hiring, and training cleaning staff for our clients, providing both industrial and domestic cleaning solutions tailored to meet their unique needs.",
-  
-        problem:
+
+      problem:
         "Many businesses struggle with finding reliable and trustworthy cleaning services that can effectively meet their specific cleaning needs. Hiring and managing cleaning staff can be a time-consuming and challenging process for many companies. Additionally, the cleaning industry faces challenges such as high competition, seasonal demand fluctuations, and the need to stay compliant with constantly changing regulations. These issues make it difficult for businesses to maintain consistent cleaning standards while keeping costs under control.",
-  
-        solution:
+
+      solution:
         "ABC Cleaning and Janitorial services offer a comprehensive range of cleaning solutions to address the diverse needs of businesses. Our team of experienced professionals takes care of all cleaning requirements, allowing our clients to focus on their core business activities. We provide daily cleaning services, specialty cleaning solutions for carpets, hard tile, VCT waxing, furniture, and general disinfecting. By managing the recruitment, hiring, and training of cleaning staff, we ensure high-quality, consistent service delivery that meets the specific needs of each client.",
 
-  
-        benefits: [
-            "Daily cleaning services for offices, retail spaces, and other commercial environments.",
-            "Specialty cleaning solutions including carpet, hard tile, VCT waxing, and furniture cleaning.",
-            "General disinfecting services to maintain a safe and hygienic environment.",
-        ],
-      },
-  
-      targetAudience: {
-        "Regular commuters": 40,
-        "Tourists and visitors": 30,
-        "Event-goers": 30,
-      },
+      benefits: [
+        "Daily cleaning services for offices, retail spaces, and other commercial environments.",
+        "Specialty cleaning solutions including carpet, hard tile, VCT waxing, and furniture cleaning.",
+        "General disinfecting services to maintain a safe and hygienic environment.",
+      ],
+    },
+
+    targetAudience: {
+      "Regular commuters": 40,
+      "Tourists and visitors": 30,
+      "Event-goers": 30,
+    },
     images: [
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
