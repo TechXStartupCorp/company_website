@@ -54,9 +54,11 @@ export const featuredProjects = [
     },
 
     targetAudience: {
-      "Regular commuters": 40,
-      "Tourists and visitors": 30,
-      "Event-goers": 30,
+      "Entertainment": 25,
+      "Retail": 30,
+      "Education": 20,
+      "Advertising": 15, 
+      "Healthcare": 10
     },
     images: [
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
@@ -87,9 +89,9 @@ export const featuredProjects = [
     },
 
     targetAudience: {
-      "Regular commuters": 40,
-      "Tourists and visitors": 30,
-      "Event-goers": 30,
+      "SMB's": 40,
+      "Municipalities": 30,
+      "Residential communities": 30,
     },
     images: [
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
@@ -157,9 +159,9 @@ export const featuredProjects = [
     },
 
     targetAudience: {
-      "Regular commuters": 40,
-      "Tourists and visitors": 30,
-      "Event-goers": 30,
+      "Corporate offices": 40,
+      "Retail stores": 30,
+      "Media facilities": 30,
     },
     images: [
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
