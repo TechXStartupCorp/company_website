@@ -56,7 +56,7 @@
 }
 
 .sellingPointCard {
-  border: 1px solid #d0dbe7;
+  border: 1px solid var(--lightGreyBorder);
   border-radius: 12px;
 }
 
