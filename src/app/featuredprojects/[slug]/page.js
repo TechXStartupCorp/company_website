@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import { featuredProjects } from "@/app/data/FeaturedProjects";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import styles from "./page.module.css";
+import { imageOptimizer } from "next/dist/server/image-optimizer";
 
 export default function ProjectDetails({ params }) {
   const { slug } = useParams();
@@ -113,7 +114,43 @@ export default function ProjectDetails({ params }) {
           <h5 className="xtraBold">The Benefits of My Ride</h5>
           <p className="mt-2">{project && project.sections.benefits}</p>
         </Row>
+        {project &&
+          project.images.map((image, index) => (
+            <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
+              <div className={`customCard`}>
+                <div className="imgContainer">
+                  <Image
+                    src={image}
+                    alt={project && project.title}
+                    layout="fill"
+                  />
+                </div>
+              </div>
+            </Col>
+          ))}
       </Container>
     </div>
   );
+}
+
+{
+  /* <Row className="g-4 mt-2">
+{services.map((service, index) => (
+  <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
+    <div className={`customCard`}>
+      <div className="imgContainer">
+        <Image
+          src={service.image}
+          alt={service.title}
+          layout="fill"
+        />
+      </div>
+      <div>
+        <h5 className="xtraBold mt-3">{service.title}</h5>
+        <p className="text-secondary">{service.text}</p>
+      </div>
+    </div>
+  </Col>
+))}
+</Row> */
 }
