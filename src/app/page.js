@@ -215,45 +215,46 @@ export default function Home() {
       </div>
 
       <Container>
-        <h4 className="xtraBold mt-5 header pb-3">Featured projects</h4>
         <div id="featured-projects">
-          {sortedYears.map((year) => (
-            <div key={year}>
-              <h5 className="xtraBold mt-5">{year}</h5>
-              {groupedProjects[year].map((project, index) => (
-                <Row className="mt-5" key={index}>
-                  <Col>
-                    <h5 className="xtraBold">{project.title}</h5>
-                    <p className="mt-3 text-secondary">{project.text}</p>
-                    <div className={styles.caseStudyLinkContainer}>
-                      <Link
-                        href={`/featuredprojects/${project.title
-                          .toLowerCase()
-                          .replace(/ /g, "-")}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`text-dark fw-bold text-decoration-none py-2 px-3 rounded ${styles.caseStudyLink}`}
+          <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
+          <div>
+            {sortedYears.map((year) => (
+              <div key={year}>
+                <h5 className="xtraBold mt-5">{year}</h5>
+                {groupedProjects[year].map((project, index) => (
+                  <Row className="mt-5" key={index}>
+                    <Col>
+                      <h5 className="xtraBold">{project.title}</h5>
+                      <p className="mt-3 text-secondary">{project.text}</p>
+                      <div className={styles.caseStudyLinkContainer}>
+                        <Link
+                          href={`/featuredprojects/${project.title
+                            .toLowerCase()
+                            .replace(/ /g, "-")}`}
+                          rel="noopener noreferrer"
+                          className={`text-dark fw-bold text-decoration-none py-2 px-3 rounded ${styles.caseStudyLink}`}
+                        >
+                          Learn more
+                        </Link>
+                      </div>
+                    </Col>
+                    <Col xl={4}>
+                      <div
+                        className={`${styles.featuredProjImgContainer} position-relative h-auto w-100`}
                       >
-                        Learn more
-                      </Link>
-                    </div>
-                  </Col>
-                  <Col xl={4}>
-                    <div
-                      className={`${styles.featuredProjImgContainer} position-relative h-auto w-100`}
-                    >
-                      <Image
-                        className="roundedImage"
-                        src={project.images[0]}
-                        alt={project.title}
-                        layout="fill"
-                      />
-                    </div>
-                  </Col>
-                </Row>
-              ))}
-            </div>
-          ))}
+                        <Image
+                          className="roundedImage"
+                          src={project.images[0]}
+                          alt={project.title}
+                          layout="fill"
+                        />
+                      </div>
+                    </Col>
+                  </Row>
+                ))}
+              </div>
+            ))}
+          </div>
         </div>
       </Container>
 

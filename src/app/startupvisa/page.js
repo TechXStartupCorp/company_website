@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Container, Row, Col, Badge } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import styles from "./page.module.css";
+import SectionWithHeaderAndText from "../components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Timeline from "./components/Timeline/Timeline";
 

@@ -6,6 +6,7 @@ import { featuredProjects } from "@/app/data/FeaturedProjects";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import styles from "./page.module.css";
 import Image from "next/image";
+import SectionWithHeaderAndText from "@/app/components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 
 export default function ProjectDetails({ params }) {
   const { slug } = useParams();
@@ -17,6 +18,17 @@ export default function ProjectDetails({ params }) {
   if (!project) {
     return <div>Project not found</div>;
   }
+
+  const scrollToFeaturedProjects = () => {
+    const featuredProjectsElement =
+      document.getElementById("featured-projects");
+    if (featuredProjectsElement) {
+      window.scrollTo({
+        top: featuredProjectsElement.offsetTop - 20, // Scroll 20px above the top of the element
+        behavior: "smooth",
+      });
+    }
+  };
   //   const { slug } = params;
 
   //   const project = featuredProjects.find(
@@ -87,6 +99,7 @@ export default function ProjectDetails({ params }) {
               <span className="fw-bold mt-1">Onsite or remote</span>
             </div>
           </Col>
+         
         </Row>
 
         <h5 className="mt-5 xtraBold">Target Audience</h5>
@@ -114,7 +127,7 @@ export default function ProjectDetails({ params }) {
           <p className="mt-2">{project && project.sections.solution}</p>
         </Row>
         <Row className="mt-4">
-          <h5 className="xtraBold">What are the benefits of My Ride</h5>
+          <h5 className="xtraBold">What are the benefits of {project && project.title}</h5>
           <p className="mt-2">
             Some noteworthy benefits of {project && project.title} include:
           </p>
@@ -122,9 +135,9 @@ export default function ProjectDetails({ params }) {
           {project &&
             project.sections.benefits &&
             project.sections.benefits.map((benefit, index) => (
-              <div key={index} className="d-flex align-items-center gap-3 mt-3">
-                <span className="bulletPoint"></span>
-                <p className="mb-0">{benefit}</p>
+              <div key={index} className="d-flex align-items-start gap-3 mt-3">
+                <span className="bulletPoint mt-1"></span>
+                <p className="">{benefit}</p>
               </div>
             ))}
         </Row>
@@ -144,6 +157,12 @@ export default function ProjectDetails({ params }) {
               </Col>
             ))}
         </Row>
+        <div className="section">
+          <SectionWithHeaderAndText
+            header="Need help with your startup idea?"
+            text="Contact us today to get started and discuss your vision. Our team of experts is here to provide personalized guidance and help you bring your ideas to life. Whether you need advice, support, or solutions, we’re here to assist you every step of the way. Call us now to take the first step towards turning your vision into reality."
+          />
+        </div>
       </Container>
     </div>
   );

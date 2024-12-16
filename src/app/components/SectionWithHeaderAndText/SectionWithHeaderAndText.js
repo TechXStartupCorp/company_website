@@ -7,8 +7,9 @@ const SectionWithHeaderAndText = ({ header, text, btnText, textAlign }) => {
     <div className="section">
       <Container>
         <Row>
-          <Col className="d-flex flex-column">
-            <h2 className="xtraBold">{header}</h2>
+          <Col lg={9} className="d-flex flex-column">
+            <h3 className="xtraBold">{header}</h3>
+            <p className="mt-3">{text}</p>
             <div className="mt-3">
               <CustomBtn
                 fullWidth={false}
@@ -17,11 +18,12 @@ const SectionWithHeaderAndText = ({ header, text, btnText, textAlign }) => {
               />
             </div>
           </Col>
-          <Col>
+          {/* //// optional  */}
+          {/* <Col>
             <div>
               <p>{text}</p>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </div>
