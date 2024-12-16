@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { featuredProjects } from "@/app/data/FeaturedProjects";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import styles from "./page.module.css";
-import { imageOptimizer } from "next/dist/server/image-optimizer";
+import Image from "next/image";
 
 export default function ProjectDetails({ params }) {
   const { slug } = useParams();
@@ -49,7 +49,7 @@ export default function ProjectDetails({ params }) {
 
   return (
     <div className="section">
-      <Container>
+      <Container className="pb-4">
         <Breadcrumb>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/#featured-projects">
@@ -57,22 +57,25 @@ export default function ProjectDetails({ params }) {
           </Breadcrumb.Item>
           <Breadcrumb.Item active>{project && project.title}</Breadcrumb.Item>
         </Breadcrumb>
-        <h2 className="xtraBold mt-5">Project: {project && project.title}</h2>
-        <p className="mt-4">{project && project.sections.intro}</p>
-        <h5 className="mt-5 py-2 xtraBold">Project details</h5>
+        <Row className="align-items-center mt-5">
+          <h2 className="xtraBold">Project: {project && project.title}</h2>
+          <p className="mt-3">{project && project.sections.intro}</p>
+        </Row>
+
+        <h5 className="mt-3 py-2 xtraBold">Project details</h5>
         <hr className="mt-4"></hr>
         <Row className="py-2">
           <Col>
             <div className="d-flex flex-column">
               <span className="text-secondary">Year</span>
-              <span className="fw-bold">{project && project.year}</span>
+              <span className="fw-bold mt-1">{project && project.year}</span>
             </div>
           </Col>
           <Col>
             {" "}
             <div className="d-flex flex-column">
               <span className="text-secondary">Industry</span>
-              <span className="fw-bold">{project.industry}</span>
+              <span className="fw-bold mt-1">{project.industry}</span>
             </div>
           </Col>
         </Row>
@@ -81,7 +84,7 @@ export default function ProjectDetails({ params }) {
           <Col>
             <div className="d-flex flex-column">
               <span className="text-secondary">Project team</span>
-              <span className="fw-bold">Onsite or remote</span>
+              <span className="fw-bold mt-1">Onsite or remote</span>
             </div>
           </Col>
         </Row>
@@ -111,23 +114,36 @@ export default function ProjectDetails({ params }) {
           <p className="mt-2">{project && project.sections.solution}</p>
         </Row>
         <Row className="mt-4">
-          <h5 className="xtraBold">The Benefits of My Ride</h5>
-          <p className="mt-2">{project && project.sections.benefits}</p>
-        </Row>
-        {project &&
-          project.images.map((image, index) => (
-            <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
-              <div className={`customCard`}>
-                <div className="imgContainer">
-                  <Image
-                    src={image}
-                    alt={project && project.title}
-                    layout="fill"
-                  />
-                </div>
+          <h5 className="xtraBold">What are the benefits of My Ride</h5>
+          <p className="mt-2">
+            Some noteworthy benefits of {project && project.title} include:
+          </p>
+
+          {project &&
+            project.sections.benefits &&
+            project.sections.benefits.map((benefit, index) => (
+              <div key={index} className="d-flex align-items-center gap-3 mt-3">
+                <span className="bulletPoint"></span>
+                <p className="mb-0">{benefit}</p>
               </div>
-            </Col>
-          ))}
+            ))}
+        </Row>
+        <Row className="mt-5">
+          {project &&
+            project.images.map((image, index) => (
+              <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
+                <div className={`customCard`}>
+                  <div className="imgContainer">
+                    <Image
+                      src={image}
+                      alt={project && project.title}
+                      layout="fill"
+                    />
+                  </div>
+                </div>
+              </Col>
+            ))}
+        </Row>
       </Container>
     </div>
   );

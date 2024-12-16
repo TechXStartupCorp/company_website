@@ -1,9 +1,9 @@
-.bulletPoint {
+/* .bulletPoint {
     display: inline-block;
-    width: 20px; /* Adjust size as needed */
+    width: 20px; 
     height: 20px;
-    background-color: #007BFF; /* Blue color */
-    border-radius: 4px; /* Optional for rounded corners */
+    background-color: #007BFF; 
+    border-radius: 4px; 
     position: relative;
   }
   
@@ -12,12 +12,12 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 6px; /* Width of checkmark arms */
-    height: 10px; /* Length of checkmark */
+    width: 6px; 
+    height: 10px; 
     border: solid white;
     border-width: 0 2px 2px 0;
-    transform: translate(-50%, -50%) rotate(45deg); /* Position and angle */
-  }
+    transform: translate(-50%, -50%) rotate(45deg); 
+  } */
 
   .testimonialBox {
     flex-grow: 1;

@@ -48,7 +48,7 @@ export default function Home() {
               "Opportunity to scale your business in Canada's innovation-driven economy with access to global markets.",
             ].map((benefit, index) => (
               <div key={index} className="d-flex align-items-center gap-3 mt-3">
-                <span className={styles.bulletPoint}></span>
+                <span className="bulletPoint"></span>
                 <p className="mb-0">{benefit}</p>
               </div>
             ))}

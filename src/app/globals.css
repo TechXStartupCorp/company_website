@@ -103,6 +103,27 @@ hr {
   background-color: #f0f2f4;
 }
 
+.bulletPoint {
+  display: inline-block;
+  width: 20px; /* Adjust size as needed */
+  height: 20px;
+  background-color: #007BFF; /* Blue color */
+  border-radius: 4px; /* Optional for rounded corners */
+  position: relative;
+}
+
+.bulletPoint::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px; /* Width of checkmark arms */
+  height: 10px; /* Length of checkmark */
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: translate(-50%, -50%) rotate(45deg); /* Position and angle */
+}
+
 .primaryTimelineIconBG {
   background-color: var(--bsPrimary);
 }

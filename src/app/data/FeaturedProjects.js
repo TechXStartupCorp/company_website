@@ -12,9 +12,13 @@ export const featuredProjects = [
         "The ride-sharing industry often overlooks the importance of creating meaningful and inclusive experiences for its users. Many platforms focus heavily on operational efficiency, leaving gaps in delivering a service that fosters genuine connection and satisfaction. As a result, drivers and passengers can feel undervalued, with their needs for a more personal and community-focused experience largely unmet.",
       solution:
         "My Ride is redefining the ride-sharing experience by focusing on building a welcoming and inclusive environment for all users. By emphasizing customer satisfaction and community values, our platform offers more than just transportation—it creates an experience centered on trust, connection, and a shared sense of belonging. This approach sets My Ride apart, delivering a service that truly resonates with both drivers and passengers.",
-      benefits:
-        "My Ride delivers a transformative ride-sharing experience by prioritizing inclusivity, customer satisfaction, and community values. Passengers enjoy a reliable and welcoming service that fosters trust and connection, while drivers benefit from fair treatment, increased engagement, and a sense of purpose. By creating a platform focused on shared values and meaningful interactions, My Ride not only meets transportation needs but also strengthens the sense of belonging among its users.",
+      benefits: [
+        "A welcoming and inclusive environment that builds a strong sense of community among users.",
+        "Fair treatment and meaningful engagement for drivers, enhancing their satisfaction and purpose.",
+        "Reliable service that fosters trust and connection with every ride.",
+      ],
     },
+
     targetAudience: {
       "Regular commuters": 40,
       "Tourists and visitors": 30,
