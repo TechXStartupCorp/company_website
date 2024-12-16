@@ -22,6 +22,11 @@ body {
   --lightGreyBorder: #d0dbe7
 }
 
+hr {
+  color: var(--lightGreyBorder);
+  opacity: .75 !important;
+}
+
 .tag {
   background-color: var(--lightGreyBadgeBG) !important;
 }

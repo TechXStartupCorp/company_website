@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { featuredProjects } from "@/app/data/FeaturedProjects";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import styles from "./page.module.css";
 
 export default function ProjectDetails({ params }) {
@@ -49,9 +49,16 @@ export default function ProjectDetails({ params }) {
   return (
     <div className="section">
       <Container>
-        <h2 className="xtraBold">Project: {project && project.title}</h2>
+        <Breadcrumb>
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+          <Breadcrumb.Item href="/#featured-projects">
+            Featured projects
+          </Breadcrumb.Item>
+          <Breadcrumb.Item active>{project && project.title}</Breadcrumb.Item>
+        </Breadcrumb>
+        <h2 className="xtraBold mt-5">Project: {project && project.title}</h2>
         <p className="mt-4">{project && project.sections.intro}</p>
-        <h5 className="mt-5 xtraBold">Project details</h5>
+        <h5 className="mt-5 py-2 xtraBold">Project details</h5>
         <hr className="mt-4"></hr>
         <Row className="py-2">
           <Col>
@@ -80,35 +87,32 @@ export default function ProjectDetails({ params }) {
 
         <h5 className="mt-5 xtraBold">Target Audience</h5>
         <Row className="mt-4 pb-2">
-        {project.targetAudience &&
-          Object.entries(project.targetAudience).map(
-            ([audience, percentage], index) => (
-              <Col key={index}>
-                <div
-                  className={`${styles.detailsCard} d-flex flex-column align-items-center justify-content-center p-3 rounded`}
-                >
-                  <span className="xtraBold fs-2">{percentage}%</span>
-                  <span className="text-secondary mt-1">{audience}</span>
-                </div>
-              </Col>
-            )
-          )}
-      </Row>
+          {project.targetAudience &&
+            Object.entries(project.targetAudience).map(
+              ([audience, percentage], index) => (
+                <Col key={index}>
+                  <div
+                    className={`${styles.detailsCard} d-flex flex-column align-items-center justify-content-center p-3 rounded`}
+                  >
+                    <span className="xtraBold fs-2">{percentage}%</span>
+                    <span className="text-secondary mt-1">{audience}</span>
+                  </div>
+                </Col>
+              )
+            )}
+        </Row>
         <Row className="mt-4">
-          <h5 className="xtraBold">What problem are you solving?</h5>
+          <h5 className="xtraBold">The Problem Being Addressed</h5>
           <p className="mt-2">{project && project.sections.problem}</p>
         </Row>
         <Row className="mt-4">
-          <h5 className="xtraBold">How are you solving the problem</h5>
+          <h5 className="xtraBold">The Approach to Solving It</h5>
           <p className="mt-2">{project && project.sections.solution}</p>
         </Row>
-
-        {/* <p>{project.year}</p>
-        <img src={project.image} alt={project.title} />
-        <p>{project.text}</p>
-        <a href={project.link} target="_blank" rel="noopener noreferrer">
-          Visit Project
-        </a> */}
+        <Row className="mt-4">
+          <h5 className="xtraBold">The Benefits of My Ride</h5>
+          <p className="mt-2">{project && project.sections.benefits}</p>
+        </Row>
       </Container>
     </div>
   );

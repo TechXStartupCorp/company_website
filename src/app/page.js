@@ -77,8 +77,6 @@ export default function Home() {
     },
   ];
 
-  
-
   const partners = [
     {
       alt: "Techspot logo",
@@ -218,7 +216,7 @@ export default function Home() {
 
       <Container>
         <h4 className="xtraBold mt-5 header pb-3">Featured projects</h4>
-        <div>
+        <div id="featured-projects">
           {sortedYears.map((year) => (
             <div key={year}>
               <h5 className="xtraBold mt-5">{year}</h5>
@@ -228,16 +226,10 @@ export default function Home() {
                     <h5 className="xtraBold">{project.title}</h5>
                     <p className="mt-3 text-secondary">{project.text}</p>
                     <div className={styles.caseStudyLinkContainer}>
-                      {/* <Link
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`text-dark fw-bold text-decoration-none py-2 px-3 rounded ${styles.caseStudyLink}`}
-                      >
-                        Learn more
-                      </Link> */}
                       <Link
-                        href={`/featuredprojects/${project.title.toLowerCase().replace(/ /g, "-")}`}
+                        href={`/featuredprojects/${project.title
+                          .toLowerCase()
+                          .replace(/ /g, "-")}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`text-dark fw-bold text-decoration-none py-2 px-3 rounded ${styles.caseStudyLink}`}
@@ -252,7 +244,7 @@ export default function Home() {
                     >
                       <Image
                         className="roundedImage"
-                        src={project.image}
+                        src={project.images[0]}
                         alt={project.title}
                         layout="fill"
                       />
