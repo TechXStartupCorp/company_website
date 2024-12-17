@@ -5,6 +5,8 @@ import styles from "./page.module.css";
 import SectionWithHeaderAndText from "../components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Timeline from "./components/Timeline/Timeline";
+import CTAWithImage from "../components/CTAWithImage/CTAWithImage";
+import { calendlyLink } from "../data/CalendlyLink";
 
 export default function Home() {
   return (
@@ -86,24 +88,14 @@ export default function Home() {
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946288/usman-yousaf-qlkOZY-5dZ8-unsplash_hra5oa.jpg",
                 title: "Step 1: Free Eligibility Assessment",
                 text: "We are excited to offer a free assessment to help you determine your eligibility and readiness for the Startup Visa Program.",
-                tags: [
-                  "Eligibility",
-                  "Assessment",
-                  "Free Consultation",
-                  "Startup Visa",
-                ],
+                tags: ["Eligibility", "Assessment", "Free Consultation"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734027613/startae-team-7tXA8xwe4W4-unsplash_mzlkjh.jpg",
                 title: "Step 2: Tailored Innovation Strategy",
                 text: "Our approach focuses on personalization, ensuring that the innovative solutions we offer align with your background, interests, and goals.",
-                tags: [
-                  "Innovation",
-                  "Personalization",
-                  "Strategy",
-                  "Startup Planning",
-                ],
+                tags: ["Innovation", "Personalization", "Strategy"],
               },
               {
                 image:
@@ -111,88 +103,49 @@ export default function Home() {
                 title:
                   "Step 3: Letter of Support from Designated Organizations",
                 text: "A Letter of Support is a document issued by a designated organization, endorsing your innovative business idea and confirming its potential.",
-                tags: [
-                  "Endorsement",
-                  "Support Letter",
-                  "Designated Organization",
-                  "Business Validation",
-                ],
+                tags: ["Endorsement", "Support Letter", "Validation"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026121/pexels-valentinantonucci-1275393_nss2do.jpg",
                 title: "Step 4: Customized Immigration Assistance",
                 text: "We provide immigration support tailored to your specific needs and circumstances, ensuring a smooth process throughout.",
-                tags: [
-                  "Immigration Support",
-                  "Customization",
-                  "Tailored Assistance",
-                  "Smooth Process",
-                ],
+                tags: ["Immigration Support", "Customization"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026552/pexels-mikael-blomkvist-6476799_h5uo2k.jpg",
                 title: "Step 5: Comprehensive Business Plan",
                 text: "Our team will help craft a thorough business plan, outlining your strategic objectives, operations, and financial projections for your startup.",
-                tags: [
-                  "Business Plan",
-                  "Crafting",
-                  "Strategic Objectives",
-                  "Financial Projections",
-                ],
+                tags: ["Business Plan", "Strategy", "Financial Projections"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026660/pexels-pixabay-416405_yetmwo.jpg",
                 title: "Step 6: Complete Technology Support Program",
                 text: "This includes project design, road mapping, customer validation, cybersecurity, deployment, and ongoing mentoring to ensure your tech infrastructure is robust.",
-                tags: [
-                  "Project Design",
-                  "Road Mapping",
-                  "Customer Validation",
-                  "Cybersecurity",
-                  "Deployment",
-                  "Ongoing Mentoring",
-                ],
+                tags: ["Project Design", "Road Mapping", "Validation"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734026969/pexels-pixabay-39284_jvvaor.jpg",
                 title: "Step 7: Business Setup and Branding",
                 text: "We assist with incorporating your company, building your online presence (website and social media), designing marketing materials, and more to establish your brand.",
-                tags: [
-                  "Company Incorporation",
-                  "Online Presence",
-                  "Website and Social Media",
-                  "Marketing Materials",
-                  "Brand Establishment",
-                ],
+                tags: ["Incorporation", "Marketing", "Branding"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734027078/pexels-cottonbro-4569340_ip3cht.jpg",
                 title: "Step 8: Settlement Services",
                 text: "Our team will help you find housing, schools, and connect with local professionals like lawyers, accountants, and banks, providing concierge services as needed when you arrive in Canada.",
-                tags: [
-                  "Housing Assistance",
-                  "School Placement",
-                  "Local Professionals",
-                  "Concierge Services",
-                  "Canada Settlement",
-                ],
+                tags: ["Housing", "School Placement", "Settlement"],
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734027382/pexels-jamalyahyayev-3671394_isukyn.jpg",
                 title: "Step 9: Taking Your Business Public",
                 text: "If you wish, our partners can assist in taking your successful business public, helping you secure capital through the public markets.",
-                tags: [
-                  "Business Expansion",
-                  "Public Markets",
-                  "Capital Raising",
-                  "Partnerships",
-                ],
+                tags: ["Expansion", "Public Markets", "Partnerships"],
               },
             ].map((step, index) => (
               <Col key={index} xs={12} sm={6} lg={4} xl={4} className="rounded">
@@ -209,16 +162,9 @@ export default function Home() {
                     </div>
                     <div>
                       <h5 className="xtraBold mt-3">{step.title}</h5>
-                      <p className="text-secondary">{step.text}</p>
+                      <p className="text-secondary mt-3">{step.text}</p>
                     </div>
                   </div>
-                  {/* <div className="d-flex gap-3 mt-4 flex-wrap">
-                    {step.tags.map((tag, index) => (
-                      <Badge key={index} className={`tag text-dark`}>
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div> */}
                 </div>
               </Col>
             ))}
@@ -290,7 +236,7 @@ export default function Home() {
                 title: "Consumer goods",
               },
             ].map((industry, index) => (
-              <Col key={index} xs={12} sm={6} lg={3} xl={3} className="rounded">
+              <Col key={index} xs={12} sm={6} lg={2} xl={2} className="rounded">
                 <div className="customCard">
                   <div className="imgContainer position-relative">
                     <Image
@@ -368,14 +314,14 @@ export default function Home() {
         </Container>
       </div> */}
       <div className="section pb-5">
-        <CalloutSection
-          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734035019/headway-jfR5wu2hMI0-unsplash_y5u9fa.jpg"
-          alt="Beautiful landscape"
-          title="Apply for the Startup Visa today"
+        <CTAWithImage
+          header="Apply for the Startup Visa today"
           text="Apply for the Startup Visa today! You don't have to wait—start your application process directly through the Tech X Startup platform. Take the next step towards realizing your entrepreneurial vision by applying now."
-          primaryBtnText="Book consult"
-          secondBtn={true}
-          lightBtnText="Apply now"
+          img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734035019/headway-jfR5wu2hMI0-unsplash_y5u9fa.jpg"
+          alt="guy on computer"
+          btnText="Apply now"
+          imageAlign="left"
+          // link={calendlyLink}
         />
       </div>
     </div>

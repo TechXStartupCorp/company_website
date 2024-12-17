@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import CTAWithImage from "../components/CTAWithImage/CTAWithImage";
 import styles from "./page.module.css";
+import { calendlyLink } from "../data/CalendlyLink";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         text="We are committed to providing the resources, guidance, and community support needed to navigate the complex journey of building a successful startup. From expert mentorship to exclusive insights on the Canada Startup Visa Program, we are your partner in success. Become part of a community that’s shaping the future of innovation."
         primaryBtnText="Join our team"
         secondBtn={false}
+        primaryBtnLink="mailto:team@techxstartup.com"
       />
       <div className="section">
         <Container>
@@ -222,6 +224,7 @@ export default function Home() {
             alt="guy on computer"
             btnText="Book via Calendy"
             imageAlign="left"
+            link={calendlyLink}
           />
         </div>
       </div>

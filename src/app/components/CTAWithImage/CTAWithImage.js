@@ -4,7 +4,7 @@ import CustomBtn from "../CustomBtn/CustomBtn";
 import styles from "./CTAWithImage.module.css";
 import Image from "next/image";
 
-const CTAWithImage = ({ header, text, img, alt, btnText, imageAlign }) => {
+const CTAWithImage = ({ header, text, img, alt, btnText, imageAlign, link }) => {
   return (
     <div className="sectionWithBGcolor pb-5">
       <Container>
@@ -24,6 +24,7 @@ const CTAWithImage = ({ header, text, img, alt, btnText, imageAlign }) => {
                   fullWidth={true}
                   variant="primary"
                   text={btnText}
+                  link={link}
                 />
               </div>
             </div>

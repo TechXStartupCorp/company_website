@@ -18,7 +18,8 @@ const CalloutSection = ({
   lightBtnText,
   secondBtn,
   doSomethingForm,
-  doSomethingFormBtnText
+  doSomethingFormBtnText, 
+  link
 }) => {
   return (
     <Container>

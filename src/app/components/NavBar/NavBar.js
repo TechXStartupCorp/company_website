@@ -5,6 +5,7 @@ import styles from "./NavBar.module.css";
 import Link from "next/link";
 import CustomBtn from "../CustomBtn/CustomBtn";
 import { IoDocumentTextSharp } from "react-icons/io5";
+import { calendlyLink } from "@/app/data/CalendlyLink";
 
 const NavBar = () => {
   return (
@@ -45,7 +46,7 @@ const NavBar = () => {
             </NavDropdown.Item>
           </NavDropdown>
           <Nav.Item>
-            <CustomBtn text="Book consult" />
+            <CustomBtn link={calendlyLink} text="Book consult" />
           </Nav.Item>
           <Nav.Item className="">
           <Button variant="light" className={`fw-bold ${styles.applyNowBtn} px-3 py-2`}><span className="d-flex align-items-center gap-2"><IoDocumentTextSharp />Apply</span></Button>

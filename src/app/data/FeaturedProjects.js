@@ -27,9 +27,9 @@ export const featuredProjects = [
     link: "urlhere.com",
     images: [
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734117134/pexels-freestockpro-376729_sobips.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734460849/fikri-rasyid-HGLCvGWujGE-unsplash_g8vbb3.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461014/pexels-markus-winkler-1430818-29803999_kvq02j.jpg",
     ],
   },
   {
@@ -54,17 +54,17 @@ export const featuredProjects = [
     },
 
     targetAudience: {
-      "Entertainment": 25,
-      "Retail": 30,
-      "Education": 20,
-      "Advertising": 15, 
-      "Healthcare": 10
+      Entertainment: 25,
+      Retail: 30,
+      Education: 20,
+      Advertising: 15,
+      Healthcare: 10,
     },
     images: [
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734462572/nat-LZ-cJcURj5I-unsplash_-_Copy_o1hnbu.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734116515/nat-iLl5XhMLn_U-unsplash_dnwsxg.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734462566/theo-eilertsen-photography-NT52yr60WJI-unsplash_llnfhq.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734116444/niloy-tesla-F0Kf2nADn1I-unsplash_llqixz.jpg",
     ],
   },
   {
@@ -90,14 +90,14 @@ export const featuredProjects = [
 
     targetAudience: {
       "SMB's": 40,
-      "Municipalities": 30,
+      Municipalities: 30,
       "Residential communities": 30,
     },
     images: [
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734113784/Ecoshphere_ldpl06.png",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461629/ignacio-amenabar-nBk1X3s2wSc-unsplash_vert2g.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461631/mark-koch-KiRlN3jjVNU-unsplash_hl01qn.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461626/luca-bravo-ESkw2ayO2As-unsplash_y9seed.jpg",
     ],
   },
   {
@@ -123,16 +123,16 @@ export const featuredProjects = [
     },
 
     targetAudience: {
-      "Regular commuters": 40,
-      "Tourists and visitors": 30,
-      "Event-goers": 30,
+      Residential: 40,
+      Agricultural: 35,
+      Industrial: 25,
     },
     link: "urlhere.com",
     images: [
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734114411/andreas-gucklhorn-Ilpf2eUPpUE-unsplash_tw2qsr.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461342/darmau-hYfOeNvDXWg-unsplash_cgijj0.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461349/darmau-hYfOeNvDXWg-unsplash_tsuoun.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461365/sungrow-emea-VC-m6ULjJ6Y-unsplash_gk5inh.jpg",
     ],
   },
   {
@@ -164,10 +164,10 @@ export const featuredProjects = [
       "Media facilities": 30,
     },
     images: [
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734462833/benjamin-child-GWe0dlVD9e0-unsplash_tsulbb.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734462843/nastuh-abootalebi-yWwob8kwOCk-unsplash_aokzeg.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734462854/gil-ribeiro-3hO8igCybds-unsplash_ea7lmx.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734462843/nastuh-abootalebi-yWwob8kwOCk-unsplash_aokzeg.jpg",
     ],
   },
 ];

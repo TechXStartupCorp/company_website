@@ -12,6 +12,7 @@ import { FaNetworkWired, FaHandshake } from "react-icons/fa";
 import { SiAircanada } from "react-icons/si";
 import CTAWithImage from "./components/CTAWithImage/CTAWithImage";
 import { featuredProjects } from "./data/FeaturedProjects";
+import { calendlyLink } from "./data/CalendlyLink";
 
 export default function Home() {
   const services = [
@@ -167,9 +168,11 @@ export default function Home() {
         alt="Abstract landscape"
         title="Build the Future, Together"
         text="Accelerate your startup’s growth with dedicated support, mentorship, and resources through Canada’s Startup Visa Program. Join us to turn your innovative ideas into reality and succeed in a dynamic business environment."
-        primaryBtnText="Book consult"
+        primaryBtnText="Apply now"
         lightBtnText="Learn more"
         secondBtn={true}
+        // primaryBtnLink={calendlyLink}
+        lightBtnLink="/startupvisa"
       />
 
       <Container className={`${styles.landingPageContent} section`}>
@@ -298,19 +301,7 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-      {/* <Container className="section mt-1">
-        <h2 className={`xtraBold header`}>Apply for Your Startup Visa Today</h2>
 
-        <p className="mt-4 pb-2">
-          Join the Tech X Startup community and access our tailored services
-          designed to guide you through the Startup Visa application process.
-          Start building your successful business in Canada now—apply for your
-          Startup Visa today and unlock the potential for growth and success.
-        </p>
-        <div className="mt-4 pb-2">
-          <CustomBtn variant="primary" text="Apply for Startup Visa" />
-        </div>
-      </Container> */}
       <div className="section">
         <Container>
           <h2 className={`xtraBold header`}>Our venture partners</h2>
@@ -342,6 +333,7 @@ export default function Home() {
         alt="guy on computer"
         btnText="Book via Calendy"
         imageAlign="left"
+        link={calendlyLink}
       />
     </div>
   );

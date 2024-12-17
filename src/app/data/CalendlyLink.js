@@ -1,0 +1,1 @@
+export const calendlyLink = "https://calendly.com/techx-startup-corp"
