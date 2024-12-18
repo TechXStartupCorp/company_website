@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { useState, useEffect } from "react";
 import { Navbar, Nav, NavDropdown, Button } from "react-bootstrap";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
@@ -9,6 +10,17 @@ import { calendlyLink } from "@/app/data/Links";
 import { startupVisaFormLink } from "@/app/data/Links";
 
 const NavBar = () => {
+  const [activeLink, setActiveLink] = useState("home");
+  useEffect(() => {
+    const currentPath = window.location.pathname.substring(1); // Get the current path excluding the leading "/"
+    setActiveLink(currentPath || "home"); // Set the default to "home" if no path is matched
+  }, []);
+  const pathDisplayNames = {
+    "/": "Home",
+    "/about": "About",
+    "/startupvisa": "Startup Visa",
+    "/contact": "Contact",
+  };
   return (
     <Navbar className={`${styles.navBar} px-5 py-3 fixed-top`} expand="lg">
       <Navbar.Brand className="d-flex align-items-center" href="#home">
@@ -23,36 +35,26 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={`${styles.navMenu} ms-auto gap-4`}>
-          <Nav.Item>
-            <Nav.Link as={Link} href="/">
-              Home
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} href="/about">
-              About
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} href="/startupvisa">
-              Startup Visa
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} href="/contact">
-              Contact
-            </Nav.Link>
-          </Nav.Item>
-
-          {/* <NavDropdown title="More" id="basic-nav-dropdown">
-            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.2">
-              Another action
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#action/3.3">
-              Something else here
-            </NavDropdown.Item>
-          </NavDropdown> */}
+          <div className={`${styles.navLinksContainer} d-flex me-3`}>
+          {Object.keys(pathDisplayNames).map((path) => (
+            <Nav.Item key={path}>
+              <Nav.Link
+                as={Link}
+                href={path}
+                className={
+                  activeLink === (path === "/" ? "home" : path.substring(1))
+                    ? styles.active
+                    : ""
+                }
+                onClick={() =>
+                  setActiveLink(path === "/" ? "home" : path.substring(1))
+                }
+              >
+                {pathDisplayNames[path]}
+              </Nav.Link>
+            </Nav.Item>
+          ))}
+          </div>
           <Nav.Item>
             <CustomBtn link={calendlyLink} text="Book consult" />
           </Nav.Item>
