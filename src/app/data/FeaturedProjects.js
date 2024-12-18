@@ -2,7 +2,7 @@ export const featuredProjects = [
   {
     year: "2024",
     title: "My Ride",
-    industry: "Ride sharing - Technology",
+    industry: "Technology",
     text: "My Ride is a Canadian ride-sharing platform focused on providing reliable transportation while fostering inclusivity, community, and a positive experience for passengers and drivers alike.",
     sections: {
       intro:
@@ -36,7 +36,7 @@ export const featuredProjects = [
     year: "2024",
     title: "Holospace",
     text: "The HoloDisplay 3D offers immersive, glasses-free 3D visuals for industries like entertainment and retail, redefining digital media standards.",
-    industry: "VR/AR - Technology",
+    industry: "Technology",
     link: "urlhere.com",
     sections: {
       intro:

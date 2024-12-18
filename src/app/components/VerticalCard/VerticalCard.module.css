@@ -1,0 +1,24 @@
+/* /////// vertical card */
+
+.verticalCard {
+    overflow: hidden;
+    padding-bottom: 65%; 
+   
+  }
+  
+  .verticalCard img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* .caseStudyLinkContainer {
+    margin-top: 2.5rem;
+  } */
+  
+  .caseStudyLink {
+    background-color: var(--lightGreyContainerBG);
+  }

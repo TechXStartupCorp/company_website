@@ -9,7 +9,6 @@
 
 .customInput {
   border: none !important;
-  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  */
 }
 
 .customInput,
@@ -20,7 +19,6 @@
 .customInput:focus {
   outline: none !important;
   box-shadow: none !important;
-  /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);  */
 }
 
 .customInput::placeholder {

@@ -6,6 +6,7 @@ import CustomBtn from "./components/CustomBtn/CustomBtn";
 import { Row, Col, Container } from "react-bootstrap";
 import Link from "next/link";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
+import SectionWithHeaderAndText from "./components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import Stats from "./components/Stats/Stats";
 import { FaRegCompass } from "react-icons/fa6";
 import { FaNetworkWired, FaHandshake } from "react-icons/fa";
@@ -13,6 +14,7 @@ import { SiAircanada } from "react-icons/si";
 import CTAWithImage from "./components/CTAWithImage/CTAWithImage";
 import { featuredProjects } from "./data/FeaturedProjects";
 import { calendlyLink, startupVisaFormLink } from "./data/Links";
+import VerticalCard from "./components/VerticalCard/VerticalCard";
 
 export default function Home() {
   const services = [
@@ -220,13 +222,37 @@ export default function Home() {
       <Container>
         <div id="featured-projects">
           <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
-          <div>
+          <Row>
+            {featuredProjects.map((project, index) => (
+              <Col
+                className="d-flex flex-column"
+                key={index}
+                xs={12}
+                md={6}
+                lg={4}
+              >
+                <VerticalCard
+                  imageSrc={project.images[0]}
+                  alt={project.title}
+                  title={project.title}
+                  text={project.text}
+                  link={`/featuredprojects/${project.title
+                    .toLowerCase()
+                    .replace(/ /g, "-")}`}
+                  secondItem={project.industry}
+                  icon={<FaRegCompass />}
+                />
+              </Col>
+            ))}
+          </Row>
+          {/* <div>
             {sortedYears.map((year) => (
               <div key={year}>
                 <h5 className="xtraBold mt-5">{year}</h5>
                 {groupedProjects[year].map((project, index) => (
-                  <Row className="mt-5" key={index}>
+                  <Row className="mt-5 cardWithGreyBorder p-3" key={index}>
                     <Col>
+                    <div>
                       <h5 className="xtraBold">{project.title}</h5>
                       <p className="mt-3 text-secondary">{project.text}</p>
                       <div className={styles.caseStudyLinkContainer}>
@@ -239,6 +265,7 @@ export default function Home() {
                         >
                           Learn more
                         </Link>
+                      </div>
                       </div>
                     </Col>
                     <Col xl={4}>
@@ -257,7 +284,7 @@ export default function Home() {
                 ))}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </Container>
 
@@ -290,9 +317,7 @@ export default function Home() {
               key={index}
               className="d-flex flex-column align-items-center"
             >
-              <div
-                className={`${styles.sellingPointCard} d-flex flex-column p-4`}
-              >
+              <div className={`cardWithGreyBorder d-flex flex-column p-4`}>
                 <div className="fs-4">{point.icon}</div>
                 <h5 className="xtraBold mt-3">{point.title}</h5>
                 <p className="text-secondary mt-1">{point.text}</p>
