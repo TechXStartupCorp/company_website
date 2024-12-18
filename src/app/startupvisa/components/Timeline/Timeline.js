@@ -7,6 +7,7 @@ import { IoBriefcase } from "react-icons/io5";
 import { MdPerson3 } from "react-icons/md";
 import { IoDocumentAttachSharp } from "react-icons/io5";
 import Image from "next/image";
+import "../../../../app/globals.css";
 
 const Timeline = () => {
   const steps = [
@@ -68,7 +69,7 @@ const Timeline = () => {
                     className={`${styles.timeLineCardLeft} d-flex gap-4 align-items-center`}
                   >
                     <div
-                        style={{ borderTop: `4px solid ${step.color}` }}
+                      style={{ borderTop: `4px solid ${step.color}` }}
                       className={`d-flex bg-light p-4 rounded-bottom`}
                     >
                       <div className="pe-4">
@@ -80,7 +81,7 @@ const Timeline = () => {
                           {step.tags.map((tag, index) => (
                             <Badge
                               key={index}
-                              className={`tag text-dark`}
+                              className={`${styles.tag} text-dark`}
                             >
                               {tag}
                             </Badge>
@@ -125,7 +126,7 @@ const Timeline = () => {
                       {step.icon}
                     </div>
                     <div
-                    style={{ borderTop: `4px solid ${step.color}` }}
+                      style={{ borderTop: `4px solid ${step.color}` }}
                       className={`rounded-bottom d-flex bg-light p-4`}
                     >
                       <div className="pe-4">
@@ -137,7 +138,7 @@ const Timeline = () => {
                           {step.tags.map((tag, index) => (
                             <Badge
                               key={index}
-                              className={`tag text-dark`}
+                              className={`${styles.tag} text-dark`}
                             >
                               {tag}
                             </Badge>
