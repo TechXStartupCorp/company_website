@@ -1,3 +1,7 @@
+.tag {
+  background-color: var(--lightGreyBadgeBG) !important;
+}
+
 .leftCol {
   border-right: 3px solid white;
 }
@@ -45,9 +49,7 @@
   font-size: 1.9rem !important;
 }
 
-.tag {
-  background-color: var(--lightGreyBadgeBG) !important;
-}
+
 
 /* .timelineContainer {
   position: relative;

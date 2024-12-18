@@ -6,7 +6,7 @@ import SectionWithHeaderAndText from "../components/SectionWithHeaderAndText/Sec
 import { FaArrowRightLong } from "react-icons/fa6";
 import Timeline from "./components/Timeline/Timeline";
 import CTAWithImage from "../components/CTAWithImage/CTAWithImage";
-import { calendlyLink } from "../data/Links";
+import { startupVisaFormLink } from "../data/Links";
 
 export default function Home() {
   return (
@@ -321,7 +321,7 @@ export default function Home() {
           alt="guy on computer"
           btnText="Apply now"
           imageAlign="left"
-          // link={calendlyLink}
+          link={startupVisaFormLink}
         />
       </div>
     </div>

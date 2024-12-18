@@ -30,6 +30,8 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           crossOrigin="anonymous"
         />
+         <link rel="preload" href="/globals.css" as="style" />
+        <link rel="stylesheet" href="/globals.css" />
       </head>
       <body className={mulish.className}>
         <NavBar />
