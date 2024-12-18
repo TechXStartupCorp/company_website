@@ -29,7 +29,7 @@ const VerticalCard = ({
         <div>
           <h4 className="xtraBold mt-3">{title}</h4>
 
-          <p className="text-secondary mt-2">{text}</p>
+          <p className="textBlue mt-3">{text}</p>
         </div>
         <div className="d-flex gap-3 w-100 justify-content-between">
           <div className={styles.caseStudyLinkContainer}>

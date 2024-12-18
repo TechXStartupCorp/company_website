@@ -65,7 +65,7 @@ export default function Home() {
                   </div>
                   <div>
                     <h5 className="xtraBold mt-3">{item.title}</h5>
-                    <p className="text-secondary">{item.text}</p>
+                    <p className="textBlue">{item.text}</p>
                   </div>
                 </div>
               </Col>
@@ -149,7 +149,7 @@ export default function Home() {
                     </div>
                     <div className="d-flex flex-column">
                       <span className="xtraBold">{item.name}</span>
-                      <span className="text-secondary">{item.text}</span>
+                      <span className="textBlue">{item.text}</span>
                     </div>
                   </div>
                 </Col>
@@ -209,7 +209,7 @@ export default function Home() {
                     />
                   </div>
                   <h5 className="xtraBold mt-3">{item.title}</h5>
-                  <p className="text-secondary mt-1">{item.text}</p>
+                  <p className="textBlue mt-1">{item.text}</p>
                 </div>
               </Col>
             ))}

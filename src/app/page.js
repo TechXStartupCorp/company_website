@@ -199,8 +199,20 @@ export default function Home() {
           <h4 className="xtraBold header">Our services</h4>
           <Row className="g-4 mt-2">
             {services.map((service, index) => (
-              <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
-                <div className={`customCard`}>
+              <Col
+                key={index}
+                xs={12}
+                sm={6}
+                lg={4}
+                xl={3}
+                className="rounded d-flex flex-column"
+              >
+                <div className="cardWithGreyBorder flex-grow-1 p-4">
+                  <FaRegCompass className="fs-3" />
+                  <h5 className="xtraBold mt-4">{service.title}</h5>
+                  <p className="textBlue mt-2">{service.text}</p>
+                </div>
+                {/* <div className={`customCard`}>
                   <div className="imgContainer">
                     <Image
                       src={service.image}
@@ -212,7 +224,7 @@ export default function Home() {
                     <h5 className="xtraBold mt-3">{service.title}</h5>
                     <p className="text-secondary">{service.text}</p>
                   </div>
-                </div>
+                </div> */}
               </Col>
             ))}
           </Row>
@@ -320,7 +332,7 @@ export default function Home() {
               <div className={`cardWithGreyBorder d-flex flex-column p-4`}>
                 <div className="fs-4">{point.icon}</div>
                 <h5 className="xtraBold mt-3">{point.title}</h5>
-                <p className="text-secondary mt-1">{point.text}</p>
+                <p className="textBlue mt-1">{point.text}</p>
               </div>
             </Col>
           ))}
