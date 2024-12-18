@@ -5,7 +5,8 @@ import styles from "./NavBar.module.css";
 import Link from "next/link";
 import CustomBtn from "../CustomBtn/CustomBtn";
 import { IoDocumentTextSharp } from "react-icons/io5";
-import { calendlyLink } from "@/app/data/CalendlyLink";
+import { calendlyLink } from "@/app/data/Links";
+import { startupVisaFormLink } from "@/app/data/Links";
 
 const NavBar = () => {
   return (
@@ -22,21 +23,28 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={`${styles.navMenu} ms-auto gap-4`}>
-        <Nav.Item>
-    <Nav.Link as={Link} href="/">Home</Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link as={Link} href="/about">About</Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link as={Link} href="/startupvisa">Startup Visa</Nav.Link>
-  </Nav.Item>
-  <Nav.Item>
-    <Nav.Link as={Link} href="/contact">Contact</Nav.Link>
-  </Nav.Item>
-  
+          <Nav.Item>
+            <Nav.Link as={Link} href="/">
+              Home
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} href="/about">
+              About
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} href="/startupvisa">
+              Startup Visa
+            </Nav.Link>
+          </Nav.Item>
+          <Nav.Item>
+            <Nav.Link as={Link} href="/contact">
+              Contact
+            </Nav.Link>
+          </Nav.Item>
 
-          <NavDropdown title="More" id="basic-nav-dropdown">
+          {/* <NavDropdown title="More" id="basic-nav-dropdown">
             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">
               Another action
@@ -44,12 +52,27 @@ const NavBar = () => {
             <NavDropdown.Item href="#action/3.3">
               Something else here
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
           <Nav.Item>
             <CustomBtn link={calendlyLink} text="Book consult" />
           </Nav.Item>
           <Nav.Item className="">
-          <Button variant="light" className={`fw-bold ${styles.applyNowBtn} px-3 py-2`}><span className="d-flex align-items-center gap-2"><IoDocumentTextSharp />Apply</span></Button>
+            <a
+              href={startupVisaFormLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-decoration-none"
+            >
+              <Button
+                variant="light"
+                className={`fw-bold ${styles.applyNowBtn} px-3 py-2`}
+              >
+                <span className="d-flex align-items-center gap-2">
+                  <IoDocumentTextSharp />
+                  Apply
+                </span>
+              </Button>
+            </a>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

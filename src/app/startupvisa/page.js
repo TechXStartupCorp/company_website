@@ -6,7 +6,7 @@ import SectionWithHeaderAndText from "../components/SectionWithHeaderAndText/Sec
 import { FaArrowRightLong } from "react-icons/fa6";
 import Timeline from "./components/Timeline/Timeline";
 import CTAWithImage from "../components/CTAWithImage/CTAWithImage";
-import { calendlyLink } from "../data/CalendlyLink";
+import { calendlyLink } from "../data/Links";
 
 export default function Home() {
   return (

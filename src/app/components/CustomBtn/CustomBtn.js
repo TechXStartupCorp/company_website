@@ -15,6 +15,7 @@ const CustomBtn = ({
     <Button
       type={type ? "submit" : undefined}
       variant={variant}
+      // target="_blank"
       className={`${styles.customBtn} ${
         thickerPadding ? "thickerWideBTN" : "px-3 py-2"
       } fw-bold ${fullWidth && "w100BTN"}`}
@@ -23,7 +24,13 @@ const CustomBtn = ({
     </Button>
   );
 
-  return link ? <Link href={link}>{buttonContent}</Link> : buttonContent;
+  return link ? (
+    <a target="_blank" href={link} rel="noopener noreferrer">
+      {buttonContent}
+    </a>
+  ) : (
+    buttonContent
+  );
 };
 
 export default CustomBtn;

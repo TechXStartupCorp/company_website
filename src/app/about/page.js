@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import CTAWithImage from "../components/CTAWithImage/CTAWithImage";
 import styles from "./page.module.css";
-import { calendlyLink } from "../data/CalendlyLink";
+import { calendlyLink } from "../data/Links";
 
 export default function Home() {
   return (

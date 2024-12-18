@@ -80,7 +80,7 @@ const Timeline = () => {
                           {step.tags.map((tag, index) => (
                             <Badge
                               key={index}
-                              className={`${styles.tag} text-dark`}
+                              className={`tag text-dark`}
                             >
                               {tag}
                             </Badge>

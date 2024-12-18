@@ -12,7 +12,7 @@ import { FaNetworkWired, FaHandshake } from "react-icons/fa";
 import { SiAircanada } from "react-icons/si";
 import CTAWithImage from "./components/CTAWithImage/CTAWithImage";
 import { featuredProjects } from "./data/FeaturedProjects";
-import { calendlyLink } from "./data/CalendlyLink";
+import { calendlyLink, startupVisaFormLink } from "./data/Links";
 
 export default function Home() {
   const services = [
@@ -171,7 +171,7 @@ export default function Home() {
         primaryBtnText="Apply now"
         lightBtnText="Learn more"
         secondBtn={true}
-        // primaryBtnLink={calendlyLink}
+        primaryBtnLink={startupVisaFormLink}
         lightBtnLink="/startupvisa"
       />
 
