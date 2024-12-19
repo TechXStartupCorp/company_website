@@ -19,6 +19,7 @@ const NavBar = () => {
     "/": "Home",
     "/about": "About",
     "/startupvisa": "Startup Visa",
+    "/blog": "Blog", 
     "/contact": "Contact",
   };
   return (

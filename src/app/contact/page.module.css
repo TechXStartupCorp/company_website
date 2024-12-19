@@ -5,7 +5,7 @@
 
 .input::placeholder,
 .textArea::placeholder {
-  color: rgb(149, 148, 148);
+  color: #8fa8bb;
   font-size: 0.9rem;
 }
 

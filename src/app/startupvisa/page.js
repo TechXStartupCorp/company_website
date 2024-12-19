@@ -162,7 +162,7 @@ export default function Home() {
                     </div>
                     <div>
                       <h5 className="xtraBold mt-3">{step.title}</h5>
-                      <p className="text-secondary mt-3">{step.text}</p>
+                      <p className="textBlue mt-3">{step.text}</p>
                     </div>
                   </div>
                 </div>

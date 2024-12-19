@@ -263,7 +263,7 @@ export default function Home() {
                   alt={project.title}
                   title={project.title}
                   text={project.text}
-                  link={`/featuredprojects/${project.title
+                  link={`/featured-projects/${project.title
                     .toLowerCase()
                     .replace(/ /g, "-")}`}
                   secondItem={project.industry}

@@ -31,7 +31,7 @@ export default function Home() {
           <Col lg={6}>
             <div className="pe-3">
               <h4 className="xtraBold">Get in touch</h4>
-              <p className="mt-3 text-secondary">
+              <p className="mt-3">
                 Let us know how we can help you.
               </p>
 
@@ -140,7 +140,7 @@ export default function Home() {
                   </div>
                   <div className="d-flex flex-column">
                     <span className="xtraBold fs-6">{item.title}</span>
-                    <small className="text-secondary mt-1">
+                    <small className="textBlue mt-1">
                       {item.content}
                     </small>
                   </div>

@@ -76,7 +76,7 @@ const Timeline = () => {
                         <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
                           {step.title}
                         </h5>
-                        <p className="mt-3 text-secondary">{step.text}</p>
+                        <p className="mt-3">{step.text}</p>
                         <div className="d-flex gap-3 mt-4">
                           {step.tags.map((tag, index) => (
                             <Badge
@@ -91,7 +91,7 @@ const Timeline = () => {
                       <div
                         className={`${styles.week} d-flex flex-column align-items-center justify-content-center ps-4 pe-2 gap-2`}
                       >
-                        <p className="mb-0 text-secondary mb-0">Week</p>
+                        <p className="mb-0 mb-0">Week</p>
                         <h2 className={`${styles.timelineNum} fw-bold`}>
                           {step.timeline}
                         </h2>
@@ -133,7 +133,7 @@ const Timeline = () => {
                         <h5 className={`${styles.stepTitle} xtraBold mt-1`}>
                           {step.title}
                         </h5>
-                        <p className="mt-3 text-secondary">{step.text}</p>
+                        <p className="mt-3">{step.text}</p>
                         <div className="d-flex gap-3 mt-2 flex-wrap">
                           {step.tags.map((tag, index) => (
                             <Badge
@@ -148,7 +148,7 @@ const Timeline = () => {
                       <div
                         className={`${styles.week} d-flex flex-column align-items-center justify-content-center ps-4 pe-2 gap-2`}
                       >
-                        <p className="text-secondary mb-0">Week</p>
+                        <p className="mb-0">Week</p>
                         <h2 className={`${styles.timelineNum} fw-bold`}>
                           {step.timeline}
                         </h2>
