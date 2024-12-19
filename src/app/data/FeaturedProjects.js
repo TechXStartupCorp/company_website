@@ -1,3 +1,6 @@
+
+
+
 export const featuredProjects = [
   {
     year: "2024",

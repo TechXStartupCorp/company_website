@@ -8,8 +8,13 @@ import Link from "next/link";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
 import SectionWithHeaderAndText from "./components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import Stats from "./components/Stats/Stats";
-import { FaRegCompass } from "react-icons/fa6";
-import { FaNetworkWired, FaHandshake } from "react-icons/fa";
+import { FaRegCompass, FaGraduationCap, FaHeartCirclePlus } from "react-icons/fa6";
+import { FaNetworkWired, FaHandshake, FaLightbulb, FaGavel, FaPencilRuler } from "react-icons/fa";
+import { IoIosMegaphone } from "react-icons/io";
+import { HiPresentationChartBar } from "react-icons/hi2";
+import { BsFileEarmarkSpreadsheetFill } from "react-icons/bs";
+import { GiPadlock } from "react-icons/gi";
+import { IoDocument } from "react-icons/io5";
 import { SiAircanada } from "react-icons/si";
 import CTAWithImage from "./components/CTAWithImage/CTAWithImage";
 import { featuredProjects } from "./data/FeaturedProjects";
@@ -20,60 +25,70 @@ export default function Home() {
   const services = [
     {
       title: "Pre-LOS training",
+      icon: <FaGraduationCap />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866229/headway-5QgIuuBxKwM-unsplash_knadoy.jpg",
       text: "Prepare your startup for the Canada Startup Visa and secure a spot in top incubators with our Pre-Letter of Support training.",
     },
     {
       title: "Ideation & Validation",
+      icon: <FaLightbulb />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935456/mika-baumeister-Y_LgXwQEx2c-unsplash_yfzgmi.jpg",
       text: "Refining and validating business ideas through market feedback and incubator resources.",
     },
     {
       title: "Business Plan Development",
+      icon: <IoDocument />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866435/austin-distel-wD1LRb9OeEo-unsplash_vbd1pz.jpg",
       text: "Crafting a compelling business plan tailored for the Startup Visa and incubator applications.",
     },
     {
       title: "Pitch Decks",
+      icon: <HiPresentationChartBar />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866530/slidebean-ymTcgQg-2BE-unsplash_y8rt85.jpg",
       text: "Designing persuasive pitch decks to attract incubators and investors.",
     },
     {
       title: "Financial Models",
+      icon: <BsFileEarmarkSpreadsheetFill />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733948630/pexels-ivan-samkov-7213434_f0ovyw.jpg",
       text: "Building financial models to meet the requirements of investors and incubators.",
     },
     {
       title: "Incorporation & Legal",
+      icon: <FaGavel />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733933962/scott-graham-OQMZwNd3ThU-unsplash_ciwcak.jpg",
       text: "Assisting with business setup and shareholder agreements for the Startup Visa program.",
     },
     {
       title: "Marketing Strategy",
+      icon: <IoIosMegaphone />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935935/austin-chan-ukzHlkoz1IE-unsplash_jjstzt.jpg",
       text: "Developing strategic marketing plans for growth and investor attraction.",
     },
     {
       title: "Social Media & Customer Discovery",
+      icon: <FaHeartCirclePlus />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935851/firmbee-com-DfMMzzi3rmg-unsplash_qq6brp.jpg",
       text: "Creating a strong social presence and engaging with target customers.",
     },
     {
       title: "Compliance & IP Protection",
+      icon: <GiPadlock />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733936349/pexels-pixabay-39584_lozgzk.jpg",
       text: "Ensuring compliance with regulations and safeguarding intellectual property to protect your business interests.",
     },
     {
       title: "Prototyping & UI/UX Design",
+      icon: <FaPencilRuler />, 
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937263/pexels-tranmautritam-326502_hcsllt.jpg",
       text: "Developing prototypes and designs to showcase your innovation to incubators and investors.",
@@ -207,8 +222,8 @@ export default function Home() {
                 xl={3}
                 className="rounded d-flex flex-column"
               >
-                <div className="cardWithGreyBorder flex-grow-1 p-4">
-                  <FaRegCompass className="fs-3" />
+                <div className="cardWithGreyBorder flex-grow-1 py-3 px-4">
+                 <div className="fs-4 mt-1">{service.icon && service.icon}</div>
                   <h5 className="xtraBold mt-4">{service.title}</h5>
                   <p className="textBlue mt-2">{service.text}</p>
                 </div>
