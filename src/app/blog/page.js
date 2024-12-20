@@ -3,6 +3,7 @@ import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import Pagination from "../components/Pagination/Pagination";
+import GreyBtnWithBlackHover from "../components/GreyBtnWithBlackHover/GreyBtnWithBlackHover";
 import Tag from "../components/Tag/Tag";
 import styles from "./page.module.css";
 import Link from "next/link";
@@ -142,14 +143,12 @@ const page = () => {
             </Col>
             <Col>
               <div>
-                {" "}
-                <Link href="#">
-                  <Button
-                    className={`${styles.readMoreButton} border-0 text-dark fw-bold lightBtnBackgroundColor px-3 py-1`}
-                  >
-                    Read more
-                  </Button>
-                </Link>
+                <GreyBtnWithBlackHover
+                  text="Read more"
+                  link={`/blog/${post.title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                />
               </div>
             </Col>
           </Row>

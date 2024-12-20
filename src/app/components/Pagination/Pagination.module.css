@@ -1,17 +1,15 @@
 .pagination {
-  --bs-pagination-color: var(--bsDark) !important; 
+  --bs-pagination-color: var(--bsDark) !important;
   --bs-pagination-border-color: none !important;
   --bs-pagination-border-width: 0 !important;
-  --bs-pagination-active-bg: var(--lightBtnBG) !important;
+  --bs-pagination-active-bg: var(--lightGreyContainerBG) !important;
   --bs-pagination-disabled-bg: none !important;
-  --bs-pagination-active-color: var(--bsDark) !important; 
-  /* --bs-pagination-padding-x: 1.2rem !important;
-    --bs-pagination-padding-y: 0.75rem !important; */
-    --bs-pagination-padding-x: 1rem !important;
-    --bs-pagination-padding-y: 0.55rem !important;
- 
+  --bs-pagination-active-color: var(--bsDark) !important;
+  --bs-pagination-padding-x: 1rem !important;
+  --bs-pagination-padding-y: 0.55rem !important;
 }
 
 .paginationItem span {
   border-radius: 50% !important;
+  background-color: var(--lightGreyContainerBG) !important;
 }

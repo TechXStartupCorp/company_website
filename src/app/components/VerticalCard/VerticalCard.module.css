@@ -15,9 +15,7 @@
     object-fit: cover;
   }
 
-  /* .caseStudyLinkContainer {
-    margin-top: 2.5rem;
-  } */
+ 
   
   .caseStudyLink {
     background-color: var(--lightGreyContainerBG);

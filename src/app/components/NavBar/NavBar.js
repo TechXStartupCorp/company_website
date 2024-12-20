@@ -12,14 +12,18 @@ import { startupVisaFormLink } from "@/app/data/Links";
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   useEffect(() => {
-    const currentPath = window.location.pathname.substring(1); // Get the current path excluding the leading "/"
-    setActiveLink(currentPath || "home"); // Set the default to "home" if no path is matched
+    const currentPath = window.location.pathname;
+    if (currentPath.includes("/blog")) {
+      setActiveLink("blog");
+    } else {
+      setActiveLink(currentPath.substring(1) || "home");
+    }
   }, []);
   const pathDisplayNames = {
     "/": "Home",
     "/about": "About",
     "/startupvisa": "Startup Visa",
-    "/blog": "Blog", 
+    "/blog": "Blog",
     "/contact": "Contact",
   };
   return (
@@ -37,47 +41,46 @@ const NavBar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className={`${styles.navMenu} ms-auto gap-4`}>
           <div className={`${styles.navLinksContainer} d-flex me-3`}>
-          {Object.keys(pathDisplayNames).map((path) => (
-            <Nav.Item key={path}>
-              <Nav.Link
-                as={Link}
-                href={path}
-                className={
-                  activeLink === (path === "/" ? "home" : path.substring(1))
-                    ? styles.active
-                    : ""
-                }
-                onClick={() =>
-                  setActiveLink(path === "/" ? "home" : path.substring(1))
-                }
-              >
-                {pathDisplayNames[path]}
-              </Nav.Link>
-            </Nav.Item>
-          ))}
+            {Object.keys(pathDisplayNames).map((path) => (
+              <Nav.Item key={path}>
+                <Nav.Link
+                  as={Link}
+                  href={path}
+                  className={
+                    activeLink === (path === "/" ? "home" : path.substring(1))
+                      ? styles.active
+                      : ""
+                  }
+                  onClick={() =>
+                    setActiveLink(path === "/" ? "home" : path.substring(1))
+                  }
+                >
+                  {pathDisplayNames[path]}
+                </Nav.Link>
+              </Nav.Item>
+            ))}
           </div>
-          <Nav.Item>
-            <CustomBtn link={calendlyLink} text="Book consult" />
-          </Nav.Item>
-          <Nav.Item className="">
-            <a
-              href={startupVisaFormLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none"
-            >
-              <Button
-                variant="light"
-                className={`fw-bold ${styles.applyNowBtn} lightBtnBackgroundColor px-3 py-2`}
-              >
-                <span className="d-flex align-items-center gap-2">
-                  <IoDocumentTextSharp />
-                  Apply
-                </span>
-              </Button>
-            </a>
-          </Nav.Item>
         </Nav>
+        <div className="d-flex gap-2 ms-3">
+          <CustomBtn link={calendlyLink} text="Book consult" />
+
+          <a
+            href={startupVisaFormLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-decoration-none"
+          >
+            <Button
+              variant="light"
+              className={`fw-bold ${styles.applyNowBtn} lightBtnBackgroundColor px-3 py-2`}
+            >
+              <span className="d-flex align-items-center gap-2">
+                <IoDocumentTextSharp />
+                Apply
+              </span>
+            </Button>
+          </a>
+        </div>
       </Navbar.Collapse>
     </Navbar>
   );

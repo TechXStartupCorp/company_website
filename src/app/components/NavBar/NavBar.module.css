@@ -11,6 +11,7 @@
   color: black;
   position: relative;
   display: inline-block;
+  letter-spacing: 1.3px;
 }
 
 .navMenu a.active::after {
@@ -44,11 +45,9 @@
 }
 
 .applyNowBtn {
-  /* background-color: #eeeeee !important; */
   border-radius: 11px !important;
   white-space: nowrap !important;
   border-color: transparent !important;
-  margin-left: -0.8rem;
 }
 
 .navMenu a {
