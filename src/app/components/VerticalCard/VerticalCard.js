@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./VerticalCard.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import Tag from "../Tag/Tag";
 
 const VerticalCard = ({
   imageSrc,
@@ -32,15 +33,7 @@ const VerticalCard = ({
           <p className="textBlue mt-3">{text}</p>
         </div>
         <div className="d-flex gap-3 w-100 justify-content-between">
-          <div className={styles.caseStudyLinkContainer}>
-            <Link
-              href={link}
-              rel="noopener noreferrer"
-              className={`text-dark fw-bold text-decoration-none py-2 px-3 rounded ${styles.caseStudyLink}`}
-            >
-              Learn more
-            </Link>
-          </div>
+          <Tag link={link} text="Learn more" />
         </div>
       </div>
     </div>

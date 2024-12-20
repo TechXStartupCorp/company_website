@@ -21,6 +21,8 @@ body {
   --lightGreyBadgeBG: #e2e1e1;
   --lightGreyBorder: #d0dbe7; 
   --blueText: #4f7396; 
+  --lightBtnBG: #eeeeee !important;
+  --bsDark:#212529; 
 }
 
 .textBlue {
@@ -30,6 +32,10 @@ body {
 hr {
   color: var(--lightGreyBorder) !important;
   opacity: .75 !important;
+}
+
+.lightBtnBackgroundColor {
+  background-color: var(--lightBtnBG) !important;
 }
 
 .tag {
@@ -173,6 +179,8 @@ hr {
 .navyBlueTimelineCardBorderTop {
   border-top: 4px solid #354b6a;
 }
+
+
 
 /* 
 @media (max-width: 575px) {

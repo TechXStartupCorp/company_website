@@ -68,7 +68,7 @@ const NavBar = () => {
             >
               <Button
                 variant="light"
-                className={`fw-bold ${styles.applyNowBtn} px-3 py-2`}
+                className={`fw-bold ${styles.applyNowBtn} lightBtnBackgroundColor px-3 py-2`}
               >
                 <span className="d-flex align-items-center gap-2">
                   <IoDocumentTextSharp />

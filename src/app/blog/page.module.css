@@ -1,0 +1,33 @@
+.blogImgContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.blogImgContainer img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.readMoreButton {
+  font-size: 0.9rem !important;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.readMoreButton:hover {
+  background-color: var(--bsDark) !important;
+  color: #fff !important;
+}
+
+.blogDate {
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 1200px) {
+  .blogHeader {
+    font-size: 1.2rem !important;
+  }
+}
