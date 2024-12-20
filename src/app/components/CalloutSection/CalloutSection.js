@@ -21,6 +21,10 @@ const CalloutSection = ({
   doSomethingFormBtnText, 
   link
 }) => {
+
+  const hasButtons =
+    primaryBtnLink && primaryBtnText && (!secondBtn || (lightBtnLink && lightBtnText));
+
   return (
     <Container>
       <div
@@ -41,23 +45,25 @@ const CalloutSection = ({
           <p className="mt-3">{text}</p>
           {doSomethingForm ? (
             <div className="mt-4 pt-2">
-            <DoSomethingForm text={doSomethingFormBtnText}/>
+              <DoSomethingForm text={doSomethingFormBtnText} />
             </div>
           ) : (
-            <div className="d-flex gap-3 mt-5">
-              <CustomBtn
-                link={primaryBtnLink}
-                text={primaryBtnText}
-                variant="primary"
-              />
-              {secondBtn && (
+            hasButtons && (
+              <div className="d-flex gap-3 mt-5">
                 <CustomBtn
-                  link={lightBtnLink}
-                  text={lightBtnText}
-                  variant="light"
+                  link={primaryBtnLink}
+                  text={primaryBtnText}
+                  variant="primary"
                 />
-              )}
-            </div>
+                {secondBtn && (
+                  <CustomBtn
+                    link={lightBtnLink}
+                    text={lightBtnText}
+                    variant="light"
+                  />
+                )}
+              </div>
+            )
           )}
         </div>
       </div>

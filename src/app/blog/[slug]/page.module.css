@@ -1,0 +1,26 @@
+.breadCrumb li a,
+.breadCrumb li::before {
+  color: var(--blueText) !important;
+  text-decoration: none !important;
+}
+
+.breadCrumb li {
+  color: var(--bsDark) !important;
+}
+
+.blogImgContainer {
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* Makes the container a square */
+    overflow: hidden;
+    border-radius: 50%; /* Ensures the square becomes a circle */
+  }
+  
+  .blogImgContainer img {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }

@@ -11,15 +11,6 @@
   height: 100%;
 }
 
-.readMoreButton {
-  font-size: 0.9rem !important;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
-}
-
-.readMoreButton:hover {
-  background-color: var(--bsDark) !important;
-  color: #fff !important;
-}
 
 .blogDate {
     font-size: 0.85rem;

@@ -1,6 +1,4 @@
 "use client";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import { featuredProjects } from "@/app/data/FeaturedProjects";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
@@ -63,14 +61,16 @@ export default function ProjectDetails({ params }) {
   return (
     <div className="section">
       <Container className="pb-4">
-      {/* <CustomBreadcrumb /> */}
-      {/* <CustomBreadcrumb currentPath={window.location.pathname} /> */}
-        <Breadcrumb>
+        {/* <CustomBreadcrumb /> */}
+        {/* <CustomBreadcrumb currentPath={window.location.pathname} /> */}
+        <Breadcrumb className={styles.breadCrumb}>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/#featured-projects">
             Featured projects
           </Breadcrumb.Item>
-          <Breadcrumb.Item active>{project && project.title}</Breadcrumb.Item>
+          <Breadcrumb.Item className={styles.breadCrumbItemActive} active>
+            {project && project.title}
+          </Breadcrumb.Item>
         </Breadcrumb>
         <Row className="align-items-center mt-5">
           <h2 className="xtraBold">Project: {project && project.title}</h2>
@@ -82,15 +82,15 @@ export default function ProjectDetails({ params }) {
         <Row className="py-2">
           <Col>
             <div className="d-flex flex-column">
-              <span className="text-secondary">Year</span>
-              <span className="fw-bold mt-1">{project && project.year}</span>
+              <span className="">Year</span>
+              <span className="xtraBold mt-1">{project && project.year}</span>
             </div>
           </Col>
           <Col>
             {" "}
             <div className="d-flex flex-column">
-              <span className="text-secondary">Industry</span>
-              <span className="fw-bold mt-1">{project.industry}</span>
+              <span className="">Industry</span>
+              <span className="xtraBold mt-1">{project.industry}</span>
             </div>
           </Col>
         </Row>
@@ -98,11 +98,10 @@ export default function ProjectDetails({ params }) {
         <Row className="py-2">
           <Col>
             <div className="d-flex flex-column">
-              <span className="text-secondary">Project team</span>
-              <span className="fw-bold mt-1">Onsite or remote</span>
+              <span className="">Project team</span>
+              <span className="xtraBold mt-1">Onsite or remote</span>
             </div>
           </Col>
-         
         </Row>
 
         <h5 className="mt-5 xtraBold">Target Audience</h5>
@@ -115,7 +114,7 @@ export default function ProjectDetails({ params }) {
                     className={`${styles.detailsCard} d-flex flex-column align-items-center justify-content-center p-3 rounded`}
                   >
                     <span className="xtraBold fs-2">{percentage}%</span>
-                    <span className="text-secondary mt-1">{audience}</span>
+                    <span className="textBlue mt-1">{audience}</span>
                   </div>
                 </Col>
               )
@@ -130,7 +129,9 @@ export default function ProjectDetails({ params }) {
           <p className="mt-2">{project && project.sections.solution}</p>
         </Row>
         <Row className="mt-4">
-          <h5 className="xtraBold">What are the benefits of {project && project.title}</h5>
+          <h5 className="xtraBold">
+            What are the benefits of {project && project.title}
+          </h5>
           <p className="mt-2">
             Some noteworthy benefits of {project && project.title} include:
           </p>

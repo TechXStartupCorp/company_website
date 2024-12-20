@@ -26,6 +26,11 @@ body {
   --bsDark:#212529; 
 }
 
+
+/* .breadcrumb-item.active {
+  color: var(--bsDark);
+} */
+
 .textBlue {
   color: var(--blueText);
 }
