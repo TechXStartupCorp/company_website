@@ -6,6 +6,13 @@ import styles from "./page.module.css";
 import { blogPosts } from "@/app/data/DummyBlogPosts";
 import CalloutSection from "@/app/components/CalloutSection/CalloutSection";
 import Image from "next/image";
+import CustomBtn from "@/app/components/CustomBtn/CustomBtn";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaReddit } from "react-icons/fa";
+import { FaSquareThreads } from "react-icons/fa6";
+import { BsPaperclip } from "react-icons/bs";
 
 const page = () => {
   const { slug } = useParams();
@@ -22,9 +29,9 @@ const page = () => {
         <Breadcrumb className={styles.breadCrumb}>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
           <Breadcrumb.Item href="/blog">Blog</Breadcrumb.Item>
-          <Breadcrumb.Item active>{blogPost.title}</Breadcrumb.Item>
+          <Breadcrumb.Item active>{blogPost && blogPost.title}</Breadcrumb.Item>
         </Breadcrumb>
-        <h2 className="xtraBold mt-5">{blogPost.title}</h2>
+        <h2 className="xtraBold mt-5">{blogPost && blogPost.title}</h2>
         <small className="textBlue mt-3">by Tatyana Karlen - 12 min read</small>
         <Row className="d-flex align-items-center mt-5">
           <Col className="" lg={1}>
@@ -48,13 +55,64 @@ const page = () => {
             </div>
           </Col>
         </Row>
+      </Container>
+      <div className="mt-4">
+        <CalloutSection
+          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
+          alt="Abstract landscape"
+          title="Introduction"
+          text="In today’s fast-paced digital landscape, design is more than just aesthetics—it's the bridge between creativity and functionality. Whether you're building a brand, launching a website, or crafting a seamless user experience, great design has the power to captivate, engage, and inspire. In this blog, we’ll explore how thoughtful design can elevate your ideas, turning visions into reality while leaving a lasting impact on your audience. Whether you're a seasoned professional or just starting your creative journey, there's something here to spark your inspiration and empower your next project. Let’s dive in!"
+        />
+      </div>
+      <Container>
         <div className="mt-4">
-          <CalloutSection
-            imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
-            alt="Abstract landscape"
-            title="Introduction"
-            text="In today’s fast-paced digital landscape, design is more than just aesthetics—it's the bridge between creativity and functionality. Whether you're building a brand, launching a website, or crafting a seamless user experience, great design has the power to captivate, engage, and inspire. In this blog, we’ll explore how thoughtful design can elevate your ideas, turning visions into reality while leaving a lasting impact on your audience. Whether you're a seasoned professional or just starting your creative journey, there's something here to spark your inspiration and empower your next project. Let’s dive in!"
-          />
+          <p>{blogPost && blogPost.introduction}</p>
+          <div
+            className={`${styles.shareLinkContainer} cardWithGreyBorder d-flex justify-content-between align-items-center py-3 px-4 mt-5`}
+          >
+            <div className="d-flex flex-column">
+              <span className="fs-6 xtraBold">Enjoying this article?</span>
+              <small className="textBlue mt-1">
+                Share it with your friends and colleagues.
+              </small>
+            </div>
+            <div className="d-flex flex-column mt-2 gap-3 align-items-center">
+            <div className="d-flex gap-3 fs-5">
+              <div className={`${styles.faceBookLogo} d-flex justify-content-center align-items-center`}>
+            <FaFacebook />
+            </div>
+            <div className={`${styles.xLogo} d-flex justify-content-center align-items-center`}>
+            <FaXTwitter />
+            </div>
+            <div className={`${styles.redditLogo} d-flex justify-content-center align-items-center`}>
+            <FaReddit />
+            </div>
+            <div className={`${styles.linkedinLogo} d-flex justify-content-center align-items-center`}>
+            <FaLinkedin />
+            </div>
+            <div className={`${styles.threadsLogo} d-flex justify-content-center align-items-center`}>
+            <FaSquareThreads />
+            </div>
+
+              {/* <CustomBtn
+                variant="dark"
+                icon={
+                  <div className="text-light d-flex justify-content-center align-items-center">
+                    <FaXTwitter />
+                  </div>
+                }
+              />
+              <CustomBtn text="Share on Twitter" /> */}
+            </div>
+            <div className="d-flex gap-2">
+              <div className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-2 px-3 gap-2">
+                <BsPaperclip className={styles.paperClipIcon}/>
+                <small className={styles.shareLink}>https://link/link</small>
+
+              </div>
+            </div>
+            </div>
+          </div>
         </div>
       </Container>
     </div>

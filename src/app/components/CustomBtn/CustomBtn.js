@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 import styles from "./CustomBtn.module.css";
-import Link from "next/link";
 
 const CustomBtn = ({
   text,
@@ -10,16 +9,17 @@ const CustomBtn = ({
   thickerPadding,
   type,
   link,
+  icon, // New prop for the icon
 }) => {
   const buttonContent = (
     <Button
       type={type ? "submit" : undefined}
       variant={variant}
-      // target="_blank"
       className={`${styles.customBtn} ${
         thickerPadding ? "thickerWideBTN" : "px-3 py-2"
-      } fw-bold ${fullWidth && "w100BTN"}`}
+      } fw-bold d-flex justify-content-center align-items-center ${fullWidth && "w100BTN"}`}
     >
+      {icon && icon}
       {text}
     </Button>
   );
