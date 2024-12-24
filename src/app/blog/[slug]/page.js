@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 import { Container, Breadcrumb, Row, Col } from "react-bootstrap";
 import styles from "./page.module.css";
 import { blogPosts } from "@/app/data/DummyBlogPosts";
@@ -13,6 +14,9 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaReddit } from "react-icons/fa";
 import { FaSquareThreads } from "react-icons/fa6";
 import { BsPaperclip } from "react-icons/bs";
+import { FaRegCopy } from "react-icons/fa";
+
+
 
 const page = () => {
   const { slug } = useParams();
@@ -23,6 +27,48 @@ const page = () => {
   if (!blogPost) {
     return <div>Blog not found</div>;
   }
+
+  const [currentUrl, setCurrentUrl] = useState("");
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // This will run once the component mounts on the client side
+  }, []);
+
+  const handleCopyClick = () => {
+    if (isClient) {
+      // Check if Clipboard API is available
+      if (navigator.clipboard) {
+        if (window.location.protocol === "https:") {
+          // Clipboard API is available and in a secure context (https)
+          navigator.clipboard.writeText(currentUrl)
+            .then(() => {
+              alert("Link copied to clipboard!");
+            })
+            .catch((err) => {
+              console.error("Error copying text: ", err);
+            });
+        } else {
+          alert("Clipboard API requires a secure context (https).");
+        }
+      } else {
+        // Fallback for older browsers (execCommand)
+        const textArea = document.createElement("textarea");
+        textArea.value = currentUrl;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textArea);
+        alert("Link copied using fallback!");
+      }
+    }
+  };
+
+  // Set the current URL when the component mounts
+  useEffect(() => {
+    setCurrentUrl(window.location.href); // Gets the current URL
+  }, []);
+
   return (
     <div className="section">
       <Container>
@@ -76,7 +122,7 @@ const page = () => {
                 Share it with your friends and colleagues.
               </small>
             </div>
-            <div className="d-flex flex-column mt-2 gap-3 align-items-center">
+            <div className="d-flex flex-column mt-2 gap-3 align-items-end">
             <div className="d-flex gap-3 fs-5">
               <div className={`${styles.faceBookLogo} d-flex justify-content-center align-items-center`}>
             <FaFacebook />
@@ -105,11 +151,12 @@ const page = () => {
               <CustomBtn text="Share on Twitter" /> */}
             </div>
             <div className="d-flex gap-2">
-              <div className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-2 px-3 gap-2">
+              <div onClick={handleCopyClick} role="button" className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-1 px-3 gap-2">
                 <BsPaperclip className={styles.paperClipIcon}/>
-                <small className={styles.shareLink}>https://link/link</small>
+                <small className={styles.shareLink}>Copy link</small>
 
               </div>
+              <div onClick={handleCopyClick} className={`${styles.customBtn}`}><FaRegCopy /></div>
             </div>
             </div>
           </div>
