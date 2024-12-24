@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./Footer.module.css";
 import { Container } from "react-bootstrap";
 import Link from "next/link";
-import { CiLinkedin } from "react-icons/ci";
-import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
 import DoSomethingForm from "../CalloutSection/components/GetSomethingForm/DoSomethingForm";
 import { FaRegCopyright } from "react-icons/fa";
 
@@ -26,13 +26,13 @@ const Footer = () => {
       </div>
       <Container className="textBlue d-flex flex-column align-items-center justify-content-center pb-4">
         <div className="d-flex justify-content-center text-dark gap-3 fs-4 mt-4">
-          <CiLinkedin />
-          <CiFacebook />
-          <FaXTwitter />
-          <FaInstagram />
+          <FaLinkedin />
+          <FaFacebook />
+          <FaXTwitter  />
+          <RiInstagramFill className="" />
         </div>
         <div className="text-center mt-4">
-          <FaRegCopyright className="mt-0 mb-1" /> 2024 Tech X Startup Inc. All rights reserved. Privacy and terms
+          <FaRegCopyright className="mt-0 mb-1" /> <small>2024 Tech X Startup Inc. All rights reserved. Privacy and terms</small>
         </div>
       </Container>
     </div>

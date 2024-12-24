@@ -46,6 +46,7 @@
 
 .shareLink {
   color: #a5a7aa;
+  font-size: 0.85rem !important;
 }
 
 .paperClipIcon {
@@ -63,9 +64,9 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 50%;
+  /* border-radius: 50%;
   height: 1.65rem;
-  width: 1.65rem;
+  width: 1.65rem; */
 }
 
 .customBtn:hover {
