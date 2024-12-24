@@ -25,6 +25,9 @@
   height: 100%;
 }
 
+.shareLinkContainer {
+  margin-top: 1.85rem;
+}
 .faceBookLogo {
   color: #1877f2;
 }
@@ -42,7 +45,7 @@
 }
 
 .shareLink {
-  color: #A5A7AA;
+  color: #a5a7aa;
 }
 
 .paperClipIcon {
@@ -60,7 +63,7 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  border-radius: 50%; 
+  border-radius: 50%;
   height: 1.65rem;
   width: 1.65rem;
 }
@@ -69,9 +72,18 @@
   opacity: 0.85;
 }
 
+.shareLinkBottom {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.shareLinkBottom:hover {
+  background-color: var(--bsDark) !important;
+  color: #fff !important;
+}
+
 .socialLogosContainer .iconContainer {
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -91,4 +103,3 @@
 .socialLogosContainer .iconContainer:hover::after {
   width: 100%; /* Expand to full width of the parent */
 }
-

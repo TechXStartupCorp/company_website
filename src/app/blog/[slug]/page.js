@@ -15,6 +15,7 @@ import { FaReddit } from "react-icons/fa";
 import { FaSquareThreads } from "react-icons/fa6";
 import { BsPaperclip } from "react-icons/bs";
 import { FaRegCopy } from "react-icons/fa";
+import { MdArrowOutward } from "react-icons/md";
 
 const page = () => {
   const { slug } = useParams();
@@ -66,7 +67,7 @@ const page = () => {
   }, []);
 
   return (
-    <div className="section">
+    <div className="section pb-5">
       <Container>
         <Breadcrumb className={styles.breadCrumb}>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -109,70 +110,81 @@ const page = () => {
       <Container>
         <div className="mt-4">
           <p>{blogPost && blogPost.introduction}</p>
+        </div>
+      </Container>
+      <Container className="">
+        <div
+          className={`${styles.shareLinkContainer} cardWithGreyBorder d-flex justify-content-between align-items-center py-3 px-4`}
+        >
+          <div className="d-flex flex-column">
+            <span className="fs-6 xtraBold">Enjoying this article?</span>
+            <small className="textBlue mt-2">
+              Share it with your friends and colleagues.
+            </small>
+          </div>
+          <div className="d-flex flex-column mt-2 gap-2 align-items-end">
+            <div className={`${styles.socialLogosContainer} d-flex gap-3 fs-5`}>
+              <div
+                className={`${styles.faceBookLogo} ${styles.iconContainer} pb-2 d-flex justify-content-center align-items-center`}
+              >
+                <FaFacebook />
+              </div>
+              <div
+                className={`${styles.xLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+              >
+                <FaXTwitter />
+              </div>
+              <div
+                className={`${styles.redditLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+              >
+                <FaReddit />
+              </div>
+              <div
+                className={`${styles.linkedinLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+              >
+                <FaLinkedin />
+              </div>
+              <div
+                className={`${styles.threadsLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+              >
+                <FaSquareThreads />
+              </div>
+            </div>
+            <div className="d-flex gap-2">
+              <div
+                onClick={handleCopyClick}
+                role="button"
+                className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-1 px-3 gap-2"
+              >
+                <BsPaperclip className={styles.paperClipIcon} />
+                <small className={styles.shareLink}>Copy link</small>
+              </div>
+              <div onClick={handleCopyClick} className={`${styles.customBtn}`}>
+                <FaRegCopy />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+      <Container>
+        {blogPost.content.map((section, index) => (
+          <div className="mt-5" key={index}>
+            <h4 className="xtraBold">{section.subheader}</h4>
+            <p>{section.paragraph}</p>
+          </div>
+        ))}
+      </Container>
+      <Container>
+        <div className="section d-flex flex-column align-items-start w-25">
+          <h6 className="mt-2 xtraBold">Published on Jun 3rd, 2024</h6>
+         
           <div
-            className={`${styles.shareLinkContainer} cardWithGreyBorder d-flex justify-content-between align-items-center py-3 px-4 mt-5`}
+            onClick={handleCopyClick}
+            role="button"
+            className={`${styles.shareLinkBottom} w-100 mt-2 py-2 rounded lightGreyContainerBG fw-bold d-flex align-items-center justify-content-center gap-3`}
           >
-            <div className="d-flex flex-column">
-              <span className="fs-6 xtraBold">Enjoying this article?</span>
-              <small className="textBlue mt-2">
-                Share it with your friends and colleagues.
-              </small>
-            </div>
-            <div className="d-flex flex-column mt-2 gap-2 align-items-end">
-              <div className={`${styles.socialLogosContainer} d-flex gap-3 fs-5`}>
-                <div
-                  className={`${styles.faceBookLogo} ${styles.iconContainer} pb-2 d-flex justify-content-center align-items-center`}
-                >
-                  <FaFacebook />
-                </div>
-                <div
-                  className={`${styles.xLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
-                >
-                  <FaXTwitter />
-                </div>
-                <div
-                  className={`${styles.redditLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
-                >
-                  <FaReddit />
-                </div>
-                <div
-                  className={`${styles.linkedinLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
-                >
-                  <FaLinkedin />
-                </div>
-                <div
-                  className={`${styles.threadsLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
-                >
-                  <FaSquareThreads />
-                </div>
-
-                {/* <CustomBtn
-                variant="dark"
-                icon={
-                  <div className="text-light d-flex justify-content-center align-items-center">
-                    <FaXTwitter />
-                  </div>
-                }
-              />
-              <CustomBtn text="Share on Twitter" /> */}
-              </div>
-              <div className="d-flex gap-2">
-                <div
-                  onClick={handleCopyClick}
-                  role="button"
-                  className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-1 px-3 gap-2"
-                >
-                  <BsPaperclip className={styles.paperClipIcon} />
-                  <small className={styles.shareLink}>Copy link</small>
-                </div>
-                <div
-                  onClick={handleCopyClick}
-                  className={`${styles.customBtn}`}
-                >
-                  <FaRegCopy />
-                </div>
-              </div>
-            </div>
+            <MdArrowOutward />
+            <small>Share</small>
           </div>
         </div>
       </Container>
