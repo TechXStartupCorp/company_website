@@ -16,8 +16,6 @@ import { FaSquareThreads } from "react-icons/fa6";
 import { BsPaperclip } from "react-icons/bs";
 import { FaRegCopy } from "react-icons/fa";
 
-
-
 const page = () => {
   const { slug } = useParams();
   const blogPost = blogPosts.find(
@@ -37,11 +35,10 @@ const page = () => {
 
   const handleCopyClick = () => {
     if (isClient) {
-      // Check if Clipboard API is available
       if (navigator.clipboard) {
         if (window.location.protocol === "https:") {
-          // Clipboard API is available and in a secure context (https)
-          navigator.clipboard.writeText(currentUrl)
+          navigator.clipboard
+            .writeText(currentUrl)
             .then(() => {
               alert("Link copied to clipboard!");
             })
@@ -52,14 +49,13 @@ const page = () => {
           alert("Clipboard API requires a secure context (https).");
         }
       } else {
-        // Fallback for older browsers (execCommand)
         const textArea = document.createElement("textarea");
         textArea.value = currentUrl;
         document.body.appendChild(textArea);
         textArea.select();
         document.execCommand("copy");
         document.body.removeChild(textArea);
-        alert("Link copied using fallback!");
+        alert("Link copied to clipboard!");
       }
     }
   };
@@ -118,29 +114,39 @@ const page = () => {
           >
             <div className="d-flex flex-column">
               <span className="fs-6 xtraBold">Enjoying this article?</span>
-              <small className="textBlue mt-1">
+              <small className="textBlue mt-2">
                 Share it with your friends and colleagues.
               </small>
             </div>
-            <div className="d-flex flex-column mt-2 gap-3 align-items-end">
-            <div className="d-flex gap-3 fs-5">
-              <div className={`${styles.faceBookLogo} d-flex justify-content-center align-items-center`}>
-            <FaFacebook />
-            </div>
-            <div className={`${styles.xLogo} d-flex justify-content-center align-items-center`}>
-            <FaXTwitter />
-            </div>
-            <div className={`${styles.redditLogo} d-flex justify-content-center align-items-center`}>
-            <FaReddit />
-            </div>
-            <div className={`${styles.linkedinLogo} d-flex justify-content-center align-items-center`}>
-            <FaLinkedin />
-            </div>
-            <div className={`${styles.threadsLogo} d-flex justify-content-center align-items-center`}>
-            <FaSquareThreads />
-            </div>
+            <div className="d-flex flex-column mt-2 gap-2 align-items-end">
+              <div className={`${styles.socialLogosContainer} d-flex gap-3 fs-5`}>
+                <div
+                  className={`${styles.faceBookLogo} ${styles.iconContainer} pb-2 d-flex justify-content-center align-items-center`}
+                >
+                  <FaFacebook />
+                </div>
+                <div
+                  className={`${styles.xLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+                >
+                  <FaXTwitter />
+                </div>
+                <div
+                  className={`${styles.redditLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+                >
+                  <FaReddit />
+                </div>
+                <div
+                  className={`${styles.linkedinLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+                >
+                  <FaLinkedin />
+                </div>
+                <div
+                  className={`${styles.threadsLogo} ${styles.iconContainer}  pb-2 d-flex justify-content-center align-items-center`}
+                >
+                  <FaSquareThreads />
+                </div>
 
-              {/* <CustomBtn
+                {/* <CustomBtn
                 variant="dark"
                 icon={
                   <div className="text-light d-flex justify-content-center align-items-center">
@@ -149,15 +155,23 @@ const page = () => {
                 }
               />
               <CustomBtn text="Share on Twitter" /> */}
-            </div>
-            <div className="d-flex gap-2">
-              <div onClick={handleCopyClick} role="button" className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-1 px-3 gap-2">
-                <BsPaperclip className={styles.paperClipIcon}/>
-                <small className={styles.shareLink}>Copy link</small>
-
               </div>
-              <div onClick={handleCopyClick} className={`${styles.customBtn}`}><FaRegCopy /></div>
-            </div>
+              <div className="d-flex gap-2">
+                <div
+                  onClick={handleCopyClick}
+                  role="button"
+                  className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-1 px-3 gap-2"
+                >
+                  <BsPaperclip className={styles.paperClipIcon} />
+                  <small className={styles.shareLink}>Copy link</small>
+                </div>
+                <div
+                  onClick={handleCopyClick}
+                  className={`${styles.customBtn}`}
+                >
+                  <FaRegCopy />
+                </div>
+              </div>
             </div>
           </div>
         </div>

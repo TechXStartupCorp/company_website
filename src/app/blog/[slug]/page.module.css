@@ -69,3 +69,26 @@
   opacity: 0.85;
 }
 
+.socialLogosContainer .iconContainer {
+  position: relative;
+  overflow: hidden; 
+  cursor: pointer;
+}
+
+/* The after element that will create the bottom border effect */
+.socialLogosContainer .iconContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* Set the thickness of the bottom border */
+  background: linear-gradient(135deg, #3b7bff, #66d98b);
+  transition: width 0.3s ease; /* Make the width change smoothly */
+}
+
+/* Hover effect: expand the width of the bottom border */
+.socialLogosContainer .iconContainer:hover::after {
+  width: 100%; /* Expand to full width of the parent */
+}
+
