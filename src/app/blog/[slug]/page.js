@@ -169,7 +169,7 @@ const page = () => {
             >
               {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
                 <ShareButton key={platform} url={shareUrl} quote={title}>
-                  <Icon size={24} round />
+                  <Icon size={21} className={`${styles.shareIcon}`} />
                 </ShareButton>
               ))}
             </div>
@@ -184,7 +184,7 @@ const page = () => {
               </div>
               <div
                 onClick={handleCopyClick}
-                className={`${styles.customBtn} rounded py-1 px-2`}
+                className={`${styles.customBtn}`}
               >
                 <FaRegCopy />
               </div>

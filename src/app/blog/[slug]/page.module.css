@@ -64,13 +64,17 @@
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
-  /* border-radius: 50%;
+  border-radius: 50%;
   height: 1.65rem;
-  width: 1.65rem; */
+  width: 1.65rem;
 }
 
 .customBtn:hover {
   opacity: 0.85;
+}
+
+.shareIcon {
+  border-radius: 5px !important;
 }
 
 .shareLinkBottom {
