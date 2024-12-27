@@ -16,6 +16,28 @@ const page = () => {
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
+  const [selectedTags, setSelectedTags] = useState([]); // State for selected tags
+  console.log(selectedTags, "selected tags");
+
+  // Function to add or remove a tag
+  const toggleTagSelection = (tag) => {
+    setSelectedTags((prevSelectedTags) => {
+      if (prevSelectedTags.includes(tag)) {
+        return prevSelectedTags.filter((t) => t !== tag); // Remove tag if already selected
+      } else {
+        return [...prevSelectedTags, tag]; // Add tag if not already selected
+      }
+    });
+  };
+
+  // Filter blog posts based on selected tags
+  const filteredPosts = blogPosts.filter((post) =>
+    selectedTags.some((tag) => post.tags.includes(tag))
+  );
+
+  console.log(filteredPosts, "filtered posts");
+
   //
   return (
     <div className="section">
@@ -36,53 +58,56 @@ const page = () => {
             "Investors",
             "Global Expansion",
           ].map((tag, index) => (
-            <Tag key={index} text={tag} />
+            <Tag
+              key={index}
+              text={tag}
+              isSelected={selectedTags.includes(tag)}
+              onClick={() => toggleTagSelection(tag)}
+            />
           ))}
         </div>
 
         <Row>
           <h5 className="xtraBold mt-5">December 2024</h5>
         </Row>
-        {blogPosts.map((post, index) => (
-          <Row className="mt-4" key={index}>
-            <Col lg={10}>
-              <Row className="d-flex align-items-center">
-                <Col xl={1} lg={2}>
-                  <div className={styles.blogImgContainer}>
-                    <Image
-                      src={post.imageUrl}
-                      alt={post.altText}
-                      layout="fill"
-                      className="w-100 h-100 rounded"
-                    />
-                  </div>
-                </Col>
-                <Col>
-                  <div className="d-flex flex-column">
-                    <h6
-                      className={`${styles.blogHeader} xtraBold fs-6 mb-1 mt-1`}
-                    >
-                      {post.title}
-                    </h6>
-                    <small className={`${styles.blogDate} textBlue`}>
-                      {post.date}
-                    </small>
-                  </div>
-                </Col>
-              </Row>
-            </Col>
-            <Col>
-              <div>
-                <GreyBtnWide
-                  text="Read more"
-                  link={`/blog/${post.title
-                    .replace(/\s+/g, "-")
-                    .toLowerCase()}`}
-                />
-              </div>
-            </Col>
-          </Row>
-        ))}
+        {(filteredPosts.length > 0 ? filteredPosts : blogPosts).map(
+          (post, index) => (
+            <Row className="mt-4" key={index}>
+              <Col lg={10}>
+                <Row className="d-flex align-items-center">
+                  <Col xl={1} lg={2}>
+                    <div className="blogImgContainer">
+                      <Image
+                        src={post.imageUrl}
+                        alt={post.altText}
+                        layout="fill"
+                        className="w-100 h-100 rounded"
+                      />
+                    </div>
+                  </Col>
+                  <Col>
+                    <div className="d-flex flex-column">
+                      <h6 className="blogHeader xtraBold fs-6 mb-1 mt-1">
+                        {post.title}
+                      </h6>
+                      <small className="blogDate textBlue">{post.date}</small>
+                    </div>
+                  </Col>
+                </Row>
+              </Col>
+              <Col>
+                <div>
+                  <GreyBtnWide
+                    text="Read more"
+                    link={`/blog/${post.title
+                      .replace(/\s+/g, "-")
+                      .toLowerCase()}`}
+                  />
+                </div>
+              </Col>
+            </Row>
+          )
+        )}
         <Row>
           <div className="mt-5">
             <Pagination
