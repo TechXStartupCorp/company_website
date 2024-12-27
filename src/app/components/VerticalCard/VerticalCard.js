@@ -3,7 +3,7 @@ import styles from "./VerticalCard.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import Tag from "../Tag/Tag";
-import GreyBtnWithBlackHover from "../GreyBtnWithBlackHover/GreyBtnWithBlackHover";
+import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 
 const VerticalCard = ({
   imageSrc,
@@ -33,9 +33,8 @@ const VerticalCard = ({
 
           <p className="textBlue mt-2">{text}</p>
         </div>
-        <div className="d-flex gap-3 w-100 justify-content-between">
-          <GreyBtnWithBlackHover link={link} text="Learn more" />
-        </div>
+
+        <GreyBtnWide link={link} icon={icon} text="Read more" />
       </div>
     </div>
   );

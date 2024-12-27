@@ -1,9 +1,10 @@
-.greyButton {
-    font-size: 0.9rem !important;
+
+.greyWideBtn {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
   }
   
-  .greyButton:hover {
+  .greyWideBtn:hover {
     background-color: var(--bsDark) !important;
     color: #fff !important;
   }
+  

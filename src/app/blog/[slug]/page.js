@@ -7,15 +7,15 @@ import styles from "./page.module.css";
 import { blogPosts } from "@/app/data/DummyBlogPosts";
 import CalloutSection from "@/app/components/CalloutSection/CalloutSection";
 import Image from "next/image";
-import { FaXTwitter, FaSquareThreads } from "react-icons/fa6";
-import { FaFacebook, FaLinkedin, FaReddit, FaRegCopy } from "react-icons/fa";
+import { FaRegCopy } from "react-icons/fa";
 import { BsPaperclip } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
+import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
 import {
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
-  TwitterIcon,
+
   XIcon,
   RedditShareButton,
   RedditIcon,
@@ -159,7 +159,7 @@ const page = () => {
         >
           <div className="d-flex flex-column">
             <span className="xtraBold">Enjoying this article?</span>
-            <small className="textBlue mt-2">
+            <small className="textBlue mt-1">
               Share it with your friends and colleagues.
             </small>
           </div>
@@ -168,12 +168,12 @@ const page = () => {
               className={`${styles.socialLogosContainer} d-flex gap-3 fs-5 pb-1`}
             >
               {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
-                <ShareButton key={platform} url={shareUrl} quote={title}>
-                  <Icon size={21} className={`${styles.shareIcon}`} />
+                <ShareButton key={platform} rounded url={shareUrl} quote={title}>
+                  <Icon rounded="true" size={26}  />
                 </ShareButton>
               ))}
             </div>
-            <div className="d-flex gap-2">
+            {/* <div className="d-flex gap-2">
               <div
                 onClick={handleCopyClick}
                 role="button"
@@ -182,13 +182,10 @@ const page = () => {
                 <BsPaperclip className={styles.paperClipIcon} />
                 <small className={styles.shareLink}>Copy link</small>
               </div>
-              <div
-                onClick={handleCopyClick}
-                className={`${styles.customBtn}`}
-              >
+              <div onClick={handleCopyClick} className={`${styles.customBtn}`}>
                 <FaRegCopy />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </Container>
@@ -196,22 +193,18 @@ const page = () => {
         {blogPost.content.map((section, index) => (
           <div className="mt-5" key={index}>
             <h4 className="xtraBold">{section.subheader}</h4>
-            <p>{section.paragraph}</p>
+            <p className="mt-3">{section.paragraph}</p>
           </div>
         ))}
       </Container>
       <Container>
         <div className="section d-flex flex-column align-items-start w-25">
           <h6 className="mt-2 xtraBold">Published on Jun 3rd, 2024</h6>
-
-          <div
+          <GreyBtnWide
             onClick={handleCopyClick}
-            role="button"
-            className={`${styles.shareLinkBottom} w-100 mt-2 py-2 rounded lightGreyContainerBG fw-bold d-flex align-items-center justify-content-center gap-3`}
-          >
-            <MdArrowOutward />
-            <small>Share</small>
-          </div>
+            icon={<MdArrowOutward />}
+            text="Share"
+          />
         </div>
       </Container>
     </div>

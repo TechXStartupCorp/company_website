@@ -3,11 +3,11 @@ import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import Pagination from "../components/Pagination/Pagination";
-import GreyBtnWithBlackHover from "../components/GreyBtnWithBlackHover/GreyBtnWithBlackHover";
 import Tag from "../components/Tag/Tag";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { blogPosts } from "../data/DummyBlogPosts";
+import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -72,7 +72,7 @@ const page = () => {
             </Col>
             <Col>
               <div>
-                <GreyBtnWithBlackHover
+                <GreyBtnWide
                   text="Read more"
                   link={`/blog/${post.title
                     .replace(/\s+/g, "-")

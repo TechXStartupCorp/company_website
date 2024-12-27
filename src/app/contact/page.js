@@ -172,7 +172,7 @@ export default function Home() {
               {contactInfo.map((item, index) => (
                 <div key={index} className="d-flex gap-3 align-items-center">
                   <div
-                    className={`${styles.iconContainer} d-flex justify-content-center align-items-center p-3 rounded fs-4`}
+                    className={`${styles.iconContainer} d-flex justify-content-center align-items-center px-3 py-2 rounded`}
                   >
                     {item.icon}
                   </div>

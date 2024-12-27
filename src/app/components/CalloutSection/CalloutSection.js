@@ -16,15 +16,14 @@ const CalloutSection = ({
   primaryBtnText,
   lightBtnLink,
   lightBtnText,
-  secondBtn,
+  secondBtn, // Controls rendering of the secondary button
   doSomethingForm,
-  doSomethingFormBtnText, 
-  link
+  doSomethingFormBtnText,
+  onClickBtn1,
+  isPrimaryBtnLinkExternal, 
+  isLightBtnLinkExternal, 
+
 }) => {
-
-  const hasButtons =
-    primaryBtnLink && primaryBtnText && (!secondBtn || (lightBtnLink && lightBtnText));
-
   return (
     <Container>
       <div
@@ -48,18 +47,24 @@ const CalloutSection = ({
               <DoSomethingForm text={doSomethingFormBtnText} />
             </div>
           ) : (
-            hasButtons && (
+            (primaryBtnText || secondBtn) && (
               <div className="d-flex gap-3 mt-5">
-                <CustomBtn
-                  link={primaryBtnLink}
-                  text={primaryBtnText}
-                  variant="primary"
-                />
-                {secondBtn && (
+                {primaryBtnText && (
+                  <CustomBtn
+                    link={primaryBtnLink}
+                    text={primaryBtnText}
+                    variant="primary"
+                    onClick={onClickBtn1}
+                    isLinkExternal={isPrimaryBtnLinkExternal}
+                    
+                  />
+                )}
+                {secondBtn && lightBtnText && lightBtnLink && (
                   <CustomBtn
                     link={lightBtnLink}
                     text={lightBtnText}
                     variant="light"
+                    isLinkExternal={isLightBtnLinkExternal}
                   />
                 )}
               </div>
