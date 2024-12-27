@@ -6,17 +6,17 @@ const Stats = () => {
   const stats = [
     {
       title: "Success rate",
-      percentage: "78%",
+      percentage: "95%",
       average: "+2%",
     },
     {
       title: "Conversion rate",
-      percentage: "35%",
+      percentage: "90%",
       average: "+1%",
     },
     {
       title: "Retention rate",
-      percentage: "85%",
+      percentage: "90%",
       average: "+3%",
     },
   ];

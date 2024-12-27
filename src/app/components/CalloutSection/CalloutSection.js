@@ -6,6 +6,7 @@ import styles from "./CalloutSection.module.css";
 import { Form, Container } from "react-bootstrap";
 import { IoMdSearch } from "react-icons/io";
 import DoSomethingForm from "./components/GetSomethingForm/DoSomethingForm";
+import SubscribeButton from "../SubscribeBTN/SubscribeBTN";
 
 const CalloutSection = ({
   imageURL,
@@ -20,9 +21,9 @@ const CalloutSection = ({
   doSomethingForm,
   doSomethingFormBtnText,
   onClickBtn1,
-  isPrimaryBtnLinkExternal, 
-  isLightBtnLinkExternal, 
-
+  onClickBtn2,
+  isPrimaryBtnLinkExternal,
+  isLightBtnLinkExternal,
 }) => {
   return (
     <Container>
@@ -44,7 +45,8 @@ const CalloutSection = ({
           <p className="mt-3">{text}</p>
           {doSomethingForm ? (
             <div className="mt-4 pt-2">
-              <DoSomethingForm text={doSomethingFormBtnText} />
+              {/* <DoSomethingForm text={doSomethingFormBtnText} /> */}
+              <SubscribeButton />
             </div>
           ) : (
             (primaryBtnText || secondBtn) && (
@@ -56,7 +58,6 @@ const CalloutSection = ({
                     variant="primary"
                     onClick={onClickBtn1}
                     isLinkExternal={isPrimaryBtnLinkExternal}
-                    
                   />
                 )}
                 {secondBtn && lightBtnText && lightBtnLink && (
@@ -64,6 +65,7 @@ const CalloutSection = ({
                     link={lightBtnLink}
                     text={lightBtnText}
                     variant="light"
+                    onClick={onClickBtn2}
                     isLinkExternal={isLightBtnLinkExternal}
                   />
                 )}

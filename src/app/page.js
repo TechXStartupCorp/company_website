@@ -2,11 +2,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import Image from "next/image";
 import styles from "./page.module.css";
-import CustomBtn from "./components/CustomBtn/CustomBtn";
 import { Row, Col, Container } from "react-bootstrap";
-import Link from "next/link";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
-import SectionWithHeaderAndText from "./components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import Stats from "./components/Stats/Stats";
 import {
   FaRegCompass,
@@ -31,79 +28,78 @@ import CTAWithImage from "./components/CTAWithImage/CTAWithImage";
 import { featuredProjects } from "./data/FeaturedProjects";
 import { calendlyLink, startupVisaFormLink } from "./data/Links";
 import VerticalCard from "./components/VerticalCard/VerticalCard";
-import { handleGetGuideClick } from "../../utils/emailOctopus";
 
 export default function Home() {
   const services = [
     {
-      title: "Pre-LOS training",
+      title: "Startup Launch Training",
       icon: <FaGraduationCap />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866229/headway-5QgIuuBxKwM-unsplash_knadoy.jpg",
-      text: "Prepare your startup for the Canada Startup Visa and secure a spot in top incubators with our Pre-Letter of Support training.",
+      text: "Empowering early-stage founders and Startup Visa applicants with tailored training to kickstart their ventures.",
     },
     {
-      title: "Ideation & Validation",
+      title: "Ideation & Market Validation",
       icon: <FaLightbulb />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935456/mika-baumeister-Y_LgXwQEx2c-unsplash_yfzgmi.jpg",
-      text: "Refining and validating business ideas through market feedback and incubator resources.",
+      text: "Helping founders refine and validate their business ideas with market insights and industry expertise.",
     },
     {
-      title: "Business Plan Development",
+      title: "Business Planning for Startups",
       icon: <IoDocument />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866435/austin-distel-wD1LRb9OeEo-unsplash_vbd1pz.jpg",
-      text: "Crafting a compelling business plan tailored for the Startup Visa and incubator applications.",
+      text: "Crafting impactful business plans to attract investors and meet Startup Visa application requirements.",
     },
     {
-      title: "Pitch Decks",
+      title: "Investor-Ready Pitch Decks",
       icon: <HiPresentationChartBar />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733866530/slidebean-ymTcgQg-2BE-unsplash_y8rt85.jpg",
-      text: "Designing persuasive pitch decks to attract incubators and investors.",
+      text: "Designing compelling pitch decks to secure funding and incubator placements.",
     },
     {
-      title: "Financial Models",
+      title: "Financial Modeling for Success",
       icon: <BsFileEarmarkSpreadsheetFill />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733948630/pexels-ivan-samkov-7213434_f0ovyw.jpg",
-      text: "Building financial models to meet the requirements of investors and incubators.",
+      text: "Developing robust financial models to guide startups and support funding applications.",
     },
     {
-      title: "Incorporation & Legal",
+      title: "Incorporation & Legal Services",
       icon: <FaGavel />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733933962/scott-graham-OQMZwNd3ThU-unsplash_ciwcak.jpg",
-      text: "Assisting with business setup and shareholder agreements for the Startup Visa program.",
+      text: "Facilitating business setup and compliance for early-stage founders and Startup Visa applicants.",
     },
     {
-      title: "Marketing Strategy",
+      title: "Strategic Marketing Plans",
       icon: <IoIosMegaphone />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935935/austin-chan-ukzHlkoz1IE-unsplash_jjstzt.jpg",
-      text: "Developing strategic marketing plans for growth and investor attraction.",
+      text: "Building marketing strategies to drive growth and enhance visibility among investors.",
     },
     {
-      title: "Social Media & Customer Discovery",
+      title: "Social Engagement & Discovery",
       icon: <FaHeartCirclePlus />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733935851/firmbee-com-DfMMzzi3rmg-unsplash_qq6brp.jpg",
-      text: "Creating a strong social presence and engaging with target customers.",
+      text: "Strengthening social presence and connecting with target audiences for customer discovery.",
     },
     {
-      title: "Compliance & IP Protection",
+      title: "Regulatory Compliance & IP",
       icon: <GiPadlock />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733936349/pexels-pixabay-39584_lozgzk.jpg",
-      text: "Ensuring compliance with regulations and safeguarding intellectual property to protect your business interests.",
+      text: "Ensuring regulatory compliance and protecting intellectual property to safeguard your startup's assets.",
     },
     {
-      title: "Prototyping & UI/UX Design",
+      title: "Prototyping & UX/UI Design",
       icon: <FaPencilRuler />,
       image:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937263/pexels-tranmautritam-326502_hcsllt.jpg",
-      text: "Developing prototypes and designs to showcase your innovation to incubators and investors.",
+      text: "Creating prototypes and designs to bring your vision to life and captivate stakeholders.",
     },
   ];
 
@@ -160,23 +156,23 @@ export default function Home() {
   const sellingPoints = [
     {
       icon: <FaRegCompass />,
-      title: "End-to-End Guidance",
-      text: "We take you from concept to execution, offering tailored support to help secure your Startup Visa approval.",
+      title: "Comprehensive Startup Support",
+      text: "From idea refinement to securing your Startup Visa, we provide end-to-end guidance tailored for entrepreneurs and SUV applicants.",
     },
     {
       icon: <FaNetworkWired />,
-      title: "Extensive Network",
-      text: "Access our network of investors and incubators to bring your vision to life and fast-track your growth in Canada.",
+      title: "Global Network Access",
+      text: "Leverage our extensive connections with investors, incubators, and industry leaders to accelerate your startup's journey in Canada.",
     },
     {
       icon: <FaHandshake />,
-      title: "Partnership Opportunities",
-      text: "Partner with Canadian businesses and stakeholders to expand your operations and integrate into the Canadian market.",
+      title: "Cross-Border Collaboration",
+      text: "Forge strategic partnerships with Canadian businesses and stakeholders, ensuring seamless integration into the Canadian market.",
     },
     {
       icon: <SiAircanada />,
-      title: "Exclusive Canadian Benefits",
-      text: "Benefit from Canada's supportive business environment, tax incentives, and access to a thriving global market.",
+      title: "Startup Visa Expertise",
+      text: "With a proven track record of success, we simplify your Startup Visa process and help you establish your venture in Canada.",
     },
   ];
 
@@ -196,9 +192,9 @@ export default function Home() {
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
         alt="Abstract landscape"
         title="Build the Future, Together"
-        text="Accelerate your startup’s growth with dedicated support, mentorship, and resources through Canada’s Startup Visa Program. Join us to turn your innovative ideas into reality and succeed in a dynamic business environment."
+        text="Launch and grow your startup with expert guidance, tailored resources, and mentorship. Whether you're building your first venture or navigating Canada’s Startup Visa Program, we’re here to help you succeed in a competitive global market."
         primaryBtnText="Apply now"
-        lightBtnText="Learn more"
+        lightBtnText="Startup Visa"
         secondBtn={true}
         primaryBtnLink={startupVisaFormLink}
         lightBtnLink="/startupvisa"
@@ -206,19 +202,19 @@ export default function Home() {
 
       <Container className={`${styles.landingPageContent} section`}>
         <h2 className={`xtraBold w-75`}>
-          Our mission is to empower creators and innovators to push boundaries
-          through our partnership with Canada&apos;s Startup Visa Program
+          Our mission is to empower founders and innovators to launch startups
+          and thrive, leveraging our expertise and Canada&apos;s Startup Visa
+          Program
         </h2>
+
         <p className="mt-4">
-          Tech X Startup collaborates closely with a network of angel investors,
-          business incubators, and venture capital funds to help transform your
-          tech idea into a thriving business. We offer not only the essential
-          funding, resources, and mentorship needed to validate and scale your
-          startup but also provide expert guidance throughout the process. With
-          our support, you&apos;ll navigate the Canada Startup Visa Program,
-          securing the opportunity for permanent residence while laying the
-          foundation for long-term success and building a prosperous future in
-          Canada.
+          Tech X Startup partners with a network of angel investors, incubators,
+          and venture capital funds to help turn your innovative ideas into
+          successful startups. We provide the essential funding, resources, and
+          mentorship to validate and scale your business. Our expert guidance
+          ensures you not only navigate the startup journey but also succeed in
+          Canada&apos;s Startup Visa Program, securing permanent residence and
+          setting the stage for long-term success in Canada.
         </p>
       </Container>
       <div className="mt-4 pb-4">
@@ -321,14 +317,14 @@ export default function Home() {
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"
           alt="Beautiful landscape"
           title="Transform Your Startup’s Future"
-          text="Elevate your business with Canada's Startup Visa Program. Unlock new opportunities, gain invaluable support, and accelerate your growth as you scale your startup to new heights."
+          text="Take your startup to the next level with Canada’s Startup Visa Program. Access valuable resources, expert support, and accelerate your growth as you scale your business and seize new opportunities in a thriving market."
           primaryBtnText="Get the guide"
           secondBtn={true}
           lightBtnLink="/startupvisa"
           lightBtnText="Learn more"
-          // doSomethingForm={true}
+          doSomethingForm={true}
           // doSomethingFormBtnText="Get the guide"
-          onClickBtn1={handleGetGuideClick}
+          // onClickBtn1={handleGetGuideClick}
           isLightBtnLinkExternal={false}
           // isPrimaryBtnLinkExternal={false}
         />
@@ -337,11 +333,13 @@ export default function Home() {
         <Stats />
       </Container>
       <Container className="section mt-1">
-        <h2 className={`xtraBold header`}>Why Tech X Startup?</h2>
+        <h2 className={`xtraBold header`}>Why Choose Tech X Startup?</h2>
         <p className="mt-4 w-75 pb-2">
-          Tech X Startup guides you from idea to success, securing essential
-          support for Canada&apos;s Startup Visa Program and unlocking
-          opportunities for your business to thrive.
+          Tech X Startup supports you at every stage, from turning your idea
+          into a thriving business to navigating Canada&apos;s Startup Visa
+          Program. We provide the resources, mentorship, and expertise you need
+          to unlock opportunities and scale your startup for long-term success
+          in Canada.
         </p>
         <Row className="mt-3 gx-4 gy-3">
           {sellingPoints.map((point, index) => (
