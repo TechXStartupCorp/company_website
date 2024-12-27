@@ -6,6 +6,7 @@ import { PiGearSixFill } from "react-icons/pi";
 import { IoBriefcase } from "react-icons/io5";
 import { MdPerson3 } from "react-icons/md";
 import { IoDocumentAttachSharp } from "react-icons/io5";
+import { FaGlobe } from "react-icons/fa";
 import Image from "next/image";
 import "../../../../app/globals.css";
 
@@ -50,6 +51,14 @@ const Timeline = () => {
       icon: <IoDocumentAttachSharp />,
       color: "#354b6a",
       text: "Once payment is received, the incubator will issue a Letter of Support to the applicant.",
+    },
+    {
+      timeline: "15",
+      title: "Immigration Application Submission",
+      tags: ["Immigration", "Work Permit", "Permanent Residence"],
+      icon: <FaGlobe />,
+      color: "#212529", 
+      text: "Prepare and submit the work permit or permanent residence application once the Letter of Support is received.",
     },
   ];
 

@@ -6,6 +6,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
 import { MdOutlineLocationOn } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
 import CustomBtn from "../components/CustomBtn/CustomBtn";
 import { send } from "emailjs-com";
 
@@ -28,7 +29,7 @@ export default function Home() {
     },
     {
       icon: <FaWhatsapp />,
-      text: "647-792-7999 ext 103",
+      text: "+1-782-641-6944",
     },
   ];
 
@@ -182,7 +183,8 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="mt-3">
+            <p className="mt-5 mb-0 d-flex align-items-center gap-1"><IoLocationOutline />2985 Drew Road, Suite 204, Mississauga ON, L4T 0A4</p>
+            <div className="">
               <iframe
                 width="100%"
                 height="300px"

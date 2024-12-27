@@ -1,16 +1,17 @@
-"use client"
-import React, { useState, useEffect } from 'react';
+'use client'; // Ensure this component runs on the client side
+
+import React, { useState } from 'react';
 
 const SubscribeButton = () => {
   const [formLoaded, setFormLoaded] = useState(false);
 
-  useEffect(() => {
-    if (formLoaded) return; // Avoid reloading the form multiple times
+  const loadEmailOctopusForm = () => {
+    if (formLoaded) return; 
 
-    const loadEmailOctopusForm = () => {
-      // Create the form container (without using ID)
+    if (typeof window !== 'undefined') {
+     
       const formContainer = document.createElement('div');
-      document.body.appendChild(formContainer); // Form container inserted
+      document.body.appendChild(formContainer); 
 
       console.log('Form container created:', formContainer);
 
@@ -19,27 +20,30 @@ const SubscribeButton = () => {
       script.src = 'https://eocampaign1.com/form/9aed7d28-c46c-11ef-aac9-3d4a674a74de.js'; // Update with your form URL
       script.async = true;
       script.setAttribute('data-form', '9aed7d28-c46c-11ef-aac9-3d4a674a74de'); // Your unique form ID
+      // script.setAttribute('crossorigin', 'anonymous'); 
       document.body.appendChild(script); // Script inserted
 
       // Log the script loading process
       script.onload = () => {
-        console.log('EmailOctopus script loaded!'); 
+        console.log('EmailOctopus script loaded!');
+        alert('Thank you for subscribing! Your guide will be sent shortly.');
         setFormLoaded(true); // Only set form loaded once script finishes loading
       };
-     
+
       script.onerror = () => {
         console.error('Error loading the EmailOctopus script!');
         alert('There was an issue loading the form. Please try again.');
       };
-    };
+    }
+  };
 
-    // Load form only once on the client side after component mounts
-    loadEmailOctopusForm();
-
-  }, [formLoaded]); // Empty array ensures this only runs once
+  const handleButtonClick = () => {
+    console.log('Button clicked - Get the Guide clicked!');
+    loadEmailOctopusForm(); // Trigger form loading on button click
+  };
 
   return (
-    <button onClick={() => { console.log('Button clicked - Get the Guide clicked!') }}>
+    <button onClick={handleButtonClick}>
       Get the Guide
     </button>
   );

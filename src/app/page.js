@@ -208,7 +208,7 @@ export default function Home() {
         </h2>
 
         <p className="mt-4">
-          Tech X Startup partners with a network of angel investors, incubators,
+          TechX Startup partners with a network of angel investors, incubators,
           and venture capital funds to help turn your innovative ideas into
           successful startups. We provide the essential funding, resources, and
           mentorship to validate and scale your business. Our expert guidance
@@ -317,7 +317,7 @@ export default function Home() {
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"
           alt="Beautiful landscape"
           title="Transform Your Startup’s Future"
-          text="Take your startup to the next level with Canada’s Startup Visa Program. Access valuable resources, expert support, and accelerate your growth as you scale your business and seize new opportunities in a thriving market."
+          text="Elevate your startup with expert guidance and resources. Whether you're launching your business or navigating Canada’s Startup Visa Program, we provide the support you need to scale, seize new opportunities, and thrive in a competitive market."
           primaryBtnText="Get the guide"
           secondBtn={true}
           lightBtnLink="/startupvisa"
@@ -381,10 +381,8 @@ export default function Home() {
       </div>
 
       <CTAWithImage
-        header="Build, Launch, and Scale with Tech X Startup"
-        text="Partner with Tech X Startup to navigate the Canada Startup Visa
-                process. Book a call today and start your journey to building a
-                successful business in Canada."
+        header="Build, Launch, and Scale with TechX Startup"
+        text="Partner with TechX Startup to successfully navigate the Canada Startup Visa process. Book a call today and take the first step toward launching your business and thriving in Canada."
         img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946918/dai-ke-GkraTrCYA_0-unsplash_zm7zb8.jpg"
         alt="guy on computer"
         btnText="Book via Calendy"

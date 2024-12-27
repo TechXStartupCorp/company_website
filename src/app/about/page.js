@@ -12,7 +12,7 @@ export default function Home() {
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934546/pexels-canvastudio-3194521_zoauly.jpg"
         alt="Beautiful landscape"
         title="Our Mission: Empowering Innovation and Growth"
-        text="We are committed to providing the resources, guidance, and community support needed to navigate the complex journey of building a successful startup. From expert mentorship to exclusive insights on the Canada Startup Visa Program, we are your partner in success. Become part of a community that’s shaping the future of innovation."
+        text="We are dedicated to helping both local founders and Startup Visa applicants navigate the journey of building a successful startup. With expert mentorship, tailored resources, and exclusive insights into the Canada Startup Visa Program, we are your partner every step of the way. Join a community that is driving innovation and shaping the future of entrepreneurship."
         primaryBtnText="Join our team"
         secondBtn={false}
         primaryBtnLink="mailto:team@techxstartup.com"
@@ -21,15 +21,16 @@ export default function Home() {
         <Container>
           <h2 className="xtraBold mt-3">A brief history of Tech X Startup</h2>
           <p className="mt-4">
-            Tech X Startup began with a mission to empower aspiring
-            entrepreneurs worldwide. Since our inception, we’ve grown from a
-            small team of passionate innovators to a thriving network of startup
-            enthusiasts, mentors, and industry experts. Over the years, we’ve
-            helped countless startups navigate the complexities of the Canada
-            Startup Visa Program, establish strong foundations, and scale their
-            ideas into successful ventures. Our journey is fueled by a
-            commitment to innovation, collaboration, and supporting the next
-            generation of visionary leaders.
+            TechX Startup was founded with the mission to empower aspiring
+            entrepreneurs, both locally and globally. From a small team of
+            passionate innovators, we have grown into a thriving network of
+            startup enthusiasts, mentors, and industry experts. Over the years,
+            we&apos;ve helped local founders and Startup Visa applicants
+            navigate the complexities of launching a business, establish strong
+            foundations, and scale their ideas into successful ventures. Our
+            journey is driven by a commitment to innovation, collaboration, and
+            supporting the next generation of visionary leaders, wherever they
+            are.
           </p>
           <Row className="g-4 mt-2">
             {[
@@ -77,9 +78,9 @@ export default function Home() {
       <div className="section">
         <Container>
           <h2 className={`xtraBold w-75`}>
-            Our team values community and the power of information, using years
-            of immigration expertise to guide individuals and families every
-            step of the way.
+            Our team values community, innovation, and the power of
+            collaboration, using years of expertise to guide entrepreneurs and
+            startups through every stage of their journey.
           </h2>
           <h4 className="xtraBold mt-5 pb-2">Our team</h4>
           <div>
@@ -161,15 +162,16 @@ export default function Home() {
 
       <div className="section pb-5">
         <Container>
-          <h3 className="xtraBold mt-3">Our immigration partners</h3>
+          <h3 className="xtraBold mt-3">Startup Visa partners</h3>
           <p className="mt-4">
-            With decades of experience working alongside top immigration firms,
-            we have honed our expertise in the intricacies of the immigration
-            process. Our strong partnerships enable us to provide our clients
-            with comprehensive, tailored solutions that address every aspect of
-            their journey. From initial consultations to securing the necessary
-            visas, we work hand-in-hand with our immigration partners to ensure
-            a smooth and efficient experience.
+            With decades of experience collaborating with leading immigration
+            firms, we have refined our expertise in the Canada Startup Visa
+            process. Our strong partnerships with immigration specialists ensure
+            that we provide tailored solutions for each step of the journey.
+            From initial consultations to securing the Startup Visa and
+            permanent residency, we work closely with our immigration partners
+            to offer a seamless, efficient experience for founders seeking to
+            establish their businesses in Canada.
           </p>
 
           <Row className="g-4 mt-2">

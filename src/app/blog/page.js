@@ -22,18 +22,19 @@ const page = () => {
       <Container>
         <h3 className="xtraBold">Blog</h3>
         <h5 className="xtraBold mt-5">All posts</h5>
+
         <div className="d-flex w-100 flex-wrap gap-3 mt-4">
           {[
-            "Startup Visa",
-            "Immigration",
+            "Startup Launch",
             "Entrepreneurship",
-            "Business Expansion",
+            "Business Growth",
+            "Startup Visa",
             "Founders",
-            "Startups",
-            "Residency",
+            "Innovation",
+            "Venture Capital",
             "Visa Application",
             "Investors",
-            "Immigration",
+            "Global Expansion",
           ].map((tag, index) => (
             <Tag key={index} text={tag} />
           ))}
