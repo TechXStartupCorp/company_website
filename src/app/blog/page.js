@@ -9,36 +9,32 @@ import { blogPosts } from "../data/DummyBlogPosts";
 import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
 
-// const Tag = dynamic(() => import("../components/Tag/Tag"), { ssr: false });
-// const Pagination = dynamic(
-//   () => import("../components/Pagination/Pagination"),
-//   { ssr: false }
-// );
+
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedTags, setSelectedTags] = useState([]); // State for selected tags
-  const [isClient, setIsClient] = useState(false); // Track if we're on the client
+  const [selectedCategories, setSelectedCategories] = useState([]); 
+  const [isClient, setIsClient] = useState(false); 
   const totalPages = 5;
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
-  // Function to add or remove a tag
-  const toggleTagSelection = (tag) => {
-    setSelectedTags((prevSelectedTags) => {
-      if (prevSelectedTags.includes(tag)) {
-        return prevSelectedTags.filter((t) => t !== tag); // Remove tag if already selected
+  // Function to add or remove a category
+  const toggleCategorySelection = (category) => {
+    setSelectedCategories((prevSelectedCategories) => {
+      if (prevSelectedCategories.includes(category)) {
+        return prevSelectedCategories.filter((t) => t !== category); // Remove tag if already selected
       } else {
-        return [...prevSelectedTags, tag]; // Add tag if not already selected
+        return [...prevSelectedCategories, category]; // Add tag if not already selected
       }
     });
   };
 
   // Filter blog posts based on selected tags
   const filteredPosts = blogPosts.filter((post) =>
-    selectedTags.some((tag) => post.tags.includes(tag))
+    selectedCategories.some((category) => post.categories.includes(category))
   );
 
   //
@@ -60,22 +56,22 @@ const page = () => {
             "Visa Application",
             "Investors",
             "Global Expansion",
-          ].map((tag, index) => (
+          ].map((category, index) => (
             <Tag
               key={index}
-              text={tag}
-              isSelected={selectedTags.includes(tag)}
-              onClick={() => toggleTagSelection(tag)}
-              setSelectedTags={setSelectedTags}
-              selectedTags={selectedTags}
+              text={category}
+              isSelected={selectedCategories.includes(category)}
+              onClick={() => toggleCategorySelection(category)}
+              setSelectedCategories={setSelectedCategories}
+              selectedCategories={selectedCategories}
             />
           ))}
           <Tag
-            setSelectedTags={setSelectedTags}
-            selectedTags={selectedTags}
+            setSelectedCategories={setSelectedCategories}
+            selectedCategories={selectedCategories}
             text="Reset"
             icon={<IoReload />}
-            onClick={() => setSelectedTags([])}
+            onClick={() => setSelectedCategories([])}
           />
         </div>
 

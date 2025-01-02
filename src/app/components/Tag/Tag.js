@@ -4,23 +4,23 @@ import styles from "./Tag.module.css";
 const Tag = ({
   text,
   isSelected,
-  selectedTags,
-  setSelectedTags,
+  selectedCategories,
+  // setSelectedCategories,
   onClick,
   icon,
 }) => {
-  const tagClass = isSelected ? `${styles.tag} ${styles.selected}` : styles.tag;
+  const categoryClass = isSelected ? `${styles.category} ${styles.selected}` : styles.category;
 
   return (
     <small
-      className={`text-dark fw-bold py-1 px-3 rounded greyBtnWithDarkHover ${tagClass}`}
+      className={`text-dark fw-bold py-1 px-3 rounded greyBtnWithDarkHover ${categoryClass}`}
       onClick={() => onClick(text)}
       style={{ cursor: "pointer" }}
     >
       {icon ? (
         <div
           className={
-            selectedTags.length === 0
+            selectedCategories.length === 0
               ? "text-secondary fw-normal opacity-50"
               : "text-primary opacity-40 fw-normal"
           }

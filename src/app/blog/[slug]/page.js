@@ -10,14 +10,14 @@ import Image from "next/image";
 import { FaRegCopy } from "react-icons/fa";
 import { BsPaperclip } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
+import { calendlyLink } from "@/app/data/Links";
 import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
+import CTAWithImage from "@/app/components/CTAWithImage/CTAWithImage";
 import {
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
   XIcon,
-  RedditShareButton,
-  RedditIcon,
   LinkedinShareButton,
   LinkedinIcon,
   WhatsappShareButton,
@@ -27,22 +27,17 @@ import {
 const page = () => {
   const { slug } = useParams();
 
-  
   const decodedSlug = decodeURIComponent(slug).replace(/:/g, "");
 
   // Now you can process the decodedSlug
   const generateSlug = (title) => {
     return title
       .toLowerCase()
-      .replace(/:/g, "") 
+      .replace(/:/g, "")
       .replace(/\s+/g, "-")
       .replace(/-+/g, "-")
       .trim();
   };
-
-  // const testTitle = "How to Secure Startup Funding: A Complete Guide";
-  // const testslug = generateSlug(testTitle);
-  // console.log(testslug, 'test slug');
 
   const blogPost = blogPosts.find(
     (blog) => generateSlug(blog.title) === decodedSlug
@@ -205,7 +200,32 @@ const page = () => {
         {blogPost.content.map((section, index) => (
           <div className="mt-5" key={index}>
             <h4 className="xtraBold">{section.subheader}</h4>
-            <p className="mt-3">{section.paragraph}</p>
+
+            {/* Check if section has bullet points */}
+            {section.bullet_points ? (
+              <div>
+                {/* Intro text for bullet points */}
+                {section.intro && <p>{section.intro}</p>}
+
+                {/* Render each bullet point */}
+                <ul className="bullet-points-list">
+                  {section.bullet_points_text.map((point, idx) => (
+                    <li key={idx}>
+                      <strong>{point.highlight}: </strong>
+                      {point.sentence}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Outro text for bullet points */}
+                {section.bullet_points_outro && (
+                  <p>{section.bullet_points_outro}</p>
+                )}
+              </div>
+            ) : (
+              // Regular format with a paragraph (no bullet points)
+              <p className="mt-3">{section.paragraph}</p>
+            )}
           </div>
         ))}
       </Container>
@@ -219,8 +239,23 @@ const page = () => {
           />
         </div>
       </Container>
+      <CTAWithImage
+            header={blogPost && blogPost.call_to_action.header}
+            text={blogPost && blogPost.call_to_action.text}
+            img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
+            alt={blogPost && blogPost.call_to_action.image_alt}
+            btnText="Book via Calendy"
+            imageAlign="left"
+            link={calendlyLink}
+          />
     </div>
   );
 };
+
+// call_to_action: {
+//   header: "Need help with funding?", 
+//   text: "Navigating the world of startup funding can be overwhelming, but you don’t have to do it alone. Whether you’re seeking seed funding, government grants, or venture capital, we’re here to guide you every step of the way. Contact us today to explore funding opportunities tailored to your business needs and take the next step towards scaling your startup.", 
+//   image_url: ""
+// }, 
 
 export default page;

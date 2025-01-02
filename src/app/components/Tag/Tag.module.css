@@ -1,9 +1,9 @@
-.tag {
+.category {
   background-color: var(--lightGreyContainerBG);
   cursor: pointer;
   transition: background-color 0.3s ease; 
 }
 
-.tag:hover {
+.category:hover {
   background-color: #e0e2e5;
 }
