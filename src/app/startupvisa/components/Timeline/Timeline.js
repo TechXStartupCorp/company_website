@@ -63,13 +63,13 @@ const Timeline = () => {
   ];
 
   return (
-    <Row className={`${styles.timelineRow} w-100`}>
+    (<Row className={`${styles.timelineRow} w-100`}>
       {steps.map((step, index) => (
         <Row key={index} className="">
           {" "}
           {/* Added `mb-4` for spacing between rows */}
           {index % 2 === 0 ? ( // Even rows (left-aligned)
-            <>
+            (<>
               <Col className={`${styles.leftCol} d-flex justify-content-end`}>
                 <div
                   className={`d-flex flex-column ${index !== 0 ? "mt-5" : ""}`}
@@ -116,10 +116,10 @@ const Timeline = () => {
                 </div>
               </Col>
               <Col className={`${styles.rightCol}`}></Col>
-            </>
+            </>)
           ) : (
             // Odd rows (right-aligned)
-            <>
+            (<>
               <Col className={`${styles.leftCol}`}></Col>
               <Col className={`${styles.rightCol}`}>
                 <div
@@ -166,11 +166,11 @@ const Timeline = () => {
                   </div>
                 </div>
               </Col>
-            </>
+            </>)
           )}
         </Row>
       ))}
-    </Row>
+    </Row>)
   );
 };
 

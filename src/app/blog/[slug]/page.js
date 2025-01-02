@@ -15,7 +15,6 @@ import {
   FacebookShareButton,
   FacebookIcon,
   TwitterShareButton,
-
   XIcon,
   RedditShareButton,
   RedditIcon,
@@ -27,8 +26,26 @@ import {
 
 const page = () => {
   const { slug } = useParams();
+
+  
+  const decodedSlug = decodeURIComponent(slug).replace(/:/g, "");
+
+  // Now you can process the decodedSlug
+  const generateSlug = (title) => {
+    return title
+      .toLowerCase()
+      .replace(/:/g, "") 
+      .replace(/\s+/g, "-")
+      .replace(/-+/g, "-")
+      .trim();
+  };
+
+  // const testTitle = "How to Secure Startup Funding: A Complete Guide";
+  // const testslug = generateSlug(testTitle);
+  // console.log(testslug, 'test slug');
+
   const blogPost = blogPosts.find(
-    (blog) => blog.title.toLowerCase().replace(/ /g, "-") === slug
+    (blog) => generateSlug(blog.title) === decodedSlug
   );
 
   if (!blogPost) {
@@ -38,13 +55,14 @@ const page = () => {
   const [currentUrl, setCurrentUrl] = useState("");
   const [isClient, setIsClient] = useState(false);
 
-  const shareUrl = `https://company-website-pwnt.vercel.app/${
-    currentUrl && currentUrl
-  }`;
+  const shareUrl = currentUrl
+    ? `https://company-website-pwnt.vercel.app${currentUrl}`
+    : "https://company-website-pwnt.vercel.app/default-path";
+
   const title = "Check out this amazing article";
 
   useEffect(() => {
-    setIsClient(true); // This will run once the component mounts on the client side
+    setIsClient(true);
   }, []);
 
   const handleCopyClick = () => {
@@ -99,11 +117,6 @@ const page = () => {
       platform: "Linkedin",
       ShareButton: LinkedinShareButton,
       Icon: LinkedinIcon,
-    },
-    {
-      platform: "Reddit",
-      ShareButton: RedditShareButton,
-      Icon: RedditIcon,
     },
   ];
 
@@ -168,24 +181,23 @@ const page = () => {
               className={`${styles.socialLogosContainer} d-flex gap-3 fs-5 pb-1`}
             >
               {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
-                <ShareButton key={platform} rounded url={shareUrl} quote={title}>
-                  <Icon rounded="true" size={26}  />
+                <ShareButton
+                  key={platform}
+                  rounded="true"
+                  url={shareUrl}
+                  quote={title}
+                >
+                  <Icon round={true} size={26} />
                 </ShareButton>
               ))}
-            </div>
-            {/* <div className="d-flex gap-2">
               <div
                 onClick={handleCopyClick}
-                role="button"
-                className="lightGreyContainerBG textBlue rounded d-flex align-items-center py-1 px-3 gap-2"
+                as="button"
+                className={`mt-1 ${styles.customBtn}`}
               >
-                <BsPaperclip className={styles.paperClipIcon} />
-                <small className={styles.shareLink}>Copy link</small>
+                <BsPaperclip />
               </div>
-              <div onClick={handleCopyClick} className={`${styles.customBtn}`}>
-                <FaRegCopy />
-              </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </Container>

@@ -1,23 +1,29 @@
 "use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import { Container, Row, Col, Image } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Pagination from "../components/Pagination/Pagination";
 import Tag from "../components/Tag/Tag";
 import { blogPosts } from "../data/DummyBlogPosts";
 import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
 
+// const Tag = dynamic(() => import("../components/Tag/Tag"), { ssr: false });
+// const Pagination = dynamic(
+//   () => import("../components/Pagination/Pagination"),
+//   { ssr: false }
+// );
+
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedTags, setSelectedTags] = useState([]); // State for selected tags
+  const [isClient, setIsClient] = useState(false); // Track if we're on the client
   const totalPages = 5;
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
-
-  const [selectedTags, setSelectedTags] = useState([]); // State for selected tags
-  console.log(selectedTags, "selected tags");
 
   // Function to add or remove a tag
   const toggleTagSelection = (tag) => {
@@ -34,8 +40,6 @@ const page = () => {
   const filteredPosts = blogPosts.filter((post) =>
     selectedTags.some((tag) => post.tags.includes(tag))
   );
-
-  console.log(filteredPosts, "filtered posts");
 
   //
   return (

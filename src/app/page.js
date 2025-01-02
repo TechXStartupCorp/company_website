@@ -187,7 +187,7 @@ export default function Home() {
   const sortedYears = Object.keys(groupedProjects).sort((a, b) => b - a);
 
   return (
-    <div>
+    (<div>
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
         alt="Abstract landscape"
@@ -199,7 +199,6 @@ export default function Home() {
         primaryBtnLink={startupVisaFormLink}
         lightBtnLink="/startupvisa"
       />
-
       <Container className={`${styles.landingPageContent} section`}>
         <h2 className={`xtraBold w-75`}>
           Our mission is to empower founders and innovators to launch startups
@@ -242,7 +241,6 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-
       <Container>
         <div id="featured-projects">
           <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
@@ -311,7 +309,6 @@ export default function Home() {
           </div> */}
         </div>
       </Container>
-
       <div className="section">
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"
@@ -357,7 +354,6 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-
       <div className="section">
         <Container>
           <h2 className={`xtraBold header`}>Our venture partners</h2>
@@ -379,7 +375,6 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-
       <CTAWithImage
         header="Build, Launch, and Scale with TechX Startup"
         text="Partner with TechX Startup to successfully navigate the Canada Startup Visa process. Book a call today and take the first step toward launching your business and thriving in Canada."
@@ -389,6 +384,6 @@ export default function Home() {
         imageAlign="left"
         link={calendlyLink}
       />
-    </div>
+    </div>)
   );
 }

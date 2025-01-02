@@ -4,7 +4,7 @@
   }
   
   .greyWideBtn:hover {
-    background-color: var(--bsDark) !important;
-    color: #fff !important;
+    background-color: #e0e2e5;
+    /* color: #fff !important; */
   }
   

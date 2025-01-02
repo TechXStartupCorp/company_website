@@ -13,7 +13,7 @@ const Tag = ({
 
   return (
     <small
-      className={`text-dark fw-bold py-1 px-3 rounded ${tagClass}`}
+      className={`text-dark fw-bold py-1 px-3 rounded greyBtnWithDarkHover ${tagClass}`}
       onClick={() => onClick(text)}
       style={{ cursor: "pointer" }}
     >
@@ -26,7 +26,7 @@ const Tag = ({
           }
         >
           <span>{text}</span>
-          <small className="ms-1">{icon}</small>
+          <small className={`${styles.tagX} ms-1`}>{icon}</small>
         </div>
       ) : (
         text
