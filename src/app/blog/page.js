@@ -1,13 +1,12 @@
 "use client";
 import React from "react";
-import { Container, Row, Col, Image, Button } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { Container, Row, Col, Image } from "react-bootstrap";
+import { useState } from "react";
 import Pagination from "../components/Pagination/Pagination";
 import Tag from "../components/Tag/Tag";
-import styles from "./page.module.css";
-import Link from "next/link";
 import { blogPosts } from "../data/DummyBlogPosts";
 import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
+import { IoReload } from "react-icons/io5";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,8 +62,17 @@ const page = () => {
               text={tag}
               isSelected={selectedTags.includes(tag)}
               onClick={() => toggleTagSelection(tag)}
+              setSelectedTags={setSelectedTags}
+              selectedTags={selectedTags}
             />
           ))}
+          <Tag
+            setSelectedTags={setSelectedTags}
+            selectedTags={selectedTags}
+            text="Reset"
+            icon={<IoReload />}
+            onClick={() => setSelectedTags([])}
+          />
         </div>
 
         <Row>

@@ -1,19 +1,37 @@
 import React from "react";
-import styles from "./Tag.module.css"; // Your CSS module for styling
+import styles from "./Tag.module.css";
 
-const Tag = ({ text, isSelected, onClick }) => {
-  // Determine the tag's class based on selection
-  const tagClass = isSelected
-    ? `${styles.tag} ${styles.selected}` // If selected, apply a different style
-    : styles.tag;
+const Tag = ({
+  text,
+  isSelected,
+  selectedTags,
+  setSelectedTags,
+  onClick,
+  icon,
+}) => {
+  const tagClass = isSelected ? `${styles.tag} ${styles.selected}` : styles.tag;
 
   return (
     <small
       className={`text-dark fw-bold py-1 px-3 rounded ${tagClass}`}
-      onClick={() => onClick(text)} // Trigger onClick with the tag text
-      style={{ cursor: "pointer" }} // Add cursor pointer for interaction
+      onClick={() => onClick(text)}
+      style={{ cursor: "pointer" }}
     >
-      {text}
+      {icon ? (
+        <div
+          className={
+            selectedTags.length === 0
+              ? "text-secondary fw-normal opacity-50"
+              : "text-primary opacity-40 fw-normal"
+          }
+        >
+          <span>{text}</span>
+          <small className="ms-1">{icon}</small>
+        </div>
+      ) : (
+        text
+      )}
+
       {isSelected && (
         <span
           className="ms-2"
