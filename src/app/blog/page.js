@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import dynamic from "next/dynamic";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import Pagination from "../components/Pagination/Pagination";
@@ -12,12 +11,17 @@ import { IoReload } from "react-icons/io5";
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const [isClient, setIsClient] = useState(false);
-  const totalPages = 5;
+  const POSTS_PER_PAGE = 3; // Define how many posts per page
+
+  // const totalPages = 5;
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [selectedCategories]);
 
   // Function to add or remove a category
   const toggleCategorySelection = (category) => {
@@ -35,25 +39,23 @@ const page = () => {
     selectedCategories.some((category) => post.categories.includes(category))
   );
 
+  const displayedPosts = filteredPosts.length > 0 ? filteredPosts : blogPosts;
+
+  const totalPages = Math.ceil(displayedPosts.length / POSTS_PER_PAGE);
+
+  // Get posts for the current page
+  const paginatedPosts = displayedPosts.slice(
+    (currentPage - 1) * POSTS_PER_PAGE,
+    currentPage * POSTS_PER_PAGE
+  );
+
+
   //
   return (
     <div className="section">
       <Container>
         <h3 className="xtraBold">Blog</h3>
         <h5 className="xtraBold mt-5">All posts</h5>
-        {/* Startup Basics – Foundational topics for new entrepreneurs.
-Funding & Investors – All about raising capital and engaging investors.
-Growth Strategies – Tips for scaling and expanding startups.
-Innovation – Insights on tech and creative problem-solving.
-Leadership – Building and leading effective teams.
-Global Expansion – Taking your business to international markets.
-Marketing & Branding – Strategies to build awareness and loyalty.
-Product Development – From idea to execution.
-Success Stories – Inspiring journeys from other entrepreneurs.
-Optional Additions:
-Legal & Compliance – Understanding regulations and protecting your business.
-Sustainability – Eco-friendly practices for modern startups.
-Tech Trends – Cutting-edge tools and technologies shaping startups. */}
 
         <div className="d-flex w-100 flex-wrap gap-3 mt-4">
           {[
@@ -91,44 +93,43 @@ Tech Trends – Cutting-edge tools and technologies shaping startups. */}
         <Row>
           <h5 className="xtraBold mt-5">December 2024</h5>
         </Row>
-        {(filteredPosts.length > 0 ? filteredPosts : blogPosts).map(
-          (post, index) => (
-            <Row className="mt-4" key={index}>
-              <Col lg={10}>
-                <Row className="d-flex align-items-center">
-                  <Col xl={1} lg={2}>
-                    <div className="blogImgContainer">
-                      <Image
-                        src={post.imageUrl}
-                        alt={post.altText}
-                        layout="fill"
-                        className="w-100 h-100 rounded"
-                      />
-                    </div>
-                  </Col>
-                  <Col>
-                    <div className="d-flex flex-column">
-                      <h6 className="blogHeader xtraBold fs-6 mb-1 mt-1">
-                        {post.title}
-                      </h6>
-                      <small className="blogDate textBlue">{post.date}</small>
-                    </div>
-                  </Col>
-                </Row>
-              </Col>
-              <Col>
-                <div>
-                  <GreyBtnWide
-                    text="Read more"
-                    link={`/blog/${post.title
-                      .replace(/\s+/g, "-")
-                      .toLowerCase()}`}
-                  />
-                </div>
-              </Col>
-            </Row>
-          )
-        )}
+        {paginatedPosts.map((post, index) => (
+          <Row className="mt-4" key={index}>
+            <Col lg={10}>
+              <Row className="d-flex align-items-center">
+                <Col xl={1} lg={2}>
+                  <div className="blogImgContainer">
+                    <Image
+                      src={post.imageUrl}
+                      alt={post.altText}
+                      layout="fill"
+                      className="w-100 h-100 rounded"
+                    />
+                  </div>
+                </Col>
+                <Col>
+                  <div className="d-flex flex-column">
+                    <h6 className="blogHeader xtraBold fs-6 mb-1 mt-1">
+                      {post.title}
+                    </h6>
+                    <small className="blogDate textBlue">{post.date}</small>
+                  </div>
+                </Col>
+              </Row>
+            </Col>
+            <Col>
+              <div>
+                <GreyBtnWide
+                  text="Read more"
+                  link={`/blog/${post.title
+                    .replace(/\s+/g, "-")
+                    .toLowerCase()}`}
+                  aria-label={`Read more about ${post.title}`}
+                />
+              </div>
+            </Col>
+          </Row>
+        ))}
         <Row>
           <div className="mt-5">
             <Pagination

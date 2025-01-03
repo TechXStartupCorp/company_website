@@ -9,7 +9,9 @@ const Tag = ({
   onClick,
   icon,
 }) => {
-  const categoryClass = isSelected ? `${styles.category} ${styles.selected}` : styles.category;
+  const categoryClass = isSelected
+    ? `${styles.category} ${styles.selected}`
+    : styles.category;
 
   return (
     <small
@@ -20,7 +22,7 @@ const Tag = ({
       {icon ? (
         <div
           className={
-            selectedCategories.length === 0
+            !selectedCategories || selectedCategories.length === 0
               ? "text-secondary fw-normal opacity-50"
               : "text-primary opacity-40 fw-normal"
           }

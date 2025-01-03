@@ -187,7 +187,7 @@ export default function Home() {
   const sortedYears = Object.keys(groupedProjects).sort((a, b) => b - a);
 
   return (
-    (<div>
+    <div>
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
         alt="Abstract landscape"
@@ -384,6 +384,6 @@ export default function Home() {
         imageAlign="left"
         link={calendlyLink}
       />
-    </div>)
+    </div>
   );
 }

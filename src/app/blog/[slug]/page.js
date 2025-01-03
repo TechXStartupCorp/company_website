@@ -13,6 +13,10 @@ import { MdArrowOutward } from "react-icons/md";
 import { calendlyLink } from "@/app/data/Links";
 import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
 import CTAWithImage from "@/app/components/CTAWithImage/CTAWithImage";
+import CustomBtn from "@/app/components/CustomBtn/CustomBtn";
+import Tag from "@/app/components/Tag/Tag";
+import SectionWithHeaderAndText from "@/app/components/SectionWithHeaderAndText/SectionWithHeaderAndText";
+import WideCardWithGreyBorder from "@/app/components/WideCardWithGreyBorder/WideCardWithGreyBorder";
 import Head from "next/head";
 import {
   FacebookShareButton,
@@ -24,6 +28,7 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
+
 
 const page = () => {
   const { slug } = useParams();
@@ -88,9 +93,9 @@ const page = () => {
     }
   };
 
-  // Set the current URL when the component mounts
+ 
   useEffect(() => {
-    setCurrentUrl(window.location.href); // Gets the current URL
+    setCurrentUrl(window.location.href); 
   }, []);
 
   const socialMediaButtons = [
@@ -159,9 +164,12 @@ const page = () => {
             </Col>
             <Col>
               <div className="d-flex flex-column">
-                <h5 className="xtraBold mb-0">{blogPost && blogPost.author.author_name}</h5>
+                <h5 className="xtraBold mb-0">
+                  {blogPost && blogPost.author.author_name}
+                </h5>
                 <small className="textBlue mt-1">
-                  {blogPost && blogPost.author.author_description} - TechX Startup
+                  {blogPost && blogPost.author.author_description} - TechX
+                  Startup
                 </small>
               </div>
             </Col>
@@ -181,9 +189,8 @@ const page = () => {
           </div>
         </Container>
         <Container className="">
-          <div
-            className={`${styles.shareLinkContainer} cardWithGreyBorder d-flex justify-content-between align-items-center py-3 px-4`}
-          >
+          <WideCardWithGreyBorder>
+          
             <div className="d-flex flex-column">
               <span className="xtraBold">Enjoying this article?</span>
               <small className="textBlue mt-1">
@@ -192,7 +199,7 @@ const page = () => {
             </div>
             <div className="d-flex flex-column mt-2 gap-2 align-items-end">
               <div
-                className={`${styles.socialLogosContainer} d-flex gap-3 fs-5 pb-1`}
+                className={`${styles.socialLogosContainer} d-flex gap-3 mb-2`}
               >
                 {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
                   <ShareButton
@@ -213,20 +220,21 @@ const page = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </WideCardWithGreyBorder>
+       
         </Container>
         <Container>
           {blogPost.content.map((section, index) => (
             <div className="mt-5" key={index}>
               <h4 className="xtraBold">{section.subheader}</h4>
 
-              {/* Check if section has bullet points */}
+           
               {section.bullet_points ? (
                 <div>
-                  {/* Intro text for bullet points */}
+                 
                   {section.intro && <p className="mt-3">{section.intro}</p>}
 
-                  {/* Render each bullet point */}
+               
                   <ul className="bullet-points-list">
                     {section.bullet_points_text.map((point, idx) => (
                       <li className="mb-1" key={idx}>
@@ -236,17 +244,51 @@ const page = () => {
                     ))}
                   </ul>
 
-                  {/* Outro text for bullet points */}
+                
                   {section.bullet_points_outro && (
                     <p>{section.bullet_points_outro}</p>
                   )}
                 </div>
               ) : (
-                // Regular format with a paragraph (no bullet points)
+              
                 <p className="mt-3">{section.paragraph}</p>
               )}
             </div>
           ))}
+        </Container>
+        {/* <Container className="mt-5">
+          <WideCardWithGreyBorder>
+            <div className="d-flex flex-column">
+              <span className="xtraBold">
+                {blogPost && blogPost.call_to_action.header}
+              </span>
+              <span className="mt-1">
+                Call us today to discuss your options.
+              </span>
+            </div>
+            <div>
+              <CustomBtn text="Book via Calendy" />
+            </div>
+          </WideCardWithGreyBorder>
+        </Container> */}
+          <Container>
+          <h6 className="mt-5 fw-semibold">Categories</h6>
+          <div className="d-flex flex-wrap gap-3 mt-3">
+            {blogPost &&
+              blogPost.categories.map((category, index) => (
+                <Tag key={index} text={category} />
+              ))}
+          </div>
+        </Container>
+      
+        
+        <Container>
+        <div className="cardWithGreyBorder px-3 mt-5">
+          <SectionWithHeaderAndText
+          header={blogPost && blogPost.call_to_action.header}
+          text={blogPost && blogPost.call_to_action.text}
+        />
+        </div>
         </Container>
         <Container>
           <div className="section d-flex flex-column align-items-start w-25">
@@ -258,7 +300,10 @@ const page = () => {
             />
           </div>
         </Container>
-        <CTAWithImage
+      
+       
+
+        {/* <CTAWithImage
           header={blogPost && blogPost.call_to_action.header}
           text={blogPost && blogPost.call_to_action.text}
           img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
@@ -266,7 +311,9 @@ const page = () => {
           btnText="Book via Calendy"
           imageAlign="left"
           link={calendlyLink}
-        />
+        /> */}
+    
+      
       </div>
     </>
   );
