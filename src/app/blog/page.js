@@ -9,12 +9,10 @@ import { blogPosts } from "../data/DummyBlogPosts";
 import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
 
-
-
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedCategories, setSelectedCategories] = useState([]); 
-  const [isClient, setIsClient] = useState(false); 
+  const [selectedCategories, setSelectedCategories] = useState([]);
+  const [isClient, setIsClient] = useState(false);
   const totalPages = 5;
 
   const handlePageChange = (pageNumber) => {
@@ -43,19 +41,34 @@ const page = () => {
       <Container>
         <h3 className="xtraBold">Blog</h3>
         <h5 className="xtraBold mt-5">All posts</h5>
+        {/* Startup Basics – Foundational topics for new entrepreneurs.
+Funding & Investors – All about raising capital and engaging investors.
+Growth Strategies – Tips for scaling and expanding startups.
+Innovation – Insights on tech and creative problem-solving.
+Leadership – Building and leading effective teams.
+Global Expansion – Taking your business to international markets.
+Marketing & Branding – Strategies to build awareness and loyalty.
+Product Development – From idea to execution.
+Success Stories – Inspiring journeys from other entrepreneurs.
+Optional Additions:
+Legal & Compliance – Understanding regulations and protecting your business.
+Sustainability – Eco-friendly practices for modern startups.
+Tech Trends – Cutting-edge tools and technologies shaping startups. */}
 
         <div className="d-flex w-100 flex-wrap gap-3 mt-4">
           {[
-            "Startup Launch",
-            "Entrepreneurship",
-            "Business Growth",
-            "Startup Visa",
-            "Founders",
+            "Startup Basics",
+            "Funding & Investors",
+            "Growth Strategies",
             "Innovation",
-            "Venture Capital",
-            "Visa Application",
-            "Investors",
-            "Global Expansion",
+            "Leadership",
+            "Global Growth",
+            "Marketing",
+            "Product Innovation",
+            "Success Stories",
+            "Legal & Compliance",
+            "Sustainability",
+            "Tech Trends",
           ].map((category, index) => (
             <Tag
               key={index}

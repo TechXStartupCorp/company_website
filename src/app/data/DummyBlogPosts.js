@@ -2,6 +2,13 @@
 
 export const blogPosts = [
   {
+    author: {
+      author_name: "Tatyana Karlen",
+      author_description: "Business Development, IT",
+      author_image_url:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg",
+    },
+    read_time: "12 min",
     title: "How to Secure Startup Funding: A Complete Guide",
     date: "December 2, 2024",
     imageUrl:
@@ -119,10 +126,23 @@ export const blogPosts = [
       image_alt: "blog image",
     },
     // "Are you ready to take your startup funding to the next level? Contact us to learn more about the best ways to fund your venture and discover opportunities available for early-stage tech businesses.",
-    categories: ["Entrepreneurship", "Business Growth", "Startup Visa"],
+    categories: [
+      "Funding & Investors",
+      "Startup Basics",
+      "Growth Strategies",
+      "Sustainability",
+      "Tech Trends",
+    ],
   },
   //////////// second one
   {
+    author: {
+      author_name: "Prof. Chandan Singh",
+      author_description: "IT Consultant",
+      author_image_url:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733950054/rs_w_365_h_365_cg_true_2_bb7mju.webp",
+    },
+    read_time: "8 min",
     title: "How to build a Scalable Tech Startup: Strategies For Growth",
     date: "December 10, 2024",
     imageUrl:
@@ -257,10 +277,18 @@ export const blogPosts = [
       image_alt: "blog image",
     },
     // "Are you ready to take your startup funding to the next level? Contact us to learn more about the best ways to fund your venture and discover opportunities available for early-stage tech businesses.",
-    categories: ["Entrepreneurship", "Business Growth", "Startup Visa"],
+    categories: ["Startup Basics", "Growth Strategies", "Tech Trends"],
   },
+
   //////////// third one
   {
+    author: {
+      author_name: "Tatyana Karlen",
+      author_description: "Business Development, IT",
+      author_image_url:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg",
+    },
+    read_time: "10 min",
     title: "Navigating Early-Stage Tech Startup Challenges",
     date: "December 18, 2024",
     imageUrl:
@@ -271,7 +299,7 @@ export const blogPosts = [
     banner_introduction:
       "Starting a tech startup is an exhilarating yet challenging endeavor. The journey is filled with unique obstacles that can either fuel your growth or become major roadblocks. Entrepreneurs must understand these challenges and develop strategies to overcome them if they want to turn their ideas into sustainable businesses. In this article, we’ll dive into some of the most common hurdles early-stage tech startups encounter and offer actionable solutions to ensure you don’t lose momentum along the way.",
     secondary_introduction:
-      "Beyond funding, tech startups face numerous hurdles that require strategic problem-solving. From aligning with market demands to operational scaling and legal compliance, this guide provides actionable insights to help you navigate these challenges effectively.",
+      "Tech startups often face a diverse range of challenges that go far beyond securing initial funding. Navigating market competition, building a resilient team, and scaling operations sustainably are just a few of the complexities entrepreneurs encounter. This guide dives into these critical areas, offering practical advice and proven strategies to help you address obstacles head-on and drive your startup toward lasting success.",
     content: [
       {
         bullet_points: true,
@@ -438,6 +466,6 @@ export const blogPosts = [
       image_alt: "blog image",
     },
 
-    categories: ["Entrepreneurship", "Business Growth", "Startup Visa"],
+    categories: ["Startup Basics", "Growth Strategies"],
   },
 ];

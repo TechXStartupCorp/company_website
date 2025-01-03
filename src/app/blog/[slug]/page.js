@@ -139,8 +139,10 @@ const page = () => {
             </Breadcrumb.Item>
           </Breadcrumb>
           <h2 className="xtraBold mt-5">{blogPost && blogPost.title}</h2>
+
           <small className="textBlue mt-3">
-            by Tatyana Karlen - 12 min read
+            by {blogPost && blogPost.author.author_name} -{" "}
+            {blogPost && blogPost.read_time} read
           </small>
           <Row className="d-flex align-items-center mt-5">
             <Col className="" lg={1}>
@@ -148,8 +150,8 @@ const page = () => {
                 className={`${styles.blogImgContainer} h-100 d-flex justify-content-center align-items-center`}
               >
                 <Image
-                  src="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg"
-                  alt="temp alt"
+                  src={blogPost && blogPost.author.author_image_url}
+                  alt="image of author"
                   layout="fill"
                   className="w-100 h-100"
                 />
@@ -157,9 +159,9 @@ const page = () => {
             </Col>
             <Col>
               <div className="d-flex flex-column">
-                <h5 className="xtraBold mb-0">Tatyana Karlen</h5>
+                <h5 className="xtraBold mb-0">{blogPost && blogPost.author.author_name}</h5>
                 <small className="textBlue mt-1">
-                  Business development, IT - TechX Startup
+                  {blogPost && blogPost.author.author_description} - TechX Startup
                 </small>
               </div>
             </Col>
