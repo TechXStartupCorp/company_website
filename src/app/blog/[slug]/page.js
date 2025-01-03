@@ -13,6 +13,7 @@ import { MdArrowOutward } from "react-icons/md";
 import { calendlyLink } from "@/app/data/Links";
 import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
 import CTAWithImage from "@/app/components/CTAWithImage/CTAWithImage";
+import Head from "next/head";
 import {
   FacebookShareButton,
   FacebookIcon,
@@ -116,146 +117,157 @@ const page = () => {
   ];
 
   return (
-    <div className="section pb-5">
-      <Container>
-        <Breadcrumb className={styles.breadCrumb}>
-          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="/blog">Blog</Breadcrumb.Item>
-          <Breadcrumb.Item active>{blogPost && blogPost.title}</Breadcrumb.Item>
-        </Breadcrumb>
-        <h2 className="xtraBold mt-5">{blogPost && blogPost.title}</h2>
-        <small className="textBlue mt-3">by Tatyana Karlen - 12 min read</small>
-        <Row className="d-flex align-items-center mt-5">
-          <Col className="" lg={1}>
-            <div
-              className={`${styles.blogImgContainer} h-100 d-flex justify-content-center align-items-center`}
-            >
-              <Image
-                src="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg"
-                alt="temp alt"
-                layout="fill"
-                className="w-100 h-100"
-              />
-            </div>
-          </Col>
-          <Col>
+    <>
+      <Head>
+        <title>{blogPost ? blogPost.title : "Default Title"}</title>
+        <meta
+          name="description"
+          content={
+            blogPost && blogPost.meta_description
+              ? blogPost.meta_description
+              : "Default meta description"
+          }
+        />
+      </Head>
+      <div className="section pb-5">
+        <Container>
+          <Breadcrumb className={styles.breadCrumb}>
+            <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+            <Breadcrumb.Item href="/blog">Blog</Breadcrumb.Item>
+            <Breadcrumb.Item active>
+              {blogPost && blogPost.title}
+            </Breadcrumb.Item>
+          </Breadcrumb>
+          <h2 className="xtraBold mt-5">{blogPost && blogPost.title}</h2>
+          <small className="textBlue mt-3">
+            by Tatyana Karlen - 12 min read
+          </small>
+          <Row className="d-flex align-items-center mt-5">
+            <Col className="" lg={1}>
+              <div
+                className={`${styles.blogImgContainer} h-100 d-flex justify-content-center align-items-center`}
+              >
+                <Image
+                  src="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg"
+                  alt="temp alt"
+                  layout="fill"
+                  className="w-100 h-100"
+                />
+              </div>
+            </Col>
+            <Col>
+              <div className="d-flex flex-column">
+                <h5 className="xtraBold mb-0">Tatyana Karlen</h5>
+                <small className="textBlue mt-1">
+                  Business development, IT - TechX Startup
+                </small>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+        <div className="mt-4">
+          <CalloutSection
+            imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
+            alt="Abstract landscape"
+            title="Introduction"
+            text={blogPost && blogPost.banner_introduction}
+          />
+        </div>
+        <Container>
+          <div className="mt-4">
+            <p>{blogPost && blogPost.secondary_introduction}</p>
+          </div>
+        </Container>
+        <Container className="">
+          <div
+            className={`${styles.shareLinkContainer} cardWithGreyBorder d-flex justify-content-between align-items-center py-3 px-4`}
+          >
             <div className="d-flex flex-column">
-              <h5 className="xtraBold mb-0">Tatyana Karlen</h5>
+              <span className="xtraBold">Enjoying this article?</span>
               <small className="textBlue mt-1">
-                Business development, IT - TechX Startup
+                Share it with your friends and colleagues.
               </small>
             </div>
-          </Col>
-        </Row>
-      </Container>
-      <div className="mt-4">
-        <CalloutSection
-          imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
-          alt="Abstract landscape"
-          title="Introduction"
-          text="In today’s fast-paced digital landscape, design is more than just aesthetics—it's the bridge between creativity and functionality. Whether you're building a brand, launching a website, or crafting a seamless user experience, great design has the power to captivate, engage, and inspire. In this blog, we’ll explore how thoughtful design can elevate your ideas, turning visions into reality while leaving a lasting impact on your audience. Whether you're a seasoned professional or just starting your creative journey, there's something here to spark your inspiration and empower your next project. Let’s dive in!"
-        />
-      </div>
-      <Container>
-        <div className="mt-4">
-          <p>{blogPost && blogPost.introduction}</p>
-        </div>
-      </Container>
-      <Container className="">
-        <div
-          className={`${styles.shareLinkContainer} cardWithGreyBorder d-flex justify-content-between align-items-center py-3 px-4`}
-        >
-          <div className="d-flex flex-column">
-            <span className="xtraBold">Enjoying this article?</span>
-            <small className="textBlue mt-1">
-              Share it with your friends and colleagues.
-            </small>
-          </div>
-          <div className="d-flex flex-column mt-2 gap-2 align-items-end">
-            <div
-              className={`${styles.socialLogosContainer} d-flex gap-3 fs-5 pb-1`}
-            >
-              {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
-                <ShareButton
-                  key={platform}
-                  rounded="true"
-                  url={shareUrl}
-                  quote={title}
-                >
-                  <Icon round={true} size={26} />
-                </ShareButton>
-              ))}
+            <div className="d-flex flex-column mt-2 gap-2 align-items-end">
               <div
-                onClick={handleCopyClick}
-                as="button"
-                className={`mt-1 ${styles.customBtn}`}
+                className={`${styles.socialLogosContainer} d-flex gap-3 fs-5 pb-1`}
               >
-                <BsPaperclip />
+                {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
+                  <ShareButton
+                    key={platform}
+                    rounded="true"
+                    url={shareUrl}
+                    quote={title}
+                  >
+                    <Icon round={true} size={26} />
+                  </ShareButton>
+                ))}
+                <div
+                  onClick={handleCopyClick}
+                  as="button"
+                  className={`mt-1 ${styles.customBtn}`}
+                >
+                  <BsPaperclip />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </Container>
-      <Container>
-        {blogPost.content.map((section, index) => (
-          <div className="mt-5" key={index}>
-            <h4 className="xtraBold">{section.subheader}</h4>
+        </Container>
+        <Container>
+          {blogPost.content.map((section, index) => (
+            <div className="mt-5" key={index}>
+              <h4 className="xtraBold">{section.subheader}</h4>
 
-            {/* Check if section has bullet points */}
-            {section.bullet_points ? (
-              <div>
-                {/* Intro text for bullet points */}
-                {section.intro && <p>{section.intro}</p>}
+              {/* Check if section has bullet points */}
+              {section.bullet_points ? (
+                <div>
+                  {/* Intro text for bullet points */}
+                  {section.intro && <p className="mt-3">{section.intro}</p>}
 
-                {/* Render each bullet point */}
-                <ul className="bullet-points-list">
-                  {section.bullet_points_text.map((point, idx) => (
-                    <li key={idx}>
-                      <strong>{point.highlight}: </strong>
-                      {point.sentence}
-                    </li>
-                  ))}
-                </ul>
+                  {/* Render each bullet point */}
+                  <ul className="bullet-points-list">
+                    {section.bullet_points_text.map((point, idx) => (
+                      <li className="mb-1" key={idx}>
+                        <strong>{point.highlight} </strong>
+                        {point.sentence}
+                      </li>
+                    ))}
+                  </ul>
 
-                {/* Outro text for bullet points */}
-                {section.bullet_points_outro && (
-                  <p>{section.bullet_points_outro}</p>
-                )}
-              </div>
-            ) : (
-              // Regular format with a paragraph (no bullet points)
-              <p className="mt-3">{section.paragraph}</p>
-            )}
+                  {/* Outro text for bullet points */}
+                  {section.bullet_points_outro && (
+                    <p>{section.bullet_points_outro}</p>
+                  )}
+                </div>
+              ) : (
+                // Regular format with a paragraph (no bullet points)
+                <p className="mt-3">{section.paragraph}</p>
+              )}
+            </div>
+          ))}
+        </Container>
+        <Container>
+          <div className="section d-flex flex-column align-items-start w-25">
+            <h6 className="mt-2 xtraBold">Published on Jun 3rd, 2024</h6>
+            <GreyBtnWide
+              onClick={handleCopyClick}
+              icon={<MdArrowOutward />}
+              text="Share"
+            />
           </div>
-        ))}
-      </Container>
-      <Container>
-        <div className="section d-flex flex-column align-items-start w-25">
-          <h6 className="mt-2 xtraBold">Published on Jun 3rd, 2024</h6>
-          <GreyBtnWide
-            onClick={handleCopyClick}
-            icon={<MdArrowOutward />}
-            text="Share"
-          />
-        </div>
-      </Container>
-      <CTAWithImage
-            header={blogPost && blogPost.call_to_action.header}
-            text={blogPost && blogPost.call_to_action.text}
-            img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
-            alt={blogPost && blogPost.call_to_action.image_alt}
-            btnText="Book via Calendy"
-            imageAlign="left"
-            link={calendlyLink}
-          />
-    </div>
+        </Container>
+        <CTAWithImage
+          header={blogPost && blogPost.call_to_action.header}
+          text={blogPost && blogPost.call_to_action.text}
+          img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
+          alt={blogPost && blogPost.call_to_action.image_alt}
+          btnText="Book via Calendy"
+          imageAlign="left"
+          link={calendlyLink}
+        />
+      </div>
+    </>
   );
 };
-
-// call_to_action: {
-//   header: "Need help with funding?", 
-//   text: "Navigating the world of startup funding can be overwhelming, but you don’t have to do it alone. Whether you’re seeking seed funding, government grants, or venture capital, we’re here to guide you every step of the way. Contact us today to explore funding opportunities tailored to your business needs and take the next step towards scaling your startup.", 
-//   image_url: ""
-// }, 
 
 export default page;
