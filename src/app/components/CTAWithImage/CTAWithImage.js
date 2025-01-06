@@ -9,7 +9,7 @@ const CTAWithImage = ({ header, text, img, alt, btnText, imageAlign, link }) => 
     <div className="sectionWithBGcolor pb-5">
       <Container>
         <Row>
-          <Col className={imageAlign === "right" ? "order-last" : ""}>
+          <Col md={12} lg={6} className={imageAlign === "right" ? "order-last" : ""}>
             <div className="imgContainer">
               <Image src={img} alt={alt} layout="fill" className="roundedImage"/>
             </div>

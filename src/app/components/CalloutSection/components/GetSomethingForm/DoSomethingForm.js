@@ -16,7 +16,6 @@ const DoSomethingForm = ({ text }) => {
     setEmail(e.target.value);
   };
 
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatusMessage(""); // Reset status message
@@ -54,19 +53,38 @@ const DoSomethingForm = ({ text }) => {
     }
   };
 
-    // Auto-dismiss alert after 3 seconds
-    useEffect(() => {
-      if (statusMessage) {
-        const timer = setTimeout(() => {
-          setStatusMessage(""); // Clear the message after 3 seconds
-        }, 4000); // 3 seconds delay
-        return () => clearTimeout(timer); // Cleanup timeout on unmount or change
-      }
-    }, [statusMessage]);
+  // Auto-dismiss alert after 3 seconds
+  useEffect(() => {
+    if (statusMessage) {
+      const timer = setTimeout(() => {
+        setStatusMessage(""); // Clear the message after 3 seconds
+      }, 4000); // 3 seconds delay
+      return () => clearTimeout(timer); // Cleanup timeout on unmount or change
+    }
+  }, [statusMessage]);
 
   return (
     <>
-      <Form className={`${styles.form} d-flex`} onSubmit={handleSubmit}>
+      <Form className={`${styles.form}`} onSubmit={handleSubmit}>
+        <div className={`${styles.formContainer} position-relative`}>
+          <MdOutlineEmail
+            className={`${styles.emailIcon} fs-5 text-secondary position-absolute`}
+          />
+          <Form.Control
+            type="email"
+            placeholder="Your email"
+            value={email}
+            onChange={handleEmailChange}
+            className={`${styles.customInput}`}
+            required
+          />
+          {/* ps-5 pt-2 pb-2 pe-2 */}
+          <div className={`${styles.btnContainer}`}>
+            <CustomBtn variant="primary" text={text} />
+          </div>
+        </div>
+      </Form>
+      {/* <Form className={`${styles.form} d-flex`} onSubmit={handleSubmit}>
         <div className={`${styles.formContainer} position-relative d-flex`}>
           <MdOutlineEmail
             className={`${styles.emailIcon} fs-5 text-secondary position-absolute`}
@@ -84,9 +102,9 @@ const DoSomethingForm = ({ text }) => {
             <CustomBtn variant="primary" text={text} />
           </div>
         </div>
-      </Form>
+      </Form> */}
       {statusMessage && (
-        <Alert className={`${styles.alert} mt-3`} ariant={statusVariant} >
+        <Alert className={`${styles.alert} mt-3`} ariant={statusVariant}>
           {statusMessage}
         </Alert>
       )}

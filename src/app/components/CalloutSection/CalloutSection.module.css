@@ -30,4 +30,23 @@
   font-size: 1.1rem;
 }
 
+@media (max-width: 768px) {
+  .textOverlay {
+    padding: 1.5rem;
+  }
+  .heroContainer {
+    height: 57vh;
+  }
+}
 
+@media (max-width: 478px) {
+  .heroContainer {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroContainer {
+    height: 66vh;
+  }
+}

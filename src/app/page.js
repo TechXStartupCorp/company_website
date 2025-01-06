@@ -233,8 +233,7 @@ export default function Home() {
             {services.map((service, index) => (
               <Col
                 key={index}
-                xs={12}
-                sm={6}
+                sm={12}
                 lg={4}
                 xl={3}
                 className="rounded d-flex flex-column"
@@ -348,12 +347,12 @@ export default function Home() {
           Tech X Startup supports you at every stage, from turning your startup
           idea into a thriving business to navigating{" "}
           <span className={styles.highlightedText}>
-            Canada’s Startup Visa Program
+            Canada&apos;s Startup Visa Program
           </span>
           . We offer essential resources, expert mentorship, and
           industry-leading expertise to unlock funding opportunities, attract{" "}
           <span className={styles.highlightedText}>angel investors</span>, and
-          scale your startup for long-term success in Canada’s competitive
+          scale your startup for long-term success in Canada&apos;s competitive
           market.
         </p>
         <Row className="mt-3 gx-4 gy-3">

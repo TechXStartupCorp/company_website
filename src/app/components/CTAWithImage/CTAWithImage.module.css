@@ -1,8 +1,14 @@
 .finalCTA h2 {
-    line-height: 2.85rem;
+  line-height: 2.85rem;
+}
+
+.finalCTA p {
+  font-size: 1.1rem !important;
+}
+
+@media (max-width: 991px) {
+  .finalCTA {
+    padding: unset !important;
+    margin-top: 1.3rem;
   }
-  
-  .finalCTA p {
-    font-size: 1.1rem !important;
-  }
-  
+}

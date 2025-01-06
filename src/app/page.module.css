@@ -80,6 +80,13 @@
   color: #333; /* Dark text color for contrast */
 }
 
+@media (max-width: 992px) {
+  .landingPageContent h2 {
+    width: 100% !important;
+    line-height: unset !important;
+  }
+}
+
 
 
 
