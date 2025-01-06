@@ -45,8 +45,8 @@ const CalloutSection = ({
           <p className="mt-3">{text}</p>
           {doSomethingForm ? (
             <div className="mt-4 pt-2">
-              {/* <DoSomethingForm text={doSomethingFormBtnText} /> */}
-              <SubscribeButton />
+              <DoSomethingForm text={doSomethingFormBtnText} />
+              {/* <SubscribeButton /> */}
             </div>
           ) : (
             (primaryBtnText || secondBtn) && (

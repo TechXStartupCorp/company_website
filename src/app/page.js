@@ -330,7 +330,7 @@ export default function Home() {
           lightBtnLink="/startupvisa"
           lightBtnText="Learn more"
           doSomethingForm={true}
-          // doSomethingFormBtnText="Get the guide"
+          doSomethingFormBtnText="Get the guide"
           // onClickBtn1={handleGetGuideClick}
           isLightBtnLinkExternal={false}
           // isPrimaryBtnLinkExternal={false}
