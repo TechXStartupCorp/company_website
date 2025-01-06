@@ -20,7 +20,7 @@ export default function Home() {
       <div className="section">
         &apos;
         <Container>
-          <h2 className="xtraBold mt-3">A brief history of TechX Startup</h2>
+          <h2 className="xtraBold">A brief history of TechX Startup</h2>
           <p className="mt-4">
             TechX Startup was founded with a clear mission: to empower
             entrepreneurs, from local innovators to global Startup Visa
@@ -57,7 +57,7 @@ export default function Home() {
                 text: "Rebranded and focused on idea validation, mentorship, and helping startups navigate the Canada Startup Visa.",
               },
             ].map((item, index) => (
-              <Col key={index} xs={12} sm={6} lg={4} xl={4} className="rounded">
+              <Col key={index} sm={12} lg={4} xl={4} className="rounded">
                 <div className="customCard">
                   <div className={`imgContainer position-relative`}>
                     <Image
@@ -79,9 +79,9 @@ export default function Home() {
         </Container>
       </div>
 
-      <div className="section">
+      <div className={`${styles.teamMembersSection} section`}>
         <Container>
-          <h2 className={`xtraBold w-75`}>
+          <h2 className={`xtraBold`}>
             Our expert team values innovation, community, and collaboration,
             providing guidance for entrepreneurs and startups at every stage of
             their business journey.
