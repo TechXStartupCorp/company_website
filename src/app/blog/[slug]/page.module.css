@@ -110,3 +110,26 @@
 .socialLogosContainer .iconContainer:hover::after {
   width: 100%; /* Expand to full width of the parent */
 }
+
+.authorInfoRow {
+  display: flex;
+  flex: row;
+  align-items: center;
+}
+
+.publishedDate {
+  width: 40%;
+}
+
+@media (max-width: 992px) {
+  
+  .authorInfoText {
+    margin-top: 0.9rem;
+  }
+  .socialLogosContainer {
+    margin-top: 0.6rem;
+  }
+  .publishedDate {
+    width: 100%;
+  }
+}

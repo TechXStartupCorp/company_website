@@ -1,0 +1,12 @@
+.wideCardWithGreyBorder {
+ flex-direction: row;
+ align-items: center;
+ justify-content: space-between;
+}
+
+@media (max-width: 992px) {
+  .wideCardWithGreyBorder {
+    flex-direction: column;
+    align-items: start;
+  }
+}

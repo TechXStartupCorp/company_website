@@ -12,12 +12,12 @@ import { FaRegCopyright } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <div className={`${styles.footerContainer} pb-5 section`}>
+      <div className={`${styles.footerContainer} px-2 pt-4 pb-5`}>
         <Container className="d-flex flex-column justify-content-center align-items-center">
           <h2 className="xtraBold mt-3">Let's stay in touch</h2>
           <p className="mt-3 text-center">
             Subscribe to our newsletter for the latest startup tips, funding
-            news, and Canada Startup Visa updates. 
+            news, and Canada Startup Visa updates.
           </p>
           <div className="mt-4">
             <DoSomethingForm text="Subscribe" />

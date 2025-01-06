@@ -7,13 +7,9 @@ import styles from "./page.module.css";
 import { blogPosts } from "@/app/data/DummyBlogPosts";
 import CalloutSection from "@/app/components/CalloutSection/CalloutSection";
 import Image from "next/image";
-import { FaRegCopy } from "react-icons/fa";
 import { BsPaperclip } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
-import { calendlyLink } from "@/app/data/Links";
 import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
-import CTAWithImage from "@/app/components/CTAWithImage/CTAWithImage";
-import CustomBtn from "@/app/components/CustomBtn/CustomBtn";
 import Tag from "@/app/components/Tag/Tag";
 import SectionWithHeaderAndText from "@/app/components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import WideCardWithGreyBorder from "@/app/components/WideCardWithGreyBorder/WideCardWithGreyBorder";
@@ -28,7 +24,6 @@ import {
   WhatsappShareButton,
   WhatsappIcon,
 } from "react-share";
-
 
 const page = () => {
   const { slug } = useParams();
@@ -93,9 +88,8 @@ const page = () => {
     }
   };
 
- 
   useEffect(() => {
-    setCurrentUrl(window.location.href); 
+    setCurrentUrl(window.location.href);
   }, []);
 
   const socialMediaButtons = [
@@ -149,8 +143,10 @@ const page = () => {
             by {blogPost && blogPost.author.author_name} -{" "}
             {blogPost && blogPost.read_time} read
           </small>
-          <Row className="d-flex align-items-center mt-5">
-            <Col className="" lg={1}>
+          <Row
+            className={`${styles.authorInfoRow} d-flex align-items-center mt-4`}
+          >
+            <Col xs={3} sm={2} md={2} lg={1}>
               <div
                 className={`${styles.blogImgContainer} h-100 d-flex justify-content-center align-items-center`}
               >
@@ -164,7 +160,7 @@ const page = () => {
             </Col>
             <Col>
               <div className="d-flex flex-column">
-                <h5 className="xtraBold mb-0">
+                <h5 className={`${styles.authorInfoText} xtraBold mb-0`}>
                   {blogPost && blogPost.author.author_name}
                 </h5>
                 <small className="textBlue mt-1">
@@ -177,8 +173,8 @@ const page = () => {
         </Container>
         <div className="mt-4">
           <CalloutSection
-            imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
-            alt="Abstract landscape"
+            imageURL={blogPost && blogPost.imageUrl}
+            alt={blogPost && blogPost.altText}
             title="Introduction"
             text={blogPost && blogPost.banner_introduction}
           />
@@ -188,9 +184,8 @@ const page = () => {
             <p>{blogPost && blogPost.secondary_introduction}</p>
           </div>
         </Container>
-        <Container className="">
+        <Container className="mt-4">
           <WideCardWithGreyBorder>
-          
             <div className="d-flex flex-column">
               <span className="xtraBold">Enjoying this article?</span>
               <small className="textBlue mt-1">
@@ -221,21 +216,17 @@ const page = () => {
               </div>
             </div>
           </WideCardWithGreyBorder>
-       
         </Container>
         <Container>
           {blogPost.content.map((section, index) => (
             <div className="mt-5" key={index}>
               <h4 className="xtraBold">{section.subheader}</h4>
 
-           
               {section.bullet_points ? (
                 <div>
-                 
                   {section.intro && <p className="mt-3">{section.intro}</p>}
 
-               
-                  <ul className="bullet-points-list">
+                  <ul className="mt-3">
                     {section.bullet_points_text.map((point, idx) => (
                       <li className="mb-1" key={idx}>
                         <strong>{point.highlight} </strong>
@@ -244,13 +235,11 @@ const page = () => {
                     ))}
                   </ul>
 
-                
                   {section.bullet_points_outro && (
                     <p>{section.bullet_points_outro}</p>
                   )}
                 </div>
               ) : (
-              
                 <p className="mt-3">{section.paragraph}</p>
               )}
             </div>
@@ -271,7 +260,7 @@ const page = () => {
             </div>
           </WideCardWithGreyBorder>
         </Container> */}
-          <Container>
+        <Container>
           <h6 className="mt-5 xtraBold">Categories</h6>
           <div className="d-flex flex-wrap gap-3 mt-4">
             {blogPost &&
@@ -280,42 +269,30 @@ const page = () => {
               ))}
           </div>
         </Container>
-      
-        
+
         <Container>
-        <div className="cardWithGreyBorder px-3 mt-5">
-          <SectionWithHeaderAndText
-          header={blogPost && blogPost.call_to_action.header}
-          text={blogPost && blogPost.call_to_action.text}
-        />
-        </div>
+          <div className="cardWithGreyBorder p-4 mt-5">
+            <SectionWithHeaderAndText
+              header={blogPost && blogPost.call_to_action.header}
+              text={blogPost && blogPost.call_to_action.text}
+            />
+          </div>
         </Container>
         <Container>
-          <div className="section d-flex flex-column align-items-start w-25">
-            <span className="mt-2 mb-2 textBlue">Published on {blogPost && blogPost.date}</span>
-           
+          <div
+            className={`${styles.publishedDate} mt-3 d-flex flex-column align-items-start`}
+          >
+            <span className="mt-2 mb-2 textBlue">
+              Published on {blogPost && blogPost.date}
+            </span>
+
             <GreyBtnWide
               onClick={handleCopyClick}
               icon={<MdArrowOutward />}
               text="Share"
             />
-           
           </div>
         </Container>
-      
-       
-
-        {/* <CTAWithImage
-          header={blogPost && blogPost.call_to_action.header}
-          text={blogPost && blogPost.call_to_action.text}
-          img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
-          alt={blogPost && blogPost.call_to_action.image_alt}
-          btnText="Book via Calendy"
-          imageAlign="left"
-          link={calendlyLink}
-        /> */}
-    
-      
       </div>
     </>
   );
