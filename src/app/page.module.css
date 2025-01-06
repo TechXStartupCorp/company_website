@@ -71,6 +71,15 @@
   background-color: #f0f2f4;
 }
 
+/* /// highlighted text  */
+
+.highlightedText {
+  background-color: #fffae6; /* Light yellow background for a highlighted effect */
+  padding: 0.2em; /* Small padding around the text */
+  border-radius: 3px; /* Optional: Rounded corners */
+  color: #333; /* Dark text color for contrast */
+}
+
 
 
 

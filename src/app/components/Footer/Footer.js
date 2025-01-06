@@ -14,10 +14,10 @@ const Footer = () => {
     <div>
       <div className={`${styles.footerContainer} pb-5 section`}>
         <Container className="d-flex flex-column justify-content-center align-items-center">
-          <h1 className="xtraBold mt-3">Let&apos;s stay in touch!</h1>
+          <h2 className="xtraBold mt-3">Let's stay in touch</h2>
           <p className="mt-3 text-center">
-            Subscribe to our weekly newsletter and receive the latest news and
-            changes directly in your inbox.
+            Subscribe to our newsletter for the latest startup tips, funding
+            news, and Canada Startup Visa updates. 
           </p>
           <div className="mt-4">
             <DoSomethingForm text="Subscribe" />
@@ -28,11 +28,15 @@ const Footer = () => {
         <div className="d-flex justify-content-center text-dark gap-3 fs-4 mt-4">
           <FaLinkedin />
           <FaFacebook />
-          <FaXTwitter  />
+          <FaXTwitter />
           <RiInstagramFill className="" />
         </div>
         <div className="text-center mt-4">
-          <FaRegCopyright className="mt-0 mb-1" /> <small>2024 Tech X Startup Inc. All rights reserved. Privacy and terms</small>
+          <FaRegCopyright className="mt-0 mb-1" />{" "}
+          <small>
+            2024 TechX Startup Inc. All rights reserved. Privacy Policy & Terms
+            of Service
+          </small>
         </div>
       </Container>
     </div>

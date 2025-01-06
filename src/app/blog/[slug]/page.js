@@ -272,8 +272,8 @@ const page = () => {
           </WideCardWithGreyBorder>
         </Container> */}
           <Container>
-          <h6 className="mt-5 fw-semibold">Categories</h6>
-          <div className="d-flex flex-wrap gap-3 mt-3">
+          <h6 className="mt-5 xtraBold">Categories</h6>
+          <div className="d-flex flex-wrap gap-3 mt-4">
             {blogPost &&
               blogPost.categories.map((category, index) => (
                 <Tag key={index} text={category} />
@@ -292,12 +292,14 @@ const page = () => {
         </Container>
         <Container>
           <div className="section d-flex flex-column align-items-start w-25">
-            <h6 className="mt-2 xtraBold">Published on Jun 3rd, 2024</h6>
+            <span className="mt-2 mb-2 textBlue">Published on {blogPost && blogPost.date}</span>
+           
             <GreyBtnWide
               onClick={handleCopyClick}
               icon={<MdArrowOutward />}
               text="Share"
             />
+           
           </div>
         </Container>
       

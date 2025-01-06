@@ -10,27 +10,31 @@ export default function Home() {
     <div>
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934546/pexels-canvastudio-3194521_zoauly.jpg"
-        alt="Beautiful landscape"
-        title="Our Mission: Empowering Innovation and Growth"
-        text="We are dedicated to helping both local founders and Startup Visa applicants navigate the journey of building a successful startup. With expert mentorship, tailored resources, and exclusive insights into the Canada Startup Visa Program, we are your partner every step of the way. Join a community that is driving innovation and shaping the future of entrepreneurship."
+        alt="People on computers"
+        title="Our Mission: Empowering Startup Growth and Innovation"
+        text="At TechX Startup, we help entrepreneurs, from local founders to Canada Startup Visa applicants, build and scale successful startups. Our expert mentorship, tailored resources, and in-depth knowledge of the Canada Startup Visa Program empower you to navigate every stage of your entrepreneurial journey."
         primaryBtnText="Join our team"
         secondBtn={false}
         primaryBtnLink="mailto:team@techxstartup.com"
       />
       <div className="section">
+        &apos;
         <Container>
-          <h2 className="xtraBold mt-3">A brief history of Tech X Startup</h2>
+          <h2 className="xtraBold mt-3">A brief history of TechX Startup</h2>
           <p className="mt-4">
-            TechX Startup was founded with the mission to empower aspiring
-            entrepreneurs, both locally and globally. From a small team of
-            passionate innovators, we have grown into a thriving network of
-            startup enthusiasts, mentors, and industry experts. Over the years,
-            we&apos;ve helped local founders and Startup Visa applicants
-            navigate the complexities of launching a business, establish strong
-            foundations, and scale their ideas into successful ventures. Our
-            journey is driven by a commitment to innovation, collaboration, and
-            supporting the next generation of visionary leaders, wherever they
-            are.
+            TechX Startup was founded with a clear mission: to empower
+            entrepreneurs, from local innovators to global Startup Visa
+            applicants, by providing the essential resources and mentorship to
+            launch and scale successful startups. Starting with a small team of
+            passionate individuals, we have grown into a thriving network of
+            industry experts, mentors, and investors, offering specialized
+            support to fintech companies, venture capital-backed startups, and
+            those seeking Canada&apos;s Startup Visa. Over the years, we've
+            helped aspiring founders turn their startup ideas into thriving
+            businesses, navigate the complexities of product development, secure
+            seed funding, and achieve product-market fit. Our commitment to
+            innovation, collaboration, and supporting the next generation of
+            startup leaders is at the core of our journey.
           </p>
           <Row className="g-4 mt-2">
             {[
@@ -38,19 +42,19 @@ export default function Home() {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949382/dennis-cortes-eBPx9x7Hxyg-unsplash_hsevuk.jpg",
                 title: "2021",
-                text: "Tech X Startup was incorporated and began developing business ventures for clients.",
+                text: "Tech X Startup was incorporated to help startups with business development, funding, and mentorship.",
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949783/mimi-thian-IPBGKYnuz8Y-unsplash_uuj5j5.jpg",
                 title: "2022",
-                text: "Tech X Startup supported numerous companies in establishing and growing their businesses across various Canadian provinces.",
+                text: "Tech X Startup assisted businesses in scaling across Canada with seed funding and Startup Visa support.",
               },
               {
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949704/pexels-fauxels-3184292_ertp2e.jpg",
                 title: "2024",
-                text: "Rebranded, appointed a new team and supported startups with idea validation in collaboration with immigration and startup experts.",
+                text: "Rebranded and focused on idea validation, mentorship, and helping startups navigate the Canada Startup Visa.",
               },
             ].map((item, index) => (
               <Col key={index} xs={12} sm={6} lg={4} xl={4} className="rounded">
@@ -78,9 +82,9 @@ export default function Home() {
       <div className="section">
         <Container>
           <h2 className={`xtraBold w-75`}>
-            Our team values community, innovation, and the power of
-            collaboration, using years of expertise to guide entrepreneurs and
-            startups through every stage of their journey.
+            Our expert team values innovation, community, and collaboration,
+            providing guidance for entrepreneurs and startups at every stage of
+            their business journey.
           </h2>
           <h4 className="xtraBold mt-5 pb-2">Our team</h4>
           <div>
@@ -162,38 +166,36 @@ export default function Home() {
 
       <div className="section pb-5">
         <Container>
-          <h3 className="xtraBold mt-3">Startup Visa partners</h3>
+          <h3 className="xtraBold mt-3">Canada Startup Visa Partners</h3>
           <p className="mt-4">
-            With decades of experience collaborating with leading immigration
-            firms, we have refined our expertise in the Canada Startup Visa
-            process. Our strong partnerships with immigration specialists ensure
-            that we provide tailored solutions for each step of the journey.
-            From initial consultations to securing the Startup Visa and
-            permanent residency, we work closely with our immigration partners
-            to offer a seamless, efficient experience for founders seeking to
-            establish their businesses in Canada.
+            With years of experience in the Canada Startup Visa process, we
+            collaborate with top immigration specialists to offer tailored
+            solutions. From consultations to securing your Startup Visa and
+            permanent residency, our partnerships ensure a seamless experience
+            for founders looking to establish their businesses in Canada.
           </p>
 
           <Row className="g-4 mt-2">
             {[
               {
                 title: "P & R Immigration",
-                text: "For over 20 years, P & R Immigration has been a trusted leader in providing comprehensive immigration services.",
+                text: "With 20+ years of experience, P & R Immigration specializes in guiding entrepreneurs through the Canada Startup Visa process, ensuring seamless business establishment in Canada.",
                 alt: "P & R Immigration logo",
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733945473/P_n_R_Logo_2_xhvqty.png",
               },
 
               {
-                title: "True global immigration",
-                text: "True Global Immigration is a trusted immigration firm dedicated to helping clients achieve their dreams of living and working abroad.",
+                title: "True Global Immigration",
+                text: "True Global Immigration offers expert services for the Canada Startup Visa, helping entrepreneurs successfully navigate Canada's immigration process and start their business.",
                 alt: "True global immigration logo",
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733937898/True_Global_xxmzrt.png",
               },
+
               {
                 title: "CCN Immigration Services",
-                text: "Your partner in making your global aspirations a reality. We provide expert guidance and personalized support for living and working abroad.",
+                text: "CCN Immigration Services provides personalized support for entrepreneurs seeking the Canada Startup Visa, ensuring a smooth and successful immigration process.",
                 alt: "CCN Immigration logo",
                 image:
                   "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734111531/ccn-immigration-logo_jywvzq.png",
@@ -220,10 +222,10 @@ export default function Home() {
 
         <div className="mt-3">
           <CTAWithImage
-            header="Empowering Entrepreneurs to Succeed, Together"
-            text="Whether you’re just starting out or ready to scale, we’re here to help you navigate the complexities of entrepreneurship with confidence and clarity. Together, we’ll build a future where your business not only survives but thrives."
+            header="Empowering Entrepreneurs to Achieve Their Vision"
+            text="Whether you're launching your first business or scaling to new heights, we provide the support and resources to help you succeed. Let’s work together to navigate the entrepreneurial journey and turn your ideas into thriving businesses."
             img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg"
-            alt="guy on computer"
+            alt="people on computers"
             btnText="Book via Calendy"
             imageAlign="left"
             link={calendlyLink}

@@ -156,23 +156,23 @@ export default function Home() {
   const sellingPoints = [
     {
       icon: <FaRegCompass />,
-      title: "Comprehensive Startup Support",
-      text: "From idea refinement to securing your Startup Visa, we provide end-to-end guidance tailored for entrepreneurs and SUV applicants.",
+      title: "End-to-End Support for Startups and Canada Startup Visa",
+      text: "We guide you from refining startup ideas to securing your Canada Startup Visa, specializing in fintech companies and venture capital-backed businesses.",
     },
     {
       icon: <FaNetworkWired />,
-      title: "Global Network Access",
-      text: "Leverage our extensive connections with investors, incubators, and industry leaders to accelerate your startup's journey in Canada.",
+      title: "Global Angel Investor and Network Access",
+      text: "Connect with angel investors, VCs, and incubators to fast-track your startup’s funding and scale into a unicorn company.",
     },
     {
       icon: <FaHandshake />,
-      title: "Cross-Border Collaboration",
-      text: "Forge strategic partnerships with Canadian businesses and stakeholders, ensuring seamless integration into the Canadian market.",
+      title: "Integration into Canada’s Startup Ecosystem",
+      text: "Partner with Canadian businesses to achieve product-market fit and meet Canada Startup Visa requirements for rapid growth.",
     },
     {
       icon: <SiAircanada />,
-      title: "Startup Visa Expertise",
-      text: "With a proven track record of success, we simplify your Startup Visa process and help you establish your venture in Canada.",
+      title: "Expertise in Canada Startup Visa Applications",
+      text: "We simplify the Startup Visa process, securing funding and meeting business plan requirements to help you gain PR through Canada’s program.",
     },
   ];
 
@@ -190,9 +190,9 @@ export default function Home() {
     <div>
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
-        alt="Abstract landscape"
-        title="Build the Future, Together"
-        text="Launch and grow your startup with expert guidance, tailored resources, and mentorship. Whether you're building your first venture or navigating Canada’s Startup Visa Program, we’re here to help you succeed in a competitive global market."
+        alt="Computer screens"
+        title="Empower Your Startup Journey"
+        text="Whether you're refining your startup ideas, seeking seed funding, or navigating the Canada Startup Visa Program, we provide expert guidance, strategic resources, and a global network to help your venture succeed. Turn your vision into a thriving business with support tailored to entrepreneurs worldwide."
         primaryBtnText="Apply now"
         lightBtnText="Startup Visa"
         secondBtn={true}
@@ -207,13 +207,23 @@ export default function Home() {
         </h2>
 
         <p className="mt-4">
-          TechX Startup partners with a network of angel investors, incubators,
-          and venture capital funds to help turn your innovative ideas into
-          successful startups. We provide the essential funding, resources, and
-          mentorship to validate and scale your business. Our expert guidance
-          ensures you not only navigate the startup journey but also succeed in
-          Canada&apos;s Startup Visa Program, securing permanent residence and
-          setting the stage for long-term success in Canada.
+          TechX Startup collaborates with a dynamic network of experienced{" "}
+          <span className={styles.highlightedText}>angel investors</span>,
+          renowned <span className={styles.highlightedText}>incubators</span>,
+          and leading{" "}
+          <span className={styles.highlightedText}>venture capital funds</span>{" "}
+          to help transform your groundbreaking{" "}
+          <span className={styles.highlightedText}>startup ideas</span> into
+          thriving, sustainable businesses. Our partnerships provide access to a
+          wealth of <span className={styles.highlightedText}>resources</span>,{" "}
+          <span className={styles.highlightedText}>expertise</span>, and
+          industry <span className={styles.highlightedText}>connections</span>{" "}
+          that accelerate your journey from concept to{" "}
+          <span className={styles.highlightedText}>market leader</span>,
+          ensuring your venture has the support it needs to{" "}
+          <span className={styles.highlightedText}>scale rapidly</span> and
+          achieve{" "}
+          <span className={styles.highlightedText}>long-term success</span>.
         </p>
       </Container>
       <div className="mt-4 pb-4">
@@ -314,7 +324,7 @@ export default function Home() {
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"
           alt="Beautiful landscape"
           title="Transform Your Startup’s Future"
-          text="Elevate your startup with expert guidance and resources. Whether you're launching your business or navigating Canada’s Startup Visa Program, we provide the support you need to scale, seize new opportunities, and thrive in a competitive market."
+          text="Scale your startup with expert guidance, angel investors, and venture capital. Whether launching a fintech company or navigating Canada’s Startup Visa, we help secure seed funding and turn your startup ideas into a successful unicorn startup."
           primaryBtnText="Get the guide"
           secondBtn={true}
           lightBtnLink="/startupvisa"
@@ -330,13 +340,21 @@ export default function Home() {
         <Stats />
       </Container>
       <Container className="section mt-1">
-        <h2 className={`xtraBold header`}>Why Choose Tech X Startup?</h2>
+        <h2 className={`xtraBold header`}>
+          Why Choose Tech X Startup for Your Startup Journey?
+        </h2>
+
         <p className="mt-4 w-75 pb-2">
-          Tech X Startup supports you at every stage, from turning your idea
-          into a thriving business to navigating Canada&apos;s Startup Visa
-          Program. We provide the resources, mentorship, and expertise you need
-          to unlock opportunities and scale your startup for long-term success
-          in Canada.
+          Tech X Startup supports you at every stage, from turning your startup
+          idea into a thriving business to navigating{" "}
+          <span className={styles.highlightedText}>
+            Canada’s Startup Visa Program
+          </span>
+          . We offer essential resources, expert mentorship, and
+          industry-leading expertise to unlock funding opportunities, attract{" "}
+          <span className={styles.highlightedText}>angel investors</span>, and
+          scale your startup for long-term success in Canada’s competitive
+          market.
         </p>
         <Row className="mt-3 gx-4 gy-3">
           {sellingPoints.map((point, index) => (
@@ -376,8 +394,8 @@ export default function Home() {
         </Container>
       </div>
       <CTAWithImage
-        header="Build, Launch, and Scale with TechX Startup"
-        text="Partner with TechX Startup to successfully navigate the Canada Startup Visa process. Book a call today and take the first step toward launching your business and thriving in Canada."
+        header="Build, Launch, and Scale Your Startup with TechX Startup"
+        text="Partner with TechX Startup to turn your ideas into thriving businesses. We offer funding, mentorship, and guidance, including navigating the Canada Startup Visa. Book a call today to start scaling your startup."
         img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946918/dai-ke-GkraTrCYA_0-unsplash_zm7zb8.jpg"
         alt="guy on computer"
         btnText="Book via Calendy"
