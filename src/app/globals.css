@@ -126,12 +126,13 @@ hr {
 }
 
 .bulletPoint {
-  display: inline-block;
-  width: 20px; /* Adjust size as needed */
-  height: 20px;
+  flex-shrink: 0; /* Prevent shrinking */
+  width: 20px; /* Fixed width */
+  height: 20px; /* Fixed height */
   background-color: #007BFF; /* Blue color */
   border-radius: 4px; /* Optional for rounded corners */
   position: relative;
+  margin-top: 4px; /* Align vertically with text */
 }
 
 .bulletPoint::after {
@@ -144,6 +145,10 @@ hr {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: translate(-50%, -50%) rotate(45deg); /* Position and angle */
+}
+
+p {
+  margin: 0; /* Remove extra margin */
 }
 
 .primaryTimelineIconBG {
@@ -188,7 +193,7 @@ hr {
 
 
 
-@media (max-width: 575px) {
+@media (max-width: 1000px) {
   .section {
     padding: 2rem 0 0 1rem;
   }

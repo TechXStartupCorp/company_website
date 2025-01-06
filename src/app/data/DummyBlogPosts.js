@@ -1,4 +1,4 @@
-/// highlights must have colon : to support both highlight with paragraph and highlight onlyb
+
 
 export const blogPosts = [
   {
@@ -12,7 +12,7 @@ export const blogPosts = [
     title: "How to Secure Startup Funding: A Complete Guide",
     date: "December 2, 2024",
     imageUrl:
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863586/pexels-zachtheshoota-1888883_wg1qde.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1736195160/christine-roy-ir5MHI6rPg0-unsplash_l6rtvr.jpg",
     altText: "placeholder",
     meta_description:
       "Learn how startup funding works, from seed funding to Series B rounds. Discover strategies for securing funding, exploring government grants, and attracting investors to grow your business.",
@@ -146,7 +146,7 @@ export const blogPosts = [
     title: "How to build a Scalable Tech Startup: Strategies For Growth",
     date: "December 10, 2024",
     imageUrl:
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863586/pexels-zachtheshoota-1888883_wg1qde.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1736195273/proxyclick-visitor-management-system-l90zRbWvCoE-unsplash_dw1qhk.jpg",
     altText: "placeholder",
     meta_description:
       "Learn how to create a scalable tech startup by understanding the importance of scalability, business models, and strategies used by successful tech entrepreneurs. Explore real-world examples to inspire your journey.",
@@ -292,7 +292,7 @@ export const blogPosts = [
     title: "Navigating Early-Stage Tech Startup Challenges",
     date: "December 18, 2024",
     imageUrl:
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863586/pexels-zachtheshoota-1888883_wg1qde.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1736195376/sebastian-herrmann-7nQGQ0ve5A0-unsplash_o1d8gz.jpg",
     altText: "placeholder",
     meta_description:
       "Discover how to navigate common challenges faced by early-stage tech startups with practical solutions for overcoming funding, market fit, operations, and legal roadblocks.",

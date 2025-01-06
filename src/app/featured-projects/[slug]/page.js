@@ -105,13 +105,13 @@ export default function ProjectDetails({ params }) {
         </Row>
 
         <h5 className="mt-5 xtraBold">Target Audience</h5>
-        <Row className="mt-4 pb-2">
+        <Row className="mt-4 pb-2 g-3">
           {project.targetAudience &&
             Object.entries(project.targetAudience).map(
               ([audience, percentage], index) => (
-                <Col key={index}>
+                <Col md={12} className="d-flex" key={index}>
                   <div
-                    className={`${styles.detailsCard} d-flex flex-column align-items-center justify-content-center p-3 rounded`}
+                    className={`${styles.detailsCard} flex-grow-1 d-flex flex-column align-items-center justify-content-between p-3 rounded`}
                   >
                     <span className="xtraBold fs-2">{percentage}%</span>
                     <span className="textBlue mt-1">{audience}</span>
@@ -141,11 +141,12 @@ export default function ProjectDetails({ params }) {
             project.sections.benefits.map((benefit, index) => (
               <div key={index} className="d-flex align-items-start gap-3 mt-3">
                 <span className="bulletPoint mt-1"></span>
-                <p className="">{benefit}</p>
+                <p className="flex-grow-1">{benefit}</p>
               </div>
             ))}
         </Row>
-        <Row className="mt-5">
+        <hr className="mt-5"></hr>
+        {/* <Row className="mt-5">
           {project &&
             project.images.map((image, index) => (
               <Col key={index} xs={12} sm={6} lg={4} xl={3} className="rounded">
@@ -160,12 +161,12 @@ export default function ProjectDetails({ params }) {
                 </div>
               </Col>
             ))}
-        </Row>
-        <div className="section">
-          <SectionWithHeaderAndText
-            header="Need help with your startup idea?"
-            text="Contact us today to get started and discuss your vision. Our team of experts is here to provide personalized guidance and help you bring your ideas to life. Whether you need advice, support, or solutions, we’re here to assist you every step of the way. Call us now to take the first step towards turning your vision into reality."
-          />
+        </Row> */}
+        <div className="mt-5 pb-4">
+        <SectionWithHeaderAndText
+          header="Need help with your startup idea?"
+          text="Contact us today to get started and discuss your vision. Our team of experts is here to provide personalized guidance and help you bring your ideas to life. Whether you need advice, support, or solutions, we’re here to assist you every step of the way. Call us now to take the first step towards turning your vision into reality."
+        />
         </div>
       </Container>
     </div>

@@ -17,8 +17,13 @@
 }
 
 
-@media (max-width: 1200px) {
+
+@media (max-width: 991px) {
   .blogHeader {
     font-size: 1.2rem !important;
+    margin-top: 1rem !important;
+  }
+  .readMoreBtnContainer {
+    margin-top: 1.2rem;
   }
 }

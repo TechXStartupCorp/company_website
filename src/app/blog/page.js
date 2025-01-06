@@ -7,6 +7,7 @@ import Tag from "../components/Tag/Tag";
 import { blogPosts } from "../data/DummyBlogPosts";
 import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
+import styles from "./page.module.css";
 
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -49,10 +50,9 @@ const page = () => {
     currentPage * POSTS_PER_PAGE
   );
 
-
   //
   return (
-    <div className="section">
+    <div className="section pb-5">
       <Container>
         <h3 className="xtraBold">Blog</h3>
         <h5 className="xtraBold mt-5">All posts</h5>
@@ -108,8 +108,10 @@ const page = () => {
                   </div>
                 </Col>
                 <Col>
-                  <div className="d-flex flex-column">
-                    <h6 className="blogHeader xtraBold fs-6 mb-1 mt-1">
+                  <div className={`d-flex flex-column`}>
+                    <h6
+                      className={`${styles.blogHeader} xtraBold mb-1 mt-1`}
+                    >
                       {post.title}
                     </h6>
                     <small className="blogDate textBlue">{post.date}</small>
@@ -118,7 +120,7 @@ const page = () => {
               </Row>
             </Col>
             <Col>
-              <div>
+              <div className={styles.readMoreBtnContainer}>
                 <GreyBtnWide
                   text="Read more"
                   link={`/blog/${post.title
