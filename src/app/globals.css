@@ -4,7 +4,7 @@ body {
   position: relative;
   font-family: Mulish, sans-serif !important;
   scroll-behavior: smooth;
-  padding-top: 80px;
+  /* padding-top: 80px; */
   margin: 0 !important;
 }
 
@@ -20,15 +20,26 @@ body {
   --lightGreyContainerBGDarker: #e4e7e9;
   --bsPrimary: #0d6efd;
   --lightGreyBadgeBG: #e2e1e1;
-  --lightGreyBorder: #d0dbe7; 
-  --blueText: #4f7396; 
-  /* --lightBtnBG: #eeeeee !important; */
-  --bsDark:#212529; 
+  --lightGreyBorder: #d0dbe7;
+  --blueText: #4f7396;
+  --bsDark: #212529;
 }
 
+main {
+  /* padding-top: 70px; */
+}
 
-/* .breadcrumb-item.active {
-  color: var(--bsDark);
+.newsfeedSection {
+  padding-left: 0 !important;
+}
+
+.mainSection {
+  padding-right: 0 !important;
+}
+
+/* .navBar {
+  position: unset !important; 
+  position: sticky !important;
 } */
 
 .textBlue {
@@ -37,7 +48,7 @@ body {
 
 hr {
   color: var(--lightGreyBorder) !important;
-  opacity: .75 !important;
+  opacity: 0.75 !important;
 }
 
 .lightBtnBackgroundColor {
@@ -129,14 +140,14 @@ hr {
   flex-shrink: 0; /* Prevent shrinking */
   width: 20px; /* Fixed width */
   height: 20px; /* Fixed height */
-  background-color: #007BFF; /* Blue color */
+  background-color: #007bff; /* Blue color */
   border-radius: 4px; /* Optional for rounded corners */
   position: relative;
   margin-top: 4px; /* Align vertically with text */
 }
 
 .bulletPoint::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -190,8 +201,6 @@ p {
 .navyBlueTimelineCardBorderTop {
   border-top: 4px solid #354b6a;
 }
-
-
 
 @media (max-width: 1000px) {
   .section {

@@ -1,7 +1,13 @@
+
+
 .navBar {
-  background-color: white !important;
-  border-bottom: 1px solid #f2f2f2;
-  color: #212121 !important;
+  /* position: unset !important; */
+  position: sticky !important;
+  top: 0;
+  overflow: hidden;
+  z-index: 1000 !important;
+  background-color: white !important; /* Ensures visibility on scroll */
+  border-bottom: 1px solid #f2f2f2 !important; /* Border below the navbar */
 }
 
 .navMenu a {
@@ -40,10 +46,6 @@
   width: 100%;
 }
 
-.navLinksContainer {
-  gap: 2.5rem;
-}
-
 .applyNowBtn {
   border-radius: 11px !important;
   white-space: nowrap !important;
@@ -51,7 +53,6 @@
 }
 
 .navMenu a {
-  color: #212121 !important;
   font-weight: 600 !important;
   text-decoration: none !important;
 }

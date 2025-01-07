@@ -3,6 +3,7 @@ import { Mulish } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
+import { Row, Col } from "react-bootstrap";
 
 export const metadata = {
   title: "Startup Consulting for Global Founders - Your Launchpad",
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-      <meta charSet="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="title" content={metadata.title} />
         <meta name="description" content={metadata.description} />
@@ -39,14 +40,28 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           crossOrigin="anonymous"
         />
-         <link rel="preload" href="/globals.css" as="style" />
+        <link rel="preload" href="/globals.css" as="style" />
         <link rel="stylesheet" href="/globals.css" />
         <title>{metadata.title}</title>
       </head>
       <body className={mulish.className}>
-        <NavBar />
         <main>
-          <div>{children}</div>
+          <Row className="h-100">
+            {/* Main Content Column */}
+            <Col
+              className={`h-100 mainSection position-relative d-flex flex-column`}
+              xs={9}
+            >
+              <NavBar />
+
+              <>{children}</>
+            </Col>
+
+            {/* Sidebar Column */}
+            <Col className={`newsfeedSection`} xs={3}>
+              <div className="bg-warning h-100"> NEWSFEED</div>
+            </Col>
+          </Row>
         </main>
         <Footer />
       </body>
