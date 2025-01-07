@@ -235,7 +235,6 @@ export default function Home() {
                 key={index}
                 sm={12}
                 lg={4}
-                xl={3}
                 className="rounded d-flex flex-column"
               >
                 <div className="cardWithGreyBorder flex-grow-1 py-3 px-4">
@@ -362,7 +361,7 @@ export default function Home() {
               key={index}
               className="d-flex flex-column align-items-center"
             >
-              <div className={`cardWithGreyBorder d-flex flex-column p-4`}>
+              <div className={`cardWithGreyBorder h-100 d-flex flex-column p-4`}>
                 <div className="fs-4">{point.icon}</div>
                 <h5 className="xtraBold mt-3">{point.title}</h5>
                 <p className="textBlue mt-1">{point.text}</p>

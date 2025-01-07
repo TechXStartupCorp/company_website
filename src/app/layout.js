@@ -3,7 +3,7 @@ import { Mulish } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container } from "react-bootstrap";
 
 export const metadata = {
   title: "Startup Consulting for Global Founders - Your Launchpad",
@@ -46,25 +46,43 @@ export default function RootLayout({ children }) {
       </head>
       <body className={mulish.className}>
         <main>
+          <Container fluid className="h-100">
+            <Row className="h-100">
+              {/* Left Column (Main Content, scrollable) */}
+              <Col xs={9} className="left-column">
+                <NavBar />
+                <div className="content">{children}</div>
+                <Footer />
+              </Col>
+
+              {/* Right Column (Newsfeed, scrollable) */}
+              <Col xs={3} className="right-column bg-warning">
+                <div className="content">Right Column Content</div>
+              </Col>
+            </Row>
+          </Container>
+        </main>
+        {/* <main>
           <Row className="h-100">
-            {/* Main Content Column */}
             <Col
               className={`h-100 mainSection position-relative d-flex flex-column`}
               xs={9}
             >
               <NavBar />
 
-              <>{children}</>
-              <Footer />
+              <div className="contentWrapper d-flex flex-column flex-grow-1">
+                {children}
+              </div>
             </Col>
 
-            {/* Sidebar Column */}
             <Col className={`newsfeedSection`} xs={3}>
-              <div className="bg-warning h-100"> NEWSFEED</div>
+              <div className="bg-warning h-100 newsfeedWrapper"> NEWSFEED</div>
             </Col>
           </Row>
-        </main>
-       
+          <Row>
+            <Footer />
+          </Row>
+        </main> */}
       </body>
     </html>
   );

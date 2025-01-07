@@ -25,22 +25,24 @@ body {
   --bsDark: #212529;
 }
 
+/* Ensure full height for the main container */
 main {
-  /* padding-top: 70px; */
+  height: 100vh;
 }
 
-.newsfeedSection {
-  padding-left: 0 !important;
-}
-
-.mainSection {
+/* Left Column (scrollable) */
+.left-column {
+  height: 100%; /* Full height of the viewport */
+  overflow-y: auto; /* Make this section scrollable */
   padding-right: 0 !important;
 }
 
-/* .navBar {
-  position: unset !important; 
-  position: sticky !important;
-} */
+/* Right Column (scrollable) */
+.right-column {
+  padding-left: 0 !important;
+  height: 100%; /* Full height of the viewport */
+  overflow-y: auto; /* Make this section scrollable */
+}
 
 .textBlue {
   color: var(--blueText);
@@ -81,6 +83,7 @@ hr {
 
 .section {
   padding: 2rem 0;
+  flex-grow: 1;
 }
 
 .sectionWithBGcolor {

@@ -60,7 +60,7 @@ const NavBar = () => {
     <Navbar
       expand="lg"
       // fixed="top"
-      className={`${styles.navBar} ${isScrolled ? styles.scrolled : ""} mb-3`}
+      className={`${styles.navBar} ${isScrolled ? styles.scrolled : ""}`}
     >
       <Container fluid>
         <Navbar.Brand className="d-flex align-items-center" href="/home">
@@ -85,8 +85,10 @@ const NavBar = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav
-              className={`${styles.navMenu} d-flex justify-content-between flex-grow-1 pe-3`}
+              ///// this has to be flex column when screen is small
+              className={`${styles.navMenu} d-flex justify-content-between flex-grow-1`}
             >
+              {/* /// this has to be flex column when screen is small  */}
               <div className="d-flex gap-4 ms-4">
                 {Object.keys(pathDisplayNames).map((path) => (
                   <Nav.Link
