@@ -48,7 +48,7 @@ const NavBar = () => {
     }
   }, []);
   const pathDisplayNames = {
-    // "/": "Home",
+    "/": "Home",
     "/about": "About",
     "/startupvisa": "Startup Visa",
     "/blog": "Blog",
@@ -70,7 +70,7 @@ const NavBar = () => {
             <span className={styles.logoSpan}></span>
             <span className={styles.logoSpan}></span>
           </div>
-          <span className={`${styles.logoText} fw-bold`}>Tech X Startup</span>
+          <span className={`${styles.logoText} fw-bold fs-6`}>Tech X Startup</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -85,9 +85,9 @@ const NavBar = () => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav
-              className={`${styles.navMenu} d-flex justify-content-between gap-4 flex-grow-1 pe-3`}
+              className={`${styles.navMenu} d-flex justify-content-between flex-grow-1 pe-3`}
             >
-              <div>
+              <div className="d-flex gap-4 ms-4">
                 {Object.keys(pathDisplayNames).map((path) => (
                   <Nav.Link
                     key={path}
@@ -95,8 +95,8 @@ const NavBar = () => {
                     href={path}
                     className={
                       activeLink === (path === "/" ? "home" : path.substring(1))
-                        ? styles.active
-                        : ""
+                        ? `${styles.active} px-3`
+                        : "px-3"
                     }
                     onClick={() =>
                       setActiveLink(path === "/" ? "home" : path.substring(1))

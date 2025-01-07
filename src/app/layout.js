@@ -55,6 +55,7 @@ export default function RootLayout({ children }) {
               <NavBar />
 
               <>{children}</>
+              <Footer />
             </Col>
 
             {/* Sidebar Column */}
@@ -63,7 +64,7 @@ export default function RootLayout({ children }) {
             </Col>
           </Row>
         </main>
-        <Footer />
+       
       </body>
     </html>
   );
