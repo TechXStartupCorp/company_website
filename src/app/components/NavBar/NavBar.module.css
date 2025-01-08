@@ -1,12 +1,12 @@
 .navBar {
-  /* position: unset !important; */
   position: sticky !important;
   top: 0;
   overflow: hidden;
   z-index: 1000 !important;
   white-space: nowrap !important;
-  background-color: white !important; /* Ensures visibility on scroll */
-  border-bottom: 1px solid #f2f2f2 !important;
+  background-color: white !important;
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  padding: 0.7rem 0.8rem 0.7rem 0.8rem !important;
 }
 
 .navMenu .navMenuLinks {
@@ -17,10 +17,10 @@
   position: relative;
   display: inline-block;
   letter-spacing: 1.3px;
-  font-size: 0.95rem !important; /* Fixed font size */
+  font-size: 0.95rem !important;
   border-radius: 11px;
   font-weight: 600 !important;
-  transition: color 0.2s ease, font-weight 0.2s ease; /* Smooth transition */
+  transition: color 0.2s ease, font-weight 0.2s ease;
 }
 
 .navMenu .navMenuLinks:hover {
@@ -120,8 +120,6 @@
   .menuUL {
     flex-direction: column;
     gap: 0.7rem;
-    /* border-bottom: 1px solid rgb(232, 230, 230); */
-    /* padding-bottom: 0.7rem; */
   }
   .navMenu a {
     width: fit-content;

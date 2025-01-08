@@ -98,7 +98,7 @@ const page = () => {
             <Col lg={10}>
               <Row className="d-flex align-items-center">
                 <Col xl={1} lg={2}>
-                  <div className="blogImgContainer">
+                  <div className="">
                     <Image
                       src={post.imageUrl}
                       alt={post.altText}

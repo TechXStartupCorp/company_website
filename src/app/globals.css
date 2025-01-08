@@ -54,6 +54,10 @@ main {
   color: var(--blueText);
 }
 
+.whiteBG {
+  background-color: white;
+}
+
 hr {
   color: var(--lightGreyBorder) !important;
   opacity: 0.75 !important;
