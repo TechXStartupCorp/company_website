@@ -58,7 +58,7 @@ const NavBar = () => {
     ////// basic navbar works
 
     <Navbar
-      expand="lg"
+      expand="xl"
       // fixed="top"
       className={`${styles.navBar} ${isScrolled ? styles.scrolled : ""}`}
     >
@@ -83,15 +83,15 @@ const NavBar = () => {
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
               <div className="d-flex align-items-center">
-              <div className={styles.logoContainer}>
-                <span className={styles.logoSpan}></span>
-                <span className={styles.logoSpan}></span>
-                <span className={styles.logoSpan}></span>
-                <span className={styles.logoSpan}></span>
-              </div>
-              <span className={`${styles.logoText} fw-bold fs-6`}>
-                Tech X Startup
-              </span>
+                <div className={styles.logoContainer}>
+                  <span className={styles.logoSpan}></span>
+                  <span className={styles.logoSpan}></span>
+                  <span className={styles.logoSpan}></span>
+                  <span className={styles.logoSpan}></span>
+                </div>
+                <span className={`${styles.logoText} fw-bold fs-6`}>
+                  Tech X Startup
+                </span>
               </div>
             </Offcanvas.Title>
           </Offcanvas.Header>

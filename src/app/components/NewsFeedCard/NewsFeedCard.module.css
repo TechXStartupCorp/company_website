@@ -1,0 +1,21 @@
+.newsFeedCardContainer {
+  overflow: hidden;
+  padding-bottom: 55%;
+  z-index: 1;
+}
+
+.newsFeedCardContainer img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.newsFeedCategory {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  z-index: 1000;
+}

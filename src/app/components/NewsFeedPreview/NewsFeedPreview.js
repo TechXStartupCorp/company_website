@@ -1,13 +1,12 @@
 "use client";
-import React, { useMemo } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import styles from "./NewsFeedPreview.module.css";
-import { Form, Container, Row, Col, Button, Badge } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineChevronRight } from "react-icons/md";
-import CalloutSection from "../CalloutSection/CalloutSection";
 import Image from "next/image";
 import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
-import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
+import NewsFeedCard from "../NewsFeedCard/NewsFeedCard";
 
 const NewsFeedPreview = () => {
   // Select a random newsfeed post using useMemo to avoid recalculation on each render
@@ -15,6 +14,15 @@ const NewsFeedPreview = () => {
     const randomIndex = Math.floor(Math.random() * dummyNewsFeedPosts.length);
     return dummyNewsFeedPosts[randomIndex];
   }, []);
+
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // Filter the posts based on search term
+  const filteredPosts = useMemo(() => {
+    return dummyNewsFeedPosts.filter((post) =>
+      post.title.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }, [searchTerm]);
 
   return (
     <div className="py-2 px-3">
@@ -24,6 +32,8 @@ const NewsFeedPreview = () => {
             type="text"
             className={`${styles.searchInput}`}
             placeholder="Search here..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)} // Update state as the user types
           />
           <CiSearch className={`${styles.searchIcon} fs-5`} />
         </div>
@@ -59,92 +69,14 @@ const NewsFeedPreview = () => {
           <p className="mt-3 mb-0 fs-6">{randomPost.title}</p>
         </div>
       </div>
-      <div className="mt-4">
-        {dummyNewsFeedPosts.map((newsFeedPost, index) => (
-          <div className="p-2 whiteBG rounded mb-3" key={index}>
-            <Row>
-              <div className={`d-flex flex-column flex-grow-1`}>
-                <div
-                  className={`${styles.newsFeedCardContainer} position-relative`}
-                >
-                  <Badge className={`${styles.newsFeedCategory} text-light`}>
-                    Category
-                  </Badge>
-                  <Image
-                    className="roundedImage"
-                    src={newsFeedPost.image.image_url}
-                    alt={newsFeedPost.image.alt_tag}
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                </div>
-                <div className="d-flex flex-column justify-content-between h-100">
-                  <div className="d-flex flex-column">
-                    <div className="mt-2 d-flex text-secondary justify-content-between">
-                      <div>
-                        <span>
-                          🔥 <small>Trending</small>
-                        </span>
-                      </div>
-                      <small>{newsFeedPost.date_time_posted}</small>
-                    </div>
-                    <div className="mt-2">
-                      <h5 className="xtraBold">{newsFeedPost.title}</h5>
-                    </div>
-                  </div>
-                  <div className="mt-2">
-                    <GreyBtnWide
-                      //   link={link}
-                      //   icon={icon}
-                      text="Read more"
-                    />
-                  </div>
-                </div>
-              </div>
-            </Row>
-          </div>
-          //   <Container key={index} className="whiteBG fluid p-3 rounded mb-3">
-          //     <Row className="align-items-stretch">
-          //       <Col className="">
-          //         <div>
-          //           <div className="d-flex gap-3 fs-6">
-          //             <small className="text-primary fw-bold">
-          //               {newsFeedPost.news_feed_source}
-          //             </small>{" "}
-          //             <span className="text-secondary">•</span>
-          //             <small className="text-secondary">
-          //               {newsFeedPost.date_time_posted}
-          //             </small>
-          //           </div>
-          //           <div className="mt-3">
-          //             <h6 className="xtraBold">{newsFeedPost.title}</h6>
-          //           </div>
-          //         </div>
-          //         <div className="mt-4">
-          //           <GreyBtnWide
-          //             text="Read more"
-          //             //   link={`/blog/${post.title
-          //             //     .replace(/\s+/g, "-")
-          //             //     .toLowerCase()}`}
-          //             //   aria-label={`Read more about ${post.title}`}
-          //           />
-          //         </div>
-          //       </Col>
-          //       <Col xs={3} className="h-100 d-flex flex-column">
-          //         <div className="w-100 h-100 flex-grow-1 bg-warning">
-          //             hi2
-          //           {/* <Image
-          //             src={newsFeedPost.image.image_url}
-          //             alt={newsFeedPost.image.alt_tag}
-          //             layout="fill"
-          //             objectFit="cover"
-          //             className="rounded"
-          //           /> */}
-          //         </div>
-          //       </Col>
-          //     </Row>
-          //   </Container>
-        ))}
+      <div className="mt-3">
+      {filteredPosts.length > 0 ? (
+        filteredPosts.map((newsFeedPost, index) => (
+          <NewsFeedCard newsFeedPost={newsFeedPost} key={index} />
+        ))
+      ) : (
+        <p className="text-secondary">No results found</p> // Display a message when no posts match the search
+      )}
       </div>
     </div>
   );

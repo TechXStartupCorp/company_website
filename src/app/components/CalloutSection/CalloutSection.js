@@ -50,7 +50,7 @@ const CalloutSection = ({
             </div>
           ) : (
             (primaryBtnText || secondBtn) && (
-              <div className="d-flex gap-3 mt-5">
+              <div className="d-flex gap-2 mt-5">
                 {primaryBtnText && (
                   <CustomBtn
                     link={primaryBtnLink}
