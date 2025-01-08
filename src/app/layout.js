@@ -4,6 +4,7 @@ import "./globals.css";
 import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { Row, Col, Container } from "react-bootstrap";
+import NewsFeedPreview from "./components/NewsFeedPreview/NewsFeedPreview";
 
 export const metadata = {
   title: "Startup Consulting for Global Founders - Your Launchpad",
@@ -49,40 +50,21 @@ export default function RootLayout({ children }) {
           <Container fluid className="h-100">
             <Row className="h-100">
               {/* Left Column (Main Content, scrollable) */}
-              <Col xs={9} className="left-column">
+              <Col xs={8} md={9} className="left-column">
                 <NavBar />
                 <div className="content">{children}</div>
                 <Footer />
               </Col>
 
               {/* Right Column (Newsfeed, scrollable) */}
-              <Col xs={3} className="right-column bg-warning">
-                <div className="content">Right Column Content</div>
+              <Col xs={4} md={3} className="right-column">
+                <div className="content">
+                  <NewsFeedPreview />
+                </div>
               </Col>
             </Row>
           </Container>
         </main>
-        {/* <main>
-          <Row className="h-100">
-            <Col
-              className={`h-100 mainSection position-relative d-flex flex-column`}
-              xs={9}
-            >
-              <NavBar />
-
-              <div className="contentWrapper d-flex flex-column flex-grow-1">
-                {children}
-              </div>
-            </Col>
-
-            <Col className={`newsfeedSection`} xs={3}>
-              <div className="bg-warning h-100 newsfeedWrapper"> NEWSFEED</div>
-            </Col>
-          </Row>
-          <Row>
-            <Footer />
-          </Row>
-        </main> */}
       </body>
     </html>
   );

@@ -40,8 +40,14 @@ main {
 /* Right Column (scrollable) */
 .right-column {
   padding-left: 0 !important;
+  padding-right: 0 !important;
   height: 100%; /* Full height of the viewport */
   overflow-y: auto; /* Make this section scrollable */
+  background-color: var(--lightGreyContainerBG);
+}
+
+.content {
+  padding-right: calc(var(--bs-gutter-x)* .5);
 }
 
 .textBlue {

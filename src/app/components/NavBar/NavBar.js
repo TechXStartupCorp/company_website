@@ -70,7 +70,9 @@ const NavBar = () => {
             <span className={styles.logoSpan}></span>
             <span className={styles.logoSpan}></span>
           </div>
-          <span className={`${styles.logoText} fw-bold fs-6`}>Tech X Startup</span>
+          <span className={`${styles.logoText} fw-bold fs-6`}>
+            Tech X Startup
+          </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -80,7 +82,17 @@ const NavBar = () => {
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              Offcanvas
+              <div className="d-flex align-items-center">
+              <div className={styles.logoContainer}>
+                <span className={styles.logoSpan}></span>
+                <span className={styles.logoSpan}></span>
+                <span className={styles.logoSpan}></span>
+                <span className={styles.logoSpan}></span>
+              </div>
+              <span className={`${styles.logoText} fw-bold fs-6`}>
+                Tech X Startup
+              </span>
+              </div>
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
@@ -89,7 +101,7 @@ const NavBar = () => {
               className={`${styles.navMenu} d-flex justify-content-between flex-grow-1`}
             >
               {/* /// this has to be flex column when screen is small  */}
-              <div className="d-flex gap-4 ms-4">
+              <div className={`${styles.menuUL} d-flex`}>
                 {Object.keys(pathDisplayNames).map((path) => (
                   <Nav.Link
                     key={path}
@@ -97,8 +109,8 @@ const NavBar = () => {
                     href={path}
                     className={
                       activeLink === (path === "/" ? "home" : path.substring(1))
-                        ? `${styles.active} px-3`
-                        : "px-3"
+                        ? `${styles.active} px-3 ${styles.navMenuLinks}`
+                        : `${styles.navMenuLinks} px-3`
                     }
                     onClick={() =>
                       setActiveLink(path === "/" ? "home" : path.substring(1))
@@ -109,7 +121,7 @@ const NavBar = () => {
                 ))}
               </div>
 
-              <div>
+              <div className={styles.customBtnContainer}>
                 <CustomBtn link={calendlyLink} text="Book consult" />
               </div>
 
@@ -117,7 +129,7 @@ const NavBar = () => {
                     href={startupVisaFormLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-decoration-none"
+                    className={`${styles.applyNowLink} text-decoration-none`}
                   >
                     <Button
                       variant="light"
