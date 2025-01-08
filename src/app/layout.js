@@ -1,3 +1,4 @@
+// "use client"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Mulish } from "next/font/google";
 import "./globals.css";

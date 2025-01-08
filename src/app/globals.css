@@ -47,11 +47,12 @@ main {
 }
 
 .content {
-  padding-right: calc(var(--bs-gutter-x)* .5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
 }
 
 .textBlue {
-  color: var(--blueText);
+  /* color: var(--blueText); */
+  /* color: #6C757D; */
 }
 
 .whiteBG {
@@ -134,8 +135,9 @@ hr {
 }
 
 .cardWithGreyBorder {
-  border: 1px solid var(--lightGreyBorder);
+  /* border: 1px solid var(--lightGreyBorder); */
   border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
 .logoCard {

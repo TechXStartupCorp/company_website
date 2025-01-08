@@ -109,7 +109,7 @@ export default function ProjectDetails({ params }) {
           {project.targetAudience &&
             Object.entries(project.targetAudience).map(
               ([audience, percentage], index) => (
-                <Col md={12} className="d-flex" key={index}>
+                <Col sm={12} md={6} className="d-flex" key={index}>
                   <div
                     className={`${styles.detailsCard} flex-grow-1 d-flex flex-column align-items-center justify-content-between p-3 rounded`}
                   >
@@ -145,7 +145,7 @@ export default function ProjectDetails({ params }) {
               </div>
             ))}
         </Row>
-        <hr className="mt-5"></hr>
+
         {/* <Row className="mt-5">
           {project &&
             project.images.map((image, index) => (
@@ -163,10 +163,10 @@ export default function ProjectDetails({ params }) {
             ))}
         </Row> */}
         <div className="mt-5 pb-4">
-        <SectionWithHeaderAndText
-          header="Need help with your startup idea?"
-          text="Contact us today to get started and discuss your vision. Our team of experts is here to provide personalized guidance and help you bring your ideas to life. Whether you need advice, support, or solutions, we’re here to assist you every step of the way. Call us now to take the first step towards turning your vision into reality."
-        />
+          <SectionWithHeaderAndText
+            header="Need help with your startup idea?"
+            text="Contact us today to get started and discuss your vision. Our team of experts is here to provide personalized guidance and help you bring your ideas to life. Whether you need advice, support, or solutions, we’re here to assist you every step of the way. Call us now to take the first step towards turning your vision into reality."
+          />
         </div>
       </Container>
     </div>

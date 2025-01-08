@@ -70,13 +70,13 @@ const NewsFeedPreview = () => {
         </div>
       </div>
       <div className="mt-3">
-      {filteredPosts.length > 0 ? (
-        filteredPosts.map((newsFeedPost, index) => (
-          <NewsFeedCard newsFeedPost={newsFeedPost} key={index} />
-        ))
-      ) : (
-        <p className="text-secondary">No results found</p> // Display a message when no posts match the search
-      )}
+        {filteredPosts.length > 0 ? (
+          filteredPosts.map((newsFeedPost, index) => (
+            <NewsFeedCard shadow={false} newsFeedPost={newsFeedPost} key={index} />
+          ))
+        ) : (
+          <p className="text-secondary">No results found</p> // Display a message when no posts match the search
+        )}
       </div>
     </div>
   );

@@ -51,6 +51,7 @@ const NavBar = () => {
     "/": "Home",
     "/about": "About",
     "/startupvisa": "Startup Visa",
+    "/news": "News",
     "/blog": "Blog",
     "/contact": "Contact",
   };

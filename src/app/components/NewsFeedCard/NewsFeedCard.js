@@ -5,10 +5,14 @@ import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 import Link from "next/link";
 import styles from "./NewsFeedCard.module.css";
 
-const NewsFeedCard = ({ newsFeedPost }) => {
+const NewsFeedCard = ({ newsFeedPost, shadow }) => {
   return (
-    <div className="p-2 whiteBG rounded mb-3">
-      <Row>
+    <div
+      className={`${styles.newsFeedCard} ${
+        shadow && styles.newsFeedCardShadow
+      } d-flex flex-column p-2 whiteBG rounded mb-3 h-100`}
+    >
+      <Row className="flex-grow-1">
         <div className={`d-flex flex-column flex-grow-1`}>
           <div className={`${styles.newsFeedCardContainer} position-relative`}>
             <Badge className={`${styles.newsFeedCategory} text-light`}>
@@ -38,8 +42,10 @@ const NewsFeedCard = ({ newsFeedPost }) => {
             </div>
             <div className="mt-2">
               <GreyBtnWide
-                //   link={link}
-                //   icon={icon}
+                link={`/news/${newsFeedPost.title
+                  .replace(/\s+/g, "-")
+                  .toLowerCase()}`}
+                aria-label={`Read more about ${newsFeedPost.title}`}
                 text="Read more"
               />
             </div>
