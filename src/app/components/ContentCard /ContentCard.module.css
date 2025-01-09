@@ -1,0 +1,35 @@
+.imageContainer {
+  overflow: hidden;
+  padding-bottom: 60%;
+  z-index: 1;
+}
+
+.imageContainer img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  z-index: 1000;
+}
+
+.truncateText {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.authorImage {
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the given dimensions */
+}

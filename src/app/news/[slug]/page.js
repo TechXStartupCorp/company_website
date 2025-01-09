@@ -4,6 +4,7 @@ import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
 
+
 const page = () => {
   const { slug } = useParams();
 
