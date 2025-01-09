@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import { Row, Col, Container } from "react-bootstrap";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
 import Stats from "./components/Stats/Stats";
+import Link from "next/link";
 import {
   FaRegCompass,
   FaGraduationCap,
@@ -19,6 +20,7 @@ import {
 } from "react-icons/fa";
 import { IoIosMegaphone } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
+import GreyBtnWide from "./components/GreyBtnWide/GreyBtnWide";
 import { HiPresentationChartBar } from "react-icons/hi2";
 import { BsFileEarmarkSpreadsheetFill } from "react-icons/bs";
 import { GiPadlock } from "react-icons/gi";
@@ -252,7 +254,7 @@ export default function Home() {
       <Container>
         <div id="featured-projects">
           <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
-          <Row>
+          {/* <Row>
             {featuredProjects.map((project, index) => (
               <Col
                 className="d-flex flex-column"
@@ -274,31 +276,31 @@ export default function Home() {
                 />
               </Col>
             ))}
-          </Row>
-          {/* <div>
+          </Row> */}
+          <div>
             {sortedYears.map((year) => (
               <div key={year}>
                 <h5 className="xtraBold mt-5">{year}</h5>
                 {groupedProjects[year].map((project, index) => (
-                  <Row className="mt-5 cardWithGreyBorder p-3" key={index}>
+                  <Row className="mt-5" key={index}>
                     <Col>
-                    <div>
-                      <h5 className="xtraBold">{project.title}</h5>
-                      <p className="mt-3 text-secondary">{project.text}</p>
-                      <div className={styles.caseStudyLinkContainer}>
+                      <div className="d-flex flex-column align-items-start">
+                        <h5 className="xtraBold">{project.title}</h5>
+                        <p className="mt-3 textBlue">{project.text}</p>
+
                         <Link
                           href={`/featuredprojects/${project.title
                             .toLowerCase()
                             .replace(/ /g, "-")}`}
                           rel="noopener noreferrer"
-                          className={`text-dark fw-bold text-decoration-none py-2 px-3 rounded ${styles.caseStudyLink}`}
+                          className={`${styles.caseStudyLink} mt-3 text-decoration-none text-dark py-2 px-5 rounded lightGreyContainerBG fw-bold d-flex align-items-center justify-content-center gap-3`}
                         >
-                          Learn more
+                          <MdArrowOutward />
+                          Read more
                         </Link>
                       </div>
-                      </div>
                     </Col>
-                    <Col xl={4}>
+                    <Col className={styles.featuredProjImg} xl={3}>
                       <div
                         className={`${styles.featuredProjImgContainer} position-relative h-auto w-100`}
                       >
@@ -314,10 +316,10 @@ export default function Home() {
                 ))}
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       </Container>
-      <div className="section">
+      <div className="mt-3">
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"
           alt="Beautiful landscape"
@@ -334,15 +336,16 @@ export default function Home() {
           // isPrimaryBtnLinkExternal={false}
         />
       </div>
-      <Container>
+
+      <Container className="mt-4">
         <Stats />
       </Container>
-      <Container className="section mt-1">
+      <Container className="section">
         <h2 className={`xtraBold header`}>
           Why Choose Tech X Startup for Your Startup Journey?
         </h2>
 
-        <p className="mt-4 w-75 pb-2">
+        <p className="mt-3 pb-2">
           Tech X Startup supports you at every stage, from turning your startup
           idea into a thriving business to navigating{" "}
           <span className={styles.highlightedText}>
@@ -361,7 +364,9 @@ export default function Home() {
               key={index}
               className="d-flex flex-column align-items-center"
             >
-              <div className={`cardWithGreyBorder h-100 d-flex flex-column p-4`}>
+              <div
+                className={`cardWithGreyBorder h-100 d-flex flex-column p-4`}
+              >
                 <div className="fs-4">{point.icon}</div>
                 <h5 className="xtraBold mt-3">{point.title}</h5>
                 <p className="textBlue mt-1">{point.text}</p>

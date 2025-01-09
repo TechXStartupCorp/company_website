@@ -21,6 +21,7 @@
   border-radius: 11px;
   font-weight: 600 !important;
   transition: color 0.2s ease, font-weight 0.2s ease;
+  margin-left: 1.5rem;
 }
 
 .navMenu .navMenuLinks:hover {
@@ -59,7 +60,11 @@
 
 .menuUL {
   margin-left: 1.5rem;
-  gap: 1.5rem;
+}
+
+.offCanvasBody {
+  display: flex;
+  justify-content: space-between;
 }
 
 .applyNowBtn {
@@ -113,18 +118,23 @@
   }
 }
 
-@media (max-width: 991px) {
-  .applyNowLink {
-    display: block;
-  }
-  .menuUL {
+@media (max-width: 1199px) {
+  .offCanvasBody {
     flex-direction: column;
-    gap: 0.7rem;
+    justify-content: start;
   }
+  .navMenu .navMenuLinks {
+    margin-left: 0;
+    margin-bottom: 0.8rem;
+  }
+
   .navMenu a {
     width: fit-content;
   }
   .customBtnContainer {
-    margin-top: 1rem;
+    margin-top: 0.4rem;
+  }
+  .offCanvasHeader {
+    box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   }
 }

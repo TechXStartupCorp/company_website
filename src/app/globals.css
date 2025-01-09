@@ -32,8 +32,9 @@ main {
 
 /* Left Column (scrollable) */
 .left-column {
-  height: 100%; /* Full height of the viewport */
-  overflow-y: auto; /* Make this section scrollable */
+  height: 100%;
+  overflow-y: auto;
+  padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
@@ -41,8 +42,8 @@ main {
 .right-column {
   padding-left: 0 !important;
   padding-right: 0 !important;
-  height: 100%; /* Full height of the viewport */
-  overflow-y: auto; /* Make this section scrollable */
+  height: 100%;
+  overflow-y: auto;
   background-color: var(--lightGreyContainerBG);
 }
 
@@ -51,8 +52,7 @@ main {
 }
 
 .textBlue {
-  /* color: var(--blueText); */
-  /* color: #6C757D; */
+  color: var(--blueText);
 }
 
 .whiteBG {

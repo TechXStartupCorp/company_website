@@ -43,12 +43,8 @@
   cursor: pointer;
 }
 
-.caseStudyLinkContainer {
-  margin-top: 2.5rem;
-}
-
 .caseStudyLink {
-  background-color: var(--lightGreyContainerBG);
+  font-size: 14px;
 }
 
 .featuredProjImgContainer {
@@ -64,14 +60,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Set the desired height for each card */
+  height: 200px;
   border-radius: var(--border-radius-small);
-  overflow: hidden; /* Prevents image from overflowing the div */
-  position: relative; /* Required for intrinsic layout to work */
+  overflow: hidden;
+  position: relative;
   background-color: #f0f2f4;
 }
-
-/* /// highlighted text  */
 
 .highlightedText {
   background-color: #fffae6; /* Light yellow background for a highlighted effect */
@@ -80,15 +74,21 @@
   color: #333; /* Dark text color for contrast */
 }
 
+@media (max-width: 1199px) {
+  .featuredProjImg {
+    display: none !important;
+  }
+  .caseStudyLink {
+    width: 50%;
+  }
+}
+
 @media (max-width: 992px) {
   .landingPageContent h2 {
     width: 100% !important;
     line-height: unset !important;
   }
+  .caseStudyLink {
+    width: 100%;
+  }
 }
-
-
-
-
-
-

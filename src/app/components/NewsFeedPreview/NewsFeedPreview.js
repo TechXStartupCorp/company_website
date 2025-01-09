@@ -7,6 +7,7 @@ import { MdOutlineChevronRight } from "react-icons/md";
 import Image from "next/image";
 import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
 import NewsFeedCard from "../NewsFeedCard/NewsFeedCard";
+import Link from "next/link";
 
 const NewsFeedPreview = () => {
   // Select a random newsfeed post using useMemo to avoid recalculation on each render
@@ -45,34 +46,43 @@ const NewsFeedPreview = () => {
           <MdOutlineChevronRight className="ms-2" />
         </span>
       </div>
-      <div
-        className={`${styles.previewContainerWithImage} w-100 mt-4 position-relative d-flex`}
+
+      <Link
+        href={`/news/${randomPost.title.replace(/\s+/g, "-").toLowerCase()}`}
       >
-        <div className={styles.optionalDarkOverlay}></div>
-        <Image
-          className={`${styles.heroImage}`}
-          src={randomPost.image.image_url}
-          alt={randomPost.image.alt_tag}
-          layout="fill"
-          objectFit="cover"
-          quality={100}
-          priority={true}
-        />
-        <div className={`${styles.textOverlay}`}>
-          <div className="fw-bold d-flex gap-2 align-items-center">
-            <h6 className="mb-0 xtraBold">{randomPost.news_feed_source}</h6>{" "}
-            <span className="">•</span>{" "}
-            <small className="fw-light mt-1">
-              {randomPost.date_time_posted}
-            </small>
+        <div
+          className={`${styles.previewContainerWithImage} w-100 mt-4 position-relative d-flex`}
+        >
+          <div className={styles.optionalDarkOverlay}></div>
+          <Image
+            className={`${styles.heroImage}`}
+            src={randomPost.image.image_url}
+            alt={randomPost.image.alt_tag}
+            layout="fill"
+            objectFit="cover"
+            quality={100}
+            priority={true}
+          />
+          <div className={`${styles.textOverlay}`}>
+            <div className="fw-bold d-flex gap-2 align-items-center">
+              <h6 className="mb-0 xtraBold">{randomPost.news_feed_source}</h6>{" "}
+              <span className="">•</span>{" "}
+              <small className="fw-light mt-1">
+                {randomPost.date_time_posted}
+              </small>
+            </div>
+            <p className="mt-3 mb-0 fs-6">{randomPost.title}</p>
           </div>
-          <p className="mt-3 mb-0 fs-6">{randomPost.title}</p>
         </div>
-      </div>
+      </Link>
       <div className="mt-3">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((newsFeedPost, index) => (
-            <NewsFeedCard shadow={false} newsFeedPost={newsFeedPost} key={index} />
+            <NewsFeedCard
+              shadow={false}
+              newsFeedPost={newsFeedPost}
+              key={index}
+            />
           ))
         ) : (
           <p className="text-secondary">No results found</p> // Display a message when no posts match the search
