@@ -4,7 +4,16 @@ import Image from "next/image";
 import styles from "./ContentCard.module.css";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 
-const ContentCard = ({ imageUrl, altTag, category, title, content, time }) => {
+const ContentCard = ({
+  imageUrl,
+  altTag,
+  category,
+  title,
+  content,
+  time,
+  preview,
+  imageAlign,
+}) => {
   return (
     <Row>
       <Col>
@@ -18,14 +27,6 @@ const ContentCard = ({ imageUrl, altTag, category, title, content, time }) => {
             objectFit="cover"
           />
         </div>
-        {/* <div className="mt-2 d-flex text-secondary justify-content-between">
-            <div>
-              <span>
-                🔥 <small>Trending</small>
-              </span>
-            </div>
-            <small>Some time ago</small>
-          </div> */}
       </Col>
       <Col>
         <div className="d-flex flex-column justify-content-between h-100">
@@ -49,13 +50,17 @@ const ContentCard = ({ imageUrl, altTag, category, title, content, time }) => {
 
             <small className="text-secondary mt-2">{time}</small>
 
-            <p className={`${styles.truncateText} mt-3`}>{content}</p>
+            <p className={`${preview ? styles.truncateText : "mt-3"}`}>
+              {content}
+            </p>
           </div>
-          <GreyBtnWide
-            link={`/news/${title.replace(/\s+/g, "-").toLowerCase()}`}
-            aria-label={`Read more about ${title}`}
-            text="Read more"
-          />
+          {preview && (
+            <GreyBtnWide
+              link={`/news/${title.replace(/\s+/g, "-").toLowerCase()}`}
+              aria-label={`Read more about ${title}`}
+              text="Read more"
+            />
+          )}
         </div>
       </Col>
     </Row>

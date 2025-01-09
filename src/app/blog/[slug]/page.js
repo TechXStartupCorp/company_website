@@ -245,21 +245,7 @@ const page = () => {
             </div>
           ))}
         </Container>
-        {/* <Container className="mt-5">
-          <WideCardWithGreyBorder>
-            <div className="d-flex flex-column">
-              <span className="xtraBold">
-                {blogPost && blogPost.call_to_action.header}
-              </span>
-              <span className="mt-1">
-                Call us today to discuss your options.
-              </span>
-            </div>
-            <div>
-              <CustomBtn text="Book via Calendy" />
-            </div>
-          </WideCardWithGreyBorder>
-        </Container> */}
+
         <Container>
           <h6 className="mt-5 xtraBold">Categories</h6>
           <div className="d-flex flex-wrap gap-3 mt-4">
