@@ -5,7 +5,7 @@ import NewsFeedCard from "../components/NewsFeedCard/NewsFeedCard";
 
 const page = () => {
   return (
-    <div className="lightGreyContainerBG">
+    <div className="">
       <Container className="pb-5">
         <h4 className="xtraBold mt-4">Recent news</h4>
         <Row className="">
