@@ -41,10 +41,12 @@ const NewsFeedPreview = () => {
       </Form>
       <div className="d-flex justify-content-between align-items-center mt-4">
         <h5 className="fw-bold mb-0">Recommended</h5>
+        <Link href="/news" className="text-dark text-decoration-none">
         <span className="fw-semibold">
           View all
           <MdOutlineChevronRight className="ms-2" />
         </span>
+        </Link>
       </div>
 
       <Link

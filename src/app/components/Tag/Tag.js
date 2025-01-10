@@ -5,7 +5,6 @@ const Tag = ({
   text,
   isSelected,
   selectedCategories,
-  // setSelectedCategories,
   onClick,
   icon,
 }) => {
@@ -16,8 +15,8 @@ const Tag = ({
   return (
     <small
       className={`text-dark fw-bold py-1 px-3 rounded greyBtnWithDarkHover ${categoryClass}`}
-      onClick={() => onClick(text)}
-      style={{ cursor: "pointer" }}
+      {...(onClick && { onClick: () => onClick(text) })}
+      style={{ cursor: onClick ? "pointer" : "default" }}
     >
       {icon ? (
         <div

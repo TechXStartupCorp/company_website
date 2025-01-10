@@ -139,8 +139,8 @@ const page = () => {
           </div> */}
 
           <div className="d-flex flex-column mt-4">
-            <span className="fw-bold">Share this with your network!</span>
-            <div className={`${styles.socialLogosContainer} d-flex gap-3 mt-2`}>
+            <span className="xtraBold">Share this with your network!</span>
+            <div className={`${styles.socialLogosContainer} d-flex gap-3 mt-3`}>
               {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
                 <ShareButton
                   key={platform}
