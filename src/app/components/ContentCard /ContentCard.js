@@ -16,7 +16,7 @@ const ContentCard = ({
 }) => {
   return (
     <Row>
-      <Col>
+      <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
           <Badge className={`${styles.tag} text-light`}>{category}</Badge>
           <Image
@@ -28,10 +28,10 @@ const ContentCard = ({
           />
         </div>
       </Col>
-      <Col>
+      <Col lg={12} xl={6}>
         <div className="d-flex flex-column justify-content-between h-100">
           <div>
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between mt-3 mt-xl-0">
               <div className="d-flex align-items-center gap-2">
                 <Image
                   src="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733864478/growtika-Cb2g_CXw_JI-unsplash_erxlor.jpg"
@@ -50,16 +50,18 @@ const ContentCard = ({
 
             <small className="text-secondary mt-2">{time}</small>
 
-            <p className={`${preview ? styles.truncateText : "mt-3"}`}>
+            <p className={`${preview ? styles.truncateText : ""} mt-3`}>
               {content}
             </p>
           </div>
           {preview && (
+            <div className="mt-4 mt-xl-0">
             <GreyBtnWide
               link={`/news/${title.replace(/\s+/g, "-").toLowerCase()}`}
               aria-label={`Read more about ${title}`}
               text="Read more"
             />
+            </div>
           )}
         </div>
       </Col>

@@ -51,18 +51,13 @@ export default function RootLayout({ children }) {
           <Container fluid className="h-100">
             <Row className="h-100">
               {/* Left Column (Main Content, scrollable) */}
-              <Col xs={8} md={9} className="left-column">
+              <Col className="left-column">
                 <NavBar />
                 <div className="content">{children}</div>
                 <Footer />
               </Col>
 
-              {/* Right Column (Newsfeed, scrollable) */}
-              <Col xs={4} md={3} className="right-column">
-                <div className="content">
-                  <NewsFeedPreview />
-                </div>
-              </Col>
+              <NewsFeedPreview />
             </Row>
           </Container>
         </main>

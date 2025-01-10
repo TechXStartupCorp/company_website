@@ -15,7 +15,7 @@ const page = () => {
     <div className="">
       <Container className="pb-5">
         <h3 className="xtraBold mt-4">Recent news</h3>
-        <div className="mt-3">
+        <div className="mt-4">
           <ContentCard
             imageUrl={randomPost.image.image_url}
             altTag={randomPost.image.alt_tag}
@@ -26,15 +26,17 @@ const page = () => {
             preview={true}
           />
         </div>
+        {/* <Col md={12} lg={6}> */}
 
         <Row className="mt-4">
-          <h4 className="xtraBold mb-3">More like this</h4>
-
+          <h4 className="xtraBold">More like this</h4>
+         <Row className="mt-2">
           {dummyNewsFeedPosts.map((newsFeedPost, index) => (
             <Col className="mb-3" key={index} xs={12} md={6} lg={4}>
               <NewsFeedCard shadow={true} newsFeedPost={newsFeedPost} />
             </Col>
           ))}
+          </Row>
         </Row>
       </Container>
     </div>

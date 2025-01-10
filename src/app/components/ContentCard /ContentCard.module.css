@@ -33,3 +33,9 @@
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover; /* Ensures the image covers the given dimensions */
 }
+
+@media (min-width: 1198px) and (max-width: 1399px) {
+  .truncateText {
+    -webkit-line-clamp: 3;
+  }
+}
