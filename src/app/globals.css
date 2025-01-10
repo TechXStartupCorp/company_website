@@ -48,7 +48,7 @@ main {
 }
 
 .content {
-  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
 }
 
 .textBlue {

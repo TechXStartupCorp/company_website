@@ -190,7 +190,7 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-      <div className="section lightGreyContainerBG">
+      {/* <div className="section lightGreyContainerBG">
         <Container>
           <h5 className="xtraBold mb-1 mt-3">Timeline</h5>
           <div className="d-flex text-primary gap-3 align-items-center mt-2 fw-bold mt-1">
@@ -208,7 +208,7 @@ export default function Home() {
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
       <div className="section">
         <Container>
           <h4 className="mt-3 xtraBold">

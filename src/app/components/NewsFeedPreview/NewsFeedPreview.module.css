@@ -1,11 +1,12 @@
 /* Right Column (scrollable) */
+
 .rightColumn {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    height: 100%;
-    overflow-y: auto;
-    background-color: var(--lightGreyContainerBG);
-  }
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  height: 100%;
+  overflow-y: auto;
+  background-color: var(--lightGreyContainerBG);
+}
 
 .searchInput {
   background-color: white;
@@ -81,4 +82,10 @@
 }
 
 @media (max-width: 400px) {
+}
+
+@media (max-width: 1148px) {
+  .rightColumn {
+    display: none;
+  }
 }

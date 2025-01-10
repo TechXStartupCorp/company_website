@@ -33,7 +33,7 @@ const NewsFeedPreview = () => {
   }
 
   return (
-    <Col xs={4} md={3} className={styles.rightColumn}>
+    <Col lg={4} xl={3} className={styles.rightColumn}>
       <div className="py-2 px-3">
         <Form>
           <div className="position-relative">
