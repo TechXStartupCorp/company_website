@@ -2,7 +2,7 @@
   position: sticky !important;
   top: 0;
   overflow: hidden;
-  z-index: 1000 !important;
+  z-index: 10000 !important;
   white-space: nowrap !important;
   background-color: white !important;
   box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -21,8 +21,9 @@
   border-radius: 11px;
   font-weight: 600 !important;
   transition: color 0.2s ease, font-weight 0.2s ease;
-  margin-left: 1.5rem;
+  margin-left: 1.3rem;
 }
+
 
 .navMenu .navMenuLinks:hover {
   color: #0d6efd !important;
@@ -112,10 +113,14 @@
   height: 10px;
 }
 
-@media (max-width: 1085px) {
-  .menuUL {
-    margin-left: 0.4rem;
-  }
+.offCanvasHeader {
+  padding: 0.6rem !important;
+}
+
+@media (max-width: 1230px) {
+  /* .navMenu {
+    margin-left: -1.2rem;
+  } */
 }
 
 @media (max-width: 1199px) {
@@ -137,4 +142,11 @@
   .offCanvasHeader {
     box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   }
+}
+
+
+/* //////////// logo  */
+
+.logoContainer {
+  max-width: 200px;
 }

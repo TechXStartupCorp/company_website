@@ -1,44 +1,29 @@
-/* .bulletPoint {
-    display: inline-block;
-    width: 20px; 
-    height: 20px;
-    background-color: #007BFF; 
-    border-radius: 4px; 
-    position: relative;
-  }
-  
-  .bulletPoint::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 6px; 
-    height: 10px; 
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: translate(-50%, -50%) rotate(45deg); 
-  } */
+.testimonialBox {
+  flex-grow: 1;
+}
 
-  .testimonialBox {
-    flex-grow: 1;
-  }
+.testimonialBox > div:first-child {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-  .testimonialBox > div:first-child {
-    background-color: white;
-    padding: 20px; /* Optional for spacing */
-    border-radius: 8px; /* Optional for rounded corners */
-  }
-  
-  .testimonialBox > span {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid white;
-    margin: 0 auto; /* Centers the triangle */
-    display: block;
-  }
+.testimonialBox > span {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid white;
+  margin: 0 auto;
+  display: block;
+}
 
-  .testimonialBox img {
-    border-radius: 50%;
+.testimonialBox img {
+  border-radius: 50%;
+}
+
+@media (max-width: 1308px) {
+  .timeLineContainer {
+    display: none;
   }
+}

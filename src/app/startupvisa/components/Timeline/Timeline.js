@@ -74,7 +74,7 @@ const Timeline = () => {
                   className={`d-flex flex-column ${index !== 0 ? "mt-5" : ""}`}
                 >
                   <div
-                    className={`${styles.timeLineCardLeft} d-flex gap-4 align-items-center`}
+                    className={`${styles.timeLineCardLeft} d-flex gap-3 align-items-center`}
                   >
                     <div
                       style={{ borderTop: `4px solid ${step.color}` }}
@@ -124,7 +124,7 @@ const Timeline = () => {
                   className={`d-flex flex-column ${index !== 0 ? "mt-5" : ""}`}
                 >
                   <div
-                    className={`${styles.timeLineCardRight} d-flex gap-4 align-items-center`}
+                    className={`${styles.timeLineCardRight} d-flex gap-3 align-items-center`}
                   >
                     <div
                       style={{ backgroundColor: step.color }}
@@ -141,7 +141,7 @@ const Timeline = () => {
                           {step.title}
                         </h5>
                         <p className="mt-3">{step.text}</p>
-                        <div className="d-flex gap-3 mt-2 flex-wrap">
+                        <div className="d-flex gap-3 mt-4 flex-wrap">
                           {step.tags.map((tag, index) => (
                             <Badge
                               key={index}

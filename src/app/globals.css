@@ -4,14 +4,19 @@ body {
   position: relative;
   font-family: Mulish, sans-serif !important;
   scroll-behavior: smooth;
-  /* padding-top: 80px; */
   margin: 0 !important;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 :root {
@@ -25,30 +30,15 @@ body {
   --bsDark: #212529;
 }
 
-/* Ensure full height for the main container */
 main {
   height: 100vh;
 }
 
-/* Left Column (scrollable) */
 .left-column {
   height: 100%;
   overflow-y: auto;
   padding-left: 0 !important;
   padding-right: 0 !important;
-}
-
-/* Right Column (scrollable) */
-.right-column {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-  height: 100%;
-  overflow-y: auto;
-  background-color: var(--lightGreyContainerBG);
-}
-
-.content {
-  /* padding-right: calc(var(--bs-gutter-x) * 0.5); */
 }
 
 .textBlue {
@@ -128,28 +118,25 @@ hr {
 }
 
 .customCard img {
-  /* object-fit: cover; */
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius-small);
 }
 
 .cardWithGreyBorder {
-  /* border: 1px solid var(--lightGreyBorder); */
   border-radius: 12px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  
 }
 
 .logoCard {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px; /* Set the desired height for each card */
+  height: 200px;
   border-radius: var(--border-radius-small);
-  overflow: hidden; /* Prevents image from overflowing the div */
-  position: relative; /* Required for intrinsic layout to work */
+  overflow: hidden;
+  position: relative;
   background-color: #f0f2f4;
 }
 

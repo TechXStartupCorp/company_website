@@ -92,7 +92,7 @@ const page = () => {
       <Container className="pb-5">
         <Breadcrumb className={styles.breadCrumb}>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
-          <Breadcrumb.Item href="/news">Blog</Breadcrumb.Item>
+          <Breadcrumb.Item href="/news">News</Breadcrumb.Item>
           <Breadcrumb.Item active>
             {newsArticle && newsArticle.title}
           </Breadcrumb.Item>
@@ -137,10 +137,14 @@ const page = () => {
               <CustomBtn link="/contact" text="Get in touch" />
             </div>
           </div> */}
-
-          <div className="d-flex flex-column mt-4">
-            <span className="xtraBold">Share this with your network!</span>
-            <div className={`${styles.socialLogosContainer} d-flex gap-3 mt-3`}>
+          <div className="d-flex flex-column mt-5">
+            <span className="xtraBold">
+              Know someone that would be interested?
+            </span>
+            <span className="text-secondary mt-1">
+              Share this with your network!
+            </span>
+            <div className={`${styles.socialLogosContainer} d-flex gap-3 mt-4`}>
               {socialMediaButtons.map(({ platform, ShareButton, Icon }) => (
                 <ShareButton
                   key={platform}
@@ -148,7 +152,7 @@ const page = () => {
                   url={shareUrl}
                   quote={title}
                 >
-                  <Icon round={true} size={26} />
+                  <Icon round={true} size={30} />
                 </ShareButton>
               ))}
 
@@ -157,7 +161,7 @@ const page = () => {
                   handleCopyClick(currentUrl);
                 }}
                 as="button"
-                className={`mt-1 ${styles.customBtn}`}
+                className={`${styles.customBtn}`}
               >
                 <BsPaperclip />
               </div>

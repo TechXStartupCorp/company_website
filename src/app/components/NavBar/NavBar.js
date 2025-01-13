@@ -7,6 +7,7 @@ import Link from "next/link";
 import CustomBtn from "../CustomBtn/CustomBtn";
 import { calendlyLink } from "@/app/data/Links";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -64,7 +65,16 @@ const NavBar = () => {
           className={`${styles.navBarBrand} d-flex align-items-center`}
           href="/home"
         >
-          <div className={styles.logoContainer}>
+          <div className={`${styles.logoContainer} w-100`}>
+            <Image
+              src="/assets/logo_cropped.png"
+              layout="intrinsic"
+              width={200}
+              height={53}
+              alt="company logo"
+            />
+          </div>
+          {/* <div className={styles.logoContainer}>
             <span className={styles.logoSpan}></span>
             <span className={styles.logoSpan}></span>
             <span className={styles.logoSpan}></span>
@@ -72,7 +82,7 @@ const NavBar = () => {
           </div>
           <span className={`${styles.logoText} fw-bold fs-6`}>
             Tech X Startup
-          </span>
+          </span> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -80,9 +90,19 @@ const NavBar = () => {
           aria-labelledby="offcanvasNavbarLabel"
           placement="end"
         >
-          <Offcanvas.Header className={styles.offCanvasHeader} closeButton>
+          <Offcanvas.Header className={`${styles.offCanvasHeader}`} closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
-              <div className="d-flex align-items-center">
+              <div className={`${styles.logoContainer} w-100`}>
+                <Image
+                  src="/assets/logo_cropped.png"
+                  layout="intrinsic"
+                  width={200}
+                  height={53}
+                  alt="company logo"
+                />
+              </div>
+
+              {/* <div className="d-flex align-items-center">
                 <div className={styles.logoContainer}>
                   <span className={styles.logoSpan}></span>
                   <span className={styles.logoSpan}></span>
@@ -92,7 +112,7 @@ const NavBar = () => {
                 <span className={`${styles.logoText} fw-bold fs-6`}>
                   Tech X Startup
                 </span>
-              </div>
+              </div> */}
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className={styles.offCanvasBody}>
