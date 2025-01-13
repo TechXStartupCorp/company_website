@@ -4,19 +4,19 @@
 export const featuredProjects = [
   {
     year: "2024",
-    title: "My Ride",
+    title: "Resettler",
     industry: "Technology",
-    text: "My Ride is a Canadian ride-sharing platform focused on providing reliable transportation while fostering inclusivity, community, and a positive experience for passengers and drivers alike.",
+    text: "Resettler is a Canadian ride-sharing platform focused on providing reliable transportation while fostering inclusivity, community, and a positive experience for passengers and drivers alike.",
     sections: {
       intro:
-        "My Ride is a Canadian ride-sharing platform focused on providing reliable transportation while fostering inclusivity, community, and a positive experience for passengers and drivers alike. By emphasizing enhanced community engagement, sustainable practices, transparent pricing, and a supportive user experience, My Ride goes beyond traditional ride-sharing services. This approach creates a warm, welcoming environment for both drivers and passengers, building strong connections and enhancing trust.",
+        "Resettler is a Canadian ride-sharing platform focused on providing reliable transportation while fostering inclusivity, community, and a positive experience for passengers and drivers alike. By emphasizing enhanced community engagement, sustainable practices, transparent pricing, and a supportive user experience, Resettler goes beyond traditional ride-sharing services. This approach creates a warm, welcoming environment for both drivers and passengers, building strong connections and enhancing trust.",
 
       problem:
         "The ride-sharing industry often overlooks the importance of creating meaningful and inclusive experiences for its users. Many platforms focus heavily on operational efficiency, leaving gaps in delivering a service that fosters genuine connection and satisfaction. As a result, drivers and passengers can feel undervalued, with their needs for a more personal and community-focused experience largely unmet.",
       solution:
-        "My Ride is redefining the ride-sharing experience by focusing on building a welcoming and inclusive environment for all users. By emphasizing customer satisfaction and community values, our platform offers more than just transportation—it creates an experience centered on trust, connection, and a shared sense of belonging. This approach sets My Ride apart, delivering a service that truly resonates with both drivers and passengers, and includes additional benefits like sustainable practices and transparent pricing.",
+        "Resettler is redefining the ride-sharing experience by focusing on building a welcoming and inclusive environment for all users. By emphasizing customer satisfaction and community values, our platform offers more than just transportation—it creates an experience centered on trust, connection, and a shared sense of belonging. This approach sets Resettler apart, delivering a service that truly resonates with both drivers and passengers, and includes additional benefits like sustainable practices and transparent pricing.",
       benefits: [
-        "My Ride promotes environmentally friendly initiatives by encouraging carpooling, reducing the carbon footprint, and supporting green transportation practices among drivers.",
+        "Resettler promotes environmentally friendly initiatives by encouraging carpooling, reducing the carbon footprint, and supporting green transportation practices among drivers.",
         "Clear and fair pricing structures that build trust and ensure users understand the cost of their rides upfront, without hidden fees or surprises.",
         "Reliable service that fosters trust and connection with every ride.",
       ],
