@@ -1,4 +1,5 @@
 "use client";
+import Head from "next/head";
 import React from "react";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
@@ -38,7 +39,7 @@ const page = () => {
     ? `https://company-website-pwnt.vercel.app${currentUrl}`
     : "https://company-website-pwnt.vercel.app/default-path";
 
-  const title = "Check out this amazing article";
+  const articleTitleForSharing = "Check out this amazing article";
 
   const socialMediaButtons = [
     {
@@ -87,8 +88,28 @@ const page = () => {
     setCurrentUrl(window.location.href);
   }, []);
 
+  const { title, content, image, date_time_posted, tags } = newsArticle;
+
+  const metaDescription = content
+    .map((block) => block.paragraph) // Extract paragraphs from content array
+    .join(" ") // Combine them into a single string
+    .slice(0, 160); // Truncate to the first 160 characters
+
   return (
     <div className="section">
+      <Head>
+        {/* Open Graph Meta Tags */}
+        <title>{title}</title>
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:image" content={image.image_url} />
+        <meta property="og:url" content={currentUrl} />
+        <meta property="og:type" content="article" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={metaDescription} />
+        <meta name="twitter:image" content={image.image_url} />
+      </Head>
       <Container className="pb-5">
         <Breadcrumb className={styles.breadCrumb}>
           <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
@@ -122,7 +143,9 @@ const page = () => {
           <div className="news-article-content">
             {newsArticle.content.map((block, index) => (
               <div key={index} className="mt-4">
-                {block.header && <h5 className="mb-3 mt-3 xtraBold">{block.header}</h5>}
+                {block.header && (
+                  <h5 className="mb-3 mt-3 xtraBold">{block.header}</h5>
+                )}
                 <p>{block.paragraph}</p>
               </div>
             ))}
@@ -134,16 +157,6 @@ const page = () => {
             ))}
           </div>
 
-          {/* <div className="">
-            <h5 className="xtraBold mt-4">Curious About This Topic?</h5>
-            <p className="mt-2 text-secondary">
-              Don&apos;t stop here—connect with us today! Let&apos;s chat about
-              this article and explore how we can turn ideas into action.
-            </p>
-            <div className="mt-4">
-              <CustomBtn link="/contact" text="Get in touch" />
-            </div>
-          </div> */}
           <div className="d-flex flex-column mt-5">
             <span className="xtraBold">
               Know someone that would be interested?
@@ -157,7 +170,7 @@ const page = () => {
                   key={platform}
                   rounded="true"
                   url={shareUrl}
-                  quote={title}
+                  quote={articleTitleForSharing}
                 >
                   <Icon round={true} size={30} />
                 </ShareButton>
@@ -175,15 +188,6 @@ const page = () => {
             </div>
           </div>
         </div>
-
-        {/* <ContentCard
-          imageUrl={newsArticle.image.image_url}
-          altTag={newsArticle.image.alt_tag}
-          category={newsArticle.category}
-          title={newsArticle.title}
-          content={newsArticle.text}
-          time={newsArticle.date_time_posted}
-        /> */}
       </Container>
     </div>
   );
