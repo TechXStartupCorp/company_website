@@ -119,7 +119,14 @@ const page = () => {
             {newsArticle.date_time_posted}
           </small>
 
-          <p className="mt-4">{newsArticle.text}</p>
+          <div className="news-article-content">
+            {newsArticle.content.map((block, index) => (
+              <div key={index} className="mt-4">
+                {block.header && <h5 className="mb-3 mt-3 xtraBold">{block.header}</h5>}
+                <p>{block.paragraph}</p>
+              </div>
+            ))}
+          </div>
           <h6 className="mt-5 xtraBold">Tags</h6>
           <div className="d-flex flex-wrap gap-3 mt-4">
             {techStartupTags.map((category, index) => (

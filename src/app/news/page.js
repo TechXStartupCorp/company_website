@@ -21,7 +21,7 @@ const page = () => {
             altTag={randomPost.image.alt_tag}
             category={randomPost.category}
             title={randomPost.title}
-            content={randomPost.text}
+            content={randomPost.content[0].paragraph}
             time={randomPost.date_time_posted}
             preview={true}
           />
