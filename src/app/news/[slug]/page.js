@@ -95,14 +95,17 @@ const page = () => {
   return (
     <div className="section">
       <Head>
-      <link rel="canonical" href={currentUrl} />
+        <link rel="canonical" href={currentUrl} />
         {/* Open Graph Meta Tags */}
         <title>{title}</title>
-        <meta 
-        property="og:title"
-        content="testing some stuff here for meta tag"
-        key="desc"
+        <meta name="description" content="Checkout our cool page" key="desc" />
+        <meta property="og:title" content="Social Title for Cool Page" />
+        <meta
+          property="og:description"
+          content="And a social description for our cool page"
         />
+        <meta property="og:image" content={image.image_url} />
+
         {/* <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={image.image_url} />
