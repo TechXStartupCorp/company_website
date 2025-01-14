@@ -98,7 +98,12 @@ const page = () => {
       <link rel="canonical" href={currentUrl} />
         {/* Open Graph Meta Tags */}
         <title>{title}</title>
-        <meta property="og:title" content={title} />
+        <meta 
+        property="og:title"
+        content="testing some stuff here for meta tag"
+        key="desc"
+        />
+        {/* <meta property="og:title" content={title} />
         <meta property="og:description" content={metaDescription} />
         <meta property="og:image" content={image.image_url} />
         <meta property="og:url" content={currentUrl} />
@@ -106,7 +111,7 @@ const page = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={metaDescription} />
-        <meta name="twitter:image" content={image.image_url} />
+        <meta name="twitter:image" content={image.image_url} /> */}
       </Head>
       <Container className="pb-5">
         <Breadcrumb className={styles.breadCrumb}>
