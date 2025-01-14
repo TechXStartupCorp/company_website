@@ -95,6 +95,7 @@ const page = () => {
   return (
     <div className="section">
       <Head>
+      <link rel="canonical" href={currentUrl} />
         {/* Open Graph Meta Tags */}
         <title>{title}</title>
         <meta property="og:title" content={title} />
