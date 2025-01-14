@@ -55,7 +55,7 @@ const page = () => {
     ? `https://company-website-pwnt.vercel.app${currentUrl}`
     : "https://company-website-pwnt.vercel.app/default-path";
 
-  const title = "Check out this amazing article";
+  const blogTitleToShare = "Check out this amazing article";
 
   useEffect(() => {
     setIsClient(true);
@@ -115,18 +115,53 @@ const page = () => {
     },
   ];
 
+  const { title, content, imageUrl, date, categories } = blogPost;
+
+  const metaDescription = content
+    .map((block) => block.paragraph)
+    .filter((paragraph) => paragraph)
+    .join(" ")
+    .slice(0, 160);
+
+  // Fallback for description if no content paragraphs exist
+  const descriptionFallback =
+    blogPost.meta_description || "Default blog description";
+
   return (
     <>
       <Head>
-        <title>{blogPost ? blogPost.title : "Default Title"}</title>
+        <title>{title || "Default Title"}</title>
         <meta
           name="description"
-          content={
-            blogPost && blogPost.meta_description
-              ? blogPost.meta_description
-              : "Default meta description"
-          }
+          content={metaDescription || descriptionFallback}
         />
+        <meta property="og:title" content={title || "Default Title"} />
+        <meta
+          property="og:description"
+          content={metaDescription || descriptionFallback}
+        />
+        <meta
+          property="og:image"
+          content={imageUrl || "https://defaultimage.com/default.jpg"}
+        />
+        <meta
+          property="og:image:alt"
+          content={blogPost.altText || "Blog post image"}
+        />
+        <meta property="og:url" content="YOUR_BLOG_POST_URL" />
+        <meta property="og:type" content="article" />
+        <meta
+          property="article:published_time"
+          content={date || "Default Date"}
+        />
+        <meta
+          property="article:section"
+          content={categories[0] || "Default Category"}
+        />
+        {categories &&
+          categories.map((category) => (
+            <meta key={category} property="article:tag" content={category} />
+          ))}
       </Head>
       <div className="section pb-5">
         <Container>
@@ -201,7 +236,7 @@ const page = () => {
                     key={platform}
                     rounded="true"
                     url={shareUrl}
-                    quote={title}
+                    quote={blogTitleToShare}
                   >
                     <Icon round={true} size={26} />
                   </ShareButton>

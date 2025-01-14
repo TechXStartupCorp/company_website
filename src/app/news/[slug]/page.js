@@ -4,14 +4,11 @@ import React from "react";
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
-import { Breadcrumb, Container, Badge } from "react-bootstrap";
-import CustomBtn from "@/app/components/CustomBtn/CustomBtn";
+import { Breadcrumb, Container } from "react-bootstrap";
 import styles from "./page.module.css";
 import Image from "next/image";
 import { handleCopyClick } from "../../../../utils/handleCopyClick";
 import { BsPaperclip } from "react-icons/bs";
-import SectionWithHeaderAndText from "@/app/components/SectionWithHeaderAndText/SectionWithHeaderAndText";
-import CTAWithImage from "@/app/components/CTAWithImage/CTAWithImage";
 import Tag from "@/app/components/Tag/Tag";
 import {
   FacebookShareButton,
@@ -91,9 +88,9 @@ const page = () => {
   const { title, content, image, date_time_posted, tags } = newsArticle;
 
   const metaDescription = content
-    .map((block) => block.paragraph) // Extract paragraphs from content array
-    .join(" ") // Combine them into a single string
-    .slice(0, 160); // Truncate to the first 160 characters
+    .map((block) => block.paragraph)
+    .join(" ")
+    .slice(0, 160);
 
   return (
     <div className="section">
