@@ -228,29 +228,27 @@ export default function Home() {
           <span className={styles.highlightedText}>long-term success</span>.
         </p>
       </Container>
-      <div className="mt-4 pb-4">
-        <Container>
-          <h4 className="xtraBold header">Our services</h4>
-          <Row className="g-4 mt-2">
-            {services.map((service, index) => (
-              <Col
-                key={index}
-                sm={12}
-                lg={4}
-                className="rounded d-flex flex-column"
-              >
-                <div className="cardWithGreyBorder flex-grow-1 py-3 px-4">
-                  <div className="fs-4 mt-1">
-                    {service.icon && service.icon}
-                  </div>
-                  <h5 className="xtraBold mt-4">{service.title}</h5>
-                  <p className="textBlue mt-2">{service.text}</p>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </div>
+
+      <Container className="mt-4 pb-4">
+        <h4 className="xtraBold header">Our services</h4>
+        <Row className="g-4 mt-2">
+          {services.map((service, index) => (
+            <Col
+              key={index}
+              sm={12}
+              lg={4}
+              className="rounded d-flex flex-column"
+            >
+              <div className="cardWithGreyBorder flex-grow-1 py-3 px-4">
+                <div className="fs-4 mt-1">{service.icon && service.icon}</div>
+                <h5 className="xtraBold mt-4">{service.title}</h5>
+                <p className="textBlue mt-2">{service.text}</p>
+              </div>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+
       <Container>
         <div id="featured-projects">
           <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>

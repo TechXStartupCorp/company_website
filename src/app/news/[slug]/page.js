@@ -24,6 +24,7 @@ import {
 const page = () => {
   const { slug } = useParams();
   const [currentUrl, setCurrentUrl] = useState("");
+  console.log(currentUrl, 'current url')
 
   const techStartupTags = [
     "Innovation",
