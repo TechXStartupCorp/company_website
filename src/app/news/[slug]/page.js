@@ -24,7 +24,7 @@ import {
 const page = () => {
   const { slug } = useParams();
   const [currentUrl, setCurrentUrl] = useState("");
-  console.log(currentUrl, 'current url')
+  
 
   const techStartupTags = [
     "Innovation",
@@ -33,11 +33,13 @@ const page = () => {
     "Tech Trends",
   ];
 
-  const shareUrl = currentUrl
-    ? `https://company-website-pwnt.vercel.app${currentUrl}`
-    : "https://company-website-pwnt.vercel.app/default-path";
+  const shareUrl = currentUrl ? currentUrl : "https://techxstartup.com/404";
 
-  const articleTitleForSharing = "Check out this amazing article";
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
+  const articleTitleForSharing = "Check out this article by TechX Startup!";
 
   const socialMediaButtons = [
     {
@@ -82,9 +84,7 @@ const page = () => {
     return <div>News article not found</div>;
   }
 
-  useEffect(() => {
-    setCurrentUrl(window.location.href);
-  }, []);
+
 
   const { title, content, image, date_time_posted, tags } = newsArticle;
 

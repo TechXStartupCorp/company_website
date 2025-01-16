@@ -51,11 +51,13 @@ const page = () => {
   const [currentUrl, setCurrentUrl] = useState("");
   const [isClient, setIsClient] = useState(false);
 
-  const shareUrl = currentUrl
-    ? `https://company-website-pwnt.vercel.app${currentUrl}`
-    : "https://company-website-pwnt.vercel.app/default-path";
+  const shareUrl = currentUrl ? currentUrl : "https://techxstartup.com/404";
 
-  const blogTitleToShare = "Check out this amazing article";
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
+
+  const blogTitleToShare = "Check out this article by TechX Startup!";
 
   useEffect(() => {
     setIsClient(true);
@@ -87,10 +89,6 @@ const page = () => {
       }
     }
   };
-
-  useEffect(() => {
-    setCurrentUrl(window.location.href);
-  }, []);
 
   const socialMediaButtons = [
     {
