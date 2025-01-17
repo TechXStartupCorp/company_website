@@ -5,10 +5,11 @@ import styles from "./page.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaWhatsapp } from "react-icons/fa";
-import { MdOutlineLocationOn } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import { FaLocationDot } from "react-icons/fa6";
 import CustomBtn from "../components/CustomBtn/CustomBtn";
 import { send } from "emailjs-com";
+import { MdEmail } from "react-icons/md";
 
 export default function Home() {
   const form = useRef(null);
@@ -26,7 +27,10 @@ export default function Home() {
     {
       icon: <MdOutlineEmail />,
       text: "team@techxstartup.com",
-      // ceo@techxstartup.com 
+    },
+    {
+      icon: <MdEmail />,
+      text: "ceo@techxstartup.com",
     },
     {
       icon: <FaWhatsapp />,
@@ -91,7 +95,9 @@ export default function Home() {
                 <Row className="mb-4">
                   <Col md={6}>
                     <Form.Group controlId="firstName">
-                      <Form.Label className="xtraBold mb-2">First Name</Form.Label>
+                      <Form.Label className="xtraBold mb-2">
+                        First Name
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         placeholder="Enter your first name"
@@ -103,7 +109,9 @@ export default function Home() {
                   </Col>
                   <Col md={6}>
                     <Form.Group controlId="lastName">
-                      <Form.Label className="xtraBold mb-2">Last Name</Form.Label>
+                      <Form.Label className="xtraBold mb-2">
+                        Last Name
+                      </Form.Label>
                       <Form.Control
                         type="text"
                         placeholder="Enter your last name"
@@ -145,7 +153,9 @@ export default function Home() {
                 <Row className="mb-4">
                   <Col>
                     <Form.Group controlId="discussion">
-                      <Form.Label className="xtraBold mb-2">What would you like to discuss?</Form.Label>
+                      <Form.Label className="xtraBold mb-2">
+                        What would you like to discuss?
+                      </Form.Label>
                       <Form.Control
                         as="textarea"
                         rows={3}
@@ -179,12 +189,15 @@ export default function Home() {
                     {item.icon}
                   </div>
                   <div className="d-flex flex-column">
-                    <span className="xtraBold fs-6">{item.text}</span>
+                    <span className="fw-bold fs-6">{item.text}</span>
                   </div>
                 </div>
               ))}
             </div>
-            <p className="mt-5 mb-0 d-flex align-items-center gap-1"><IoLocationOutline />2985 Drew Road, Suite 204, Mississauga ON, L4T 0A4</p>
+            <p className="mt-5 mb-0 d-flex align-items-center gap-1">
+              <IoLocationOutline />
+              2985 Drew Road, Suite 204, Mississauga ON, L4T 0A4
+            </p>
             <div className="">
               <iframe
                 width="100%"
@@ -200,4 +213,4 @@ export default function Home() {
       </Container>
     </div>
   );
-} 
+}
