@@ -21,15 +21,16 @@ export default function Home() {
   const contactInfo = [
     {
       icon: <FaPhoneAlt />,
-      text: "647-792-7999 ext 103",
+      text: "+1 (647) 792-7999 ext 103",
     },
     {
       icon: <MdOutlineEmail />,
       text: "team@techxstartup.com",
+      // ceo@techxstartup.com 
     },
     {
       icon: <FaWhatsapp />,
-      text: "+1-782-641-6944",
+      text: "+1 (782) 641-6944",
     },
   ];
 

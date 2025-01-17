@@ -63,7 +63,7 @@ const NavBar = () => {
       <Container fluid>
         <Navbar.Brand
           className={`${styles.navBarBrand} d-flex align-items-center`}
-          href="/home"
+          href="/"
         >
           <div className={`${styles.logoContainer} w-100`}>
             <Image

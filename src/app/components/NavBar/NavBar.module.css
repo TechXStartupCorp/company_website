@@ -2,7 +2,7 @@
   position: sticky !important;
   top: 0;
   overflow: hidden;
-  z-index: 10000 !important;
+  z-index: 1000 !important;
   white-space: nowrap !important;
   background-color: white !important;
   box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1);
@@ -66,6 +66,7 @@
 .offCanvasBody {
   display: flex;
   justify-content: space-between;
+  /* z-index: 20000 !important; */
 }
 
 .applyNowBtn {

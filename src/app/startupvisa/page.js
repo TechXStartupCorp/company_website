@@ -191,7 +191,7 @@ export default function Home() {
           </Row>
         </Container>
       </div>
-      <div
+      {/* <div
         className={`${styles.timeLineContainer} section lightGreyContainerBG`}
       >
         <Container>
@@ -211,7 +211,7 @@ export default function Home() {
             </div>
           </div>
         </Container>
-      </div>
+      </div> */}
       <div className="section">
         <Container>
           <h4 className="mt-3 xtraBold">

@@ -9,6 +9,8 @@ import { RiInstagramFill } from "react-icons/ri";
 import DoSomethingForm from "../CalloutSection/components/GetSomethingForm/DoSomethingForm";
 import { FaRegCopyright } from "react-icons/fa";
 
+const currentYear = new Date().getFullYear();
+
 const Footer = () => {
   return (
     <div>
@@ -34,8 +36,8 @@ const Footer = () => {
         <div className="text-center mt-4">
           <FaRegCopyright className="mt-0 mb-1" />{" "}
           <small>
-            2024 TechX Startup Inc. All rights reserved. Privacy Policy & Terms
-            of Service
+            {currentYear} TechX Startup Inc. All rights reserved. Privacy Policy
+            & Terms of Service
           </small>
         </div>
       </Container>
