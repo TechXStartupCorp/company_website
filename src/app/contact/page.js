@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { Container, Row, Col, Form, Alert } from "react-bootstrap";
+import { Container, Row, Col, Form, Alert, Spinner } from "react-bootstrap";
 import styles from "./page.module.css";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
@@ -14,6 +14,7 @@ export default function Home() {
   const [alertMessage, setAlertMessage] = useState("");
   const [alertVariant, setAlertVariant] = useState("danger"); // "success" or "danger"
   const [showOverlay, setShowOverlay] = useState(false);
+  const [loading, setLoading] = useState(false); // Add loading state
   const form = useRef(null);
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -40,8 +41,12 @@ export default function Home() {
     },
   ];
 
+  //   <Spinner animation="border" role="status">
+  //   <span className="visually-hidden">Loading...</span>
+  // </Spinner>
+
   const sendEmail = async (e) => {
-    e.preventDefault(); // Prevent default form submission
+    e.preventDefault();
 
     // Validation
     if (firstName.length < 2) {
@@ -63,8 +68,11 @@ export default function Home() {
       return;
     }
 
+    setLoading(true);
+    setShowOverlay(true); // Show overlay with spinner
+
     try {
-      const result = await send(
+      await send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         {
@@ -78,22 +86,13 @@ export default function Home() {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
-      console.log("Email sent successfully:", result.text);
       setAlertMessage("Message sent successfully!");
       setAlertVariant("success");
-      setShowOverlay(true);
-
-      // Clear form
-      setFirstName("");
-      setLastName("");
-      setEmail("");
-      setCompany("");
-      setMessage("");
     } catch (error) {
-      console.error("Failed to send email:", error);
       setAlertMessage("Failed to send message. Please try again.");
       setAlertVariant("danger");
-      setShowOverlay(true);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -144,16 +143,20 @@ export default function Home() {
     <>
       {showOverlay && (
         <div className={styles.overlay}>
-          <div className={styles.alertBox}>
-            <Alert
-              className={styles.alert}
-              variant={alertVariant}
-              onClose={() => setShowOverlay(false)}
-              dismissible
-            >
-              {alertMessage}
-            </Alert>
-          </div>
+          {loading ? (
+            <Spinner animation="border" variant="light" />
+          ) : (
+            <div className={styles.alertBox}>
+              <Alert
+                className={styles.alert}
+                variant={alertVariant}
+                onClose={() => setShowOverlay(false)}
+                dismissible
+              >
+                {alertMessage}
+              </Alert>
+            </div>
+          )}
         </div>
       )}
       <div className="section pb-5">
