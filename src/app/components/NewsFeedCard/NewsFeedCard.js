@@ -1,13 +1,13 @@
 import React from "react";
 import { Row, Badge } from "react-bootstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 import Link from "next/link";
 import styles from "./NewsFeedCard.module.css";
 
 const NewsFeedCard = ({ newsFeedPost, shadow }) => {
   return (
-    <div
+    (<div
       className={`${styles.newsFeedCard} ${
         shadow && styles.newsFeedCardShadow
       } d-flex flex-column p-2 whiteBG rounded mb-3 h-100`}
@@ -52,7 +52,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
           </div>
         </div>
       </Row>
-    </div>
+    </div>)
   );
 };
 

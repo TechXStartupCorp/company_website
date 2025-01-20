@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { Container, Row, Col } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import CTAWithImage from "../components/CTAWithImage/CTAWithImage";

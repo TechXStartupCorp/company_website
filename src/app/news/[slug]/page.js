@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
 import { Breadcrumb, Container } from "react-bootstrap";
 import styles from "./page.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { handleCopyClick } from "../../../../utils/handleCopyClick";
 import { BsPaperclip } from "react-icons/bs";
 import Tag from "@/app/components/Tag/Tag";

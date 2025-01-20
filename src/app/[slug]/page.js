@@ -5,7 +5,7 @@ import { useParams } from "next/navigation";
 import { featuredProjects } from "@/app/data/FeaturedProjects";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import styles from "./page.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SectionWithHeaderAndText from "@/app/components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 
 export default function ProjectDetails({ params }) {

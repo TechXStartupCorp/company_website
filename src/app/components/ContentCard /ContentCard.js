@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Badge } from "react-bootstrap";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./ContentCard.module.css";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 
@@ -15,7 +15,7 @@ const ContentCard = ({
   imageAlign,
 }) => {
   return (
-    <Row>
+    (<Row>
       <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
           <Badge className={`${styles.tag} text-light`}>{category}</Badge>
@@ -65,7 +65,7 @@ const ContentCard = ({
           )}
         </div>
       </Col>
-    </Row>
+    </Row>)
   );
 };
 

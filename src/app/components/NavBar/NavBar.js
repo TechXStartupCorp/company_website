@@ -7,7 +7,7 @@ import Link from "next/link";
 import CustomBtn from "../CustomBtn/CustomBtn";
 import { calendlyLink } from "@/app/data/Links";
 import { usePathname } from "next/navigation";
-import Image from "next/image";
+import Image from "next/legacy/image";
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
@@ -56,7 +56,7 @@ const NavBar = () => {
   return (
     ////// basic navbar works
 
-    <Navbar
+    (<Navbar
       expand="xl"
       className={`${styles.navBar} ${isScrolled ? styles.scrolled : ""}`}
     >
@@ -141,7 +141,7 @@ const NavBar = () => {
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
-    </Navbar>
+    </Navbar>)
   );
 };
 

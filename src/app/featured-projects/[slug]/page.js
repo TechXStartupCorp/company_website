@@ -3,7 +3,7 @@ import { useParams } from "next/navigation";
 import { featuredProjects } from "@/app/data/FeaturedProjects";
 import { Container, Row, Col, Breadcrumb } from "react-bootstrap";
 import styles from "./page.module.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import SectionWithHeaderAndText from "@/app/components/SectionWithHeaderAndText/SectionWithHeaderAndText";
 import CustomBreadcrumb from "@/app/components/CustomBreadcrumb/import React from 'react'; import { Breadcrumb } from 'react-bootstrap';  const CustomBreadcrumb = ({ currentPath }) => {   let items = [     { href: '/', label: 'Home' },     { href: '/#featured-projects', label: 'Featured projects' }   ];    / Conditional logic to add specific items based on the current path   if (currentPath === '/specific-section') {     items.push({ href: '/#specific-section', label: 'Specific Section' });   } else if (currentPath === '/another-section') {     items.push({ href: '/#another-section', label: 'Another Section' });   }    return (     <Breadcrumb>       {items.map((item, index) => (         <Breadcrumb.Item key={index} href={item.href} active={item.href === currentPath}>           {item.label}         </Breadcrumb.Item>       ))}     </CustomBreadcrumb";
 

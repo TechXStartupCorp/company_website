@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./VerticalCard.module.css";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Tag from "../Tag/Tag";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 

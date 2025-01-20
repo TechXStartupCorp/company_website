@@ -1,6 +1,6 @@
 "use client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./page.module.css";
 import { Row, Col, Container } from "react-bootstrap";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
@@ -20,7 +20,6 @@ import {
 } from "react-icons/fa";
 import { IoIosMegaphone } from "react-icons/io";
 import { MdArrowOutward } from "react-icons/md";
-import GreyBtnWide from "./components/GreyBtnWide/GreyBtnWide";
 import { HiPresentationChartBar } from "react-icons/hi2";
 import { BsFileEarmarkSpreadsheetFill } from "react-icons/bs";
 import { GiPadlock } from "react-icons/gi";
@@ -29,7 +28,6 @@ import { SiAircanada } from "react-icons/si";
 import CTAWithImage from "./components/CTAWithImage/CTAWithImage";
 import { featuredProjects } from "./data/FeaturedProjects";
 import { calendlyLink, startupVisaFormLink } from "./data/Links";
-import VerticalCard from "./components/VerticalCard/VerticalCard";
 
 export default function Home() {
   const services = [
@@ -228,7 +226,6 @@ export default function Home() {
           <span className={styles.highlightedText}>long-term success</span>.
         </p>
       </Container>
-
       <Container className="mt-4 pb-4">
         <h4 className="xtraBold header">Our services</h4>
         <Row className="g-4 mt-2">
@@ -248,7 +245,6 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-
       <Container>
         <div id="featured-projects">
           <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
@@ -307,6 +303,7 @@ export default function Home() {
                           src={project.images[0]}
                           alt={project.title}
                           layout="fill"
+                          priority
                         />
                       </div>
                     </Col>
@@ -334,7 +331,6 @@ export default function Home() {
           // isPrimaryBtnLinkExternal={false}
         />
       </div>
-
       <Container className="mt-4">
         <Stats />
       </Container>

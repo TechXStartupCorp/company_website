@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import CustomBtn from "../CustomBtn/CustomBtn";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import styles from "./CalloutSection.module.css";
 import { Form, Container } from "react-bootstrap";
 import { IoMdSearch } from "react-icons/io";

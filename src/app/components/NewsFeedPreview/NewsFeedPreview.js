@@ -5,7 +5,7 @@ import styles from "./NewsFeedPreview.module.css";
 import { Form, Col } from "react-bootstrap";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineChevronRight } from "react-icons/md";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
 import NewsFeedCard from "../NewsFeedCard/NewsFeedCard";
 import Link from "next/link";
@@ -33,7 +33,7 @@ const NewsFeedPreview = () => {
   }
 
   return (
-    <Col lg={4} xl={3} className={styles.rightColumn}>
+    (<Col lg={4} xl={3} className={styles.rightColumn}>
       <div className="py-2 px-3">
         <Form>
           <div className="position-relative">
@@ -95,11 +95,11 @@ const NewsFeedPreview = () => {
               />
             ))
           ) : (
-            <p className="text-secondary">No results found</p> // Display a message when no posts match the search
+            (<p className="text-secondary">No results found</p>) // Display a message when no posts match the search
           )}
         </div>
       </div>
-    </Col>
+    </Col>)
   );
 };
 

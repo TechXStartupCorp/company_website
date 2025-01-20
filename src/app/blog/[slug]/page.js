@@ -6,7 +6,7 @@ import { Container, Breadcrumb, Row, Col } from "react-bootstrap";
 import styles from "./page.module.css";
 import { blogPosts } from "@/app/data/DummyBlogPosts";
 import CalloutSection from "@/app/components/CalloutSection/CalloutSection";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { BsPaperclip } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
 import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";

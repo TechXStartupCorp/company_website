@@ -7,7 +7,7 @@ import { IoBriefcase } from "react-icons/io5";
 import { MdPerson3 } from "react-icons/md";
 import { IoDocumentAttachSharp } from "react-icons/io5";
 import { FaGlobe } from "react-icons/fa";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import "../../../../app/globals.css";
 
 const Timeline = () => {

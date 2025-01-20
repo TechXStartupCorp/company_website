@@ -52,7 +52,7 @@ const page = () => {
 
   //
   return (
-    <div className="section pb-5">
+    (<div className="section pb-5">
       <Container>
         <h3 className="xtraBold">Blog</h3>
         <h5 className="xtraBold mt-5">All posts</h5>
@@ -142,7 +142,7 @@ const page = () => {
           </div>
         </Row>
       </Container>
-    </div>
+    </div>)
   );
 };
 
