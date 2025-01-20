@@ -39,6 +39,7 @@ const CalloutSection = ({
           objectFit="cover"
           quality={100}
           priority={true}
+          unoptimized={true}
         />
         <div className={`${styles.textOverlay}`}>
           <h1 className="fw-bold">{title}</h1>
