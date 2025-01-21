@@ -1,6 +1,3 @@
-
-
-
 export const featuredProjects = [
   {
     year: "2024",
@@ -29,10 +26,7 @@ export const featuredProjects = [
     },
     link: "urlhere.com",
     images: [
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734112676/my_ride_nev6xa.png",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734117134/pexels-freestockpro-376729_sobips.jpg",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734460849/fikri-rasyid-HGLCvGWujGE-unsplash_g8vbb3.jpg",
-      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461014/pexels-markus-winkler-1430818-29803999_kvq02j.jpg",
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734461384/pexels-tima-miroshnichenko-6169870_g9dkor.jpg",
     ],
   },
   {

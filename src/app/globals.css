@@ -211,3 +211,10 @@ p {
     padding: 2rem 0 0 1rem;
   }
 }
+
+@media (min-width: 1148px) {
+  .content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

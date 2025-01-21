@@ -11,6 +11,9 @@ import { FaRegCopyright } from "react-icons/fa";
 
 const currentYear = new Date().getFullYear();
 
+// linkdein url: https://www.linkedin.com/company/techx-startup
+// twitter url: https://x.com/TechXStartup
+
 const Footer = () => {
   return (
     <div>
@@ -28,10 +31,14 @@ const Footer = () => {
       </div>
       <Container className="textBlue d-flex flex-column align-items-center justify-content-center pb-4">
         <div className="d-flex justify-content-center text-dark gap-3 fs-4 mt-4">
-          <FaLinkedin />
-          <FaFacebook />
-          <FaXTwitter />
-          <RiInstagramFill className="" />
+          <Link className="text-dark" target="blank" href="https://www.linkedin.com/company/techx-startup"><FaLinkedin /></Link>
+          <Link className="text-dark" target="blank" href="#"> <FaFacebook /></Link>
+          <Link className="text-dark" target="blank" href="https://x.com/TechXStartup"> <FaXTwitter /></Link>
+          <Link className="text-dark" target="blank" href="#"> <RiInstagramFill /></Link>
+         
+          
+         
+        
         </div>
         <div className="text-center mt-4">
           <FaRegCopyright className="mt-0 mb-1" />{" "}
