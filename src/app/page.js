@@ -207,26 +207,16 @@ export default function Home() {
         </h2>
 
         <p className="mt-4">
-          TechX Startup collaborates with a dynamic network of experienced{" "}
-          <span className={styles.highlightedText}>angel investors</span>,
-          renowned <span className={styles.highlightedText}>incubators</span>,
-          and leading{" "}
-          <span className={styles.highlightedText}>venture capital funds</span>{" "}
-          to help transform your groundbreaking{" "}
-          <span className={styles.highlightedText}>startup ideas</span> into
-          thriving, sustainable businesses. Our partnerships provide access to a
-          wealth of <span className={styles.highlightedText}>resources</span>,{" "}
-          <span className={styles.highlightedText}>expertise</span>, and
-          industry <span className={styles.highlightedText}>connections</span>{" "}
-          that accelerate your journey from concept to{" "}
-          <span className={styles.highlightedText}>market leader</span>,
-          ensuring your venture has the support it needs to{" "}
-          <span className={styles.highlightedText}>scale rapidly</span> and
-          achieve{" "}
-          <span className={styles.highlightedText}>long-term success</span>.
+          TechX Startup collaborates with a dynamic network of experienced angel
+          investors, renowned incubators, and leading venture capital funds to
+          help transform your groundbreaking startup ideas into thriving,
+          sustainable businesses. Our partnerships provide access to a wealth of
+          resources, expertise, and industry connections that accelerate your
+          journey from concept to market leader, ensuring your venture has the
+          support it needs to scale rapidly and achieve long-term success.
         </p>
       </Container>
-      <Container className="mt-4 pb-4">
+      <Container className="mt-5 pb-4">
         <h4 className="xtraBold header">Our services</h4>
         <Row className="g-4 mt-2">
           {services.map((service, index) => (
@@ -236,7 +226,7 @@ export default function Home() {
               lg={4}
               className="rounded d-flex flex-column"
             >
-              <div className="cardWithGreyBorder flex-grow-1 py-3 px-4">
+              <div className="cardWithGreyBorder flex-grow-1 py-2 px-3">
                 <div className="fs-4 mt-1">{service.icon && service.icon}</div>
                 <h5 className="xtraBold mt-4">{service.title}</h5>
                 <p className="textBlue mt-2">{service.text}</p>
