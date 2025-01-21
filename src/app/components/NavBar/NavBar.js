@@ -56,7 +56,7 @@ const NavBar = () => {
   return (
     ////// basic navbar works
 
-    (<Navbar
+    <Navbar
       expand="xl"
       className={`${styles.navBar} ${isScrolled ? styles.scrolled : ""}`}
     >
@@ -69,20 +69,11 @@ const NavBar = () => {
             <Image
               src="/assets/logo_cropped.png"
               layout="intrinsic"
-              width={200}
+              width={230}
               height={53}
               alt="company logo"
             />
           </div>
-          {/* <div className={styles.logoContainer}>
-            <span className={styles.logoSpan}></span>
-            <span className={styles.logoSpan}></span>
-            <span className={styles.logoSpan}></span>
-            <span className={styles.logoSpan}></span>
-          </div>
-          <span className={`${styles.logoText} fw-bold fs-6`}>
-            Tech X Startup
-          </span> */}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
@@ -96,23 +87,11 @@ const NavBar = () => {
                 <Image
                   src="/assets/logo_cropped.png"
                   layout="intrinsic"
-                  width={200}
+                  width={230}
                   height={53}
                   alt="company logo"
                 />
               </div>
-
-              {/* <div className="d-flex align-items-center">
-                <div className={styles.logoContainer}>
-                  <span className={styles.logoSpan}></span>
-                  <span className={styles.logoSpan}></span>
-                  <span className={styles.logoSpan}></span>
-                  <span className={styles.logoSpan}></span>
-                </div>
-                <span className={`${styles.logoText} fw-bold fs-6`}>
-                  Tech X Startup
-                </span>
-              </div> */}
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body className={styles.offCanvasBody}>
@@ -141,7 +120,7 @@ const NavBar = () => {
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
-    </Navbar>)
+    </Navbar>
   );
 };
 

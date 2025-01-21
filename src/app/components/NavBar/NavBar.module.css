@@ -20,10 +20,11 @@
   font-size: 0.95rem !important;
   border-radius: 11px;
   font-weight: 600 !important;
-  transition: color 0.2s ease, font-weight 0.2s ease;
+  transition:
+    color 0.2s ease,
+    font-weight 0.2s ease;
   margin-left: 1.3rem;
 }
-
 
 .navMenu .navMenuLinks:hover {
   color: #0d6efd !important;
@@ -145,8 +146,11 @@
   }
 }
 
-
-/* //////////// logo  */
+@media (max-width: 575px) {
+  .navBar {
+    padding: 0.5rem 0rem 0.5rem 0rem !important;
+  }
+}
 
 .logoContainer {
   max-width: 200px;
