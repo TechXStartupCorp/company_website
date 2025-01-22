@@ -12,7 +12,14 @@ import Image from "next/legacy/image";
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState("home");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [showOffcanvas, setShowOffcanvas] = useState(false); // State to manage Offcanvas visibility
   const pathname = usePathname();
+
+  // Handler to toggle Offcanvas visibility
+  const handleToggleOffcanvas = () => setShowOffcanvas(!showOffcanvas);
+
+  // Handler to close Offcanvas
+  const handleCloseOffcanvas = () => setShowOffcanvas(false);
 
   // Detect scrolling
   useEffect(() => {
@@ -75,11 +82,15 @@ const NavBar = () => {
             />
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle 
+        onClick={handleToggleOffcanvas}
+        aria-controls="offcanvasNavbar" />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
           placement="end"
+          show={showOffcanvas}
+          onHide={handleCloseOffcanvas}
         >
           <Offcanvas.Header className={`${styles.offCanvasHeader}`} closeButton>
             <Offcanvas.Title id="offcanvasNavbarLabel">
@@ -106,9 +117,10 @@ const NavBar = () => {
                       ? `${styles.active} px-3 ${styles.navMenuLinks}`
                       : `${styles.navMenuLinks} px-3 `
                   }
-                  onClick={() =>
-                    setActiveLink(path === "/" ? "home" : path.substring(1))
-                  }
+                  onClick={() => {
+                    setActiveLink(path === "/" ? "home" : path.substring(1));
+                    handleCloseOffcanvas(); // Close Offcanvas on link click
+                  }}
                 >
                   {pathDisplayNames[path]}
                 </Nav.Link>
@@ -126,5 +138,4 @@ const NavBar = () => {
 
 export default NavBar;
 
-{
-}
+
