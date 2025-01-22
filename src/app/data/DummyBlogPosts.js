@@ -1,3 +1,8 @@
+const getFormattedDate = () => {
+  const options = { year: "numeric", month: "long", day: "numeric" };
+  return new Date().toLocaleDateString("en-US", options);
+};
+
 export const blogPosts = [
   {
     author: {
@@ -8,10 +13,10 @@ export const blogPosts = [
     },
     read_time: "12 min",
     title: "How to Secure Startup Funding: A Complete Guide",
-    date: "December 2, 2024",
+    date: getFormattedDate(),
     imageUrl:
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1736195160/christine-roy-ir5MHI6rPg0-unsplash_l6rtvr.jpg",
-    altText: "placeholder",
+    altText: "worls map with money",
     meta_description:
       "Learn how startup funding works, from seed funding to Series B rounds. Discover strategies for securing funding, exploring government grants, and attracting investors to grow your business.",
     banner_introduction:
@@ -142,10 +147,10 @@ export const blogPosts = [
     },
     read_time: "8 min",
     title: "How to build a Scalable Tech Startup: Strategies For Growth",
-    date: "December 10, 2024",
+    date: getFormattedDate(),
     imageUrl:
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1736195273/proxyclick-visitor-management-system-l90zRbWvCoE-unsplash_dw1qhk.jpg",
-    altText: "placeholder",
+    altText: "startup office",
     meta_description:
       "Learn how to create a scalable tech startup by understanding the importance of scalability, business models, and strategies used by successful tech entrepreneurs. Explore real-world examples to inspire your journey.",
     banner_introduction:
@@ -288,10 +293,10 @@ export const blogPosts = [
     },
     read_time: "10 min",
     title: "Navigating Early-Stage Tech Startup Challenges",
-    date: "December 18, 2024",
+    date: getFormattedDate(),
     imageUrl:
       "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1736195376/sebastian-herrmann-7nQGQ0ve5A0-unsplash_o1d8gz.jpg",
-    altText: "placeholder",
+    altText: "frustrated startup founder",
     meta_description:
       "Discover how to navigate common challenges faced by early-stage tech startups with practical solutions for overcoming funding, market fit, operations, and legal roadblocks.",
     banner_introduction:
@@ -459,6 +464,242 @@ export const blogPosts = [
     call_to_action: {
       header: "Are you ready to tackle your startup’s challenges head-on?",
       text: "Get in touch with us to receive personalized guidance on securing funding, perfecting your product-market fit, and optimizing your operations. Let’s turn your vision into reality!",
+      image_url:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg",
+      image_alt: "blog image",
+    },
+
+    categories: ["Startup Basics", "Growth Strategies"],
+  },
+  //////////// fourth one
+  {
+    author: {
+      author_name: "Tatyana Karlen",
+      author_description: "Business Development, IT",
+      author_image_url:
+        "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1734023031/me_lchm8q.jpg",
+    },
+    read_time: "15 min",
+    title:
+      "Mastering the Canada Start-Up Visa: A Guide for Global Entrepreneurs",
+    date: getFormattedDate(),
+    imageUrl:
+      "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1737573961/hermes-rivera-ahHn48-zKWo-unsplash_b47thu.jpg",
+    altText: "Canada flag",
+    meta_description:
+      "Discover how to overcome challenges and seize the incredible opportunities within Canada's Start-Up Visa program. We offer practical solutions for your entrepreneurial journey.",
+    banner_introduction:
+      "With Canada's dynamic and evolving immigration policies, 2025 presents new opportunities for global entrepreneurs to thrive. Let's dive into the exciting steps you can take to succeed in the Start-Up Visa program and establish your business in one of the world's most entrepreneurial countries.",
+    secondary_introduction:
+      "Canada's Start-Up Visa (SUV) program offers a unique opportunity for entrepreneurs to establish innovative businesses in a dynamic and diverse environment. By securing support from a designated organization, meeting language proficiency requirements, and ensuring sufficient settlement funds, you can embark on a path to permanent residency for yourself and your family. With strategic planning and a clear vision, success in this competitive program is within reach, paving the way for lasting growth and prosperity in Canada.",
+    content: [
+      {
+        bullet_points: true,
+        subheader:
+          "Key Factors for Success in the SUV Program: Understanding the Requirements",
+        intro: "Successful applicants demonstrate:",
+        bullet_points_text: [
+          {
+            highlight: "Innovation:",
+            sentence: "A unique and scalable business idea that stands out.",
+          },
+          {
+            highlight: "Economic Contribution:",
+            sentence:
+              "The potential to create jobs and generate positive value for the Canadian economy.",
+          },
+          {
+            highlight: "Designated Organization Support:",
+            sentence:
+              "Securing the backing of a venture capital fund, angel investor group, or business incubator to propel your business forward.",
+          },
+        ],
+        bullet_points_outro: "",
+      },
+      {
+        bullet_points: true,
+        subheader: "Conducting Thorough Market Research",
+        intro:
+          "Understanding the Canadian market gives entrepreneurs the edge. You should:",
+        bullet_points_text: [
+          {
+            highlight: "",
+            sentence:
+              "Analyze the demand for your product or service in Canada.",
+          },
+          {
+            highlight: "",
+            sentence: "Study consumer preferences and local behavior patterns.",
+          },
+          {
+            highlight: "",
+            sentence: "Evaluate competitors and identify valuable market gaps.",
+          },
+        ],
+        bullet_points_outro: "",
+      },
+      {
+        bullet_points: true,
+        subheader: "Developing a Robust Business Plan",
+        intro:
+          "Your business plan is your roadmap to success and should include:",
+        bullet_points_text: [
+          {
+            highlight: "",
+            sentence: "A well-defined and innovative business model.",
+          },
+          {
+            highlight: "",
+            sentence:
+              "Thorough market and financial analysis to guide your vision.",
+          },
+          {
+            highlight: "",
+            sentence:
+              "A scalable growth strategy that aligns with Canada’s economic goals.",
+          },
+        ],
+        bullet_points_outro: "",
+      },
+      {
+        bullet_points: true,
+        subheader: "Securing Support from Designated Organizations",
+        intro:
+          "Building strong relationships with reputable Designated Organizations will help you succeed. Seek those with:",
+        bullet_points_text: [
+          {
+            highlight: "",
+            sentence: "Proven success and high approval rates.",
+          },
+          {
+            highlight: "",
+            sentence: "Expertise that aligns with your business industry.",
+          },
+          {
+            highlight: "",
+            sentence:
+              "Clear processes for obtaining Letters of Support (LOS) that will propel your application.",
+          },
+        ],
+        bullet_points_outro: "",
+      },
+      {
+        bullet_points: true,
+        subheader: "Changes to the SUV Program in 2025",
+        intro:
+          "Canada’s updated Immigration Levels Plan refines the business stream, opening up exciting new opportunities. Here’s what you need to know about the reduction in federal business stream spots:",
+        bullet_points_text: [
+          {
+            highlight: "2024:",
+            sentence:
+              "5,000 spots, offering ample room for qualified applicants.",
+          },
+          {
+            highlight: "2025:",
+            sentence: "2,000 spots, a competitive yet achievable target.",
+          },
+          {
+            highlight: "2026 & 2027:",
+            sentence:
+              "1,000 spots each, highlighting the program’s sustainable growth.",
+          },
+        ],
+        bullet_points_outro:
+          "With fewer spots available, crafting a standout application is more critical than ever, but it also means the program is focusing on the best opportunities to build Canada’s economy.",
+      },
+      {
+        bullet_points: true,
+        subheader: "Introduction of Open Work Permits",
+        intro:
+          "Entrepreneurs and their families now have access to exciting new open work permits, offering them flexibility and enhanced opportunities. These include:",
+        bullet_points_text: [
+          {
+            highlight: "",
+            sentence: "Employment outside the start-up business.",
+          },
+          {
+            highlight: "",
+            sentence:
+              "Increased flexibility for supplementary income generation.",
+          },
+          {
+            highlight: "",
+            sentence: "Easier integration into Canada’s vibrant communities.",
+          },
+        ],
+        bullet_points_outro:
+          "These changes make Canada even more welcoming to global talent, encouraging innovation and work-life balance.",
+      },
+      {
+        bullet_points: true,
+        subheader: "Extended Processing Times",
+        intro:
+          "Processing permanent residency applications now averages 37 months. While this requires patience, it also reflects the thoroughness with which each application is reviewed, ensuring that only the most promising businesses thrive.",
+        bullet_points_outro:
+          "This extended timeline also presents more opportunities for applicants to strengthen their business plans and strategies before final approval.",
+      },
+      {
+        bullet_points: true,
+        subheader: "Steps to Succeed in the SUV Program",
+        intro:
+          "Succeeding in the Start-Up Visa (SUV) Program is all about preparation and strategic planning. Follow these steps to maximize your chances of success and bring your business dreams to life in Canada.",
+        bullet_points_text: [
+          {
+            highlight: "Refine Your Business Idea:",
+            sentence:
+              "Make sure your idea is not only scalable but also brings tangible value to Canada’s economy.",
+          },
+          {
+            highlight: "Secure a Letter of Support:",
+            sentence:
+              "Collaborate with Designated Organizations to get the right backing.",
+          },
+          {
+            highlight: "Apply for an Open Work Permit:",
+            sentence:
+              "This allows you to generate income while building your start-up.",
+          },
+          {
+            highlight: "Launch Your Business and Track Progress:",
+            sentence:
+              "Take advantage of the opportunities Canada offers to develop and grow your business.",
+          },
+          {
+            highlight: "Monitor and Adapt:",
+            sentence:
+              "Stay informed of any program changes, market trends, and industry needs to keep your business competitive.",
+          },
+        ],
+      },
+      {
+        bullet_points: true,
+        subheader: "Why Entrepreneurs Choose the Start-Up Visa",
+        intro:
+          "The Start-Up Visa program offers several unique advantages that make it an appealing choice for entrepreneurs looking to build their business in Canada:",
+        bullet_points_text: [
+          {
+            highlight: "Direct Path to Permanent Residency:",
+            sentence:
+              "A streamlined process for entrepreneurs and their families.",
+          },
+          {
+            highlight: "No Net Worth Requirements:",
+            sentence:
+              "Opening the doors to entrepreneurs at various stages of growth.",
+          },
+          {
+            highlight: "Family Inclusion:",
+            sentence:
+              "Spouses and children can live, work, and study in Canada, providing a better quality of life for your loved ones.",
+          },
+        ],
+      },
+    ],
+    conclusion:
+      "Canada’s Start-Up Visa program continues to be one of the most exciting and accessible pathways for global entrepreneurs. With expert support from TechX Startup, you can confidently navigate the program and unlock incredible opportunities to build your business in Canada. Get in touch with us today to turn your entrepreneurial vision into a successful reality.",
+    call_to_action: {
+      header: "Ready to Secure Your Startup’s Future?",
+      text: "The Start-Up Visa program may seem challenging, but with the right support, it offers unparalleled opportunities. Contact us today to take the next step toward launching your business and securing permanent residency in Canada.",
       image_url:
         "https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733949231/pexels-fauxels-3184660_m89p3h.jpg",
       image_alt: "blog image",

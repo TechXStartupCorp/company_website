@@ -12,7 +12,7 @@ import styles from "./page.module.css";
 const page = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const POSTS_PER_PAGE = 3; // Define how many posts per page
+  const POSTS_PER_PAGE = 7; // Define how many posts per page
 
   // const totalPages = 5;
 
@@ -52,7 +52,7 @@ const page = () => {
 
   //
   return (
-    (<div className="section pb-5">
+    <div className="section pb-5">
       <Container>
         <h3 className="xtraBold">Blog</h3>
         <h5 className="xtraBold mt-5">All posts</h5>
@@ -89,8 +89,70 @@ const page = () => {
             onClick={() => setSelectedCategories([])}
           />
         </div>
-
         <Row>
+          {paginatedPosts.map((post, index) => {
+            const postDate = new Date(post.date);
+            const formattedMonth = postDate.toLocaleString("default", {
+              month: "long",
+              year: "numeric",
+            });
+
+            // Check if this is the first occurrence of a new month
+            const isNewMonth =
+              index === 0 ||
+              new Date(paginatedPosts[index - 1].date).toLocaleString(
+                "default",
+                { month: "long", year: "numeric" }
+              ) !== formattedMonth;
+
+            return (
+              <React.Fragment key={index}>
+                {isNewMonth && (
+                  <h5 className="xtraBold mt-5">{formattedMonth}</h5>
+                )}
+                <Row className="mt-4">
+                  <Col lg={10}>
+                    <Row className="d-flex align-items-center">
+                      <Col xl={1} lg={2}>
+                        <div className={styles.blogImgContainer}>
+                          <Image
+                            src={post.imageUrl}
+                            alt={post.altText}
+                            layout="fill"
+                            className="w-100 h-100 rounded"
+                          />
+                        </div>
+                      </Col>
+                      <Col>
+                        <div className="d-flex flex-column">
+                          <h6
+                            className={`${styles.blogHeader} xtraBold mb-1 mt-1`}
+                          >
+                            {post.title}
+                          </h6>
+                          <small className="blogDate textBlue">
+                            {post.date}
+                          </small>
+                        </div>
+                      </Col>
+                    </Row>
+                  </Col>
+                  <Col>
+                    <div className={styles.readMoreBtnContainer}>
+                      <GreyBtnWide
+                        text="Read more"
+                        link={`/blog/${post.title.replace(/\s+/g, "-").toLowerCase()}`}
+                        aria-label={`Read more about ${post.title}`}
+                      />
+                    </div>
+                  </Col>
+                </Row>
+              </React.Fragment>
+            );
+          })}
+        </Row>
+
+        {/* <Row>
           <h5 className="xtraBold mt-5">December 2024</h5>
         </Row>
         {paginatedPosts.map((post, index) => (
@@ -131,7 +193,7 @@ const page = () => {
               </div>
             </Col>
           </Row>
-        ))}
+        ))} */}
         <Row>
           <div className="mt-5">
             <Pagination
@@ -142,7 +204,7 @@ const page = () => {
           </div>
         </Row>
       </Container>
-    </div>)
+    </div>
   );
 };
 

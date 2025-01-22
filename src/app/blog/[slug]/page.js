@@ -251,7 +251,7 @@ const page = () => {
           </WideCardWithGreyBorder>
         </Container>
         <Container>
-          {blogPost.content.map((section, index) => (
+          {blogPost.content?.map((section, index) => (
             <div className="mt-5" key={index}>
               <h4 className="xtraBold">{section.subheader}</h4>
 
@@ -260,10 +260,14 @@ const page = () => {
                   {section.intro && <p className="mt-3">{section.intro}</p>}
 
                   <ul className="mt-3">
-                    {section.bullet_points_text.map((point, idx) => (
+                    {section.bullet_points_text?.map((point, idx) => (
                       <li className="mb-1" key={idx}>
-                        <strong>{point.highlight} </strong>
-                        {point.sentence}
+                        {point.highlight && point.highlight.trim() && (
+                          <strong>{point.highlight} </strong>
+                        )}
+                        {point.sentence &&
+                          point.sentence.trim() &&
+                          point.sentence}
                       </li>
                     ))}
                   </ul>
@@ -278,28 +282,32 @@ const page = () => {
             </div>
           ))}
         </Container>
+        <Container>
+          <h4 className="xtraBold mt-5">Conclusion</h4>
+          <p className="mt-3">{blogPost && blogPost.conclusion}</p>
+        </Container>
 
         <Container>
           <h6 className="mt-5 xtraBold">Categories</h6>
           <div className="d-flex flex-wrap gap-3 mt-4">
             {blogPost &&
-              blogPost.categories.map((category, index) => (
+              blogPost.categories?.map((category, index) => (
                 <Tag key={index} text={category} />
               ))}
           </div>
         </Container>
 
-        <Container>
+        {/* <Container>
           <div className="cardWithGreyBorder p-4 mt-5">
             <SectionWithHeaderAndText
               header={blogPost && blogPost.call_to_action.header}
               text={blogPost && blogPost.call_to_action.text}
             />
           </div>
-        </Container>
+        </Container> */}
         <Container>
           <div
-            className={`${styles.publishedDate} mt-3 d-flex flex-column align-items-start`}
+            className={`${styles.publishedDate} mt-4 d-flex flex-column align-items-start`}
           >
             <span className="mt-2 mb-2 textBlue">
               Published on {blogPost && blogPost.date}
