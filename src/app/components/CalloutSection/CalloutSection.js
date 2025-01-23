@@ -25,6 +25,7 @@ const CalloutSection = ({
   isPrimaryBtnLinkExternal,
   isLightBtnLinkExternal,
 }) => {
+  const optimizedImageURL = `${imageURL}?fm=webp&q=80`; 
   return (
     <Container>
       <div
@@ -33,13 +34,12 @@ const CalloutSection = ({
         <div className={styles.optionalDarkOverlay}></div>
         <Image
           className={`${styles.heroImage}`}
-          src={imageURL}
+          src={optimizedImageURL}
           alt={alt}
           layout="fill"
           objectFit="cover"
           quality={100}
-          priority={true}
-          unoptimized={true}
+          priority
         />
         <div className={`${styles.textOverlay}`}>
           <h1 className="fw-bold">{title}</h1>

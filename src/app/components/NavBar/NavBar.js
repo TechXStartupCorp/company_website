@@ -79,6 +79,7 @@ const NavBar = () => {
               width={230}
               height={53}
               alt="company logo"
+              priority
             />
           </div>
         </Navbar.Brand>
