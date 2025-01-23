@@ -16,7 +16,7 @@ const VerticalCard = ({
 }) => {
   return (
     <div
-      className={`cardWithGreyBorder d-flex flex-column mb-4 p-4 flex-grow-1`}
+      className={`cardWithGreyBorder d-flex flex-column mb-4 p-3 flex-grow-1`}
     >
       <div className={`${styles.verticalCard} position-relative`}>
         <Image
@@ -29,9 +29,9 @@ const VerticalCard = ({
       </div>
       <div className="d-flex flex-column justify-content-between h-100 gap-4">
         <div>
-          <h5 className={`${styles.cardTitle} xtraBold mt-3`}>{title}</h5>
+          <h5 className={`${styles.cardTitle} xtraBold mt-4`}>{title}</h5>
 
-          <p className="textBlue mt-2">{text}</p>
+          <p className="mt-3 textBlue">{text}</p>
         </div>
 
         <GreyBtnWide link={link} icon={icon} text="Read more" />

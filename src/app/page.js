@@ -4,8 +4,10 @@ import Image from "next/legacy/image";
 import styles from "./page.module.css";
 import { Row, Col, Container } from "react-bootstrap";
 import CalloutSection from "./components/CalloutSection/CalloutSection";
+import VerticalCard from "./components/VerticalCard/VerticalCard";
 import Stats from "./components/Stats/Stats";
 import Link from "next/link";
+import Head from "next/head";
 import {
   FaRegCompass,
   FaGraduationCap,
@@ -188,6 +190,16 @@ export default function Home() {
 
   return (
     <div>
+      {/* <Head>
+        <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
+          fetchpriority="high"
+        />
+      </Head> */}
+      
+
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
         alt="Computer screens"
@@ -198,7 +210,7 @@ export default function Home() {
         secondBtn={true}
         primaryBtnLink={startupVisaFormLink}
         lightBtnLink="/startupvisa"
-      />
+        />
       <Container className={`${styles.landingPageContent} section`}>
         <h2 className={`xtraBold w-75`}>
           Our mission is to empower founders and innovators to launch startups
@@ -226,10 +238,10 @@ export default function Home() {
               lg={4}
               className="rounded d-flex flex-column"
             >
-              <div className="cardWithGreyBorder flex-grow-1 py-2 px-3">
+              <div className="cardWithGreyBorder flex-grow-1 pt-2 pb-4 px-3">
                 <div className="fs-4 mt-1">{service.icon && service.icon}</div>
                 <h5 className="xtraBold mt-4">{service.title}</h5>
-                <p className="textBlue mt-2">{service.text}</p>
+                <p className="mt-2 textBlue">{service.text}</p>
               </div>
             </Col>
           ))}
@@ -238,7 +250,7 @@ export default function Home() {
       <Container>
         <div id="featured-projects">
           <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
-          {/* <Row>
+          <Row>
             {featuredProjects.map((project, index) => (
               <Col
                 className="d-flex flex-column"
@@ -260,8 +272,8 @@ export default function Home() {
                 />
               </Col>
             ))}
-          </Row> */}
-          <div>
+          </Row>
+          {/* <div>
             {sortedYears.map((year) => (
               <div key={year}>
                 <h5 className="xtraBold mt-5">{year}</h5>
@@ -301,7 +313,7 @@ export default function Home() {
                 ))}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </Container>
       <div className="mt-3">

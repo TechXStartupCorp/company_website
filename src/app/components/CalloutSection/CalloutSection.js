@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import CustomBtn from "../CustomBtn/CustomBtn";
 import Image from "next/legacy/image";
 import styles from "./CalloutSection.module.css";
@@ -10,6 +10,7 @@ import SubscribeButton from "../SubscribeBTN/SubscribeBTN";
 
 const CalloutSection = ({
   imageURL,
+  blurDataURL,
   alt,
   title,
   text,
@@ -25,7 +26,9 @@ const CalloutSection = ({
   isPrimaryBtnLinkExternal,
   isLightBtnLinkExternal,
 }) => {
-  const optimizedImageURL = `${imageURL}?fm=webp&q=80`; 
+  const optimizedImageURL = `${imageURL}?fm=webp&q=80`;
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <Container>
       <div
@@ -39,7 +42,7 @@ const CalloutSection = ({
           layout="fill"
           objectFit="cover"
           quality={100}
-          priority
+          priority={true}
         />
         <div className={`${styles.textOverlay}`}>
           <h1 className="fw-bold">{title}</h1>

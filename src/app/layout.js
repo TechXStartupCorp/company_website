@@ -33,6 +33,11 @@ export default function RootLayout({ children }) {
         <meta name="author" content="TechX Startup" />
         <link rel="icon" href="/favicon.png" type="image/x-icon" />
         <link
+          rel="preload"
+          as="image"
+          href="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=Mulish:wght@200..1000&display=swap"
           rel="preload"
           as="style"

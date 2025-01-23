@@ -5,6 +5,7 @@
   max-height: 800px;
   overflow: hidden;
   border-radius: var(--border-radius-small);
+  background-color: #fff;
 }
 
 .optionalDarkOverlay {
