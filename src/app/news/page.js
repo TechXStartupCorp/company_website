@@ -3,7 +3,7 @@ import React, { useMemo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import NewsFeedCard from "../components/NewsFeedCard/NewsFeedCard";
 import { dummyNewsFeedPosts } from "../data/DummyNewsFeedPosts";
-import ContentCard from "../components/ContentCard /ContentCard";
+import ContentCard from "../components/ContentCard/ContentCard";
 
 const page = () => {
   const randomPost = useMemo(() => {
