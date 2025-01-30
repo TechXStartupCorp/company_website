@@ -29,7 +29,7 @@ export default function Home() {
             passionate individuals, we have grown into a thriving network of
             industry experts, mentors, and investors, offering specialized
             support to fintech companies, venture capital-backed startups, and
-            those seeking Canada&apos;s Startup Visa. Over the years, we've
+            those seeking Canada&apos;s Startup Visa. Over the years, we&apos;ve
             helped aspiring founders turn their startup ideas into thriving
             businesses, navigate the complexities of product development, secure
             seed funding, and achieve product-market fit. Our commitment to

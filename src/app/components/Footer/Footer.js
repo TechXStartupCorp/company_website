@@ -19,7 +19,7 @@ const Footer = () => {
     <div>
       <div className={`${styles.footerContainer} px-2 pt-4 pb-5`}>
         <Container className="d-flex flex-column justify-content-center align-items-center">
-          <h2 className="xtraBold mt-3">Let's stay in touch</h2>
+          <h2 className="xtraBold mt-3">Let&apos;s stay in touch</h2>
           <p className="mt-3 text-center">
             Subscribe to our newsletter for the latest startup tips, funding
             news, and Canada Startup Visa updates.
