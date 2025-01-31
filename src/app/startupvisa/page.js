@@ -36,7 +36,7 @@ export default function Home() {
             funding. As a pathway to permanent residency, it enables
             entrepreneurs to grow their businesses and contribute to Canada
             &apos;s vibrant startup ecosystem. Leverage this opportunity to turn
-            your vision into a thriving venture in one of the world's most
+            your vision into a thriving venture in one of the world&apos;s most
             entrepreneurial countries.
           </p>
           <h4 className="xtraBold mt-5">

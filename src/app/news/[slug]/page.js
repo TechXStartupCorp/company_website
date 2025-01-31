@@ -21,7 +21,7 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-const page = () => {
+const NewsArticle = () => {
   const { slug } = useParams();
   const [currentUrl, setCurrentUrl] = useState("");
   
@@ -200,4 +200,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default NewsArticle;

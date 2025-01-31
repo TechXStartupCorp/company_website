@@ -5,7 +5,7 @@ import NewsFeedCard from "../components/NewsFeedCard/NewsFeedCard";
 import { dummyNewsFeedPosts } from "../data/DummyNewsFeedPosts";
 import ContentCard from "../components/ContentCard/ContentCard";
 
-const page = () => {
+const News = () => {
   const randomPost = useMemo(() => {
     const randomIndex = Math.floor(Math.random() * dummyNewsFeedPosts.length);
     return dummyNewsFeedPosts[randomIndex];
@@ -43,4 +43,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default News;
