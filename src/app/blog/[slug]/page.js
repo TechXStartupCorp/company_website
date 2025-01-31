@@ -44,10 +44,6 @@ const BlogPost = () => {
     (blog) => generateSlug(blog.title) === decodedSlug
   );
 
-  if (!blogPost) {
-    return <div>Blog not found</div>;
-  }
-
   const [currentUrl, setCurrentUrl] = useState("");
   const [isClient, setIsClient] = useState(false);
 
@@ -62,6 +58,12 @@ const BlogPost = () => {
   useEffect(() => {
     setIsClient(true);
   }, []);
+
+  if (!blogPost) {
+    return <div>Blog not found</div>;
+  }
+
+  const { title, content, imageUrl, date, categories } = blogPost;
 
   const handleCopyClick = () => {
     if (isClient) {
@@ -112,8 +114,6 @@ const BlogPost = () => {
       Icon: LinkedinIcon,
     },
   ];
-
-  const { title, content, imageUrl, date, categories } = blogPost;
 
   const metaDescription = content
     .map((block) => block.paragraph)
