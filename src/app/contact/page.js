@@ -10,7 +10,7 @@ import CustomBtn from "../components/CustomBtn/CustomBtn";
 import { send } from "emailjs-com";
 import { MdEmail } from "react-icons/md";
 
-export default function Home() {
+export default function Contact() {
   const [alertMessage, setAlertMessage] = useState("");
   const [alertVariant, setAlertVariant] = useState("danger"); // "success" or "danger"
   const [showOverlay, setShowOverlay] = useState(false);

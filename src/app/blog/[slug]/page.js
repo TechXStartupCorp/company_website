@@ -25,7 +25,7 @@ import {
   WhatsappIcon,
 } from "react-share";
 
-const page = () => {
+const BlogPost = () => {
   const { slug } = useParams();
 
   const decodedSlug = decodeURIComponent(slug).replace(/:/g, "");
@@ -325,4 +325,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default BlogPost;

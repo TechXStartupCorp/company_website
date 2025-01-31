@@ -9,7 +9,7 @@ import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
 import styles from "./page.module.css";
 
-const page = () => {
+const Blog = () => {
   const [currentPage, setCurrentPage] = useState(1); 
   const [selectedCategories, setSelectedCategories] = useState([]);
   const POSTS_PER_PAGE = 7; // Define how many posts per page
@@ -207,4 +207,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Blog;
