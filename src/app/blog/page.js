@@ -8,12 +8,33 @@ import { blogPosts } from "../data/DummyBlogPosts";
 import GreyBtnWide from "../components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
 import styles from "./page.module.css";
+import { fetchBlogPosts } from "../../../sanity/lib/fetchBlogPosts";
 
 const Blog = () => {
-  const [currentPage, setCurrentPage] = useState(1); 
+  const [currentPage, setCurrentPage] = useState(1);
+  const [sanityTestPosts, setSanityTestPosts] = useState("");
+
   const [selectedCategories, setSelectedCategories] = useState([]);
   const POSTS_PER_PAGE = 7; // Define how many posts per page
 
+  useEffect(() => {
+    const getPosts = async () => {
+      console.log(
+        process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+        process.env.NEXT_PUBLIC_SANITY_DATASET
+      );
+      try {
+        const data = await fetchBlogPosts();
+        setSanityTestPosts(data);
+        console.log(sanityTestPosts, "sanity posts");
+      } catch (error) {
+        console.error("Error fetching blog posts:", error);
+      }
+    };
+    getPosts();
+  }, []);
+
+  console.log(sanityTestPosts, "sanity posts");
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -34,12 +55,23 @@ const Blog = () => {
     });
   };
 
-  // Filter blog posts based on selected tags
-  const filteredPosts = blogPosts.filter((post) =>
+  if (!sanityTestPosts || sanityTestPosts.length === 0) {
+    return <p>Loading...</p>;
+  }
+
+  const filteredPosts = sanityTestPosts.filter((post) =>
     selectedCategories.some((category) => post.categories.includes(category))
   );
 
-  const displayedPosts = filteredPosts.length > 0 ? filteredPosts : blogPosts;
+  // Filter blog posts based on selected tags
+  // const filteredPosts = blogPosts.filter((post) =>
+  //   selectedCategories.some((category) => post.categories.includes(category))
+  // );
+
+  const displayedPosts =
+    filteredPosts.length > 0 ? filteredPosts : sanityTestPosts;
+
+  // const displayedPosts = filteredPosts.length > 0 ? filteredPosts : blogPosts;
 
   const totalPages = Math.ceil(displayedPosts.length / POSTS_PER_PAGE);
 
@@ -130,7 +162,11 @@ const Blog = () => {
                             {post.title}
                           </h6>
                           <small className="blogDate textBlue">
-                            {post.date}
+                            {new Date(post.date).toLocaleDateString("en-US", {
+                              year: "numeric",
+                              month: "long",
+                              day: "numeric",
+                            })}
                           </small>
                         </div>
                       </Col>
