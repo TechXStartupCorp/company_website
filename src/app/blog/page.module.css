@@ -11,12 +11,9 @@
   height: 100%;
 }
 
-
 .blogDate {
-    font-size: 0.85rem;
+  font-size: 0.85rem;
 }
-
-
 
 @media (max-width: 991px) {
   .blogHeader {

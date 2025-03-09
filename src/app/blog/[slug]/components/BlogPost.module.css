@@ -1,0 +1,135 @@
+.breadCrumb li a,
+.breadCrumb li::before {
+  color: var(--blueText) !important;
+  text-decoration: none !important;
+}
+
+.breadCrumb li {
+  color: var(--bsDark) !important;
+}
+
+.blogImgContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 100%; /* Makes the container a square */
+  overflow: hidden;
+  border-radius: 50%; /* Ensures the square becomes a circle */
+}
+
+.blogImgContainer img {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.shareLinkContainer {
+  margin-top: 1.85rem;
+}
+.faceBookLogo {
+  color: #1877f2;
+}
+
+.xLogo,
+.threadsLogo {
+  color: #000000;
+}
+
+.linkedinLogo {
+  color: #0a66c2;
+}
+.redditLogo {
+  color: #ff4500;
+}
+
+.shareLink {
+  color: #a5a7aa;
+  font-size: 0.85rem !important;
+}
+
+.paperClipIcon {
+  color: #747678;
+}
+
+.customBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff1f7d, #9b4dca);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  height: 1.65rem;
+  width: 1.65rem;
+}
+
+.customBtn svg {
+  font-size: 1rem !important;
+}
+
+.customBtn:hover {
+  opacity: 0.85;
+}
+
+/* .shareIcon {
+  border-radius: 5px !important;
+} */
+
+.shareLinkBottom {
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.shareLinkBottom:hover {
+  background-color: var(--bsDark) !important;
+  color: #fff !important;
+}
+
+.socialLogosContainer .iconContainer {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* The after element that will create the bottom border effect */
+.socialLogosContainer .iconContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px; /* Set the thickness of the bottom border */
+  background: linear-gradient(135deg, #3b7bff, #66d98b);
+  transition: width 0.3s ease; /* Make the width change smoothly */
+}
+
+/* Hover effect: expand the width of the bottom border */
+.socialLogosContainer .iconContainer:hover::after {
+  width: 100%; /* Expand to full width of the parent */
+}
+
+.authorInfoRow {
+  display: flex;
+  flex: row;
+  align-items: center;
+}
+
+.publishedDate {
+  width: 40%;
+}
+
+@media (max-width: 992px) {
+  
+  .authorInfoText {
+    margin-top: 0.9rem;
+  }
+  .socialLogosContainer {
+    margin-top: 0.6rem;
+  }
+  .publishedDate {
+    width: 100%;
+  }
+}
