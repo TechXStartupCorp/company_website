@@ -1,0 +1,69 @@
+.breadCrumb li a,
+.breadCrumb li::before {
+  color: var(--blueText) !important;
+  text-decoration: none !important;
+}
+
+.breadCrumb li {
+  color: var(--bsDark) !important;
+}
+
+.imageContainer {
+  overflow: hidden;
+  padding-bottom: 60%;
+  z-index: 1;
+}
+
+.imageContainer img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 8px;
+  right: 7px;
+  z-index: 1000;
+}
+
+.truncateText {
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Number of lines to show */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.authorImage {
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the given dimensions */
+}
+
+
+
+.customBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff1f7d, #9b4dca);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  height: 1.85rem;
+  width: 1.85rem;
+}
+
+.customBtn svg {
+  font-size: 1rem !important;
+}
+
+.customBtn:hover {
+  opacity: 0.85;
+}

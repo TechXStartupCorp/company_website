@@ -1,22 +1,17 @@
 "use client";
-import React from 'react'
-import styles from './BlogIndexPage.module.css'
+import React from "react";
+import styles from "./BlogIndexPage.module.css";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import Pagination from '@/app/components/Pagination/Pagination';
-import Tag from '@/app/components/Tag/Tag';
-// import { blogPosts } from "../data/DummyBlogPosts";
-import GreyBtnWide from '@/app/components/GreyBtnWide/GreyBtnWide';
+import Pagination from "@/app/components/Pagination/Pagination";
+import Tag from "@/app/components/Tag/Tag";
+import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
 import { IoReload } from "react-icons/io5";
 
-
-const BlogIndexPage = ( {sanityTestPosts} ) => {
+const BlogIndexPage = ({ blogPosts }) => {
   const [currentPage, setCurrentPage] = useState(1);
-  console.log(sanityTestPosts, 'posts')
-//   const [sanityTestPosts, setSanityTestPosts] = useState();
-
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const POSTS_PER_PAGE = 7; // Define how many posts per page
+  const POSTS_PER_PAGE = 7;
 
   const slugify = (title) => {
     return title
@@ -25,24 +20,6 @@ const BlogIndexPage = ( {sanityTestPosts} ) => {
       .replace(/[^a-z0-9\s-]/g, "")
       .replace(/\s+/g, "-");
   };
-
-//   useEffect(() => {
-//     const getPosts = async () => {
-//       console.log(
-//         process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-//         process.env.NEXT_PUBLIC_SANITY_DATASET
-//       );
-//       try {
-//         const data = await fetchBlogPosts();
-//         setSanityTestPosts(data);
-//       } catch (error) {
-//         console.error("Error fetching blog posts:", error);
-//       }
-//     };
-//     getPosts();
-//   }, [sanityTestPosts]);
-
- 
 
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
@@ -56,23 +33,22 @@ const BlogIndexPage = ( {sanityTestPosts} ) => {
   const toggleCategorySelection = (category) => {
     setSelectedCategories((prevSelectedCategories) => {
       if (prevSelectedCategories.includes(category)) {
-        return prevSelectedCategories.filter((t) => t !== category); // Remove tag if already selected
+        return prevSelectedCategories.filter((t) => t !== category);
       } else {
-        return [...prevSelectedCategories, category]; // Add tag if not already selected
+        return [...prevSelectedCategories, category];
       }
     });
   };
 
-  if (!sanityTestPosts || sanityTestPosts.length === 0) {
+  if (!blogPosts || blogPosts.length === 0) {
     return <p>Loading...</p>;
   }
 
-  const filteredPosts = sanityTestPosts.filter((post) =>
+  const filteredPosts = blogPosts.filter((post) =>
     selectedCategories.some((category) => post.categories.includes(category))
   );
 
-  const displayedPosts =
-    filteredPosts.length > 0 ? filteredPosts : sanityTestPosts;
+  const displayedPosts = filteredPosts.length > 0 ? filteredPosts : blogPosts;
 
   const totalPages = Math.ceil(displayedPosts.length / POSTS_PER_PAGE);
 
@@ -200,7 +176,7 @@ const BlogIndexPage = ( {sanityTestPosts} ) => {
         </Row>
       </Container>
     </div>
-  )
-}
+  );
+};
 
-export default BlogIndexPage
+export default BlogIndexPage;

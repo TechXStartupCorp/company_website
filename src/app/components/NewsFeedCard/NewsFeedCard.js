@@ -7,7 +7,7 @@ import styles from "./NewsFeedCard.module.css";
 
 const NewsFeedCard = ({ newsFeedPost, shadow }) => {
   return (
-    (<div
+    <div
       className={`${styles.newsFeedCard} ${
         shadow && styles.newsFeedCardShadow
       } d-flex flex-column p-2 whiteBG rounded mb-3 h-100`}
@@ -34,7 +34,16 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
                     🔥 <small>Trending</small>
                   </span>
                 </div>
-                <small>{newsFeedPost.date_time_posted}</small>
+                <small>
+                  {new Date(newsFeedPost.date_time_posted).toLocaleDateString(
+                    "en-US",
+                    {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    }
+                  )}
+                </small>
               </div>
               <div className="mt-2">
                 <h5 className="xtraBold">{newsFeedPost.title}</h5>
@@ -42,9 +51,10 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             </div>
             <div className="mt-2">
               <GreyBtnWide
-                link={`/news/${newsFeedPost.title
-                  .replace(/\s+/g, "-")
-                  .toLowerCase()}`}
+                link={`/news/${newsFeedPost.slug}`}
+                // link={`/news/${newsFeedPost.title
+                //   .replace(/\s+/g, "-")
+                //   .toLowerCase()}`}
                 aria-label={`Read more about ${newsFeedPost.title}`}
                 text="Read more"
               />
@@ -52,7 +62,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
           </div>
         </div>
       </Row>
-    </div>)
+    </div>
   );
 };
 

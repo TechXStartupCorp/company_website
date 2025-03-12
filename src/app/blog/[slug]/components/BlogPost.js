@@ -3,8 +3,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Container, Breadcrumb, Row, Col } from "react-bootstrap";
 import CalloutSection from "@/app/components/CalloutSection/CalloutSection";
+import GreyBtnWide from "@/app/components/GreyBtnWide/GreyBtnWide";
 import Image from "next/legacy/image";
 import { BsPaperclip } from "react-icons/bs";
+import { MdArrowOutward } from "react-icons/md";
 import Tag from "@/app/components/Tag/Tag";
 import WideCardWithGreyBorder from "@/app/components/WideCardWithGreyBorder/WideCardWithGreyBorder";
 import {
@@ -20,12 +22,8 @@ import {
 import styles from "./BlogPost.module.css";
 
 const BlogPost = ({ blogPost }) => {
-  console.log(blogPost, "blogPost");
-
   const [currentUrl, setCurrentUrl] = useState("");
   const [isClient, setIsClient] = useState(false);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   const shareUrl = currentUrl ? currentUrl : "https://techxstartup.com/404";
 
@@ -222,7 +220,7 @@ const BlogPost = ({ blogPost }) => {
             className={`${styles.publishedDate} mt-4 d-flex flex-column align-items-start`}
           >
             <span className="mt-2 mb-2 textBlue">
-              Published on
+              Published on&nbsp;
               {new Date(blogPost?.date).toLocaleDateString("en-US", {
                 year: "numeric",
                 month: "long",
@@ -230,11 +228,11 @@ const BlogPost = ({ blogPost }) => {
               })}
             </span>
 
-            {/* <GreyBtnWide
-                onClick={handleCopyClick}
-                icon={<MdArrowOutward />}
-                text="Share"
-              /> */}
+            <GreyBtnWide
+              onClick={handleCopyClick}
+              icon={<MdArrowOutward />}
+              text="Share"
+            />
           </div>
         </Container>
       </Container>
