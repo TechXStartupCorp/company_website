@@ -1,27 +1,6 @@
 import React from "react";
 import { client } from "../../../../sanity/lib/client";
 import NewsFeedPage from "./components/NewsFeedPage";
-import Head from "next/head";
-import { fetchNewsFeedPosts } from "../../../../sanity/lib/fetchNewsFeedPost";
-// import { useParams } from "next/navigation";
-// import { useState, useEffect } from "react";
-import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
-import { Breadcrumb, Container } from "react-bootstrap";
-import styles from "./page.module.css";
-import Image from "next/legacy/image";
-import { handleCopyClick } from "../../../../utils/handleCopyClick";
-import { BsPaperclip } from "react-icons/bs";
-import Tag from "@/app/components/Tag/Tag";
-import {
-  FacebookShareButton,
-  FacebookIcon,
-  TwitterShareButton,
-  XIcon,
-  LinkedinShareButton,
-  LinkedinIcon,
-  WhatsappShareButton,
-  WhatsappIcon,
-} from "react-share";
 
 const page = async ({ params }) => {
   const resolvedParams = await params;
