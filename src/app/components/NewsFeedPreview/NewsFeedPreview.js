@@ -6,7 +6,7 @@ import { Form, Col } from "react-bootstrap";
 import { CiSearch } from "react-icons/ci";
 import { MdOutlineChevronRight } from "react-icons/md";
 import Image from "next/legacy/image";
-import { dummyNewsFeedPosts } from "@/app/data/DummyNewsFeedPosts";
+import { dummyNewsFeedPosts } from "@/app/data/dummyNewsFeedPosts";
 import NewsFeedCard from "../NewsFeedCard/NewsFeedCard";
 import Link from "next/link";
 
