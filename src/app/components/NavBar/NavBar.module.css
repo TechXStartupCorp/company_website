@@ -1,7 +1,7 @@
 .navBar {
   position: sticky !important;
   top: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
   z-index: 1000 !important;
   white-space: nowrap !important;
   background-color: white !important;
@@ -9,11 +9,11 @@
   padding: 0.7rem 0.8rem 0.7rem 0.8rem !important;
 }
 
-.navMenu .navMenuLinks {
+.navMenu .navMenuLinks, .navDropdownLink {
   text-decoration: none;
   padding-left: 0 !important;
   padding-right: 0 !important;
-  color: black;
+  color: black !important;
   position: relative;
   display: inline-block;
   letter-spacing: 1.3px;
@@ -24,6 +24,10 @@
     color 0.2s ease,
     font-weight 0.2s ease;
   margin-left: 1.3rem;
+}
+
+.navDropdownLink a {
+  color: black !important;
 }
 
 .navMenu .navMenuLinks:hover {

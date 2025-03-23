@@ -198,7 +198,6 @@ export default function Home() {
           fetchpriority="high"
         />
       </Head> */}
-      
 
       <CalloutSection
         imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733863599/pexels-mateusz-dach-99805-450035_dp9nh3.jpg"
@@ -210,7 +209,7 @@ export default function Home() {
         secondBtn={true}
         primaryBtnLink={startupVisaFormLink}
         lightBtnLink="/startupvisa"
-        />
+      />
       <Container className={`${styles.landingPageContent} section`}>
         <h2 className={`xtraBold w-75`}>
           Our mission is to empower founders and innovators to launch startups
@@ -247,75 +246,7 @@ export default function Home() {
           ))}
         </Row>
       </Container>
-      <Container>
-        <div id="featured-projects">
-          <h4 className="xtraBold pt-5 header pb-3">Featured projects</h4>
-          <Row>
-            {featuredProjects.map((project, index) => (
-              <Col
-                className="d-flex flex-column"
-                key={index}
-                xs={12}
-                md={6}
-                lg={4}
-              >
-                <VerticalCard
-                  imageSrc={project.images[0]}
-                  alt={project.title}
-                  title={project.title}
-                  text={project.text}
-                  link={`/featured-projects/${project.title
-                    .toLowerCase()
-                    .replace(/ /g, "-")}`}
-                  secondItem={project.industry}
-                  icon={<MdArrowOutward />}
-                />
-              </Col>
-            ))}
-          </Row>
-          {/* <div>
-            {sortedYears.map((year) => (
-              <div key={year}>
-                <h5 className="xtraBold mt-5">{year}</h5>
-                {groupedProjects[year].map((project, index) => (
-                  <Row className="mt-5" key={index}>
-                    <Col>
-                      <div className="d-flex flex-column align-items-start">
-                        <h5 className="xtraBold">{project.title}</h5>
-                        <p className="mt-3 textBlue">{project.text}</p>
 
-                        <Link
-                          href={`/featuredprojects/${project.title
-                            .toLowerCase()
-                            .replace(/ /g, "-")}`}
-                          rel="noopener noreferrer"
-                          className={`${styles.caseStudyLink} mt-3 text-decoration-none text-dark py-2 px-5 rounded lightGreyContainerBG fw-bold d-flex align-items-center justify-content-center gap-3`}
-                        >
-                          <MdArrowOutward />
-                          Read more
-                        </Link>
-                      </div>
-                    </Col>
-                    <Col className={styles.featuredProjImg} xl={3}>
-                      <div
-                        className={`${styles.featuredProjImgContainer} position-relative h-auto w-100`}
-                      >
-                        <Image
-                          className="roundedImage"
-                          src={project.images[0]}
-                          alt={project.title}
-                          layout="fill"
-                          priority
-                        />
-                      </div>
-                    </Col>
-                  </Row>
-                ))}
-              </div>
-            ))}
-          </div> */}
-        </div>
-      </Container>
       <div className="mt-3">
         <CalloutSection
           imageURL="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733934684/pexels-weekendplayer-187041_amvoh1.jpg"

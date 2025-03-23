@@ -1,0 +1,17 @@
+.detailsCard {
+  border: 1px solid var(--lightGreyBorder);
+}
+
+.breadCrumb li a,
+.breadCrumb li::before {
+  color: var(--blueText) !important;
+  text-decoration: none !important;
+}
+
+.breadCrumb li {
+  color: var(--bsDark) !important;
+}
+
+.detailsCard {
+  border: 1px solid var(--lightGreyBorder);
+}

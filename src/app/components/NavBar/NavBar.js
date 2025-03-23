@@ -1,7 +1,13 @@
 "use client";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Navbar, Nav, Container, Offcanvas } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Container,
+  Offcanvas,
+  NavDropdown,
+} from "react-bootstrap";
 import styles from "./NavBar.module.css";
 import Link from "next/link";
 import CustomBtn from "../CustomBtn/CustomBtn";
@@ -45,19 +51,21 @@ const NavBar = () => {
       setActiveLink("news");
     } else if (pathname.startsWith("/blog")) {
       setActiveLink("blog");
+    } else if (pathname.startsWith("/projects")) { // Match parent path
+      setActiveLink("projects");
     } else if (pathname === "/") {
       setActiveLink("home");
     } else {
-      setActiveLink(pathname.substring(1)); // For other paths
+      setActiveLink(pathname.substring(1));
     }
   }, [pathname]);
+  
 
   const pathDisplayNames = {
     "/": "Home",
     "/about": "About",
     "/startupvisa": "Startup Visa",
-    "/news": "News",
-    "/blog": "Blog",
+    "/projects": "Projects",
     "/contact": "Contact",
   };
   return (
@@ -83,9 +91,10 @@ const NavBar = () => {
             />
           </div>
         </Navbar.Brand>
-        <Navbar.Toggle 
-        onClick={handleToggleOffcanvas}
-        aria-controls="offcanvasNavbar" />
+        <Navbar.Toggle
+          onClick={handleToggleOffcanvas}
+          aria-controls="offcanvasNavbar"
+        />
         <Navbar.Offcanvas
           id="offcanvasNavbar"
           aria-labelledby="offcanvasNavbarLabel"
@@ -126,6 +135,18 @@ const NavBar = () => {
                   {pathDisplayNames[path]}
                 </Nav.Link>
               ))}
+              <NavDropdown
+                className={`${styles.navDropdownLink}`}
+                title="More"
+                id="more-dropdown"
+              >
+                <NavDropdown.Item as={Link} href="/blog">
+                  Blog
+                </NavDropdown.Item>
+                <NavDropdown.Item as={Link} href="/news">
+                  News
+                </NavDropdown.Item>
+              </NavDropdown>
             </Nav>
             <div className={styles.customBtnContainer}>
               <CustomBtn link={calendlyLink} text="Book consult" />
@@ -138,5 +159,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-
