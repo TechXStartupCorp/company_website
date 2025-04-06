@@ -26,7 +26,7 @@ const CalloutSection = ({
   isPrimaryBtnLinkExternal,
   isLightBtnLinkExternal,
 }) => {
-  const optimizedImageURL = `${imageURL}?fm=webp&q=80`;
+  // const optimizedImageURL = `${imageURL}?fm=webp&q=80`;
   const [isLoaded, setIsLoaded] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ const CalloutSection = ({
         <div className={styles.optionalDarkOverlay}></div>
         <Image
           className={`${styles.heroImage}`}
-          src={optimizedImageURL}
+          src={imageURL}
           alt={alt}
           layout="fill"
           objectFit="cover"

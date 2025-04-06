@@ -154,7 +154,7 @@ const BlogIndexPage = ({ blogPosts }) => {
                     <div className={styles.readMoreBtnContainer}>
                       <GreyBtnWide
                         text="Read more"
-                        link={`/blog/${slugify(post.title)}`}
+                        link={`/blog/${post.slug.current}`}
                         aria-label={`Read more about ${post.title}`}
                       />
                     </div>
