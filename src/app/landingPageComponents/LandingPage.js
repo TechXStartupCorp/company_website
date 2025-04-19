@@ -6,8 +6,6 @@ import { Row, Col, Container } from "react-bootstrap";
 import CalloutSection from "../components/CalloutSection/CalloutSection";
 import VerticalCard from "../components/VerticalCard/VerticalCard";
 import Stats from "../components/Stats/Stats";
-import Link from "next/link";
-import Head from "next/head";
 import {
   FaRegCompass,
   FaGraduationCap,
@@ -162,14 +160,13 @@ const LandingPage = ({ content }) => {
         </Container>
       </div>
       <CTAWithImage
-        header="Build, Launch, and Scale Your Startup with TechX Startup"
-        text="Partner with TechX Startup to turn your ideas into thriving businesses. We offer funding, mentorship, and guidance, including navigating the Canada Startup Visa. Book a call today to start scaling your startup."
-        img="https://res.cloudinary.com/dq8ii6nbc/image/upload/v1733946918/dai-ke-GkraTrCYA_0-unsplash_zm7zb8.jpg"
-        alt="guy on computer"
-        btnText="Book via Calendy"
-        imageAlign="left"
-        // link={calendlyLink}
-        link="https://docs.google.com/forms/d/1xpjSnPmxe2qz_K9EKHcudGpOrCG1PC46BqIhqpdgiDA"
+        header={content.ctaSection.header}
+        text={content.ctaSection.text}
+        img={content.ctaSection.image}
+        alt={content.ctaSection.alt}
+        btnText={content.ctaSection.btnText}
+        imageAlign={content.ctaSection.left}
+        link={content.ctaSection.link}
       />
     </div>
   );

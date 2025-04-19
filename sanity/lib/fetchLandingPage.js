@@ -41,7 +41,10 @@ export const fetchLandingPage = async () => {
       header,
       text,
       btnText,
-      link
+      link, 
+      imageAlign, 
+      image, 
+      alt
     }, 
     getTheGuideSection { 
       imageUrl,

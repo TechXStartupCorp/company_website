@@ -256,9 +256,24 @@ export const landingPage = {
           type: "string",
         },
         {
+          name: "imageAlign",
+          title: "Image align",
+          type: "string",
+        },
+        {
           name: "link",
           title: "Button Link",
           type: "url",
+        },
+        {
+          name: "image",
+          title: "Image URL",
+          type: "url", // <-- Changed from type: "image" to "url"
+        },
+        {
+          name: "alt",
+          title: "Image Alt Text",
+          type: "string",
         },
       ],
     },
