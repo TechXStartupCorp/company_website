@@ -18,13 +18,14 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             <Badge className={`${styles.newsFeedCategory} text-light`}>
               {newsFeedPost.category}
             </Badge>
-            <Image
+            <img src={newsFeedPost.image} alt="temp alt" className="roundedImage" />
+            {/* <Image
               className="roundedImage"
               src={newsFeedPost.image.image_url}
               alt={newsFeedPost.image.alt_tag}
               layout="fill"
               objectFit="cover"
-            />
+            /> */}
           </div>
           <div className="d-flex flex-column justify-content-between h-100">
             <div className="d-flex flex-column">
@@ -35,14 +36,15 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
                   </span>
                 </div>
                 <small>
-                  {new Date(newsFeedPost.date_time_posted).toLocaleDateString(
+                  {/* {new Date(newsFeedPost.date_time_posted).toLocaleDateString(
                     "en-US",
                     {
                       year: "numeric",
                       month: "long",
                       day: "numeric",
                     }
-                  )}
+                  )} */}
+                  fake date here for now
                 </small>
               </div>
               <div className="mt-2">
@@ -51,7 +53,8 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             </div>
             <div className="mt-2">
               <GreyBtnWide
-                link={`/news/${newsFeedPost.slug}`}
+                // link={`/news/${newsFeedPost.slug}`}
+                link="temp link"
                 // link={`/news/${newsFeedPost.title
                 //   .replace(/\s+/g, "-")
                 //   .toLowerCase()}`}

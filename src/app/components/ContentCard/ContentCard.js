@@ -20,13 +20,14 @@ const ContentCard = ({
       <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
           <Badge className={`${styles.tag} text-light`}>{category}</Badge>
-          <Image
+          <img src={imageUrl} alt="temp alt"/>
+          {/* <Image
             className="roundedImage"
             src={imageUrl}
             alt={altTag}
             layout="fill"
             objectFit="cover"
-          />
+          /> */}
         </div>
       </Col>
       <Col lg={12} xl={6}>
