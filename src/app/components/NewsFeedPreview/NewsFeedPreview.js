@@ -9,6 +9,7 @@ import Image from "next/legacy/image";
 import { dummyNewsFeedPosts } from "@/app/data/dummyNewsFeedPosts";
 import NewsFeedCard from "../NewsFeedCard/NewsFeedCard";
 import Link from "next/link";
+import { useNews } from "@/app/context/NewsContext";
 
 const NewsFeedPreview = () => {
   const pathname = usePathname(); // Get the current path
@@ -18,6 +19,16 @@ const NewsFeedPreview = () => {
     const randomIndex = Math.floor(Math.random() * dummyNewsFeedPosts.length);
     return dummyNewsFeedPosts[randomIndex];
   }, []);
+
+  const { articles, loading } = useNews();
+
+  useEffect(() => {
+    if (!loading) {
+      console.log("Fetched Articles:", articles); // ✅ Console log here
+    }
+  }, [loading, articles]);
+
+  // if (loading) return <p>Loading news...</p>;
 
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -31,6 +42,28 @@ const NewsFeedPreview = () => {
   if (isNewsPage) {
     return null;
   }
+
+//   content
+// : 
+// "The official Legend of Zelda playing cards from Nintendo are currently on sale for just $9.99 (20% off). Keep in mind, they are a Japan-only imported product, so buying through Amazon typically means you're purchasing from a reseller. This could mean... [309 chars]"
+// description
+// : 
+// "Back to Nintendo's roots."
+// image
+// : 
+// "https://assets-prd.ignimgs.com/2025/05/09/legend-of-zelda-playing-cards-1746823499510.jpg?width=1280"
+// publishedAt
+// : 
+// "2025-05-09T22:26:46Z"
+// source
+// : 
+// {name: 'IGN', url: 'https://www.ign.com'}
+// title
+// : 
+// "You Can Get a Pack of Official Legend of Zelda Playing Cards for Just $10"
+// url
+// : 
+// "https://www.ign.com/articles/you-can-get-a-pack
 
   return (
     (<Col lg={4} xl={3} className={styles.rightColumn}>

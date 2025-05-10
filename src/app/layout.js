@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar/NavBar";
 import Footer from "./components/Footer/Footer";
 import { Row, Col, Container } from "react-bootstrap";
 import NewsFeedPreview from "./components/NewsFeedPreview/NewsFeedPreview";
+import { NewsProvider } from "./context/NewsContext";
+import { fetchNewsArticles } from "./lib/fetchNews";
 
 export const metadata = {
   title: "Startup Consulting for Global Founders - Your Launchpad",
@@ -21,7 +23,10 @@ const mulish = Mulish({
   display: "swap",
 });
 
+const articles = await fetchNewsArticles();
+
 export default function RootLayout({ children }) {
+ 
   return (
     <html lang="en">
       <head>
@@ -53,20 +58,22 @@ export default function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body className={mulish.className}>
-        <main>
-          <Container fluid className="h-100">
-            <Row className="h-100">
-              {/* Left Column (Main Content, scrollable) */}
-              <Col className="left-column">
-                <NavBar />
-                <div className="content">{children}</div>
-                <Footer />
-              </Col>
+        <NewsProvider initialArticles={articles}>
+          <main>
+            <Container fluid className="h-100">
+              <Row className="h-100">
+                {/* Left Column (Main Content, scrollable) */}
+                <Col className="left-column">
+                  <NavBar />
+                  <div className="content">{children}</div>
+                  <Footer />
+                </Col>
 
-              <NewsFeedPreview />
-            </Row>
-          </Container>
-        </main>
+                <NewsFeedPreview />
+              </Row>
+            </Container>
+          </main>
+        </NewsProvider>
       </body>
     </html>
   );
