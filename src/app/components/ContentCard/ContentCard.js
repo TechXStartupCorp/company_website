@@ -4,30 +4,15 @@ import Image from "next/legacy/image";
 import styles from "./ContentCard.module.css";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 import { timeInterval } from "rxjs";
+import { timeAgo } from "@/app/lib/timeAgo";
 
-const ContentCard = ({
-  imageUrl,
-  altTag,
-  category,
-  title,
-  content,
-  time,
-  preview,
-  imageAlign,
-}) => {
+const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
   return (
     <Row>
       <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
           <Badge className={`${styles.tag} text-light`}>{category}</Badge>
-          <img src={imageUrl} alt="temp alt"/>
-          {/* <Image
-            className="roundedImage"
-            src={imageUrl}
-            alt={altTag}
-            layout="fill"
-            objectFit="cover"
-          /> */}
+          <img src={randomPost.image} alt="temp alt" />
         </div>
       </Col>
       <Col lg={12} xl={6}>
@@ -42,30 +27,26 @@ const ContentCard = ({
                   height={32}
                   className={styles.authorImage}
                 />
-                <span className="fw-bold">TechX Startup</span>
+                <span className="fw-bold">{randomPost.source.name}</span>
               </div>
               <span className="text-secondary">
                 🔥 <small>Trending</small>
               </span>
             </div>
-            <h2 className="xtraBold mt-3">{title}</h2>
+            <h2 className="xtraBold mt-3">{randomPost.title}</h2>
 
             <small className="text-secondary mt-2">
-              {new Date(time).toLocaleDateString("en-US", {
-                year: "numeric",
-                month: "long",
-                day: "numeric",
-              })}
+              {timeAgo(randomPost.publishedAt)}
             </small>
 
             <p className={`${preview ? styles.truncateText : ""} mt-3`}>
-              {content}
+              {randomPost.content}
             </p>
           </div>
           {preview && (
             <div className="mt-4 mt-xl-0">
               <GreyBtnWide
-                link={`/news/${title.replace(/\s+/g, "-").toLowerCase()}`}
+                link={`/news/${randomPost.title.replace(/\s+/g, "-").toLowerCase()}`}
                 aria-label={`Read more about ${title}`}
                 text="Read more"
               />

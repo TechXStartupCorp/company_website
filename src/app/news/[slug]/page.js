@@ -1,44 +1,35 @@
-// import React from "react";
-// import { client } from "../../../../sanity/lib/client";
-// import NewsFeedPage from "./components/NewsFeedPage";
+"use client";
+import React, { useEffect, useState } from "react";
+import { useParams } from "next/navigation"; // ✅ App Router version
+import { useNews } from "@/app/context/NewsContext";
 
-// const page = async ({ params }) => {
-//   const resolvedParams = await params;
-//   const { slug } = resolvedParams;
+const NewsArticlePage = () => {
+  const { articles } = useNews();
+  const { slug } = useParams(); // ✅ Get slug from URL in App Router
+  const [article, setArticle] = useState(null);
 
-//   const query = `*[_type == "newsFeed" && slug.current == $slug][0]{
-//     _id,
-//     title,
-//     "slug": slug.current,
-//     news_feed_source,
-//     date_time_posted,
-//     content, 
-//     image {
-//       image_url,
-//       alt_tag
-//     },
-//     category,
-//     tags
-//   }`;
+  useEffect(() => {
+    if (slug && articles.length) {
+      const matchedArticle = articles.find((a) => a.slug === slug);
+      setArticle(matchedArticle || null);
+    }
+  }, [slug, articles]);
 
-//   const newsFeedPost = await client.fetch(query, { slug });
+  if (!slug || !articles.length) {
+    return null; // optional: loading state
+  }
 
-//   console.log(newsFeedPost, "news feed post");
+  if (!article) {
+    return <div>Article not found</div>;
+  }
 
-//   return <NewsFeedPage newsFeedPost={newsFeedPost} />;
-// };
-
-// export default page;
-
-import React from 'react'
-
-const page = () => {
   return (
     <div>
-      <div>i am news feed page!~!!!!!</div>
+      <h1>{article.title}</h1>
+      {/* Add other content */}
     </div>
-  )
-}
+  );
+};
 
-export default page
+export default NewsArticlePage;
 

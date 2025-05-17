@@ -4,6 +4,8 @@ import Image from "next/legacy/image";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 import Link from "next/link";
 import styles from "./NewsFeedCard.module.css";
+import { generateSlug } from "@/app/lib/generateSlug";
+import { timeAgo } from "@/app/lib/timeAgo";
 
 const NewsFeedCard = ({ newsFeedPost, shadow }) => {
   return (
@@ -18,7 +20,11 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             <Badge className={`${styles.newsFeedCategory} text-light`}>
               {newsFeedPost.category}
             </Badge>
-            <img src={newsFeedPost.image} alt="temp alt" className="roundedImage" />
+            <img
+              src={newsFeedPost.image}
+              alt="temp alt"
+              className="roundedImage"
+            />
             {/* <Image
               className="roundedImage"
               src={newsFeedPost.image.image_url}
@@ -35,17 +41,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
                     🔥 <small>Trending</small>
                   </span>
                 </div>
-                <small>
-                  {/* {new Date(newsFeedPost.date_time_posted).toLocaleDateString(
-                    "en-US",
-                    {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    }
-                  )} */}
-                  fake date here for now
-                </small>
+                <small>{timeAgo(newsFeedPost.publishedAt)}</small>
               </div>
               <div className="mt-2">
                 <h5 className="xtraBold">{newsFeedPost.title}</h5>
@@ -53,11 +49,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             </div>
             <div className="mt-2">
               <GreyBtnWide
-                // link={`/news/${newsFeedPost.slug}`}
-                link="temp link"
-                // link={`/news/${newsFeedPost.title
-                //   .replace(/\s+/g, "-")
-                //   .toLowerCase()}`}
+                link={`/news/${newsFeedPost.slug}`}
                 aria-label={`Read more about ${newsFeedPost.title}`}
                 text="Read more"
               />

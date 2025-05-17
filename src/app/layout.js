@@ -8,6 +8,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import NewsFeedPreview from "./components/NewsFeedPreview/NewsFeedPreview";
 import { NewsProvider } from "./context/NewsContext";
 import { fetchNewsArticles } from "./lib/fetchNews";
+import { enrichArticles } from "./lib/enrichArticles";
 
 export const metadata = {
   title: "Startup Consulting for Global Founders - Your Launchpad",
@@ -23,10 +24,10 @@ const mulish = Mulish({
   display: "swap",
 });
 
-const articles = await fetchNewsArticles();
-
-export default function RootLayout({ children }) {
- 
+export default async function RootLayout({ children }) {
+  const rawArticles = await fetchNewsArticles();
+ const articles = enrichArticles(rawArticles); // 👈 enrich them here
+  console.log(articles, "articles");
   return (
     <html lang="en">
       <head>
