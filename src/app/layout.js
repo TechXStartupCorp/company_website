@@ -26,7 +26,7 @@ const mulish = Mulish({
 
 export default async function RootLayout({ children }) {
   const rawArticles = await fetchNewsArticles();
- const articles = enrichArticles(rawArticles); // 👈 enrich them here
+  const articles = enrichArticles(rawArticles); // 👈 enrich them here
   console.log(articles, "articles");
   return (
     <html lang="en">

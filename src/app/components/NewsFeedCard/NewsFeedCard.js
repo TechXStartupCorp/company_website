@@ -17,12 +17,12 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
       <Row className="flex-grow-1">
         <div className={`d-flex flex-column flex-grow-1`}>
           <div className={`${styles.newsFeedCardContainer} position-relative`}>
-            <Badge className={`${styles.newsFeedCategory} text-light`}>
+            {/* <Badge className={`${styles.newsFeedCategory} text-light`}>
               {newsFeedPost.category}
-            </Badge>
+            </Badge> */}
             <img
               src={newsFeedPost.image}
-              alt="temp alt"
+              alt="Newsfeed post image"
               className="roundedImage"
             />
             {/* <Image
@@ -49,7 +49,8 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             </div>
             <div className="mt-2">
               <GreyBtnWide
-                link={`/news/${newsFeedPost.slug}`}
+                // link={`/news/${newsFeedPost.slug}`}
+                link={newsFeedPost.url}
                 aria-label={`Read more about ${newsFeedPost.title}`}
                 text="Read more"
               />

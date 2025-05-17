@@ -72,7 +72,7 @@ const NewsFeedPreview = () => {
           </Link>
         </div>
 
-        <Link href={`/news/${randomPost.slug}`}>
+        <Link href={randomPost.url}>
           <div
             className={`${styles.previewContainerWithImage} w-100 mt-4 position-relative d-flex`}
           >
@@ -97,7 +97,7 @@ const NewsFeedPreview = () => {
           </div>
         </Link>
         <div className="mt-3">
-          {filteredPosts.length > 0 ? (
+          {/* {filteredPosts.length > 0 ? (
             filteredPosts.map((newsFeedPost, index) => (
               <NewsFeedCard
                 shadow={false}
@@ -106,7 +106,20 @@ const NewsFeedPreview = () => {
               />
             ))
           ) : (
-            <p className="text-secondary">No results found</p> // Display a message when no posts match the search
+            <p className="text-secondary">No results found</p>
+          )} */}
+          {articles.length > 0 ? (
+            articles
+              .filter((post) => post.title !== randomPost?.title) // Avoid showing randomPost again
+              .map((newsFeedPost, index) => (
+                <NewsFeedCard
+                  shadow={false}
+                  newsFeedPost={newsFeedPost}
+                  key={index}
+                />
+              ))
+          ) : (
+            <p className="text-secondary">No results found</p>
           )}
         </div>
       </div>

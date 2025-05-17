@@ -11,8 +11,8 @@ const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
     <Row>
       <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
-          <Badge className={`${styles.tag} text-light`}>{category}</Badge>
-          <img src={randomPost.image} alt="temp alt" />
+          {/* <Badge className={`${styles.tag} text-light`}>{category}</Badge> */}
+          <img class="rounded" src={randomPost.image} alt="newdfeed image" />
         </div>
       </Col>
       <Col lg={12} xl={6}>
@@ -40,7 +40,11 @@ const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
             </small>
 
             <p className={`${preview ? styles.truncateText : ""} mt-3`}>
-              {randomPost.content}
+              {(randomPost.content || randomPost.description || "")
+                .replace(/\s?\.\.\.\s?\[\d+\schars\]$/, "") // remove '... [4996 chars]'
+                .replace(/\[\d+\schars\]$/, "") // backup: remove '[4996 chars]' without '...'
+                .trim()
+                .replace(/\.*$/, "...")}{" "}
             </p>
           </div>
           {preview && (
