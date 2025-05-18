@@ -36,15 +36,17 @@ const NewsFeedPreview = () => {
       <div className="py-2 px-3">
         <div className="d-flex justify-content-between align-items-center mt-4">
           <h5 className="fw-bold mb-0">Tech news</h5>
-          <Link href="/news" className="text-dark text-decoration-none">
-            <span className="fw-semibold">
-              View all
-              <MdOutlineChevronRight className="ms-2" />
-            </span>
+
+          <Link
+            href="/news"
+            className="text-dark text-decoration-none fw-semibold"
+          >
+            View all
+            <MdOutlineChevronRight className="ms-2" />
           </Link>
         </div>
 
-        <Link href={randomPost.url}>
+        <Link href={randomPost.url} target="_blank" rel="noopener noreferrer">
           <div
             className={`${styles.previewContainerWithImage} w-100 mt-4 position-relative d-flex`}
           >
@@ -71,7 +73,7 @@ const NewsFeedPreview = () => {
         <div className="mt-3">
           {articles.length > 0 ? (
             articles
-              .filter((post) => post.title !== randomPost?.title) 
+              .filter((post) => post.title !== randomPost?.title)
               .map((newsFeedPost, index) => (
                 <NewsFeedCard
                   shadow={false}

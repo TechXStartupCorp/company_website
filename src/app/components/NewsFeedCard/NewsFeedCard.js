@@ -17,9 +17,6 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
       <Row className="flex-grow-1">
         <div className={`d-flex flex-column flex-grow-1`}>
           <div className={`${styles.newsFeedCardContainer} position-relative`}>
-            {/* <Badge className={`${styles.newsFeedCategory} text-light`}>
-              {newsFeedPost.category}
-            </Badge> */}
             <img
               src={newsFeedPost.image}
               alt="Newsfeed post image"

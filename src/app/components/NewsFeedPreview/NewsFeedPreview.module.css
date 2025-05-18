@@ -1,26 +1,10 @@
-/* Right Column (scrollable) */
-
 .imgContainer {
   overflow: hidden;
   padding-bottom: 55%;
   z-index: 1;
-  /* box-sizing: border-box;
-  display: block;
-  overflow: hidden;
-  width: initial;
-  height: initial;
-  background: none;
-  opacity: 1;
-  border: 0px;
-  margin: 0px;
-  padding: 0px;
-  position: absolute;
-  inset: 0px; */
 }
 
 .heroImage {
-  /* object-fit: cover;
-  vertical-align: middle; */
   position: absolute;
   top: 0;
   right: 0;

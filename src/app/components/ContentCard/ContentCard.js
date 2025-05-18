@@ -5,7 +5,7 @@ import styles from "./ContentCard.module.css";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
 import { timeAgo } from "@/app/lib/timeAgo";
 
-const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
+const ContentCard = ({ randomPost, title, preview }) => {
   return (
     <Row>
       <Col lg={12} xl={6}>
@@ -48,7 +48,7 @@ const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
           {preview && (
             <div className="mt-4 mt-xl-0">
               <GreyBtnWide
-                link={`/news/${randomPost.title.replace(/\s+/g, "-").toLowerCase()}`}
+                link={randomPost.url}
                 aria-label={`Read more about ${title}`}
                 text="Read more"
               />

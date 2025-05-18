@@ -16,7 +16,7 @@ const GreyBtnWide = ({ onClick, link, icon, text }) => {
 
   if (link) {
     return (
-      <Link className="text-dark text-decoration-none" href={link}>
+      <Link target="_blank" rel="noopener noreferrer" className="text-dark text-decoration-none" href={link}>
         {content}
       </Link>
     );
