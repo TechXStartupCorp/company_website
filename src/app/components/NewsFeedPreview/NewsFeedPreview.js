@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./NewsFeedPreview.module.css";
 import { Col } from "react-bootstrap";

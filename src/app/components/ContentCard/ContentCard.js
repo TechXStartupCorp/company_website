@@ -10,7 +10,7 @@ const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
     <Row>
       <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
-          <img class="rounded" src={randomPost.image} alt="newdfeed image" />
+          <img className="rounded" src={randomPost.image} alt="newdfeed image" />
         </div>
       </Col>
       <Col lg={12} xl={6}>
