@@ -25,13 +25,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
               alt="Newsfeed post image"
               className="roundedImage"
             />
-            {/* <Image
-              className="roundedImage"
-              src={newsFeedPost.image.image_url}
-              alt={newsFeedPost.image.alt_tag}
-              layout="fill"
-              objectFit="cover"
-            /> */}
+  
           </div>
           <div className="d-flex flex-column justify-content-between h-100">
             <div className="d-flex flex-column">

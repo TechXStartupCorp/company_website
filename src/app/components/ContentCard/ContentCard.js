@@ -1,9 +1,8 @@
 import React from "react";
-import { Row, Col, Badge } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Image from "next/legacy/image";
 import styles from "./ContentCard.module.css";
 import GreyBtnWide from "../GreyBtnWide/GreyBtnWide";
-import { timeInterval } from "rxjs";
 import { timeAgo } from "@/app/lib/timeAgo";
 
 const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
@@ -11,7 +10,6 @@ const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
     <Row>
       <Col lg={12} xl={6}>
         <div className={`${styles.imageContainer} position-relative`}>
-          {/* <Badge className={`${styles.tag} text-light`}>{category}</Badge> */}
           <img class="rounded" src={randomPost.image} alt="newdfeed image" />
         </div>
       </Col>
@@ -41,8 +39,8 @@ const ContentCard = ({ randomPost, altTag, category, title, preview }) => {
 
             <p className={`${preview ? styles.truncateText : ""} mt-3`}>
               {(randomPost.content || randomPost.description || "")
-                .replace(/\s?\.\.\.\s?\[\d+\schars\]$/, "") // remove '... [4996 chars]'
-                .replace(/\[\d+\schars\]$/, "") // backup: remove '[4996 chars]' without '...'
+                .replace(/\s?\.\.\.\s?\[\d+\schars\]$/, "")
+                .replace(/\[\d+\schars\]$/, "")
                 .trim()
                 .replace(/\.*$/, "...")}{" "}
             </p>
