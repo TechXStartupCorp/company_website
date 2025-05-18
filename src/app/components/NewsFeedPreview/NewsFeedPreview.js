@@ -35,7 +35,7 @@ const NewsFeedPreview = () => {
     <Col lg={4} xl={3} className={styles.rightColumn}>
       <div className="py-2 px-3">
         <div className="d-flex justify-content-between align-items-center mt-4">
-          <h5 className="fw-bold mb-0">Recommended</h5>
+          <h5 className="fw-bold mb-0">Tech news</h5>
           <Link href="/news" className="text-dark text-decoration-none">
             <span className="fw-semibold">
               View all
