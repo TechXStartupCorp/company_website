@@ -8,7 +8,7 @@ const Blog = async () => {
   try {
  
     const blogPosts = await fetchBlogPosts(); // Make sure your fetchBlogPosts function is handling the query properly
-    console.log(blogPosts, 'blog posts')
+    console.log(blogPosts, 'blog posts from server')
     return <BlogIndexPage blogPosts={blogPosts} />; // Pass the fetched posts as props to the Client Component
   } catch (error) {
     console.error("Error fetching posts:", error);

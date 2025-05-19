@@ -76,6 +76,7 @@
   padding: 1rem;
   color: white;
   z-index: 10;
+  background: rgba(0, 0, 0, .5);
 }
 
 .textOverlay p {

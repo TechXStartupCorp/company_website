@@ -52,17 +52,17 @@ const BlogIndexPage = ({ blogPosts }) => {
 
   const totalPages = Math.ceil(displayedPosts.length / POSTS_PER_PAGE);
 
-  const paginatedPosts = displayedPosts.slice(
+  const sortedPosts = [...displayedPosts].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
+
+  const paginatedPosts = sortedPosts.slice(
     (currentPage - 1) * POSTS_PER_PAGE,
     currentPage * POSTS_PER_PAGE
   );
 
-  const sortedPosts = [...paginatedPosts].sort(
-    (a, b) => new Date(b.date) - new Date(a.date)
-  );
-
   const groupedPosts = {};
-  sortedPosts.forEach((post) => {
+  paginatedPosts.forEach((post) => {
     const postDate = new Date(post.date);
     const formattedMonth = postDate.toLocaleString("default", {
       month: "long",
