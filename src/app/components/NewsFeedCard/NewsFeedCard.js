@@ -6,8 +6,10 @@ import Link from "next/link";
 import styles from "./NewsFeedCard.module.css";
 import { generateSlug } from "@/app/lib/generateSlug";
 import { timeAgo } from "@/app/lib/timeAgo";
+import { useNews } from "@/app/context/NewsContext";
 
 const NewsFeedCard = ({ newsFeedPost, shadow }) => {
+  const { isFallback } = useNews();
   return (
     <div
       className={`${styles.newsFeedCard} ${
@@ -18,7 +20,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
         <div className={`d-flex flex-column flex-grow-1`}>
           <div className={`${styles.newsFeedCardContainer} position-relative`}>
             <img
-              src={newsFeedPost.image}
+              src={isFallback ? newsFeedPost.image.image_url : newsFeedPost.image}
               alt="Newsfeed post image"
               className="roundedImage"
             />
@@ -41,7 +43,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             <div className="mt-2">
               <GreyBtnWide
                 // link={`/news/${newsFeedPost.slug}`}
-                link={newsFeedPost.url}
+                href={isFallback ? `/news/${newsFeedPost.slug}` : newsFeedPost.url} 
                 aria-label={`Read more about ${newsFeedPost.title}`}
                 text="Read more"
               />
