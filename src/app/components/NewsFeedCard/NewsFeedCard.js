@@ -43,7 +43,7 @@ const NewsFeedCard = ({ newsFeedPost, shadow }) => {
             <div className="mt-2">
               <GreyBtnWide
                 // link={`/news/${newsFeedPost.slug}`}
-                href={isFallback ? `/news/${newsFeedPost.slug}` : newsFeedPost.url} 
+                link={isFallback ? `/news/${newsFeedPost.slug}` : newsFeedPost.url}
                 aria-label={`Read more about ${newsFeedPost.title}`}
                 text="Read more"
               />
