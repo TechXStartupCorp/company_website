@@ -8,6 +8,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import NewsFeedPreview from "./components/NewsFeedPreview/NewsFeedPreview";
 import { NewsProvider } from "./context/NewsContext";
 import { fetchNewsArticles } from "./lib/fetchNews";
+import { fetchNewsFeedPosts } from "../../sanity/lib/fetchNewsFeedPost";
 import { enrichArticles } from "./lib/enrichArticles";
 
 export const metadata = {
@@ -25,9 +26,25 @@ const mulish = Mulish({
 });
 
 export default async function RootLayout({ children }) {
-  const rawArticles = await fetchNewsArticles();
-  const articles = enrichArticles(rawArticles); // 👈 enrich them here
-  console.log(articles, "articles");
+  let articles = []; // The final array you'll pass down
+  let isFallback = false;
+
+  try {
+    const rawArticles = await fetchNewsArticles();
+    
+    if (!rawArticles || rawArticles.length === 0) {
+      throw new Error("No articles from external API");
+    }
+    
+    articles = enrichArticles(rawArticles);
+    isFallback = false;
+  } catch (error) {
+    console.error("API fetch failed or returned no articles, falling back to Sanity data:", error);
+    articles = await fetchNewsFeedPosts();  // Sanity articles
+    isFallback = true;
+  }
+  
+  console.log(articles, isFallback, "is fall back", "articles from layout");
   return (
     <html lang="en">
       <head>
@@ -59,7 +76,7 @@ export default async function RootLayout({ children }) {
         <title>{metadata.title}</title>
       </head>
       <body className={mulish.className}>
-        <NewsProvider initialArticles={articles}>
+        <NewsProvider articles={articles} isFallback={isFallback}>
           <main>
             <Container fluid className="h-100">
               <Row className="h-100">

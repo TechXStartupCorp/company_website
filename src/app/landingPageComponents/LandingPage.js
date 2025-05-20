@@ -51,6 +51,7 @@ const LandingPage = ({ content }) => {
     <div>
       <CalloutSection
         imageURL={content.heroSection.imageUrl}
+        // imageUrl="/assets/images/come_in_were_open.jpg"
         alt={content.heroSection.altText}
         title={content.heroSection.title}
         text={content.heroSection.text}

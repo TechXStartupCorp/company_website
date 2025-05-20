@@ -11,8 +11,9 @@ import { timeAgo } from "@/app/lib/timeAgo";
 
 const NewsFeedPreview = () => {
   const pathname = usePathname();
-  const { articles, loading } = useNews();
-  console.log(articles, "articles from newfeed preview");
+  const { articles, loading, isFallback } = useNews();
+  console.log(articles[0], "article 0 from newfeed preview");
+  console.log(isFallback, "isFallBack");
   const isNewsPage = pathname.startsWith("/news");
   const randomPost = useMemo(() => {
     const randomIndex = Math.floor(Math.random() * articles.length);
@@ -31,6 +32,8 @@ const NewsFeedPreview = () => {
     return null;
   }
 
+ 
+
   return (
     <Col lg={4} xl={3} className={styles.rightColumn}>
       <div className="py-2 px-3">
@@ -45,8 +48,10 @@ const NewsFeedPreview = () => {
             <MdOutlineChevronRight className="ms-2" />
           </Link>
         </div>
-
-        <Link href={randomPost.url} target="_blank" rel="noopener noreferrer">
+       {/* //// would need url here */}
+        <Link 
+        href={isFallback ? `/news/${randomPost.slug}` : randomPost.url} 
+        target="_blank" rel="noopener noreferrer">
           <div
             className={`${styles.previewContainerWithImage} w-100 mt-4 position-relative d-flex`}
           >
@@ -54,18 +59,22 @@ const NewsFeedPreview = () => {
             <div className={styles.imgContainer}>
               <img
                 className={`${styles.heroImage}`}
-                src={randomPost.image}
+              // would need image here
+                src={isFallback ? randomPost.image.image_url : randomPost.image}
                 alt="Dynamic Image"
               />
             </div>
             <div className={`${styles.textOverlay}`}>
               <div className="fw-bold d-flex gap-2 align-items-center">
-                <h6 className="mb-0 xtraBold">{randomPost.source.name}</h6>{" "}
+                {/* /// would need source name here */}
+                <h6 className="mb-0 xtraBold">{isFallback ? randomPost.news_feed_source : randomPost.source.name}</h6>{" "}
                 <span className="">•</span>{" "}
                 <small className="fw-light">
-                  {timeAgo(randomPost.publishedAt)}
+                  {/* // would need posted at date */}
+                  {isFallback ? timeAgo(randomPost.date_time_posted) : timeAgo(randomPost.publishedAt)}
                 </small>
               </div>
+              {/* //// would need title here */}
               <p className="mt-3 mb-0 fs-6">{randomPost.title}</p>
             </div>
           </div>
