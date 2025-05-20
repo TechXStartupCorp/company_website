@@ -1,4 +1,5 @@
 // "use client"
+export const dynamic = 'force-dynamic';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Mulish } from "next/font/google";
 import "./globals.css";
